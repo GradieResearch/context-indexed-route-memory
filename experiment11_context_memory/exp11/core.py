@@ -156,8 +156,10 @@ class ContextMemoryGraph:
         n_modes = len(MODE_NAMES)
         n = cfg.max_number + 1
         # Tiny initialization breaks ties deterministically by seed.
-        self.world_scores = self.rng.normal(0.0, 1e-5, size=(n_worlds, n, n_modes, n)).astype(np.float32)
         # Last mode index is the "unbound mode" channel for no-context-binding.
+        # Both substrates need this channel: no_context_binding should keep world
+        # separation while deliberately collapsing mode separation within a world.
+        self.world_scores = self.rng.normal(0.0, 1e-5, size=(n_worlds, n, n_modes + 1, n)).astype(np.float32)
         self.shared_scores = self.rng.normal(0.0, 1e-5, size=(n, n_modes + 1, n)).astype(np.float32)
         self.consolidated_world_scores: Optional[np.ndarray] = None
         self.consolidated_shared_scores: Optional[np.ndarray] = None
@@ -280,11 +282,14 @@ class ContextMemoryGraph:
                         self.world_scores[widx, task.start, om, target] -= np.float32(lr * v.wrong_mode_inhibition)
                     # Suppress same mode/target in inactive worlds only mildly; this
                     # improves retrieval separation while not destroying memories.
-                    for other_world in self.cfg.worlds:
-                        if other_world == task.world:
-                            continue
-                        ow = self.world_index[other_world]
-                        self.world_scores[ow, task.start, midx, target] -= np.float32(lr * v.wrong_world_inhibition * 0.25)
+                    # In the world-gated variant, inactive worlds must not be modified;
+                    # otherwise the "gated" control is not actually non-destructive.
+                    if not v.world_gated_plasticity:
+                        for other_world in self.cfg.worlds:
+                            if other_world == task.world:
+                                continue
+                            ow = self.world_index[other_world]
+                            self.world_scores[ow, task.start, midx, target] -= np.float32(lr * v.wrong_world_inhibition * 0.25)
 
         if shared_frac > 0.0:
             self.shared_scores[task.start, midx, target] += np.float32(lr * shared_frac)
@@ -318,48 +323,80 @@ class ContextMemoryGraph:
         best_wrong = float(np.max(wrong)) if wrong.size else -math.inf
         return rank, target_score - best_wrong, target_score, float(np.max(s))
 
-    def world_margin(self, source: int, mode: str, world: str, target: int) -> float:
+    def world_margin(
+        self,
+        source: int,
+        mode: str,
+        world: str,
+        target: int,
+        world_context_bleed: float = 0.0,
+        world_context_dropout: float = 0.0,
+    ) -> float:
         if not self.variant.world_context or self.variant.shared_edges_only:
             return math.nan
-        correct = float(self.scores(source, mode, world)[target])
+        correct = float(self.scores(source, mode, world, world_context_bleed, world_context_dropout)[target])
         wrong = []
         for other_world in self.cfg.worlds:
             if other_world == world:
                 continue
-            wrong.append(float(self.scores(source, mode, other_world)[target]))
+            wrong.append(float(self.scores(source, mode, other_world, world_context_bleed, world_context_dropout)[target]))
         return correct - max(wrong) if wrong else math.nan
 
-    def mode_margin(self, source: int, mode: str, world: str, target: int) -> float:
+    def mode_margin(
+        self,
+        source: int,
+        mode: str,
+        world: str,
+        target: int,
+        world_context_bleed: float = 0.0,
+        world_context_dropout: float = 0.0,
+    ) -> float:
         if not self.variant.context_binding:
             return math.nan
-        correct = float(self.scores(source, mode, world)[target])
+        correct = float(self.scores(source, mode, world, world_context_bleed, world_context_dropout)[target])
         wrong = []
         for other_mode in MODE_NAMES:
             if other_mode == mode:
                 continue
-            wrong.append(float(self.scores(source, other_mode, world)[target]))
+            wrong.append(float(self.scores(source, other_mode, world, world_context_bleed, world_context_dropout)[target]))
         return correct - max(wrong) if wrong else math.nan
 
-    def wrong_world_activation(self, source: int, mode: str, world: str, target: int) -> float:
+    def wrong_world_activation(
+        self,
+        source: int,
+        mode: str,
+        world: str,
+        target: int,
+        world_context_bleed: float = 0.0,
+        world_context_dropout: float = 0.0,
+    ) -> float:
         if not self.variant.world_context or self.variant.shared_edges_only:
             return math.nan
-        correct = float(self.scores(source, mode, world)[target])
+        correct = float(self.scores(source, mode, world, world_context_bleed, world_context_dropout)[target])
         wrong = []
         for other_world in self.cfg.worlds:
             if other_world == world:
                 continue
-            wrong.append(float(self.scores(source, mode, other_world)[target]))
+            wrong.append(float(self.scores(source, mode, other_world, world_context_bleed, world_context_dropout)[target]))
         return float(np.mean([_safe_sigmoid(w - correct) for w in wrong])) if wrong else math.nan
 
-    def wrong_mode_activation(self, source: int, mode: str, world: str, target: int) -> float:
+    def wrong_mode_activation(
+        self,
+        source: int,
+        mode: str,
+        world: str,
+        target: int,
+        world_context_bleed: float = 0.0,
+        world_context_dropout: float = 0.0,
+    ) -> float:
         if not self.variant.context_binding:
             return math.nan
-        correct = float(self.scores(source, mode, world)[target])
+        correct = float(self.scores(source, mode, world, world_context_bleed, world_context_dropout)[target])
         wrong = []
         for other_mode in MODE_NAMES:
             if other_mode == mode:
                 continue
-            wrong.append(float(self.scores(source, other_mode, world)[target]))
+            wrong.append(float(self.scores(source, other_mode, world, world_context_bleed, world_context_dropout)[target]))
         return float(np.mean([_safe_sigmoid(w - correct) for w in wrong])) if wrong else math.nan
 
     def predict(
@@ -394,10 +431,10 @@ class ContextMemoryGraph:
             rank, margin, _, _ = self.target_rank_and_margin(current, task.mode, task.world, local_expected, world_context_bleed, world_context_dropout)
             ranks.append(rank)
             correct_margins.append(margin)
-            world_margins.append(self.world_margin(current, task.mode, task.world, local_expected))
-            mode_margins.append(self.mode_margin(current, task.mode, task.world, local_expected))
-            wrong_worlds.append(self.wrong_world_activation(current, task.mode, task.world, local_expected))
-            wrong_modes.append(self.wrong_mode_activation(current, task.mode, task.world, local_expected))
+            world_margins.append(self.world_margin(current, task.mode, task.world, local_expected, world_context_bleed, world_context_dropout))
+            mode_margins.append(self.mode_margin(current, task.mode, task.world, local_expected, world_context_bleed, world_context_dropout))
+            wrong_worlds.append(self.wrong_world_activation(current, task.mode, task.world, local_expected, world_context_bleed, world_context_dropout))
+            wrong_modes.append(self.wrong_mode_activation(current, task.mode, task.world, local_expected, world_context_bleed, world_context_dropout))
             if predicted_next != expected_next and failure_type == "none":
                 failure_type = "first_step_failure" if step_i == 0 else "mid_route_drift"
             current = predicted_next
@@ -435,10 +472,10 @@ class ContextMemoryGraph:
                     "correct": int(predicted == target),
                     "target_rank": rank,
                     "correct_margin": margin,
-                    "world_margin": self.world_margin(source, mode, eval_world, target),
-                    "mode_margin": self.mode_margin(source, mode, eval_world, target),
-                    "wrong_world_activation": self.wrong_world_activation(source, mode, eval_world, target),
-                    "wrong_mode_activation": self.wrong_mode_activation(source, mode, eval_world, target),
+                    "world_margin": self.world_margin(source, mode, eval_world, target, world_context_bleed, world_context_dropout),
+                    "mode_margin": self.mode_margin(source, mode, eval_world, target, world_context_bleed, world_context_dropout),
+                    "wrong_world_activation": self.wrong_world_activation(source, mode, eval_world, target, world_context_bleed, world_context_dropout),
+                    "wrong_mode_activation": self.wrong_mode_activation(source, mode, eval_world, target, world_context_bleed, world_context_dropout),
                     "target_score": target_score,
                     "best_score": best_score,
                     "top_targets": ";".join(f"{int(i)}:{float(scores[i]):.5f}" for i in order),
@@ -504,6 +541,7 @@ def make_variants() -> List[VariantConfig]:
         VariantConfig(name="exp11_full_context_separated_memory", consolidation_strength=0.12, shared_route_weight=0.06, shared_update_fraction=0.04),
         VariantConfig(name="exp11_world_gated_plasticity", consolidation_strength=0.05, shared_route_weight=0.0, shared_update_fraction=0.0, world_gated_plasticity=True, learning_rate=1.2),
         VariantConfig(name="exp11_no_world_context", world_context=False, consolidation_strength=0.0, shared_route_weight=1.0, shared_update_fraction=1.0),
+        VariantConfig(name="exp11_no_recurrence", recurrence=False, consolidation_strength=0.12, shared_route_weight=0.06, shared_update_fraction=0.04),
         VariantConfig(name="exp11_no_context_binding", context_binding=False, consolidation_strength=0.0, shared_route_weight=0.06, shared_update_fraction=0.04),
         VariantConfig(name="exp11_no_inhibition", inhibition=False, consolidation_strength=0.12, shared_route_weight=0.08, shared_update_fraction=0.06),
         VariantConfig(name="exp11_no_structural_plasticity", structural_plasticity=False),

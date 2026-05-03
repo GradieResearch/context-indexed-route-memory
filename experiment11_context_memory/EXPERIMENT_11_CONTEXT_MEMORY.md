@@ -37,6 +37,7 @@ World D: minus_one=-1, plus_one=-2, plus_two=+1
 | `exp11_full_context_separated_memory` | Main model with world-specific route fields and modest shared substrate |
 | `exp11_world_gated_plasticity` | Strongest non-destructive update: only active world-specific routes are modified |
 | `exp11_no_world_context` | Tests collapse when world identity is unavailable |
+| `exp11_no_recurrence` | Tests whether composition requires recurrent traversal rather than a single transition |
 | `exp11_no_context_binding` | Tests route collision when mode/world binding is weakened |
 | `exp11_no_inhibition` | Tests wrong-world and wrong-mode suppression |
 | `exp11_no_structural_plasticity` | Tests whether route fields can form without plasticity |

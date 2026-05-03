@@ -11,7 +11,7 @@ if (-not (Test-Path $Python)) {
     exit 1
 }
 
-Write-Host "Running Experiment 11 - Context-Separated Memory and Non-Destructive Rebinding" -ForegroundColor Cyan
+Write-Host "Running Experiment 11 — Context-Separated Memory and Non-Destructive Rebinding" -ForegroundColor Cyan
 Write-Host "Using Python: $Python" -ForegroundColor Cyan
 Write-Host "Progress will stream to console and also write to analysis/exp11/exp11_run.log" -ForegroundColor Cyan
 

@@ -51,6 +51,14 @@ Use `start.ps1`. It expects the shared virtual environment one directory up:
 ..\.venv\Scripts\python.exe
 ```
 
+## Smoke test recommendation
+
+Before running the full suite, run a tiny all-variant smoke test so every ablation path is exercised:
+
+```powershell
+& $Python .\run_exp11_suite.py --output-dir analysis/exp11_smoke --max-number 9 --max-steps 3 --worlds "A B C" --seeds 1 --new-world-exposure-schedule "0 1" --alternation-cycles 1 --alternation-eval-schedule "0 1" --scaling-exposure-repeats 1 --context-bleed-sweep "0" --context-dropout-sweep "0" --force
+```
+
 ## Outputs to upload for analysis
 
 Upload the contents of:
