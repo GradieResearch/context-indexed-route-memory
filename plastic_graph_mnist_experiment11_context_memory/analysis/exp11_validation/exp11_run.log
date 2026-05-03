@@ -1,0 +1,76 @@
+2026-05-03 11:43:01 | INFO    | Experiment 11 started
+2026-05-03 11:43:01 | INFO    | Output directory: analysis/exp11_validation
+2026-05-03 11:43:01 | INFO    | Seeds=2, worlds=['A', 'B', 'C'], phases=['sequential', 'alternating', 'scaling', 'context_noise']
+2026-05-03 11:43:01 | INFO    | Large raw predictions are disabled unless --save-predictions is provided
+2026-05-03 11:43:01 | INFO    | Variants: exp11_full_context_separated_memory, exp11_world_gated_plasticity, exp11_no_world_context, exp11_no_structural_plasticity
+2026-05-03 11:43:01 | INFO    | Starting seed 1/2 (seed=0)
+2026-05-03 11:43:01 | INFO    | Job 1/32: seed=0 variant=exp11_full_context_separated_memory phase=sequential
+2026-05-03 11:43:02 | INFO    | Completed job 1/32 in 1.51s
+2026-05-03 11:43:02 | INFO    | Job 2/32: seed=0 variant=exp11_full_context_separated_memory phase=alternating
+2026-05-03 11:43:03 | INFO    | Completed job 2/32 in 0.61s
+2026-05-03 11:43:03 | INFO    | Job 3/32: seed=0 variant=exp11_full_context_separated_memory phase=scaling
+2026-05-03 11:43:03 | INFO    | Completed job 3/32 in 0.69s
+2026-05-03 11:43:03 | INFO    | Job 4/32: seed=0 variant=exp11_full_context_separated_memory phase=context_noise
+2026-05-03 11:43:04 | INFO    | Completed job 4/32 in 1.02s
+2026-05-03 11:43:04 | INFO    | Job 5/32: seed=0 variant=exp11_world_gated_plasticity phase=sequential
+2026-05-03 11:43:06 | INFO    | Completed job 5/32 in 1.52s
+2026-05-03 11:43:06 | INFO    | Job 6/32: seed=0 variant=exp11_world_gated_plasticity phase=alternating
+2026-05-03 11:43:07 | INFO    | Completed job 6/32 in 0.66s
+2026-05-03 11:43:07 | INFO    | Job 7/32: seed=0 variant=exp11_world_gated_plasticity phase=scaling
+2026-05-03 11:43:07 | INFO    | Completed job 7/32 in 0.68s
+2026-05-03 11:43:07 | INFO    | Job 8/32: seed=0 variant=exp11_world_gated_plasticity phase=context_noise
+2026-05-03 11:43:08 | INFO    | Completed job 8/32 in 1.01s
+2026-05-03 11:43:08 | INFO    | Job 9/32: seed=0 variant=exp11_no_world_context phase=sequential
+2026-05-03 11:43:09 | INFO    | Completed job 9/32 in 0.21s
+2026-05-03 11:43:09 | INFO    | Job 10/32: seed=0 variant=exp11_no_world_context phase=alternating
+2026-05-03 11:43:09 | INFO    | Completed job 10/32 in 0.13s
+2026-05-03 11:43:09 | INFO    | Job 11/32: seed=0 variant=exp11_no_world_context phase=scaling
+2026-05-03 11:43:09 | INFO    | Completed job 11/32 in 0.26s
+2026-05-03 11:43:09 | INFO    | Job 12/32: seed=0 variant=exp11_no_world_context phase=context_noise
+2026-05-03 11:43:09 | INFO    | Completed job 12/32 in 0.12s
+2026-05-03 11:43:09 | INFO    | Job 13/32: seed=0 variant=exp11_no_structural_plasticity phase=sequential
+2026-05-03 11:43:10 | INFO    | Completed job 13/32 in 1.43s
+2026-05-03 11:43:10 | INFO    | Job 14/32: seed=0 variant=exp11_no_structural_plasticity phase=alternating
+2026-05-03 11:43:11 | INFO    | Completed job 14/32 in 0.50s
+2026-05-03 11:43:11 | INFO    | Job 15/32: seed=0 variant=exp11_no_structural_plasticity phase=scaling
+2026-05-03 11:43:12 | INFO    | Completed job 15/32 in 0.68s
+2026-05-03 11:43:12 | INFO    | Job 16/32: seed=0 variant=exp11_no_structural_plasticity phase=context_noise
+2026-05-03 11:43:13 | INFO    | Completed job 16/32 in 1.09s
+2026-05-03 11:43:13 | INFO    | Starting seed 2/2 (seed=1)
+2026-05-03 11:43:13 | INFO    | Job 17/32: seed=1 variant=exp11_full_context_separated_memory phase=sequential
+2026-05-03 11:43:14 | INFO    | Completed job 17/32 in 1.40s
+2026-05-03 11:43:14 | INFO    | Job 18/32: seed=1 variant=exp11_full_context_separated_memory phase=alternating
+2026-05-03 11:43:15 | INFO    | Completed job 18/32 in 0.53s
+2026-05-03 11:43:15 | INFO    | Job 19/32: seed=1 variant=exp11_full_context_separated_memory phase=scaling
+2026-05-03 11:43:15 | INFO    | Completed job 19/32 in 0.63s
+2026-05-03 11:43:15 | INFO    | Job 20/32: seed=1 variant=exp11_full_context_separated_memory phase=context_noise
+2026-05-03 11:43:16 | INFO    | Completed job 20/32 in 0.44s
+2026-05-03 11:43:16 | INFO    | Job 21/32: seed=1 variant=exp11_world_gated_plasticity phase=sequential
+2026-05-03 11:43:16 | INFO    | Completed job 21/32 in 0.54s
+2026-05-03 11:43:16 | INFO    | Job 22/32: seed=1 variant=exp11_world_gated_plasticity phase=alternating
+2026-05-03 11:43:17 | INFO    | Completed job 22/32 in 0.41s
+2026-05-03 11:43:17 | INFO    | Job 23/32: seed=1 variant=exp11_world_gated_plasticity phase=scaling
+2026-05-03 11:43:17 | INFO    | Completed job 23/32 in 0.66s
+2026-05-03 11:43:17 | INFO    | Job 24/32: seed=1 variant=exp11_world_gated_plasticity phase=context_noise
+2026-05-03 11:43:18 | INFO    | Completed job 24/32 in 0.42s
+2026-05-03 11:43:18 | INFO    | Job 25/32: seed=1 variant=exp11_no_world_context phase=sequential
+2026-05-03 11:43:18 | INFO    | Completed job 25/32 in 0.09s
+2026-05-03 11:43:18 | INFO    | Job 26/32: seed=1 variant=exp11_no_world_context phase=alternating
+2026-05-03 11:43:18 | INFO    | Completed job 26/32 in 0.07s
+2026-05-03 11:43:18 | INFO    | Job 27/32: seed=1 variant=exp11_no_world_context phase=scaling
+2026-05-03 11:43:18 | INFO    | Completed job 27/32 in 0.10s
+2026-05-03 11:43:18 | INFO    | Job 28/32: seed=1 variant=exp11_no_world_context phase=context_noise
+2026-05-03 11:43:18 | INFO    | Completed job 28/32 in 0.07s
+2026-05-03 11:43:18 | INFO    | Job 29/32: seed=1 variant=exp11_no_structural_plasticity phase=sequential
+2026-05-03 11:43:19 | INFO    | Completed job 29/32 in 0.50s
+2026-05-03 11:43:19 | INFO    | Job 30/32: seed=1 variant=exp11_no_structural_plasticity phase=alternating
+2026-05-03 11:43:19 | INFO    | Completed job 30/32 in 0.42s
+2026-05-03 11:43:19 | INFO    | Job 31/32: seed=1 variant=exp11_no_structural_plasticity phase=scaling
+2026-05-03 11:43:20 | INFO    | Completed job 31/32 in 0.63s
+2026-05-03 11:43:20 | INFO    | Job 32/32: seed=1 variant=exp11_no_structural_plasticity phase=context_noise
+2026-05-03 11:43:20 | INFO    | Completed job 32/32 in 0.41s
+2026-05-03 11:43:20 | INFO    | Writing CSV outputs
+2026-05-03 11:43:20 | INFO    | Raw run completed in 19.72s
+2026-05-03 11:43:20 | INFO    | Starting analysis
+2026-05-03 11:43:28 | INFO    | Analysis complete
+2026-05-03 11:43:28 | INFO    | Experiment 11 finished
