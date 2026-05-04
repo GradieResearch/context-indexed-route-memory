@@ -1,0 +1,14 @@
+{"config": {"adversarial_context_levels": [0.0, 0.1, 0.25, 0.4, 0.49, 0.51, 0.6, 0.75, 0.9, 0.99], "budget_ratios": [0.25, 0.5, 0.75, 1.0, 1.25], "capacity_route_lengths": [1, 4, 8, 12], "capacity_world_counts": [4, 8, 16, 32], "context_bleed_levels": [0.0, 0.1, 0.25, 0.5, 0.75, 0.95], "context_budget_ratio": 1.0, "context_dropout_levels": [0.0, 0.1, 0.25, 0.5, 0.75, 0.9], "context_route_length": 8, "context_world_count": 32, "continuous_noise_levels": [0.0, 0.05, 0.1, 0.2, 0.35, 0.5, 0.75, 1.0], "continuous_route_length": 8, "continuous_world_count": 16, "holdout_route_length": 8, "holdout_world_count": 16, "local_budget_ratios": [0.25, 0.5, 0.75, 1.0], "modes": 3, "nodes": 32, "primitive_holdout_rates": [0.0, 0.1, 0.2, 0.4, 0.6], "profile": "standard", "retention_budget_ratios": [0.375, 0.5, 0.75, 1.0], "retention_route_length": 8, "retention_world_count": 32, "route_lengths": [1, 2, 4, 8, 12], "routes_per_world": 48, "seeds": [0, 1, 2, 3, 4], "variants": ["exp13_full_context_separated_memory", "exp13_world_gated_plasticity", "exp13_no_consolidation", "exp13_strong_consolidation", "exp13_no_world_context", "exp13_no_context_binding", "exp13_no_recurrence", "exp13_no_structural_plasticity"], "world_counts": [4, 8, 16, 32]}, "message": "Starting Experiment 13", "profile": "standard", "time": 1777897749.7521777}
+{"message": "Running capacity_pressure", "phase": "capacity_pressure", "time": 1777897749.7531729}
+{"elapsed_seconds": 644.7371602058411, "message": "Completed run_capacity_pressure", "rows": 3200, "time": 1777898394.490333}
+{"message": "Running local_capacity_pressure", "phase": "local_capacity_pressure", "time": 1777898394.5733125}
+{"elapsed_seconds": 79.28261923789978, "message": "Completed run_local_capacity_pressure", "rows": 320, "time": 1777898473.8559318}
+{"message": "Running context_corruption", "phase": "context_corruption", "time": 1777898473.9519498}
+{"elapsed_seconds": 380.51507687568665, "message": "Completed run_context_corruption", "rows": 770, "time": 1777898854.4670267}
+{"message": "Running continual_retention_pressure", "phase": "continual_retention_pressure", "time": 1777898854.5790236}
+{"elapsed_seconds": 401.9918112754822, "message": "Completed run_continual_retention_pressure", "rows": 42240, "time": 1777899256.5708349}
+{"message": "Running true_holdout_generalization", "phase": "true_holdout_generalization", "time": 1777899257.8667958}
+{"elapsed_seconds": 566.4475803375244, "message": "Completed run_true_holdout", "rows": 325, "time": 1777899824.314376}
+{"message": "Running continuous_frontend_bridge", "phase": "continuous_frontend_bridge", "time": 1777899825.6713414}
+{"elapsed_seconds": 17.574601888656616, "message": "Completed run_continuous_bridge", "rows": 160, "time": 1777899843.2459433}
+{"elapsed_seconds": 2112.2362611293793, "message": "Experiment 13 complete", "rows": 47015, "time": 1777899862.2914526}

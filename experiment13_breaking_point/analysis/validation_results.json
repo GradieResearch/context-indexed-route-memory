@@ -1,0 +1,47 @@
+[
+  {
+    "status": "PASS",
+    "name": "all phases executed",
+    "detail": "Found phases: ['capacity_pressure', 'context_corruption', 'continual_retention_pressure', 'continuous_frontend_bridge', 'local_capacity_pressure', 'true_holdout_generalization']"
+  },
+  {
+    "status": "PASS",
+    "name": "full model succeeds at exact/surplus capacity",
+    "detail": "mean=1.0000"
+  },
+  {
+    "status": "PASS",
+    "name": "finite memory pressure creates a breaking curve",
+    "detail": "low=0.3939, exact=1.0000"
+  },
+  {
+    "status": "PASS",
+    "name": "no-recurrence separates one-step storage from composition",
+    "detail": "route_table=1.0000, multi_comp=0.0427"
+  },
+  {
+    "status": "PASS",
+    "name": "no-world-context shows interference",
+    "detail": "no_world_context=0.0694, full=1.0000"
+  },
+  {
+    "status": "PASS",
+    "name": "adversarial context corruption creates world-selection failure",
+    "detail": "low=1.0000, high=0.0000"
+  },
+  {
+    "status": "PASS",
+    "name": "primitive holdout separates composition from unseen-transition inference",
+    "detail": "seen=0.8924, unseen=0.0747"
+  },
+  {
+    "status": "PASS",
+    "name": "continuous front-end degrades under perceptual noise",
+    "detail": "low=1.0000, high=0.3841"
+  },
+  {
+    "status": "WARN",
+    "name": "consolidation changes finite-pressure behavior",
+    "detail": "no_consolidation=0.7661, strong=0.7676, delta=0.0016"
+  }
+]
