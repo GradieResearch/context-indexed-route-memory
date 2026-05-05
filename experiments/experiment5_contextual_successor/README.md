@@ -21,7 +21,7 @@ See [EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md](EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md)
 ## Layout
 
 ```text
-plastic_graph_mnist_experiment5_contextual_successor/
+experiments/experiment5_contextual_successor/
   run_exp5_contextual_successor.py
   run_exp5_suite.py
   analyze_exp5_suite.py

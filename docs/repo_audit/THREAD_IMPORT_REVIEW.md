@@ -1,10 +1,10 @@
 ## Finding 1
 
 Severity: P1
-File: `docs/manuscript/CLAIMS_AND_EVIDENCE.md:20`; `experiment13_breaking_point/analysis/validation_report.md`
-Problem: C1 says "Exp13 validation also marks no-structural-plasticity as a failure mode under boundary mapping" and cites `experiment13_breaking_point/analysis/validation_report.md`, but the validation report has PASS entries for no-recurrence, no-world-context, context corruption, holdout, continuous front end, and consolidation. It does not mention no-structural-plasticity.
+File: `docs/manuscript/CLAIMS_AND_EVIDENCE.md:20`; `experiments/experiment13_breaking_point/analysis/validation_report.md`
+Problem: C1 says "Exp13 validation also marks no-structural-plasticity as a failure mode under boundary mapping" and cites `experiments/experiment13_breaking_point/analysis/validation_report.md`, but the validation report has PASS entries for no-recurrence, no-world-context, context corruption, holdout, continuous front end, and consolidation. It does not mention no-structural-plasticity.
 Why it matters: The local artifact path exists, but it does not verify the exact scientific claim. This makes the C1 evidence row look stronger and cleaner than the actual local provenance.
-Recommended fix: Either remove the Exp13 validation sentence/path from C1, or cite the actual Exp13 data table that contains the no-structural-plasticity rows, such as `experiment13_breaking_point/analysis/capacity_pressure_summary.csv`, and update the evidence wording accordingly.
+Recommended fix: Either remove the Exp13 validation sentence/path from C1, or cite the actual Exp13 data table that contains the no-structural-plasticity rows, such as `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`, and update the evidence wording accordingly.
 
 ## Finding 2
 
@@ -68,4 +68,4 @@ Severity: P2
 File: `docs/manuscript/CLAIMS_AND_EVIDENCE.md:23`
 Problem: C4 cites an Exp12 plot for the numeric statement that route-table accuracy is 1.0 while composition is about 0.05-0.06, but it does not cite the machine-readable Exp12 summary CSV that contains those values. Its required follow-up is only a figure panel, while adjacent recurrence claims include external baseline follow-up.
 Why it matters: The claim has a local artifact path, but the strongest local evidence for the numbers is a data table, not a plot. The follow-up column also understates the baseline/statistical hardening needed for a strong internal-ablation claim.
-Recommended fix: Add `experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv` or `experiment12_capacity_generalization/analysis/exp12/exp12_final_memory_index.csv` to C4's artifacts, and add baseline/effect-size follow-up consistent with C3 and the limitations docs.
+Recommended fix: Add `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv` or `experiments/experiment12_capacity_generalization/analysis/exp12/exp12_final_memory_index.csv` to C4's artifacts, and add baseline/effect-size follow-up consistent with C3 and the limitations docs.

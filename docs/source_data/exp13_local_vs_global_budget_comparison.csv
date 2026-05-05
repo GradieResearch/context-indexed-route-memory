@@ -1,0 +1,5 @@
+budget_ratio,global_composition_mean,local_composition_mean,local_minus_global_composition,global_route_table_mean,local_route_table_mean
+0.25,0.2755,0.0417,-0.2339,0.2723,0.2721
+0.50,0.5173,0.0596,-0.4577,0.5144,0.5148
+0.75,0.7579,0.1379,-0.6201,0.7571,0.7575
+1.00,1.0000,1.0000,0.0000,1.0000,1.0000

@@ -1,3 +1,600 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bdbe0fdfa0f890065dc76256d9afc2152f1acf3534c0a66ec090fab8824c91de
-size 98560
+experiment_id,artifact_category,path,description,exists,notes
+exp1,code,experiments/experiment1/plastic_graph_mnist/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,code,experiments/experiment1/plastic_graph_mnist/config.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,code,experiments/experiment1/plastic_graph_mnist/data.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,code,experiments/experiment1/plastic_graph_mnist/logging_utils.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,code,experiments/experiment1/plastic_graph_mnist/modulators.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,code,experiments/experiment1/plastic_graph_mnist/plastic_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,code,experiments/experiment1/plastic_graph_mnist/storage.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,code,experiments/experiment1/plastic_graph_mnist/trainer.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp1,readme,experiments/experiment1/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp1,run_or_analysis_script,experiments/experiment1/run_mnist_experiment.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp1,run_database,experiments/experiment1/runs/plastic_graph_mnist.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp1,run_or_analysis_script,experiments/experiment1/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp1,run_or_analysis_script,experiments/experiment1/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp2,report_or_design_doc,experiments/experiment2/analysis/analysis_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp2,run_log_or_json,experiments/experiment2/analysis/latest_checkpoint_summary.json,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,metrics,experiments/experiment2/analysis/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp2,plot,experiments/experiment2/analysis/test_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp2,plot,experiments/experiment2/analysis/test_average_confidence.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp2,plot,experiments/experiment2/analysis/train_average_confidence.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp2,plot,experiments/experiment2/analysis/train_window_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp2,run_or_analysis_script,experiments/experiment2/analyze_results.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/config.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/data.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/logging_utils.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/modulators.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/plastic_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/storage.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,code,experiments/experiment2/plastic_graph_mnist/trainer.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp2,readme,experiments/experiment2/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp2,run_or_analysis_script,experiments/experiment2/run_mnist_experiment.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp2,run_database,experiments/experiment2/runs/plastic_graph_mnist.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp2,run_or_analysis_script,experiments/experiment2/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp2,run_or_analysis_script,experiments/experiment2/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp3,plot,experiments/experiment3/analysis/suite/suite_best_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp3,summary,experiments/experiment3/analysis/suite/suite_comparison.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp3,report_or_design_doc,experiments/experiment3/analysis/suite/suite_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp3,run_or_analysis_script,experiments/experiment3/analyze_experiment_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp3,run_or_analysis_script,experiments/experiment3/analyze_results.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/config.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/data.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/logging_utils.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/modulators.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/plastic_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/storage.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,code,experiments/experiment3/plastic_graph_mnist/trainer.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp3,readme,experiments/experiment3/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp3,run_or_analysis_script,experiments/experiment3/run_experiment_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp3,run_or_analysis_script,experiments/experiment3/run_mnist_experiment.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp3,run_database,experiments/experiment3/runs/plastic_graph_suite.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp3,run_or_analysis_script,experiments/experiment3/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp3,run_or_analysis_script,experiments/experiment3/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp4,plot,experiments/experiment4_successor/analysis/exp4/exp4_best_addition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp4,summary,experiments/experiment4_successor/analysis/exp4/exp4_comparison.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp4,plot,experiments/experiment4_successor/analysis/exp4/exp4_recurrent_drive.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp4,report_or_design_doc,experiments/experiment4_successor/analysis/exp4/exp4_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp4,plot,experiments/experiment4_successor/analysis/exp4/exp4_unique_active.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/analyze_exp4_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/analyze_experiment_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/analyze_results.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp4,report_or_design_doc,experiments/experiment4_successor/EXPERIMENT_4_SUCCESSOR_TRAVERSAL.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/config.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/data.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/logging_utils.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/modulators.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/plastic_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/storage.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/successor_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/successor_task.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/successor_trainer.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,code,experiments/experiment4_successor/plastic_graph_mnist/trainer.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp4,readme,experiments/experiment4_successor/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/run_exp4_successor_experiment.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/run_exp4_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/run_experiment_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/run_mnist_experiment.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp4,run_database,experiments/experiment4_successor/runs/exp4_successor_suite.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp4,run_or_analysis_script,experiments/experiment4_successor/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_path_length.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_adaptation_curve.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_best_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp5,summary,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_context_confusion.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_recurrent_drive.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,report_or_design_doc,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_wrong_route_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_path_length.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_adaptation_curve.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_best_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp5,summary,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_context_confusion.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_recurrent_drive.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,report_or_design_doc,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp5,plot,experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_wrong_route_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp5,run_or_analysis_script,experiments/experiment5_contextual_successor/analyze_exp5_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp5,report_or_design_doc,experiments/experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/context_router.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/contextual_successor_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/contextual_successor_task.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/contextual_successor_trainer.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/inhibition.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/logging_utils.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/storage.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,code,experiments/experiment5_contextual_successor/plastic_graph_mnist/successor_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp5,readme,experiments/experiment5_contextual_successor/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp5,run_or_analysis_script,experiments/experiment5_contextual_successor/run_exp5_contextual_successor.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp5,run_or_analysis_script,experiments/experiment5_contextual_successor/run_exp5_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp5,run_database,experiments/experiment5_contextual_successor/runs/exp5_migration_smoke.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp5,run_database,experiments/experiment5_contextual_successor/runs/exp5_smoke.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp5,run_database,experiments/experiment5_contextual_successor/runs/exp5_suite_smoke.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp5,run_or_analysis_script,experiments/experiment5_contextual_successor/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp5,run_or_analysis_script,experiments/experiment5_contextual_successor/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_accuracy_by_path_length.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_adaptation_curve.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_best_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp6,summary,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_comparison.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_context_confusion.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_recurrent_drive.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp6,report_or_design_doc,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_route_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp6,plot,experiments/experiment6_route_audit_successor/analysis/exp6/exp6_wrong_route_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp6,run_or_analysis_script,experiments/experiment6_route_audit_successor/analyze_exp6_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp6,report_or_design_doc,experiments/experiment6_route_audit_successor/EXPERIMENT_6_ROUTE_AUDIT_SUCCESSOR.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/context_router.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/contextual_successor_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/contextual_successor_task.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/contextual_successor_trainer.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/inhibition.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/logging_utils.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/storage.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,code,experiments/experiment6_route_audit_successor/plastic_graph_mnist/successor_graph.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp6,readme,experiments/experiment6_route_audit_successor/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp6,run_or_analysis_script,experiments/experiment6_route_audit_successor/run_exp6_route_audit_successor.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp6,run_or_analysis_script,experiments/experiment6_route_audit_successor/run_exp6_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp6,run_database,experiments/experiment6_route_audit_successor/runs/exp6_route_audit_successor_suite.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp6,run_or_analysis_script,experiments/experiment6_route_audit_successor/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp6,run_or_analysis_script,experiments/experiment6_route_audit_successor/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_accuracy_by_steps.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_context_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp7,report_or_design_doc,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_target_rank.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/exp7_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,metrics,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/route_margin_heatmap_exp7_context_bleed_seed0_minus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/route_margin_heatmap_exp7_context_bleed_seed0_plus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/route_margin_heatmap_exp7_context_bleed_seed0_plus_two.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.sample/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_accuracy_by_steps.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_context_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp7,report_or_design_doc,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_target_rank.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/exp7_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,metrics,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/route_margin_heatmap_exp7_context_bleed_seed0_minus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/route_margin_heatmap_exp7_context_bleed_seed0_plus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/route_margin_heatmap_exp7_context_bleed_seed0_plus_two.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.saturated/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_accuracy_by_steps.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_context_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp7,report_or_design_doc,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_target_rank.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/exp7_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp7,metrics,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/route_margin_heatmap_exp7_context_bleed_seed0_minus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/route_margin_heatmap_exp7_context_bleed_seed0_plus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,plot,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/route_margin_heatmap_exp7_context_bleed_seed0_plus_two.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp7,summary,experiments/experiment7_route_field_diagnostics/analysis/exp7.unsaturated/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp7,run_or_analysis_script,experiments/experiment7_route_field_diagnostics/analyze_exp7_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp7,code,experiments/experiment7_route_field_diagnostics/exp7/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp7,code,experiments/experiment7_route_field_diagnostics/exp7/core.py,Experiment implementation,yes,Manuscript relevance: low; review before citing.
+exp7,report_or_design_doc,experiments/experiment7_route_field_diagnostics/EXPERIMENT_7_ROUTE_FIELD_DIAGNOSTICS.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp7,readme,experiments/experiment7_route_field_diagnostics/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp7,run_or_analysis_script,experiments/experiment7_route_field_diagnostics/run_exp7_route_field_diagnostics.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp7,run_or_analysis_script,experiments/experiment7_route_field_diagnostics/run_exp7_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp7,run_database,experiments/experiment7_route_field_diagnostics/runs/exp7_route_field_diagnostics.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp7,run_or_analysis_script,experiments/experiment7_route_field_diagnostics/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp7,run_or_analysis_script,experiments/experiment7_route_field_diagnostics/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp7,report_or_design_doc,experiments/experiment7_route_field_diagnostics/TRACKER_UPDATE_EXP7.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_accuracy_by_steps.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_context_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_exposure_curve_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_exposure_curve_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_exposure_curve_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_failure_taxonomy.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp8,report_or_design_doc,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_target_rank.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/exp8_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,metrics,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp8,metrics,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_minus_one_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_plus_one_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_plus_two_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_accuracy_by_steps.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_context_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_exposure_curve_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_exposure_curve_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_exposure_curve_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_failure_taxonomy.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp8,report_or_design_doc,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_target_rank.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/exp8_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,metrics,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp8,metrics,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_minus_one_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_plus_one_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_plus_two_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_accuracy_by_mode.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_accuracy_by_steps.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_context_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_exposure_curve_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_exposure_curve_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_exposure_curve_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_failure_taxonomy.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp8,report_or_design_doc,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_target_rank.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/exp8_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp8,metrics,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp8,metrics,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_minus_one_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_plus_one_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,plot,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/route_margin_heatmap_exp8_full_self_organizing_route_field_seed0_plus_two_exp1.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp8,summary,experiments/experiment8_self_organizing_route_acquisition/analysis/exp8_validation_test/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp8,run_or_analysis_script,experiments/experiment8_self_organizing_route_acquisition/analyze_exp8_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp8,code,experiments/experiment8_self_organizing_route_acquisition/exp8/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp8,code,experiments/experiment8_self_organizing_route_acquisition/exp8/core.py,Experiment implementation,yes,Manuscript relevance: low; review before citing.
+exp8,report_or_design_doc,experiments/experiment8_self_organizing_route_acquisition/EXPERIMENT_8_SELF_ORGANIZING_ROUTE_ACQUISITION.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp8,readme,experiments/experiment8_self_organizing_route_acquisition/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp8,run_or_analysis_script,experiments/experiment8_self_organizing_route_acquisition/run_exp8_self_organizing_route_acquisition.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp8,run_or_analysis_script,experiments/experiment8_self_organizing_route_acquisition/run_exp8_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp8,run_database,experiments/experiment8_self_organizing_route_acquisition/runs/exp8_self_organizing_route_acquisition.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp8,run_database,experiments/experiment8_self_organizing_route_acquisition/runs/exp8_validation.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp8,run_or_analysis_script,experiments/experiment8_self_organizing_route_acquisition/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp8,run_or_analysis_script,experiments/experiment8_self_organizing_route_acquisition/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp8,run_or_analysis_script,experiments/experiment8_self_organizing_route_acquisition/start_exp8.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp8,report_or_design_doc,experiments/experiment8_self_organizing_route_acquisition/TRACKER_UPDATE_EXP8.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_clean_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_clean_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_failure_taxonomy.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_composition_noise_delay_0.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_composition_noise_delay_2.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_composition_noise_delay_4.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_margin_noise_delay_0.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_margin_noise_delay_2.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_margin_noise_delay_4.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_route_table_noise_delay_0.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_route_table_noise_delay_2.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_feedback_route_table_noise_delay_4.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_interference_composition_by_bleed.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_interference_margin_by_bleed.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_interference_route_table_by_bleed.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_interference_wrong_route_by_bleed.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,report_or_design_doc,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/exp9_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp9,metrics,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp9,metrics,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/route_margin_heatmap_feedback_exp9_full_reward_robust_minus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/route_margin_heatmap_feedback_exp9_full_reward_robust_plus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/route_margin_heatmap_feedback_exp9_full_reward_robust_plus_two.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/route_margin_heatmap_interference_exp9_full_interference_robust_minus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/route_margin_heatmap_interference_exp9_full_interference_robust_plus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/route_margin_heatmap_interference_exp9_full_interference_robust_plus_two.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_clean_composition_accuracy.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_clean_transition_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_failure_taxonomy.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_feedback_composition_noise_delay_0.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_feedback_composition_noise_delay_2.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_feedback_margin_noise_delay_0.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_feedback_margin_noise_delay_2.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_feedback_route_table_noise_delay_0.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_feedback_route_table_noise_delay_2.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_interference_composition_by_bleed.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_interference_margin_by_bleed.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_interference_route_table_by_bleed.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_interference_wrong_route_by_bleed.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp9,report_or_design_doc,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/exp9_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp9,metrics,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp9,metrics,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/predictions.csv,Raw predictions,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/route_margin_heatmap_feedback_exp9_full_reward_robust_minus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/route_margin_heatmap_feedback_exp9_full_reward_robust_plus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/route_margin_heatmap_feedback_exp9_full_reward_robust_plus_two.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/route_margin_heatmap_interference_exp9_full_interference_robust_minus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/route_margin_heatmap_interference_exp9_full_interference_robust_plus_one.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,plot,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/route_margin_heatmap_interference_exp9_full_interference_robust_plus_two.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp9,summary,experiments/experiment9_robust_adaptive_route_plasticity/analysis/exp9_validation/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp9,run_or_analysis_script,experiments/experiment9_robust_adaptive_route_plasticity/analyze_exp9_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp9,code,experiments/experiment9_robust_adaptive_route_plasticity/exp9/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp9,code,experiments/experiment9_robust_adaptive_route_plasticity/exp9/core.py,Experiment implementation,yes,Manuscript relevance: low; review before citing.
+exp9,report_or_design_doc,experiments/experiment9_robust_adaptive_route_plasticity/EXPERIMENT_9_ROBUST_ADAPTIVE_ROUTE_PLASTICITY.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp9,readme,experiments/experiment9_robust_adaptive_route_plasticity/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp9,run_or_analysis_script,experiments/experiment9_robust_adaptive_route_plasticity/run_exp9_robust_adaptive_route_plasticity.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp9,run_or_analysis_script,experiments/experiment9_robust_adaptive_route_plasticity/run_exp9_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp9,run_database,experiments/experiment9_robust_adaptive_route_plasticity/runs/exp9_robust_adaptive_route_plasticity.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp9,run_database,experiments/experiment9_robust_adaptive_route_plasticity/runs/exp9_validation.sqlite3,Per-run sqlite database,yes,Manuscript relevance: low; review before citing.
+exp9,run_or_analysis_script,experiments/experiment9_robust_adaptive_route_plasticity/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp9,run_or_analysis_script,experiments/experiment9_robust_adaptive_route_plasticity/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp9,run_or_analysis_script,experiments/experiment9_robust_adaptive_route_plasticity/start_exp9.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp9,report_or_design_doc,experiments/experiment9_robust_adaptive_route_plasticity/TRACKER_UPDATE_EXP9.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_adaptation_thresholds.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_failure_taxonomy_final_new_rule.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_final_new_rule_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_final_old_rule_retention.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp10,report_or_design_doc,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_reversal_composition_dual_rule.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_reversal_correct_margin_dual_rule.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_reversal_new_rule_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_reversal_new_rule_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_reversal_old_rule_retention.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_reversal_route_table_dual_rule.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/exp10_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/failure_taxonomy.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp10,metrics,experiments/experiment10_adaptive_reversal/analysis/exp10/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp10,metrics,experiments/experiment10_adaptive_reversal/analysis/exp10/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_adaptation_thresholds.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_failure_taxonomy_final_new_rule.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_final_new_rule_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_final_old_rule_retention.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp10,report_or_design_doc,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_reversal_composition_dual_rule.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_reversal_correct_margin_dual_rule.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_reversal_new_rule_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_reversal_new_rule_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_reversal_old_rule_retention.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp10,plot,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_reversal_route_table_dual_rule.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_route_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/exp10_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/failure_taxonomy.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp10,metrics,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp10,metrics,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp10,summary,experiments/experiment10_adaptive_reversal/analysis/exp10_validation_full/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp10,run_or_analysis_script,experiments/experiment10_adaptive_reversal/analyze_exp10_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp10,code,experiments/experiment10_adaptive_reversal/exp10/__init__.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.
+exp10,code,experiments/experiment10_adaptive_reversal/exp10/core.py,Experiment implementation,yes,Manuscript relevance: low; review before citing.
+exp10,report_or_design_doc,experiments/experiment10_adaptive_reversal/EXPERIMENT_10_ADAPTIVE_REVERSAL.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp10,readme,experiments/experiment10_adaptive_reversal/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp10,run_or_analysis_script,experiments/experiment10_adaptive_reversal/run_exp10_adaptive_reversal.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp10,run_or_analysis_script,experiments/experiment10_adaptive_reversal/run_exp10_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp10,run_or_analysis_script,experiments/experiment10_adaptive_reversal/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp10,run_or_analysis_script,experiments/experiment10_adaptive_reversal/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp10,run_or_analysis_script,experiments/experiment10_adaptive_reversal/start_exp10.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp10,report_or_design_doc,experiments/experiment10_adaptive_reversal/TRACKER_UPDATE_EXP10.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_alternating_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_alternating_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_alternating_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/exp11_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_context_bleed_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_context_bleed_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_context_bleed_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_context_dropout_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_context_dropout_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_context_dropout_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/exp11_failure_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_failure_taxonomy_final_sequential.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/exp11_final_sequential_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp11,report_or_design_doc,experiments/experiment11_context_memory/analysis/exp11/exp11_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_scaling_final_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_scaling_final_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_scaling_final_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_scaling_final_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_sequential_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_sequential_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_sequential_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_sequential_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11/exp11_sequential_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/exp11_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/failure_taxonomy.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp11,metrics,experiments/experiment11_context_memory/analysis/exp11/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp11,metrics,experiments/experiment11_context_memory/analysis/exp11/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp11,run_log_or_json,experiments/experiment11_context_memory/analysis/exp11/progress.jsonl,Progress log,yes,Manuscript relevance: low; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/baselines.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_alternating_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_alternating_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_alternating_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_baseline_summary.csv,Baseline summary,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_context_bleed_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_context_bleed_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_context_bleed_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_context_dropout_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_context_dropout_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_context_dropout_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_failure_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_failure_taxonomy_final_sequential.png,Failure taxonomy plot,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_final_sequential_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_memory_indices.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp11,report_or_design_doc,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_scaling_final_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_scaling_final_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_scaling_final_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_scaling_final_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_sequential_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_sequential_correct_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_sequential_route_table.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_sequential_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp11,plot,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_sequential_wrong_world_activation.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/exp11_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/failure_taxonomy.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp11,metrics,experiments/experiment11_context_memory/analysis/exp11_validation/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp11,metrics,experiments/experiment11_context_memory/analysis/exp11_validation/metrics_wide.csv,Wide metrics table,yes,Manuscript relevance: high; review before citing.
+exp11,run_log_or_json,experiments/experiment11_context_memory/analysis/exp11_validation/progress.jsonl,Progress log,yes,Manuscript relevance: low; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/route_diagnostics.csv,Route diagnostics,yes,Manuscript relevance: high; review before citing.
+exp11,summary,experiments/experiment11_context_memory/analysis/exp11_validation/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp11,run_or_analysis_script,experiments/experiment11_context_memory/analyze_exp11_suite.py,Analysis script,yes,Manuscript relevance: low; review before citing.
+exp11,code,experiments/experiment11_context_memory/exp11/core.py,Experiment implementation,yes,Manuscript relevance: low; review before citing.
+exp11,report_or_design_doc,experiments/experiment11_context_memory/EXPERIMENT_11_CONTEXT_MEMORY.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp11,readme,experiments/experiment11_context_memory/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp11,run_or_analysis_script,experiments/experiment11_context_memory/run_exp11_context_memory.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp11,run_or_analysis_script,experiments/experiment11_context_memory/run_exp11_suite.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp11,run_or_analysis_script,experiments/experiment11_context_memory/start.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp11,run_or_analysis_script,experiments/experiment11_context_memory/start.sh,Launch script,yes,Manuscript relevance: low; review before citing.
+exp11,run_or_analysis_script,experiments/experiment11_context_memory/start_exp11.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp11,report_or_design_doc,experiments/experiment11_context_memory/TRACKER_UPDATE_EXP11.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/consolidation_pressure_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/context_bleed_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/context_dropout_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/continual_retention_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/exp12_final_memory_index.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp12,report_or_design_doc,experiments/experiment12_capacity_generalization/analysis/exp12/exp12_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/heldout_generalization_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,metrics,experiments/experiment12_capacity_generalization/analysis/exp12/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_capacity_composition_accuracy.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_capacity_route_table_accuracy.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_capacity_wrong_world_activation.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_consolidation_pressure_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_consolidation_pressure_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_bleed_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_bleed_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_dropout_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_context_dropout_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_continual_retention_heatmap_full_model.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_heldout_generalization_by_length.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12/plots/exp12_route_table_composition_gap.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp12,run_log_or_json,experiments/experiment12_capacity_generalization/analysis/exp12/progress.jsonl,Progress log,yes,Manuscript relevance: low; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/capacity_final_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/consolidation_pressure_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/context_bleed_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/context_dropout_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/continual_retention_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/exp12_final_memory_index.csv,Supporting artifact,yes,Manuscript relevance: high; review before citing.
+exp12,report_or_design_doc,experiments/experiment12_capacity_generalization/analysis/exp12_validation/exp12_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/heldout_generalization_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp12,metrics,experiments/experiment12_capacity_generalization/analysis/exp12_validation/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_capacity_composition_accuracy.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_capacity_route_table_accuracy.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_capacity_wrong_world_activation.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_consolidation_pressure_accuracy.png,Accuracy plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_consolidation_pressure_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_context_bleed_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_context_bleed_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_context_dropout_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_context_dropout_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_continual_retention_heatmap_full_model.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_heldout_generalization_by_length.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp12,plot,experiments/experiment12_capacity_generalization/analysis/exp12_validation/plots/exp12_route_table_composition_gap.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp12,run_log_or_json,experiments/experiment12_capacity_generalization/analysis/exp12_validation/progress.jsonl,Progress log,yes,Manuscript relevance: low; review before citing.
+exp12,summary,experiments/experiment12_capacity_generalization/analysis/exp12_validation/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp12,code,experiments/experiment12_capacity_generalization/experiment12.py,Experiment implementation,yes,Manuscript relevance: low; review before citing.
+exp12,report_or_design_doc,experiments/experiment12_capacity_generalization/HANDOFF.md,Supporting artifact,yes,Manuscript relevance: medium; review before citing.
+exp12,readme,experiments/experiment12_capacity_generalization/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp12,run_or_analysis_script,experiments/experiment12_capacity_generalization/start_exp12.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp13,summary,experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp13,summary,experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp13,summary,experiments/experiment13_breaking_point/analysis/continual_retention_pressure_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp13,summary,experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp13,report_or_design_doc,experiments/experiment13_breaking_point/analysis/exp13_report.md,Generated report,yes,Manuscript relevance: high; review before citing.
+exp13,summary,experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp13,metrics,experiments/experiment13_breaking_point/analysis/metrics.csv,Primary metrics,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_budget_breaking_curve_full_vs_consolidation.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_capacity_accuracy_route_len_1.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_capacity_accuracy_route_len_12.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_capacity_accuracy_route_len_4.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_capacity_accuracy_route_len_8.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_capacity_wrong_world_activation_budget_1.png,Capacity or budget plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_top1_world.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_dropout_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_dropout_top1_world.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_dropout_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_uniform_bleed_composition.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_uniform_bleed_top1_world.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_context_uniform_bleed_world_margin.png,Margin plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_continuous_frontend_composition_vs_noise.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_continuous_frontend_decode_vs_noise.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_holdout_compositions_from_seen_primitives.png,Composition plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_holdout_one_step_unseen_primitives.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_holdout_routes_requiring_unseen_primitives.png,Plot image,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_full_context_separated_memory_budget_0.375.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_full_context_separated_memory_budget_0.5.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_full_context_separated_memory_budget_0.75.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_full_context_separated_memory_budget_1.0.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_consolidation_budget_0.375.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_consolidation_budget_0.5.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_consolidation_budget_0.75.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_consolidation_budget_1.0.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_world_context_budget_0.375.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_world_context_budget_0.5.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_world_context_budget_0.75.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_no_world_context_budget_1.0.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_strong_consolidation_budget_0.375.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_strong_consolidation_budget_0.5.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_strong_consolidation_budget_0.75.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,plot,experiments/experiment13_breaking_point/analysis/plots/exp13_retention_heatmap_exp13_strong_consolidation_budget_1.0.png,Heatmap plot,yes,Manuscript relevance: high; review before citing.
+exp13,run_log_or_json,experiments/experiment13_breaking_point/analysis/progress.jsonl,Progress log,yes,Manuscript relevance: low; review before citing.
+exp13,summary,experiments/experiment13_breaking_point/analysis/runs.csv,Run manifest,yes,Manuscript relevance: high; review before citing.
+exp13,summary,experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv,Summary table,yes,Manuscript relevance: high; review before citing.
+exp13,validation,experiments/experiment13_breaking_point/analysis/validation_report.md,Validation report,yes,Manuscript relevance: high; review before citing.
+exp13,run_log_or_json,experiments/experiment13_breaking_point/analysis/validation_results.json,Validation result data,yes,Manuscript relevance: low; review before citing.
+exp13,readme,experiments/experiment13_breaking_point/README.md,Experiment overview and run notes,yes,Manuscript relevance: medium; review before citing.
+exp13,run_or_analysis_script,experiments/experiment13_breaking_point/run_experiment13.py,Experiment runner,yes,Manuscript relevance: low; review before citing.
+exp13,run_or_analysis_script,experiments/experiment13_breaking_point/start_exp13.ps1,Launch script,yes,Manuscript relevance: low; review before citing.
+exp13,code,experiments/experiment13_breaking_point/validate_exp13.py,Supporting artifact,yes,Manuscript relevance: low; review before citing.

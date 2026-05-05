@@ -14,7 +14,7 @@ Recommended resolution: Re-export the Exp1-Exp4 digest or keep Exp1-Exp4 as hist
 
 Issue: Exp6 thread says the local README still contains stale "Pending first Experiment 6 run" wording while completed Exp6 report artifacts exist.
 Thread source: `docs/threads/experiment6_export.md`.
-Local artifact status: Completed local artifacts exist at `experiment6_route_audit_successor/analysis/exp6/exp6_report.md` and `experiment6_route_audit_successor/analysis/exp6/exp6_comparison.csv`.
+Local artifact status: Completed local artifacts exist at `experiments/experiment6_route_audit_successor/analysis/exp6/exp6_report.md` and `experiments/experiment6_route_audit_successor/analysis/exp6/exp6_comparison.csv`.
 Risk: Repository docs may contradict generated results.
 Recommended resolution: Update the Exp6 experiment README in a separate docs cleanup without changing run artifacts.
 
@@ -30,7 +30,7 @@ Recommended resolution: Rename the current condition conservatively and rerun a 
 
 Issue: Exp13 holdout route-table metrics appear to mix all transitions rather than separating seen and unseen primitive subsets.
 Thread source: `docs/threads/experiment12to13_export.md`.
-Local artifact status: `experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv` exists, but split route-table metrics are not present.
+Local artifact status: `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv` exists, but split route-table metrics are not present.
 Risk: The manuscript could overstate generalization or hide unseen-transition failure.
 Recommended resolution: Add `route_table_accuracy_all`, `route_table_accuracy_seen`, `route_table_accuracy_unseen`, `composition_accuracy_seen_routes`, and `composition_accuracy_unseen_required_routes` in Exp13.1.
 
@@ -38,7 +38,7 @@ Recommended resolution: Add `route_table_accuracy_all`, `route_table_accuracy_se
 
 Issue: Exp12 context-bleed/dropout curves were discussed as too flat or inconclusive, while artifact filenames could tempt a robustness claim.
 Thread source: `docs/threads/experiment12to13_export.md`.
-Local artifact status: `experiment12_capacity_generalization/analysis/exp12/context_bleed_summary.csv`, `context_dropout_summary.csv`, and plots exist.
+Local artifact status: `experiments/experiment12_capacity_generalization/analysis/exp12/context_bleed_summary.csv`, `context_dropout_summary.csv`, and plots exist.
 Risk: Overclaiming robustness from a perturbation that may not affect the decision path.
 Recommended resolution: Treat Exp12 context-noise artifacts as diagnostics only; use Exp13/Exp13.1 for context-corruption claims.
 Resolution status: resolved in active claim map. C10 now uses Exp13 adversarial context corruption as failure evidence; Exp11/Exp12 are retained only as supplementary diagnostics in the figure plan and caveats.
@@ -47,7 +47,7 @@ Resolution status: resolved in active claim map. C10 now uses Exp13 adversarial 
 
 Issue: Exp13 consolidation interpretation is promising in thread heatmap discussion, but the local validation report warns the finite-pressure consolidation delta is small.
 Thread source: `docs/threads/experiment12to13_export.md`.
-Local artifact status: `experiment13_breaking_point/analysis/validation_report.md` reports `no_consolidation=0.7661`, `strong=0.7676`, `delta=0.0016`; retention heatmaps exist.
+Local artifact status: `experiments/experiment13_breaking_point/analysis/validation_report.md` reports `no_consolidation=0.7661`, `strong=0.7676`, `delta=0.0016`; retention heatmaps exist.
 Risk: Manuscript could overstate consolidation as behaviorally necessary.
 Recommended resolution: Frame consolidation as preliminary stability-plasticity bias and run dose-response in Exp13.1.
 
@@ -72,7 +72,7 @@ Recommended resolution: Cite local CSV/report/plot paths from `docs/repo_audit/A
 
 Issue: Exp11 status differs by thread chronology: `experiment5to10_export.md` says Exp11 was implemented but not fully locally analyzed, while `experiment11_export` analyzes completed Exp11 results.
 Thread source: `docs/threads/experiment5to10_export.md`; `docs/threads/experiment11_export`.
-Local artifact status: Completed Exp11 artifacts exist under `experiment11_context_memory/analysis/exp11/`.
+Local artifact status: Completed Exp11 artifacts exist under `experiments/experiment11_context_memory/analysis/exp11/`.
 Risk: A summary could mistakenly treat Exp11 as both pending and completed.
 Recommended resolution: Interpret the earlier thread as historical design state; use `docs/threads/experiment11_export` for Exp11 result claims.
 
@@ -80,7 +80,7 @@ Recommended resolution: Interpret the earlier thread as historical design state;
 
 Issue: Local-vs-global capacity damage in Exp13 is compelling but lacks a dedicated formal comparison artifact.
 Thread source: `docs/threads/experiment12to13_export.md`.
-Local artifact status: `experiment13_breaking_point/analysis/capacity_pressure_summary.csv`, `experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`, and `docs/experiments/exp13_local_vs_global_budget_comparison.md` exist.
+Local artifact status: `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`, `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`, and `docs/experiments/exp13_local_vs_global_budget_comparison.md` exist.
 Risk: The local-budget claim could still be too strong without a formal paired seed-level comparison and confidence intervals.
 Recommended resolution: Use the docs-only comparison for transparency, keep C7 preliminary, and generate a formal paired comparison in Exp13.1.
 Resolution status: partially resolved. The aggregate comparison artifact was added, but paired seed-level analysis remains deferred.

@@ -4,8 +4,8 @@ Purpose: Make the local-vs-global budget comparison explicit using existing Exp1
 
 ## Method
 
-- Source path, global budget: `experiment13_breaking_point/analysis/capacity_pressure_summary.csv`
-- Source path, local budget: `experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`
+- Source path, global budget: `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`
+- Source path, local budget: `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`
 - Rows selected: `run_name=exp13_full_context_separated_memory`, `world_count=32`, `route_length=12`
 - Join key: `budget_ratio` in the global CSV matched to `local_budget_ratio` in the local CSV.
 - Reported values: aggregate means already present in the source CSVs. `local_minus_global_composition` is computed as local composition mean minus global composition mean.
@@ -27,4 +27,4 @@ Evidence: At 32 worlds and route length 12, local and global budget conditions h
 
 Caveat: This is a docs-only comparison from aggregate summaries. It is not a paired seed-level hypothesis test and does not include confidence intervals. Formal paired comparison remains an Exp13.1 follow-up.
 
-Source path: `experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`
+Source path: `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv`

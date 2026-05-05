@@ -7,7 +7,7 @@ Experiment 7 showed that if a clean context-conditioned route field exists, recu
 ## Layout
 
 ```text
-plastic_graph_mnist_experiment8_self_organizing_route_acquisition/
+experiments/experiment8_self_organizing_route_acquisition/
   exp8/
     core.py
   run_exp8_suite.py

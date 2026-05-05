@@ -19,7 +19,7 @@
 
 This is a research prototype for a **persistent plastic graph network**: a sparse, stateful, reward-modulated learning substrate trained on MNIST. It is intentionally not a giant monolithic neural-network script. The core pieces are separated: - `config.py` - experiment configuration - `storage.py` - SQLite/SQLAlchemy persistence for runs, metrics, checkpoints - `data.py` - MNIST loading - `plastic_graph.py` - sparse adaptive graph substrate - `modulators.py` - reward/novelty/confidence plasticity gates - `trainer.py` - experiment loop - `run_mnist_experiment.py` - composition/root script Or use the included helper scripts: Results are persisted to `runs/plastic_graph_mnist.sqlite3` by defau
 
-Source path: `experiment1/README.md`
+Source path: `experiments/experiment1/README.md`
 
 ## Hypothesis
 
@@ -27,9 +27,9 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 
 ## Experimental design
 
-- Local source used for design: `experiment1/README.md`
+- Local source used for design: `experiments/experiment1/README.md`
 - Task/design clue: This is a research prototype for a **persistent plastic graph network**: a sparse, stateful, reward-modulated learning substrate trained on MNIST. It is intentionally not a giant monolithic neural-network script. The core pieces are separated: - `config.py` - experiment configuration - `storage.py` - SQLite/SQLAlchemy persistence for runs, metrics, checkpoints - `data.py` - MNIST loading - `plastic_graph.py` - sparse adaptive graph substrate - `modulators.py` - reward/novelty/confidence plasticity gates - `trainer.py` - experiment loop - `run_mnist_experiment.py` - composition/root script Or use the included helper scripts: Results are persisted to `runs/plastic_graph_mnist.sqlite3` by defau
-- Run scripts detected: `experiment1/run_mnist_experiment.py`, `experiment1/start.ps1`, `experiment1/start.sh`
+- Run scripts detected: `experiments/experiment1/run_mnist_experiment.py`, `experiments/experiment1/start.ps1`, `experiments/experiment1/start.sh`
 - Analysis CSVs detected: 0; plot files detected: 0; generated/design reports detected: 0.
 - TODO: import thread digest for pre-run hypothesis, design rationale, and intended interpretation.
 
@@ -56,7 +56,7 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 Claim: TODO: no result claim is made for Exp1 in this pass.
 Evidence: README and run database are present, but no generated metrics/report files were detected in the local artifact inventory.
 Caveat: A SQLite run artifact may contain results, but no report/CSV has been consolidated here.
-Source path: `experiment1/README.md`; `experiment1/runs/plastic_graph_mnist.sqlite3`
+Source path: `experiments/experiment1/README.md`; `experiments/experiment1/runs/plastic_graph_mnist.sqlite3`
 
 ## What this experiment supports
 
@@ -76,10 +76,10 @@ Source path: `experiment1/README.md`; `experiment1/runs/plastic_graph_mnist.sqli
 
 | Path | Type | Description | Manuscript relevance | Notes |
 | --- | --- | --- | --- | --- |
-| `experiment1/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
-| `experiment1/run_mnist_experiment.py` | script | Experiment runner | low | Indexed locally; review before citing. |
-| `experiment1/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
-| `experiment1/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment1/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
+| `experiments/experiment1/run_mnist_experiment.py` | script | Experiment runner | low | Indexed locally; review before citing. |
+| `experiments/experiment1/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment1/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
 
 ## Candidate manuscript figures
 
@@ -102,7 +102,7 @@ Completed result / design / caveat / decision: No importable content.
 Evidence: The digest file is present but empty.
 Caveat: No Exp1 scientific claim was imported from this file.
 Source thread: `docs/threads/experiment1to4_export.md`
-Related local artifact path: `experiment1/README.md`
+Related local artifact path: `experiments/experiment1/README.md`
 Status: Historical only
 
 ### Analysis source: `docs/threads/experiment5to10_export.md`
@@ -111,7 +111,7 @@ Completed result / design / caveat / decision: Background only.
 Evidence: The thread lists Exp1/Exp2 as sparse plastic MNIST baseline experiments and does not analyze them.
 Caveat: Thread-derived claim; local artifact support pending for any detailed Exp1 result.
 Source thread: `docs/threads/experiment5to10_export.md`
-Related local artifact path: `experiment1/README.md`
+Related local artifact path: `experiments/experiment1/README.md`
 Status: Historical only
 
 ## Key results (thread-integrated)

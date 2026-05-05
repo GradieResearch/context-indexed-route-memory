@@ -1,21 +1,36 @@
 # Workspace Rules
 
-This workspace stores experiments as isolated, self-contained directories.
+This repository stores experiments as isolated, self-contained directories under `experiments/`.
 
 ## Directory Rules
 
-- Every experiment must live in its own top-level directory.
-- Do not implement a new experiment by extending a previous experiment directory in place.
-- When starting a new experiment, create a new directory and copy or reimplement everything that experiment needs inside it.
-- An experiment directory should contain its own code, runner scripts, analysis scripts, docs, `runs/`, and `analysis/` outputs as needed.
-- Every experiment directory must include its own `README.md`.
-- Each experiment `README.md` must include a dedicated section for tracking completed runs and their results.
+- All experiment directories must live under `experiments/`.
+- Each experiment must be self-contained inside its own directory.
+- Do not implement a new experiment by extending an older experiment directory in place.
+- New experiments should follow the repository's current naming style, for example `experiments/expNN_descriptive_name/` or `experiments/experimentNN_descriptive_name/`.
+- Successor protocols or corrected experimental designs should get a new experiment directory, for example `experiments/exp13_1_publication_hardening/`.
+- Do not rename or normalize existing experiment directories unless explicitly asked.
+- Each experiment directory should contain its own code, runner scripts, analysis scripts, docs, `runs/`, and `analysis/` outputs as needed.
+- Every experiment directory must include its own `README.md` with run instructions and a dedicated section for completed runs and results.
 - Treat previous experiment directories as historical records. Do not mix a newer experiment's code or outputs into an older experiment directory.
 
-## Naming
+## Run Logging And Immutability
 
-- Use clear top-level directory names such as `plastic_graph_mnist_expN` or `plastic_graph_mnist_experimentN_description`.
-- Keep experiment-specific docs in that directory, for example `EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md`.
+- Experimental runs are immutable records.
+- Do not append multiple completed runs into a shared SQLite database for an experiment.
+- Each completed run must write to its own separate SQLite database file.
+- Store per-run SQLite databases inside the owning experiment directory, typically under that experiment's `runs/` folder.
+- Reruns of the same protocol should stay under the same experiment directory, preferably under `analysis/runs/<run_id>/` or the experiment's existing run-output convention.
+- Treat a completed run database as read-only historical output. If a new run is needed, create a new database file rather than reusing or overwriting an old one.
+- After completing a run, update that experiment's `README.md` run-results section with the run name, database path, key configuration notes, and summarized results.
+
+## Documentation Paths
+
+- Every active docs source path must use the current `experiments/...` prefix.
+- Do not cite stale paths such as `experiment12_capacity_generalization/analysis/...` in active manuscript or evidence docs.
+- Every manuscript/evidence/source path cited in docs should either resolve to an existing local file or be explicitly marked as future, planned, missing, or local verification pending.
+- Use `python scripts/verify_doc_source_paths.py` to check active documentation source paths before repo-readiness handoff.
+- Historical thread exports may preserve old conversation text, but active evidence maps and indexes should use current paths.
 
 ## Shared Root Files
 
@@ -32,15 +47,6 @@ This workspace stores experiments as isolated, self-contained directories.
 - If an experiment cannot reasonably use the available GPUs, document the reason in that experiment's `README.md`.
 - If GPU support is partial, document what is accelerated, what still runs on CPU, and any known limitations in the experiment `README.md`.
 
-## Run Logging And Immutability
-
-- Experimental runs are immutable records.
-- Do not append multiple runs into a shared SQLite database for an experiment.
-- Each completed run must write to its own separate SQLite database file.
-- Store that per-run SQLite database inside the owning experiment directory, typically under that experiment's `runs/` folder.
-- Treat a completed run database as read-only historical output. If a new run is needed, create a new database file rather than reusing or overwriting an old one.
-- After completing a run, update that experiment's `README.md` run-results section with the run name, database path, key configuration notes, and summarized results.
-
 ## Migration Rule
 
-- If an experiment was started in the wrong directory, migrate it into its own top-level directory and remove the newer experiment's files from the older one.
+- If an experiment was started in the wrong directory, migrate it into its own directory under `experiments/` and remove the newer experiment's files from the older one.

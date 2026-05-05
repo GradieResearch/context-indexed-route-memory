@@ -9,7 +9,7 @@ See [`EXPERIMENT_7_ROUTE_FIELD_DIAGNOSTICS.md`](EXPERIMENT_7_ROUTE_FIELD_DIAGNOS
 ## Layout
 
 ```text
-plastic_graph_mnist_experiment7_route_field_diagnostics/
+experiments/experiment7_route_field_diagnostics/
   exp7/
     __init__.py
     core.py

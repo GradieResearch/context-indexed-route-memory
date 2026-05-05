@@ -48,9 +48,9 @@ Proposed fix: Keep Figure 7 as supplementary or preliminary unless a new applied
 ## Context Corruption Is Not Fully Realistic Yet
 
 Claim: Exp13 adversarial context corruption is useful failure evidence but not a graded stochastic robustness test.
-Evidence: `experiment13_breaking_point/analysis/context_corruption_summary.csv` shows the full model collapses under adversarial mixture once wrong-world evidence dominates.
+Evidence: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv` shows the full model collapses under adversarial mixture once wrong-world evidence dominates.
 Caveat: Exp11/Exp12 context-noise artifacts are diagnostics only; stochastic/graded corruption remains required.
-Source path: `experiment13_breaking_point/analysis/context_corruption_summary.csv`; `docs/threads/experiment12to13_export.md`
+Source path: `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `docs/threads/experiment12to13_export.md`
 Proposed fix: Add stochastic context corruption and report top-1 world selection, margins, and behavior across corruption probability.
 
 ## Consolidation Claim Is Fragile

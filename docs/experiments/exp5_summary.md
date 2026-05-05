@@ -19,7 +19,7 @@
 
 Experiment 4 showed that recurrence and structural plasticity become load-bearing when the task actually requires traversal. The next question is whether the graph can do something more interesting than learn a single reusable chain. Experiment 5 asks: > Can the same recurrent plastic graph choose among multiple transition systems based on context, then compose the chosen route over several steps? The task introduces several context-dependent transition rules over the same number concepts: The same start state can now map to different next states depending on context: The graph therefore has to do more than memorize one successor chain. It has to preserve context, keep competing routes apart
 
-Source path: `experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md`
+Source path: `experiments/experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md`
 
 ## Hypothesis
 
@@ -27,37 +27,37 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 
 ## Experimental design
 
-- Local source used for design: `experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md`
+- Local source used for design: `experiments/experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md`
 - Task/design clue: Experiment 4 showed that recurrence and structural plasticity become load-bearing when the task actually requires traversal. The next question is whether the graph can do something more interesting than learn a single reusable chain. Experiment 5 asks: > Can the same recurrent plastic graph choose among multiple transition systems based on context, then compose the chosen route over several steps? The task introduces several context-dependent transition rules over the same number concepts: The same start state can now map to different next states depending on context: The graph therefore has to do more than memorize one successor chain. It has to preserve context, keep competing routes apart
-- Run scripts detected: `experiment5_contextual_successor/run_exp5_contextual_successor.py`, `experiment5_contextual_successor/run_exp5_suite.py`, `experiment5_contextual_successor/start.ps1`, `experiment5_contextual_successor/start.sh`
+- Run scripts detected: `experiments/experiment5_contextual_successor/run_exp5_contextual_successor.py`, `experiments/experiment5_contextual_successor/run_exp5_suite.py`, `experiments/experiment5_contextual_successor/start.ps1`, `experiments/experiment5_contextual_successor/start.sh`
 - Analysis CSVs detected: 2; plot files detected: 14; generated/design reports detected: 3.
 - TODO: import thread digest for pre-run hypothesis, design rationale, and intended interpretation.
 
 ## Local report summary
 
-- `experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md`: Experiment 4 showed that recurrence and structural plasticity become load-bearing when the task actually requires traversal. The next question is whether the graph can do something more interesting than learn a single reusable chain. Experiment 5 asks: > Can the same recurrent plastic graph choose among multiple transition systems based on context, then compose the chosen route over several steps? The task introduces
-- `experiment5_contextual_successor/analysis/exp5_smoke/exp5_report.md`: This experiment tests whether the recurrent plastic graph can choose among multiple transition systems using context, rather than storing a single universal chain. - `best_composition_accuracy`: whether the graph can compose mode-conditioned transitions across multiple steps. - `composition/accuracy_mode_*`: whether some contexts are easier or more fragile than others. - `composition/accuracy_steps_*`: whether longer
-- `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_report.md`: This experiment tests whether the recurrent plastic graph can choose among multiple transition systems using context, rather than storing a single universal chain. - `best_composition_accuracy`: whether the graph can compose mode-conditioned transitions across multiple steps. - `composition/accuracy_mode_*`: whether some contexts are easier or more fragile than others. - `composition/accuracy_steps_*`: whether longer
+- `experiments/experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md`: Experiment 4 showed that recurrence and structural plasticity become load-bearing when the task actually requires traversal. The next question is whether the graph can do something more interesting than learn a single reusable chain. Experiment 5 asks: > Can the same recurrent plastic graph choose among multiple transition systems based on context, then compose the chosen route over several steps? The task introduces
+- `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_report.md`: This experiment tests whether the recurrent plastic graph can choose among multiple transition systems using context, rather than storing a single universal chain. - `best_composition_accuracy`: whether the graph can compose mode-conditioned transitions across multiple steps. - `composition/accuracy_mode_*`: whether some contexts are easier or more fragile than others. - `composition/accuracy_steps_*`: whether longer
+- `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_report.md`: This experiment tests whether the recurrent plastic graph can choose among multiple transition systems using context, rather than storing a single universal chain. - `best_composition_accuracy`: whether the graph can compose mode-conditioned transitions across multiple steps. - `composition/accuracy_mode_*`: whether some contexts are easier or more fragile than others. - `composition/accuracy_steps_*`: whether longer
 
 ## Variants / ablations
 
 | Variant | Intended mechanism tested | Expected behavior | Observed behavior | Source artifact |
 | --- | --- | --- | --- | --- |
-| exp5_full_contextual_traversal | Reference/full mechanism | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
-| exp5_no_homeostasis | Removes homeostatic regulation | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
-| exp5_no_reward_gate | Removes reward gating | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
-| exp5_no_inhibition | Removes inhibitory route suppression | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
-| exp5_no_context_routing | Removes context or world indexing | TODO: import intended expectation from thread digest | best comp=0.1176; best transition=0.1228 | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
-| exp5_no_structural_plasticity | Removes structural plasticity / route formation | TODO: import intended expectation from thread digest | best comp=0.0882; best transition=0.1579 | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
-| exp5_no_recurrence | Removes recurrent multi-step execution | TODO: import intended expectation from thread digest | best comp=0.0; best transition=0.0 | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
+| exp5_full_contextual_traversal | Reference/full mechanism | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
+| exp5_no_homeostasis | Removes homeostatic regulation | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
+| exp5_no_reward_gate | Removes reward gating | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
+| exp5_no_inhibition | Removes inhibitory route suppression | TODO: import intended expectation from thread digest | best comp=0.1471; best transition=0.1404 | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
+| exp5_no_context_routing | Removes context or world indexing | TODO: import intended expectation from thread digest | best comp=0.1176; best transition=0.1228 | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
+| exp5_no_structural_plasticity | Removes structural plasticity / route formation | TODO: import intended expectation from thread digest | best comp=0.0882; best transition=0.1579 | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
+| exp5_no_recurrence | Removes recurrent multi-step execution | TODO: import intended expectation from thread digest | best comp=0.0; best transition=0.0 | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` |
 
 ## Metrics
 
 | Metric | Meaning | Where computed | Source artifact | Caveats |
 | --- | --- | --- | --- | --- |
-| best_accuracy | Best recorded task accuracy in a run. | Generated analysis CSV/report | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
-| best_composition_accuracy | Best recorded multi-step route composition accuracy. | Generated analysis CSV/report | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
-| best_transition_accuracy | Best recorded one-step transition accuracy. | Generated analysis CSV/report | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
+| best_accuracy | Best recorded task accuracy in a run. | Generated analysis CSV/report | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
+| best_composition_accuracy | Best recorded multi-step route composition accuracy. | Generated analysis CSV/report | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
+| best_transition_accuracy | Best recorded one-step transition accuracy. | Generated analysis CSV/report | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
 
 ## Key results
 
@@ -66,7 +66,7 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 Claim: Exp5 local smoke artifacts do not show reliable contextual multi-step composition.
 Evidence: The suite smoke comparison has maximum best_composition_accuracy=0.1471 for `exp5_full_contextual_traversal`; the full contextual traversal row reports best_composition_accuracy=0.1471.
 Caveat: Exp6 README identifies a traversal-loop ambiguity in Exp5, so Exp5 should be treated as caveated/deprecated until thread review.
-Source path: `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv`; `experiment6_route_audit_successor/README.md`
+Source path: `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv`; `experiments/experiment6_route_audit_successor/README.md`
 
 ## What this experiment supports
 
@@ -86,44 +86,44 @@ Source path: `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_co
 
 | Path | Type | Description | Manuscript relevance | Notes |
 | --- | --- | --- | --- | --- |
-| `experiment5_contextual_successor/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/run_exp5_contextual_successor.py` | script | Experiment runner | low | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/run_exp5_suite.py` | script | Experiment runner | low | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md` | report | Supporting artifact | medium | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | summary_csv | Supporting artifact | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` | summary_csv | Supporting artifact | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_mode.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_path_length.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_adaptation_curve.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_best_composition_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_context_confusion.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_recurrent_drive.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_smoke/exp5_wrong_route_activation.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_mode.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_path_length.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_adaptation_curve.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/run_exp5_contextual_successor.py` | script | Experiment runner | low | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/run_exp5_suite.py` | script | Experiment runner | low | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/EXPERIMENT_5_CONTEXTUAL_SUCCESSOR.md` | report | Supporting artifact | medium | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_comparison.csv` | summary_csv | Supporting artifact | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv` | summary_csv | Supporting artifact | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_mode.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_path_length.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_adaptation_curve.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_best_composition_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_context_confusion.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_recurrent_drive.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_wrong_route_activation.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_mode.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_path_length.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_adaptation_curve.png` | plot | Plot image | high | Indexed locally; review before citing. |
 | `docs/repo_audit/ARTIFACT_INDEX.csv` | index | 14 plot files total for this experiment | high | Use full index for exhaustive plot list. |
 
 ## Candidate manuscript figures
 
 | Figure idea | Source image/data | Claim supported | Caveat |
 | --- | --- | --- | --- |
-| exp5 accuracy by mode | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_mode.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 accuracy by path length | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_path_length.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 adaptation curve | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_adaptation_curve.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 best composition accuracy | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_best_composition_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 context confusion | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_context_confusion.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 recurrent drive | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_recurrent_drive.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 wrong route activation | `experiment5_contextual_successor/analysis/exp5_smoke/exp5_wrong_route_activation.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 accuracy by mode | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_mode.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 accuracy by path length | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_path_length.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 adaptation curve | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_adaptation_curve.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 best composition accuracy | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_best_composition_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| exp5 context confusion | `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_context_confusion.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 accuracy by mode | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_mode.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 accuracy by path length | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_accuracy_by_path_length.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 adaptation curve | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_adaptation_curve.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 best composition accuracy | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_best_composition_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 context confusion | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_context_confusion.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 recurrent drive | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_recurrent_drive.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 wrong route activation | `experiments/experiment5_contextual_successor/analysis/exp5_smoke/exp5_wrong_route_activation.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 accuracy by mode | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_mode.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 accuracy by path length | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_accuracy_by_path_length.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 adaptation curve | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_adaptation_curve.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 best composition accuracy | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_best_composition_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| exp5 context confusion | `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_context_confusion.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
 | Additional plots (2) | `docs/repo_audit/ARTIFACT_INDEX.csv` | TODO | See full artifact index. |
 
 ## Follow-up actions
@@ -141,7 +141,7 @@ Completed result / design / caveat / decision: Completed result with caveat.
 Evidence: The thread describes Exp5 as a mechanistic partial success but not a capability success; full composition was low, around 0.147, while no-recurrence was 0 and no-structural-plasticity was around 0.088.
 Caveat: The thread notes small denominators and low absolute accuracy; context confusion looked strong but did not imply route traversal success.
 Source thread: `docs/threads/experiment5to10_export.md`
-Related local artifact path: `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv`; `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_report.md`
+Related local artifact path: `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv`; `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_report.md`
 Status: Historical only
 
 ### Analysis source: `docs/threads/experiment6_export.md`
@@ -150,7 +150,7 @@ Completed result / design / caveat / decision: Identified flaw.
 Evidence: The Exp6 thread says Exp5 reconstructed the symbolic concept-plus-context state after each recurrent step, weakening claims about raw recurrent route selection.
 Caveat: This does not invalidate Exp5 as motivation, but it prevents treating Exp5 as a solved contextual traversal result.
 Source thread: `docs/threads/experiment6_export.md`
-Related local artifact path: `experiment6_route_audit_successor/EXPERIMENT_6_ROUTE_AUDIT_SUCCESSOR.md`
+Related local artifact path: `experiments/experiment6_route_audit_successor/EXPERIMENT_6_ROUTE_AUDIT_SUCCESSOR.md`
 Status: Historical only
 
 ## Key results (thread-integrated)
@@ -161,7 +161,7 @@ Claim: Exp5 should be treated as a motivating failure/diagnostic precursor rathe
 Evidence: Local suite smoke shows `exp5_full_contextual_traversal` best composition accuracy 0.1471; the thread independently identifies low composition and misleadingly strong context-confusion behavior.
 Caveat: Traversal-loop reconstruction makes raw recurrent route-selection claims unsafe.
 Source thread: `docs/threads/experiment5to10_export.md`; `docs/threads/experiment6_export.md`
-Source artifact: `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv`; `experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_context_confusion.png`
+Source artifact: `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_comparison.csv`; `experiments/experiment5_contextual_successor/analysis/exp5_suite_smoke/exp5_context_confusion.png`
 Manuscript status: Historical only
 
 ## What this experiment supports (thread-integrated)

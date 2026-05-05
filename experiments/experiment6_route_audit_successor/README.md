@@ -23,7 +23,7 @@ See [EXPERIMENT_6_ROUTE_AUDIT_SUCCESSOR.md](EXPERIMENT_6_ROUTE_AUDIT_SUCCESSOR.m
 ## Layout
 
 ```text
-plastic_graph_mnist_experiment6_route_audit_successor/
+experiments/experiment6_route_audit_successor/
   run_exp6_route_audit_successor.py
   run_exp6_suite.py
   analyze_exp6_suite.py

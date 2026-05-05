@@ -1,2 +1,9 @@
+# Large/generated databases
 *.sqlite3 filter=lfs diff=lfs merge=lfs -text
-*.csv filter=lfs diff=lfs merge=lfs -text
+
+# Large generated experiment outputs may remain in LFS.
+experiments/**/runs/**/*.csv filter=lfs diff=lfs merge=lfs -text
+experiments/**/analysis/**/*.csv filter=lfs diff=lfs merge=lfs -text
+
+# Documentation and evidence-index CSVs should stay GitHub-readable.
+docs/**/*.csv text eol=lf

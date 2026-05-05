@@ -392,14 +392,14 @@ The current experiment packages are intentionally isolated so that each experime
 .
 ├── EXPERIMENT_TRACKER.md
 ├── Experiment.md
-├── plastic_graph_mnist_exp1/
-├── plastic_graph_mnist_exp2/
-├── plastic_graph_mnist_exp3/
-├── plastic_graph_mnist_experiment4_successor/
-├── plastic_graph_mnist_experiment5_contextual_successor/
-├── plastic_graph_mnist_experiment7_route_field_diagnostics/
-├── plastic_graph_mnist_experiment8_self_organizing_route_acquisition/
-└── plastic_graph_mnist_experiment9_robust_adaptive_route_plasticity/
+├── experiments/experiment1/
+├── experiments/experiment2/
+├── experiments/experiment3/
+├── experiments/experiment4_successor/
+├── experiments/experiment5_contextual_successor/
+├── experiments/experiment7_route_field_diagnostics/
+├── experiments/experiment8_self_organizing_route_acquisition/
+└── experiments/experiment9_robust_adaptive_route_plasticity/
 ```
 
 Experiment 6 remains reserved/deferred for multimodal grounding. The numbering intentionally reflects the actual project conversation and generated packages rather than a perfectly sequential theoretical plan.
@@ -417,7 +417,7 @@ $Python = Join-Path $ScriptDir "..\.venv\Scripts\python.exe"
 For Experiment 9, the expected local flow is:
 
 ```powershell
-cd .\plastic_graph_mnist_experiment9_robust_adaptive_route_plasticity
+cd .\experiments\experiment9_robust_adaptive_route_plasticity
 .\start.ps1
 ```
 

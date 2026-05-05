@@ -19,7 +19,7 @@
 
 This is a research prototype for a **persistent plastic graph network**: a sparse, stateful, reward-modulated learning substrate trained on MNIST. It is intentionally not a giant monolithic neural-network script. The core pieces are separated: - `config.py` - experiment configuration - `storage.py` - SQLite/SQLAlchemy persistence for runs, metrics, checkpoints - `data.py` - MNIST loading - `plastic_graph.py` - sparse adaptive graph substrate - `modulators.py` - reward/novelty/confidence plasticity gates - `trainer.py` - experiment loop - `run_mnist_experiment.py` - composition/root script Or use the included helper scripts: Results are persisted to `runs/plastic_graph_mnist.sqlite3` by defau
 
-Source path: `experiment2/README.md`
+Source path: `experiments/experiment2/README.md`
 
 ## Hypothesis
 
@@ -27,15 +27,15 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 
 ## Experimental design
 
-- Local source used for design: `experiment2/README.md`
+- Local source used for design: `experiments/experiment2/README.md`
 - Task/design clue: This is a research prototype for a **persistent plastic graph network**: a sparse, stateful, reward-modulated learning substrate trained on MNIST. It is intentionally not a giant monolithic neural-network script. The core pieces are separated: - `config.py` - experiment configuration - `storage.py` - SQLite/SQLAlchemy persistence for runs, metrics, checkpoints - `data.py` - MNIST loading - `plastic_graph.py` - sparse adaptive graph substrate - `modulators.py` - reward/novelty/confidence plasticity gates - `trainer.py` - experiment loop - `run_mnist_experiment.py` - composition/root script Or use the included helper scripts: Results are persisted to `runs/plastic_graph_mnist.sqlite3` by defau
-- Run scripts detected: `experiment2/run_mnist_experiment.py`, `experiment2/start.ps1`, `experiment2/start.sh`
+- Run scripts detected: `experiments/experiment2/run_mnist_experiment.py`, `experiments/experiment2/start.ps1`, `experiments/experiment2/start.sh`
 - Analysis CSVs detected: 1; plot files detected: 4; generated/design reports detected: 1.
 - TODO: import thread digest for pre-run hypothesis, design rationale, and intended interpretation.
 
 ## Local report summary
 
-- `experiment2/analysis/analysis_report.md`: - Name: `plastic_graph_mnist` - Status: `completed` - Started: `2026-05-01 12:54:33.292616` - Completed: `2026-05-01 12:55:21.868298` - Recorded best accuracy: `0.9225` - Best test accuracy: **0.9225** at step `27500` / epoch `3` - Latest test/accuracy: `0.9190` at step `30000` - Latest test/average_confidence: `0.8309` at step `30000` - Latest train/average_confidence: `0.8979` at step `30000` - Latest train/window_
+- `experiments/experiment2/analysis/analysis_report.md`: - Name: `plastic_graph_mnist` - Status: `completed` - Started: `2026-05-01 12:54:33.292616` - Completed: `2026-05-01 12:55:21.868298` - Recorded best accuracy: `0.9225` - Best test accuracy: **0.9225** at step `27500` / epoch `3` - Latest test/accuracy: `0.9190` at step `30000` - Latest test/average_confidence: `0.8309` at step `30000` - Latest train/average_confidence: `0.8979` at step `30000` - Latest train/window_
 
 ## Variants / ablations
 
@@ -56,7 +56,7 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 Claim: Exp2 has a completed MNIST prototype run with best reported test accuracy 0.9225.
 Evidence: The generated analysis report states best test accuracy 0.9225 at step 27500 and latest test accuracy 0.9190 at step 30000.
 Caveat: Single prototype run; MNIST does not test route-memory composition.
-Source path: `experiment2/analysis/analysis_report.md`
+Source path: `experiments/experiment2/analysis/analysis_report.md`
 
 ## What this experiment supports
 
@@ -76,25 +76,25 @@ Source path: `experiment2/analysis/analysis_report.md`
 
 | Path | Type | Description | Manuscript relevance | Notes |
 | --- | --- | --- | --- | --- |
-| `experiment2/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
-| `experiment2/run_mnist_experiment.py` | script | Experiment runner | low | Indexed locally; review before citing. |
-| `experiment2/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
-| `experiment2/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
-| `experiment2/analysis/analysis_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
-| `experiment2/analysis/metrics.csv` | metrics_csv | Primary metrics table | high | Indexed locally; review before citing. |
-| `experiment2/analysis/test_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment2/analysis/test_average_confidence.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment2/analysis/train_average_confidence.png` | plot | Plot image | high | Indexed locally; review before citing. |
-| `experiment2/analysis/train_window_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment2/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
+| `experiments/experiment2/run_mnist_experiment.py` | script | Experiment runner | low | Indexed locally; review before citing. |
+| `experiments/experiment2/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment2/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment2/analysis/analysis_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
+| `experiments/experiment2/analysis/metrics.csv` | metrics_csv | Primary metrics table | high | Indexed locally; review before citing. |
+| `experiments/experiment2/analysis/test_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment2/analysis/test_average_confidence.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment2/analysis/train_average_confidence.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment2/analysis/train_window_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
 
 ## Candidate manuscript figures
 
 | Figure idea | Source image/data | Claim supported | Caveat |
 | --- | --- | --- | --- |
-| test accuracy | `experiment2/analysis/test_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| test average confidence | `experiment2/analysis/test_average_confidence.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| train average confidence | `experiment2/analysis/train_average_confidence.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
-| train window accuracy | `experiment2/analysis/train_window_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| test accuracy | `experiments/experiment2/analysis/test_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| test average confidence | `experiments/experiment2/analysis/test_average_confidence.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| train average confidence | `experiments/experiment2/analysis/train_average_confidence.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| train window accuracy | `experiments/experiment2/analysis/train_window_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
 
 ## Follow-up actions
 
@@ -111,7 +111,7 @@ Completed result / design / caveat / decision: No importable content.
 Evidence: The digest file is present but empty.
 Caveat: No Exp2 scientific claim was imported from this file.
 Source thread: `docs/threads/experiment1to4_export.md`
-Related local artifact path: `experiment2/analysis/analysis_report.md`
+Related local artifact path: `experiments/experiment2/analysis/analysis_report.md`
 Status: Historical only
 
 ### Analysis source: `docs/threads/experiment5to10_export.md`
@@ -120,7 +120,7 @@ Completed result / design / caveat / decision: Background only.
 Evidence: The thread lists Exp1/Exp2 as sparse plastic MNIST baseline experiments and does not analyze them.
 Caveat: Thread-derived claim; local artifact support pending for detailed Exp2 interpretation.
 Source thread: `docs/threads/experiment5to10_export.md`
-Related local artifact path: `experiment2/analysis/analysis_report.md`
+Related local artifact path: `experiments/experiment2/analysis/analysis_report.md`
 Status: Historical only
 
 ## Key results (thread-integrated)

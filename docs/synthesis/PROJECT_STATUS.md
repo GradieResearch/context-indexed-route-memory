@@ -29,12 +29,12 @@ Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/threads/experiment1
 Claim: Route-table storage and multi-step execution are separable.
 Evidence: No-recurrence variants preserve route-table accuracy while composition fails in Exp11-Exp13.
 Caveat: This is a route-memory benchmark claim, not a broad recurrence novelty claim.
-Source path: `experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `experiment13_breaking_point/analysis/capacity_pressure_summary.csv`.
+Source path: `experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`.
 
 Claim: Exp13 turns the story from ceiling performance into boundary mapping.
 Evidence: Global/local budget pressure, adversarial context corruption, true primitive holdout, and continuous-noise bridge artifacts are present locally.
 Caveat: Exp13 needs metric cleanup, true no-context-binding, stochastic context corruption, and consolidation dose-response.
-Source path: `experiment13_breaking_point/analysis/validation_report.md`; `docs/repo_audit/THREAD_IMPORT_CONFLICTS.md`.
+Source path: `experiments/experiment13_breaking_point/analysis/validation_report.md`; `docs/repo_audit/THREAD_IMPORT_CONFLICTS.md`.
 
 ## Current Manuscript Readiness
 

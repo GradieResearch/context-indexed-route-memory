@@ -10,9 +10,9 @@ The main changes were provenance fixes, claim downgrades, and explicit pending l
 
 ### Finding 1
 
-Original issue: C1 cited `experiment13_breaking_point/analysis/validation_report.md` for no-structural-plasticity, but that validation report does not mention the variant.
+Original issue: C1 cited `experiments/experiment13_breaking_point/analysis/validation_report.md` for no-structural-plasticity, but that validation report does not mention the variant.
 
-Action taken: Replaced the Exp13 validation citation with `experiment13_breaking_point/analysis/capacity_pressure_summary.csv`, which contains `exp13_no_structural_plasticity` rows. Added a caveat that the validation report should not be cited for this subclaim.
+Action taken: Replaced the Exp13 validation citation with `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`, which contains `exp13_no_structural_plasticity` rows. Added a caveat that the validation report should not be cited for this subclaim.
 
 Files changed: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/experiments/exp13_summary.md`; `docs/experiments/EXPERIMENT_CLAIMS_MATRIX.csv`
 
@@ -108,7 +108,7 @@ Status: resolved
 
 Original issue: C4 cited an Exp12 plot for a numeric route-table/composition statement without citing the machine-readable CSV.
 
-Action taken: Added `experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv` to C4 evidence and updated required follow-up to include external recurrent baselines, effect sizes/confidence intervals, and a publication-grade figure panel.
+Action taken: Added `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv` to C4 evidence and updated required follow-up to include external recurrent baselines, effect sizes/confidence intervals, and a publication-grade figure panel.
 
 Files changed: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/RESULTS_STORYBOARD.md`; `docs/experiments/EXPERIMENT_CLAIMS_MATRIX.csv`
 
@@ -131,11 +131,11 @@ Status: resolved
 
 | Claim ID | Removed path | Added path | Reason |
 |---|---|---|---|
-| C1 | `experiment13_breaking_point/analysis/validation_report.md` | `experiment13_breaking_point/analysis/capacity_pressure_summary.csv` | Validation report does not mention no-structural-plasticity; capacity CSV does. |
-| C4 | none | `experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv` | Machine-readable source for route-table 1.0 and composition about 0.05-0.06. |
-| C6 | `experiment13_breaking_point/analysis/validation_report.md` | none | CSV/plot are enough for observed curve; validation report is not needed for fitted-law framing. |
+| C1 | `experiments/experiment13_breaking_point/analysis/validation_report.md` | `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv` | Validation report does not mention no-structural-plasticity; capacity CSV does. |
+| C4 | none | `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv` | Machine-readable source for route-table 1.0 and composition about 0.05-0.06. |
+| C6 | `experiments/experiment13_breaking_point/analysis/validation_report.md` | none | CSV/plot are enough for observed curve; validation report is not needed for fitted-law framing. |
 | C7 | none | `docs/experiments/exp13_local_vs_global_budget_comparison.md` | Adds explicit aggregate local-vs-global comparison from existing CSVs. |
-| C10 | `experiment11_context_memory/analysis/exp11/exp11_context_bleed_world_margin.png`; `experiment12_capacity_generalization/analysis/exp12/context_bleed_summary.csv` | `experiment13_breaking_point/analysis/context_corruption_summary.csv`; `experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_world_margin.png` | Exp11/Exp12 are diagnostics; Exp13 adversarial corruption is the failure evidence. |
+| C10 | `experiments/experiment11_context_memory/analysis/exp11/exp11_context_bleed_world_margin.png`; `experiments/experiment12_capacity_generalization/analysis/exp12/context_bleed_summary.csv` | `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `experiments/experiment13_breaking_point/analysis/plots/exp13_context_adversarial_mixture_world_margin.png` | Exp11/Exp12 are diagnostics; Exp13 adversarial corruption is the failure evidence. |
 | C12 | `docs/manuscript/BASELINE_REQUIREMENTS.md`; thread-referenced `Pasted text.txt` as apparent artifact support | `local verification pending` | Novelty artifact is missing; baseline requirements are planning only. |
 
 ## Deferred Items

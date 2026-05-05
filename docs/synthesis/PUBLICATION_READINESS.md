@@ -10,15 +10,15 @@ Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/threads/experiment1
 
 ## Strongest Evidence
 
-- Exp11 A/B context-separated retention and ablations. Source path: `experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `docs/threads/experiment11_export`.
-- Exp12 clean scaling to 32 worlds with no-recurrence/no-world-context/no-structural-plasticity contrasts. Source path: `experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `docs/threads/experiment12to13_export.md`.
-- Exp13 finite-capacity breaking and no-recurrence route-table/composition dissociation. Source path: `experiment13_breaking_point/analysis/validation_report.md`; `experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `docs/threads/experiment12to13_export.md`.
+- Exp11 A/B context-separated retention and ablations. Source path: `experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `docs/threads/experiment11_export`.
+- Exp12 clean scaling to 32 worlds with no-recurrence/no-world-context/no-structural-plasticity contrasts. Source path: `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`; `docs/threads/experiment12to13_export.md`.
+- Exp13 finite-capacity breaking and no-recurrence route-table/composition dissociation. Source path: `experiments/experiment13_breaking_point/analysis/validation_report.md`; `experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv`; `docs/threads/experiment12to13_export.md`.
 
 ## Weakest Evidence
 
-- Consolidation as a stability-plasticity bias is preliminary because Exp13 validation shows only a small finite-pressure delta. Source path: `experiment13_breaking_point/analysis/validation_report.md`.
-- Primitive holdout needs metric cleanup. Source path: `experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv`.
-- Continuous/noisy input is only a front-end bridge, not end-to-end perception. Source path: `experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv`.
+- Consolidation as a stability-plasticity bias is preliminary because Exp13 validation shows only a small finite-pressure delta. Source path: `experiments/experiment13_breaking_point/analysis/validation_report.md`.
+- Primitive holdout needs metric cleanup. Source path: `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv`.
+- Continuous/noisy input is only a front-end bridge, not end-to-end perception. Source path: `experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv`.
 - External baseline evidence is absent. Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`.
 
 ## Required Before Submission

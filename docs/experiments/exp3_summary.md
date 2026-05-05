@@ -19,7 +19,7 @@
 
 This project is a small experimental framework for testing a biologically inspired learning-machine idea: > Instead of treating a model as a dense static sea of matrices, treat it as a sparse persistent graph of adaptive units whose active pathways can be reinforced, weakened, and inspected over time. This is **not** intended to beat CNNs on MNIST. MNIST is used because it gives us a clean, cheap proving ground for the learning dynamics. Can a small sparse graph substrate learn useful behavior through online reward-modulated plasticity? More specifically, can it: 1. Activate only a small subset of units per example. 2. Learn from immediate `yes/no` correction. 3. Strengthen useful active pat
 
-Source path: `experiment3/README.md`
+Source path: `experiments/experiment3/README.md`
 
 ## Hypothesis
 
@@ -27,31 +27,31 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 
 ## Experimental design
 
-- Local source used for design: `experiment3/README.md`
+- Local source used for design: `experiments/experiment3/README.md`
 - Task/design clue: This project is a small experimental framework for testing a biologically inspired learning-machine idea: > Instead of treating a model as a dense static sea of matrices, treat it as a sparse persistent graph of adaptive units whose active pathways can be reinforced, weakened, and inspected over time. This is **not** intended to beat CNNs on MNIST. MNIST is used because it gives us a clean, cheap proving ground for the learning dynamics. Can a small sparse graph substrate learn useful behavior through online reward-modulated plasticity? More specifically, can it: 1. Activate only a small subset of units per example. 2. Learn from immediate `yes/no` correction. 3. Strengthen useful active pat
-- Run scripts detected: `experiment3/run_experiment_suite.py`, `experiment3/run_mnist_experiment.py`, `experiment3/start.ps1`, `experiment3/start.sh`
+- Run scripts detected: `experiments/experiment3/run_experiment_suite.py`, `experiments/experiment3/run_mnist_experiment.py`, `experiments/experiment3/start.ps1`, `experiments/experiment3/start.sh`
 - Analysis CSVs detected: 1; plot files detected: 1; generated/design reports detected: 1.
 - TODO: import thread digest for pre-run hypothesis, design rationale, and intended interpretation.
 
 ## Local report summary
 
-- `experiment3/analysis/suite/suite_report.md`: This report compares controlled variants of the sparse plastic graph model. The goal is not merely to maximize MNIST accuracy; the goal is to identify which architectural mechanisms actually contribute to stable, generalizable online learning. - **Best accuracy**: best recorded test accuracy. This is the headline performance metric. - **Generalization gap**: latest train window accuracy minus latest test accuracy. A 
+- `experiments/experiment3/analysis/suite/suite_report.md`: This report compares controlled variants of the sparse plastic graph model. The goal is not merely to maximize MNIST accuracy; the goal is to identify which architectural mechanisms actually contribute to stable, generalizable online learning. - **Best accuracy**: best recorded test accuracy. This is the headline performance metric. - **Generalization gap**: latest train window accuracy minus latest test accuracy. A
 
 ## Variants / ablations
 
 | Variant | Intended mechanism tested | Expected behavior | Observed behavior | Source artifact |
 | --- | --- | --- | --- | --- |
-| full_recurrent_plastic_graph | Reference/full mechanism | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiment3/analysis/suite/suite_comparison.csv` |
-| no_recurrence_sparse_plastic_readout | Removes recurrent multi-step execution | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiment3/analysis/suite/suite_comparison.csv` |
-| frozen_input_projection | TODO: infer mechanism from design doc/thread digest | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiment3/analysis/suite/suite_comparison.csv` |
-| no_homeostasis | Removes homeostatic regulation | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiment3/analysis/suite/suite_comparison.csv` |
-| no_reward_modulation | Removes reward gating | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiment3/analysis/suite/suite_comparison.csv` |
+| full_recurrent_plastic_graph | Reference/full mechanism | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiments/experiment3/analysis/suite/suite_comparison.csv` |
+| no_recurrence_sparse_plastic_readout | Removes recurrent multi-step execution | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiments/experiment3/analysis/suite/suite_comparison.csv` |
+| frozen_input_projection | TODO: infer mechanism from design doc/thread digest | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiments/experiment3/analysis/suite/suite_comparison.csv` |
+| no_homeostasis | Removes homeostatic regulation | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiments/experiment3/analysis/suite/suite_comparison.csv` |
+| no_reward_modulation | Removes reward gating | TODO: import intended expectation from thread digest | TODO: inspect metric rows | `experiments/experiment3/analysis/suite/suite_comparison.csv` |
 
 ## Metrics
 
 | Metric | Meaning | Where computed | Source artifact | Caveats |
 | --- | --- | --- | --- | --- |
-| best_accuracy | Best recorded task accuracy in a run. | Generated analysis CSV/report | `experiment3/analysis/suite/suite_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
+| best_accuracy | Best recorded task accuracy in a run. | Generated analysis CSV/report | `experiments/experiment3/analysis/suite/suite_comparison.csv` | Check aggregation, seeds, profile, and split before manuscript use. |
 
 ## Key results
 
@@ -60,7 +60,7 @@ TODO: Import the pre-run hypothesis from the relevant ChatGPT thread digest or l
 Claim: The Exp3 suite report shows no-recurrence and no-reward-modulation MNIST variants matching or exceeding the full recurrent variant on best test accuracy.
 Evidence: The report table lists best test accuracy 0.9285 for `no_reward_modulation`, 0.9255 for `no_recurrence_sparse_plastic_readout`, and 0.9230 for `full_recurrent_plastic_graph`.
 Caveat: This is a classification benchmark, not a route-memory benchmark; duplicate rows appear in the generated report table.
-Source path: `experiment3/analysis/suite/suite_report.md`; `experiment3/analysis/suite/suite_comparison.csv`
+Source path: `experiments/experiment3/analysis/suite/suite_report.md`; `experiments/experiment3/analysis/suite/suite_comparison.csv`
 
 ## What this experiment supports
 
@@ -80,20 +80,20 @@ Source path: `experiment3/analysis/suite/suite_report.md`; `experiment3/analysis
 
 | Path | Type | Description | Manuscript relevance | Notes |
 | --- | --- | --- | --- | --- |
-| `experiment3/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
-| `experiment3/run_experiment_suite.py` | script | Experiment runner | low | Indexed locally; review before citing. |
-| `experiment3/run_mnist_experiment.py` | script | Experiment runner | low | Indexed locally; review before citing. |
-| `experiment3/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
-| `experiment3/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
-| `experiment3/analysis/suite/suite_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
-| `experiment3/analysis/suite/suite_comparison.csv` | summary_csv | Supporting artifact | high | Indexed locally; review before citing. |
-| `experiment3/analysis/suite/suite_best_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
+| `experiments/experiment3/README.md` | readme | Experiment README | medium | Indexed locally; review before citing. |
+| `experiments/experiment3/run_experiment_suite.py` | script | Experiment runner | low | Indexed locally; review before citing. |
+| `experiments/experiment3/run_mnist_experiment.py` | script | Experiment runner | low | Indexed locally; review before citing. |
+| `experiments/experiment3/start.ps1` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment3/start.sh` | script | Launcher | low | Indexed locally; review before citing. |
+| `experiments/experiment3/analysis/suite/suite_report.md` | report | Generated report | medium | Indexed locally; review before citing. |
+| `experiments/experiment3/analysis/suite/suite_comparison.csv` | summary_csv | Supporting artifact | high | Indexed locally; review before citing. |
+| `experiments/experiment3/analysis/suite/suite_best_accuracy.png` | plot | Plot image | high | Indexed locally; review before citing. |
 
 ## Candidate manuscript figures
 
 | Figure idea | Source image/data | Claim supported | Caveat |
 | --- | --- | --- | --- |
-| suite best accuracy | `experiment3/analysis/suite/suite_best_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
+| suite best accuracy | `experiments/experiment3/analysis/suite/suite_best_accuracy.png` | TODO: connect to reviewed claim. | Plot filename indicates relevance; inspect source data and plotting code. |
 
 ## Follow-up actions
 
@@ -110,7 +110,7 @@ Completed result / design / caveat / decision: No importable content.
 Evidence: The digest file is present but empty.
 Caveat: No Exp3 result was imported from this file.
 Source thread: `docs/threads/experiment1to4_export.md`
-Related local artifact path: `experiment3/analysis/suite/suite_report.md`
+Related local artifact path: `experiments/experiment3/analysis/suite/suite_report.md`
 Status: Historical only
 
 ### Analysis source: `docs/threads/experiment5to10_export.md`
@@ -119,7 +119,7 @@ Completed result / design / caveat / decision: Completed result with caveat, bac
 Evidence: The thread says Exp3 was a recurrent MNIST suite where recurrence was measurable but not clearly useful on MNIST.
 Caveat: The thread did not reanalyze Exp3 artifacts in detail; keep this as background rather than a manuscript claim.
 Source thread: `docs/threads/experiment5to10_export.md`
-Related local artifact path: `experiment3/analysis/suite/suite_report.md`
+Related local artifact path: `experiments/experiment3/analysis/suite/suite_report.md`
 Status: Historical only
 
 ## Key results (thread-integrated)
