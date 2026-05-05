@@ -1,0 +1,3 @@
+# Context-Indexed Route Memory
+
+This repository contains the experimental code, analysis artifacts, and manuscript preparation materials for a research program on neuroplastic memory systems. The first manuscript introduces a synthetic benchmark for Continual Compositional Route Memory and studies whether context-indexed structural plasticity can store incompatible local transition systems without destructive overwriting.
