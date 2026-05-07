@@ -1,0 +1,29 @@
+{
+  "corruption_rates": [
+    0.0,
+    0.5
+  ],
+  "cue_counts": [
+    1,
+    2
+  ],
+  "hash_slot_divisors": [
+    2
+  ],
+  "modes": 4,
+  "profile": "smoke",
+  "progress_every": 10,
+  "route_lengths": [
+    4,
+    8
+  ],
+  "routes_per_world": 8,
+  "sample_suffixes_per_route": 1,
+  "seeds": [
+    0,
+    1
+  ],
+  "world_counts": [
+    4
+  ]
+}

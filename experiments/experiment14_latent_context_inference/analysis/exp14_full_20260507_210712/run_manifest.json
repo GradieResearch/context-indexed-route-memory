@@ -1,0 +1,104 @@
+{
+  "analysis_id": "exp14",
+  "artifact_paths": {
+    "analysis_dir": "analysis\\exp14_full_20260507_210712",
+    "effect_sizes_csv": "analysis\\exp14_full_20260507_210712\\exp14_effect_sizes.csv",
+    "metrics_csv": "analysis\\exp14_full_20260507_210712\\exp14_metrics.csv",
+    "plots": [
+      "analysis\\exp14_full_20260507_210712\\plots\\exp14_world_selection_vs_corruption.png",
+      "analysis\\exp14_full_20260507_210712\\plots\\exp14_seen_composition_vs_corruption.png",
+      "analysis\\exp14_full_20260507_210712\\plots\\exp14_suffix_composition_vs_corruption.png",
+      "analysis\\exp14_full_20260507_210712\\plots\\exp14_margin_vs_corruption.png",
+      "analysis\\exp14_full_20260507_210712\\plots\\exp14_cue_count_selection_sensitivity.png",
+      "analysis\\exp14_full_20260507_210712\\plots\\exp14_cue_count_composition_sensitivity.png"
+    ],
+    "runs_dir": "runs",
+    "sqlite_db": "runs\\exp14_full_20260507_210712.sqlite3",
+    "summary_csv": "analysis\\exp14_full_20260507_210712\\exp14_summary.csv"
+  },
+  "config": {
+    "corruption_rates": [
+      0.0,
+      0.1,
+      0.25,
+      0.5
+    ],
+    "cue_counts": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "hash_slot_divisors": [
+      2,
+      4,
+      8
+    ],
+    "modes": 4,
+    "profile": "full",
+    "progress_every": 50,
+    "route_lengths": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "routes_per_world": 24,
+    "sample_suffixes_per_route": 1,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "world_counts": [
+      4,
+      8,
+      16,
+      32
+    ]
+  },
+  "created_at_utc": "2026-05-07T12:08:18.091456+00:00",
+  "device": {
+    "cpu_count": 12,
+    "gpu_note": "This experiment is symbolic/table-based and runs on CPU; no GPU is required.",
+    "gpu_used": false,
+    "machine": "AMD64",
+    "matplotlib_version": "3.10.9",
+    "numpy_version": "2.4.4",
+    "pandas_version": "3.0.2",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "processor": "Intel64 Family 6 Model 63 Stepping 2, GenuineIntel",
+    "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "experiment_name": "exp14_latent_context_inference",
+  "profile": "full",
+  "row_counts": {
+    "effect_size_rows": 12288,
+    "metrics_rows": 46080,
+    "summary_rows": 2304
+  },
+  "run_id": "exp14_full_20260507_210712",
+  "schema_version": "exp14_metrics_v1",
+  "scientific_guardrails": [
+    "Clean cue success is latent context selection from symbolic transition evidence, not raw sensory inference.",
+    "The oracle context-gated table is an upper bound, not a fair non-oracle selector.",
+    "Corruption-rate sweeps test cue-evidence sensitivity, not all forms of context noise."
+  ]
+}

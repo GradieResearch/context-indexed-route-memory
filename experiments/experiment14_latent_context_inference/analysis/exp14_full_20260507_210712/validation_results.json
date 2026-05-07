@@ -1,0 +1,146 @@
+{
+  "analysis_dir": "analysis\\exp14_full_20260507_210712",
+  "analysis_id": "exp14",
+  "checks": [
+    {
+      "detail": "analysis\\exp14_full_20260507_210712\\exp14_metrics.csv",
+      "name": "file exists: exp14_metrics.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "analysis\\exp14_full_20260507_210712\\metrics.csv",
+      "name": "file exists: metrics.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "analysis\\exp14_full_20260507_210712\\exp14_summary.csv",
+      "name": "file exists: exp14_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "analysis\\exp14_full_20260507_210712\\exp14_effect_sizes.csv",
+      "name": "file exists: exp14_effect_sizes.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "analysis\\exp14_full_20260507_210712\\run_manifest.json",
+      "name": "file exists: run_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "analysis\\exp14_full_20260507_210712\\progress.jsonl",
+      "name": "file exists: progress.jsonl",
+      "status": "PASS"
+    },
+    {
+      "detail": "analysis\\exp14_full_20260507_210712\\experiment_report.md",
+      "name": "file exists: experiment_report.md",
+      "status": "PASS"
+    },
+    {
+      "detail": "46080 rows",
+      "name": "metrics row count",
+      "status": "PASS"
+    },
+    {
+      "detail": "2304 rows",
+      "name": "summary row count",
+      "status": "PASS"
+    },
+    {
+      "detail": "12288 rows",
+      "name": "effect sizes row count",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing=[]",
+      "name": "required metric columns",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing=[]",
+      "name": "required phases present",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing=[]; hash_variants=['baseline_hash_slot_selector_div2', 'baseline_hash_slot_selector_div4', 'baseline_hash_slot_selector_div8']",
+      "name": "required variants present",
+      "status": "PASS"
+    },
+    {
+      "detail": "seed_count=20",
+      "name": "seed count nonzero",
+      "status": "PASS"
+    },
+    {
+      "detail": "exp14_latent_context_inference",
+      "name": "manifest experiment name",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"cpu_count\": 12, \"gpu_note\": \"This experiment is symbolic/table-based and runs on CPU; no GPU is required.\", \"gpu_used\": false, \"machine\": \"AMD64\", \"matplotlib_version\": \"3.10.9\", \"numpy_version\": \"2.4.4\", \"pandas_version\": \"3.0.2\", \"platform\": \"Windows-10-10.0.19045-SP0\", \"processor\": \"Intel64 Family 6 Model 63 Stepping 2, GenuineIntel\", \"python_version\": \"3.12.10 (tags/v3.12.10:0cc8128, Apr  8 ",
+      "name": "device metadata present",
+      "status": "PASS"
+    },
+    {
+      "detail": "runs\\exp14_full_20260507_210712.sqlite3",
+      "name": "sqlite db exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "[\"effect_sizes\", \"manifest\", \"metrics\", \"summary\"]",
+      "name": "sqlite tables",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=1.0000",
+      "name": "oracle context upper bound solves clean seen routes",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=1.0000",
+      "name": "CIRM latent selector identifies clean context",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=1.0000",
+      "name": "CIRM latent selector composes clean seen routes",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=0.0312",
+      "name": "shared no-context table underperforms clean seen routes",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=0.0000",
+      "name": "endpoint memorizer fails suffix routes",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=0.0307",
+      "name": "random selector below useful context selection",
+      "status": "PASS"
+    },
+    {
+      "detail": "clean=1.0000; max_corruption=0.5; corrupted=0.9416",
+      "name": "corruption reduces or challenges CIRM context selection",
+      "status": "PASS"
+    },
+    {
+      "detail": "6 png files",
+      "name": "plots generated",
+      "status": "PASS"
+    },
+    {
+      "detail": "events=46083",
+      "name": "progress has run_complete",
+      "status": "PASS"
+    }
+  ],
+  "experiment_name": "exp14_latent_context_inference",
+  "fail_count": 0,
+  "pass_count": 27,
+  "status": "PASS",
+  "warn_count": 0
+}
