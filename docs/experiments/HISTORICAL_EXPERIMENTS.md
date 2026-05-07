@@ -5,9 +5,11 @@
 Exp1-Exp10 are not all equally central to the first manuscript. This document separates historical exploration, mechanism-building support, and manuscript-critical evidence so future edits do not accidentally upgrade old exploratory results into central claims.
 
 Claim: The current manuscript-critical spine is Exp11-Exp13 plus completed Exp13.1 hardening.
-Evidence: The experiment registry, manuscript spine, and publication-readiness docs all make Exp13.1 lesion audit, baselines, uncertainty, and final figures the next blockers.
+Evidence: The experiment registry, manuscript spine, and publication-readiness docs all make Exp13.1 lesion audit, separate Exp13.2 baseline alignment, uncertainty, and final figures the next blockers.
 Caveat: Supporting and historical experiments may still be useful for background or supplementary context, but they should not be treated as external baselines or final manuscript evidence without renewed validation.
 Source path: `docs/experiments/EXPERIMENT_REGISTRY.md`; `docs/manuscript/MANUSCRIPT_SPINE.md`; `docs/synthesis/PUBLICATION_READINESS.md`
+
+Scope note: Exp13.2 is intentionally excluded from the current cleanup pass and is not part of the Tier A internal spine until a separate import/alignment pass updates the canonical docs.
 
 ## Experiment tiers
 
@@ -26,7 +28,7 @@ How it may be used:
 
 How it should not be used:
 
-- Do not claim submission readiness before external baselines, uncertainty reporting, Exp13.1 lesion audit if needed, and final figures.
+- Do not claim submission readiness before the separate Exp13.2 baseline pass, uncertainty reporting, Exp13.1 lesion audit if needed, and final figures.
 - Do not modify Exp13 in place to implement successor hardening.
 
 | Experiment | Directory | Summary doc | Manuscript role | Caveat |

@@ -4,11 +4,11 @@ Purpose: Track limitations, reviewer attack surfaces, and non-claims so the manu
 
 ## Baseline Coverage Still Incomplete
 
-Claim: Exp13.2 partially resolves the external-baseline blocker, but baseline and prior-art coverage remain incomplete.
-Evidence: Exp13.2 adds symbolic/algorithmic shared lookup, oracle context-gated lookup, endpoint memorization, recurrent non-plastic, superposition/hash, bounded LRU/replay, and parameter-isolation controls.
-Caveat: These are not full neural baselines and do not replace prior-art/novelty import. The novelty assessment artifact named `Pasted text.txt` is not present locally; local verification pending.
-Source path: `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_baseline_metrics.csv`; `docs/threads/experiment12to13_export.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`
-Proposed fix: Decide whether the first manuscript needs additional neural baselines beyond Exp13.2, import the missing novelty/prior-art artifact, and keep baseline claims explicitly symbolic/algorithmic unless new evidence is added.
+Claim: Baseline and prior-art coverage remain incomplete in this cleanup pass.
+Evidence: Current central evidence is internal to Exp11, Exp12, Exp13, and Exp13.1. `docs/manuscript/BASELINE_REQUIREMENTS.md` defines required baseline families but does not import Exp13.2 results in this pass.
+Caveat: Exp13.2 is intentionally deferred to a separate analysis/import/alignment pass; do not mark C12 complete here.
+Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
+Proposed fix: Complete the separate Exp13.2 pass, import missing novelty/prior-art sources, and decide whether additional neural baselines are required.
 
 ## Symbolic Benchmark Limitation
 
@@ -20,17 +20,17 @@ Proposed fix: Keep claims benchmark-specific; use the continuous/noisy bridge on
 ## Oracle Context / World-Label Limitation
 
 Why it matters: Many experiments provide world/context labels directly. This supports context-indexed storage, but not latent world inference.
-Where identified: Exp11 and Exp12-13 framing; Exp13.2 shows that an oracle context-gated transition table matches CIRM on the clean supplied-context benchmark; Exp14 was proposed as a future latent-world inference bridge.
-Source path: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`.
-Proposed fix: Add a future experiment where world/context is inferred from prediction error or partial evidence, not supplied as an oracle label.
+Where identified: Exp11 and Exp12-13 framing; Exp14 completed the first symbolic cue-selection follow-up.
+Source path: `docs/threads/experiment11_export`; `docs/threads/experiment12to13_export.md`; `docs/threads/experiment14_analysis_digest.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`.
+Proposed fix: Use Exp14 only as symbolic transition-cue inference evidence. Keep the limitation that this is not raw sensory context discovery, and keep the oracle context-gated table as an upper bound rather than a defeated competitor.
 
-## No-Context Suffix Probe Caveat
+## Latent Context Inference Remains Symbolic
 
-Claim: Shared no-context lookup failure should be interpreted through conflict-sensitive metrics, not suffix probes alone.
-Evidence: In Exp13.2 at `world_count=32`, `route_length=16`, and `phase=baseline_comparison`, shared no-context lookup has seen-route and first-step context accuracy `0.03125` but suffix-route accuracy `1.0000`.
-Caveat: Suffix probes can start after the disambiguating first transition, so they can make no-context lookup look stronger than it is on incompatible full-route context queries.
-Source path: `docs/threads/experiment13_2_analysis_digest.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`
-Proposed fix: Separate first-step/seen-route context-conflict panels from suffix-composition panels in manuscript figures and text.
+Claim: Exp14 partially reduces the oracle-world-label limitation by selecting context from transition cues, but does not solve latent-world discovery.
+Evidence: `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/validation_report.md` reports PASS 27, WARN 0, FAIL 0, and `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv` supports clean hard-slice CIRM world selection and composition at 1.0000.
+Caveat: The cues are symbolic transition evidence; the corruption process is synthetic; oracle context-gated lookup remains at 1.0000 under the hard corrupted slice.
+Source path: `docs/threads/experiment14_analysis_digest.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/validation_report.md`
+Proposed fix: Decide whether Exp14 is main or supplement; if central, add final figure scripts/source-data mirrors and a short implementation note for cue-count/corruption behavior.
 
 ## Metric Cleanup Requirements
 
@@ -59,7 +59,7 @@ Proposed fix: Use language such as "computationally inspired by indexing, remapp
 Why it matters: Exp13 continuous/noisy input tests whether a decoded noisy start state can feed the route-memory mechanism, not whether the model learns perception end to end.
 Where identified: Exp12-13 digest and Exp13 validation.
 Source thread path: `docs/threads/experiment12to13_export.md`.
-Proposed fix: Keep Figure 7 as supplementary or preliminary unless a new applied visual-state route-memory experiment is run.
+Proposed fix: Keep this as supplementary or preliminary unless a new applied visual-state route-memory experiment is run.
 
 ## Context Corruption Is Not Fully Realistic Yet
 
@@ -84,11 +84,21 @@ Caveat: The experiment is table-based and CPU-oriented, so missing GPU usage is 
 Source path: `docs/threads/experiment13_1_analysis_digest.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_report.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/run_manifest.json`
 Proposed fix: Add device/runtime metadata to future run manifests and explicitly document CPU-only rationale.
 
+## License And Citation Metadata Missing
+
+Why it matters: The repository currently lacks `LICENSE` and `CITATION.cff`.
+Evidence: Local filesystem inspection in this cleanup pass found neither file at the repository root.
+Caveat: Legal terms should be chosen by the human researcher; this pass does not invent a license.
+Source path: `README.md`; `docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md`
+Proposed fix: Add a human-selected license and citation metadata before public release or manuscript submission.
+
 ## Non-Claims
 
 - Do not claim solved continual learning.
 - Do not claim context gating is novel by itself.
 - Do not claim broad abstract rule induction.
 - Do not claim end-to-end perception.
+- Do not claim raw sensory latent-world discovery from Exp14.
 - Do not claim consolidation is universally necessary.
-- Do not claim CIRM beats oracle context-gated lookup on clean supplied-context symbolic route memory.
+- Do not use Exp13.1 lesion diagnostics as positive mechanism evidence unless audited and rerun.
+- Do not use Exp13.2 to complete baseline claims until the separate Exp13.2 pass is done.

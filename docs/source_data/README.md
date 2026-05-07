@@ -2,7 +2,9 @@
 
 This directory contains small, review-friendly mirrors of selected aggregate evidence tables. They exist so manuscript reviewers can inspect key tables on GitHub even when the authoritative generated experiment CSVs remain in Git LFS.
 
-These files are convenience copies or docs-derived tables, not new experimental outputs. The authoritative source remains the original artifact path in the owning experiment directory. Date copied for Exp12/Exp13 mirrors: 2026-05-05. Date copied for Exp13.1 and Exp13.2 mirrors: 2026-05-07.
+These files are convenience copies or docs-derived tables, not new experimental outputs. The authoritative source remains the original artifact path in the owning experiment directory. Date copied for Exp12/Exp13 mirrors: 2026-05-05. Date copied for Exp13.1 mirrors: 2026-05-07.
+
+Scope note: Exp13.2 source-data files may exist in this directory from a prior import, but they are intentionally excluded from the current P0/P1 cleanup manifest and should not be used to update claims until the separate Exp13.2 import/alignment pass is completed.
 
 | Mirror file | Source artifact path | Type | Notes |
 |---|---|---|---|
@@ -19,8 +21,10 @@ These files are convenience copies or docs-derived tables, not new experimental 
 | `exp13_1_lesion_metrics.csv` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv` | direct copy | Exp13.1 lesion diagnostic aggregate summary; targeted-lesion positive claim not supported. |
 | `exp13_1_budget_consolidation.csv` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv` | direct copy | Exp13.1 local/global budget and consolidation aggregate summary. |
 | `exp13_1_freeze_plasticity.csv` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_freeze_plasticity.csv` | direct copy | Exp13.1 freeze-plasticity aggregate summary. |
-| `exp13_2_summary.csv` | `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv` | direct copy | Exp13.2 symbolic/algorithmic baseline aggregate summary. |
-| `exp13_2_effect_sizes.csv` | `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_effect_sizes.csv` | direct copy | Exp13.2 effect-size comparison table; zero-variance ceiling/floor rows need careful rendering. |
-| `exp13_2_baseline_metrics.csv` | `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_baseline_metrics.csv` | direct copy | Exp13.2 baseline metrics table used for detailed baseline inspection. |
 
 Do not treat these mirrors as a replacement for the original artifacts. When citing evidence, cite the experiment artifact and use the mirror only as a readable convenience copy.
+
+Machine-readable manifests:
+
+- `docs/source_data/SOURCE_DATA_MANIFEST.csv`
+- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`

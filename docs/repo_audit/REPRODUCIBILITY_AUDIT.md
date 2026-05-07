@@ -4,15 +4,17 @@
 
 Can a new researcher clone the repo, run key experiments, regenerate metrics, regenerate plots, and reproduce manuscript claims?
 
-## Current summary
+## Current Summary
 
-Current status: partially reproducible.
+Current status: partially reproducible, excluding Exp13.2.
 
-Existing artifacts are present for the manuscript-critical experiments, and the main launch scripts can be identified. Commands in this audit were inspected from README files and launcher scripts, but they were not executed in this P1 pass. Manuscript-critical experiments still need standardized smoke/standard/full documentation, runtime notes, and final figure-regeneration commands before submission.
+Existing artifacts are present for Exp11, Exp12, Exp13, and Exp13.1. Launchers and validation commands were inspected in this cleanup pass, but no long experiment reruns were executed. Manuscript-critical experiments still need fresh command verification, runtime/hardware logs, seed-level uncertainty tables, and final figure-regeneration scripts before submission.
+
+Exp13.2 is intentionally excluded and deferred to a separate analysis/import/alignment pass.
 
 ## Environment
 
-Python version: no formal repository-wide Python version is pinned. Python 3.10+ is recommended for the current utility scripts because `scripts/verify_doc_source_paths.py` uses modern type-hint syntax.
+Python version: no formal repository-wide Python version is pinned. Python 3.10+ is recommended for current utility scripts.
 
 Package installation:
 
@@ -21,70 +23,55 @@ Package installation:
 - Exp11 requirements: `experiments/experiment11_context_memory/requirements.txt`.
 - Exp12 requirements: `experiments/experiment12_capacity_generalization/requirements.txt`.
 - Exp13 requirements: `experiments/experiment13_breaking_point/requirements.txt`.
-- Exp11 and Exp12 launchers can install or validate local requirements; Exp13 should be installed manually from its requirements file before running if the environment is fresh.
+- Exp13.1 requirements: `experiments/experiment13_1_publication_hardening/requirements.txt`.
 
 GPU expectations:
 
-- The manuscript-critical Exp11-Exp13 code paths inspected here are NumPy/Pandas/Matplotlib style workloads, not PyTorch or TensorFlow GPU workloads.
+- Exp11-Exp13.1 are table-based or NumPy/Pandas/Matplotlib style workloads, not deep-learning GPU workloads.
 - Exp13 explicitly documents that it does not require PyTorch, TensorFlow, torchvision, MNIST downloads, or internet access. Source path: `experiments/experiment13_breaking_point/README.md`.
-- New future experiments should document GPU use or the reason GPU use is not appropriate, following `AGENTS.md`.
+- Exp13.1 documents that it is table-based and CPU-oriented, with no PyTorch or dataset downloads. Source path: `experiments/experiment13_1_publication_hardening/README.md`.
+- Exp13.1 full-run manifest records configuration but not explicit device/runtime metadata. Source path: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/run_manifest.json`.
 
-## Manuscript-critical experiments
+## Manuscript-Critical Experiments
 
-| Experiment | Directory | Primary launcher | Smoke/validation command | Standard/full command | Expected outputs | Validation/report artifact | Status | Caveat |
-|---|---|---|---|---|---|---|---|---|
-| Exp11 | `experiments/experiment11_context_memory/` | `experiments/experiment11_context_memory/start_exp11.ps1` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment11_context_memory\start_exp11.ps1 -ValidationOnly` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment11_context_memory\start_exp11.ps1` | `experiments/experiment11_context_memory/analysis/exp11_validation/`; `experiments/experiment11_context_memory/analysis/exp11/` | `experiments/experiment11_context_memory/analysis/exp11_validation/exp11_report.md`; `experiments/experiment11_context_memory/analysis/exp11/exp11_report.md` | Launcher and README inspected; command not executed in P1. | Uses `-ValidationOnly` rather than `-Profile smoke`; full command runs validation before full run. |
-| Exp12 | `experiments/experiment12_capacity_generalization/` | `experiments/experiment12_capacity_generalization/start_exp12.ps1` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment12_capacity_generalization\start_exp12.ps1 -Profile validate -OutDir analysis/exp12_validation` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment12_capacity_generalization\start_exp12.ps1 -Profile full -OutDir analysis/exp12` | `experiments/experiment12_capacity_generalization/analysis/exp12_validation/`; `experiments/experiment12_capacity_generalization/analysis/exp12/` | `experiments/experiment12_capacity_generalization/analysis/exp12_validation/exp12_report.md`; `experiments/experiment12_capacity_generalization/analysis/exp12/exp12_report.md` | Launcher and README inspected; command not executed in P1. | Actual profiles are `validate`, `full`, and `custom`, not the final target `smoke` / `standard` / `full` set. |
-| Exp13 | `experiments/experiment13_breaking_point/` | `experiments/experiment13_breaking_point/start_exp13.ps1` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_breaking_point\start_exp13.ps1 -Profile smoke -Clean` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_breaking_point\start_exp13.ps1 -Profile standard -Clean`; `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_breaking_point\start_exp13.ps1 -Profile full -Clean` | `experiments/experiment13_breaking_point/analysis/metrics.csv`; summary CSVs; `experiments/experiment13_breaking_point/analysis/plots/` | `experiments/experiment13_breaking_point/analysis/exp13_report.md`; `experiments/experiment13_breaking_point/analysis/validation_report.md` | Launcher and README inspected; command not executed in P1. | Current generated artifact is a `standard` run; Exp13.1 is still needed for metric cleanup and hardening. |
+| Experiment | Directory | Primary launcher | Validation/smoke command | Full/standard command | Expected outputs | Validation/report artifact | Executed in this pass? | Known caveats | GPU/runtime notes | Manifest metadata |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Exp11 | `experiments/experiment11_context_memory/` | `experiments/experiment11_context_memory/start_exp11.ps1` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment11_context_memory\start_exp11.ps1 -ValidationOnly` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment11_context_memory\start_exp11.ps1` | `experiments/experiment11_context_memory/analysis/exp11_validation/`; `experiments/experiment11_context_memory/analysis/exp11/` | `experiments/experiment11_context_memory/analysis/exp11_validation/exp11_report.md`; `experiments/experiment11_context_memory/analysis/exp11/exp11_report.md` | No, inspected only. | Uses `-ValidationOnly` rather than `-Profile smoke`; full command runs validation before full run. | Table/NumPy style; no GPU use documented. | No dedicated run manifest found; `runs.csv` and logs exist. |
+| Exp12 | `experiments/experiment12_capacity_generalization/` | `experiments/experiment12_capacity_generalization/start_exp12.ps1` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment12_capacity_generalization\start_exp12.ps1 -Profile validate -OutDir analysis/exp12_validation` or `-ValidateOnly` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment12_capacity_generalization\start_exp12.ps1 -Profile full -OutDir analysis/exp12` | `experiments/experiment12_capacity_generalization/analysis/exp12_validation/`; `experiments/experiment12_capacity_generalization/analysis/exp12/` | `experiments/experiment12_capacity_generalization/analysis/exp12_validation/exp12_report.md`; `experiments/experiment12_capacity_generalization/analysis/exp12/exp12_report.md` | No, inspected only. | Profiles are `validate`, `full`, and `custom`, not the later `smoke` / `standard` / `full` convention. | CPU/table-oriented; no GPU use documented. | No dedicated run manifest found; `runs.csv` and `progress.jsonl` exist. |
+| Exp13 | `experiments/experiment13_breaking_point/` | `experiments/experiment13_breaking_point/start_exp13.ps1` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_breaking_point\start_exp13.ps1 -Profile smoke -Clean` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_breaking_point\start_exp13.ps1 -Profile standard -Clean`; `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_breaking_point\start_exp13.ps1 -Profile full -Clean` | `experiments/experiment13_breaking_point/analysis/metrics.csv`; summary CSVs; `experiments/experiment13_breaking_point/analysis/plots/` | `experiments/experiment13_breaking_point/analysis/exp13_report.md`; `experiments/experiment13_breaking_point/analysis/validation_report.md`; `experiments/experiment13_breaking_point/analysis/validation_results.json` | No, inspected only. | Current artifact appears to be a standard/boundary run; holdout metric cleanup remains if C9 is central. | README says no deep-learning stack or internet required. | `runs.csv` exists; no dedicated run manifest found. |
+| Exp13.1 | `experiments/experiment13_1_publication_hardening/` | `experiments/experiment13_1_publication_hardening/start_exp13_1_run.ps1`; wrapper scripts for standard/full/validate | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_1_publication_hardening\start_exp13_1_validate.ps1 -RunId latest` | `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_1_publication_hardening\start_exp13_1_standard.ps1`; `powershell -ExecutionPolicy Bypass -File .\experiments\experiment13_1_publication_hardening\start_exp13_1_full.ps1` | per-run SQLite under `experiments/experiment13_1_publication_hardening/runs/`; per-run analysis under `experiments/experiment13_1_publication_hardening/analysis/<run_id>/` | `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_report.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/validation_results.json` | No, inspected only. Existing validation report says PASS 27, WARN 0, FAIL 0. | Targeted lesion diagnostic failed expected positive pattern; do not cite as positive evidence without audit/rerun. | README documents CPU-only/table-based rationale; no GPU use. | `run_manifest.json` exists but lacks explicit device/runtime metadata. |
 
-## Historical experiments
+## Historical And Supporting Experiments
 
-| Experiment | Launchers found | Role | Reproducibility status | Caveat |
-|---|---|---|---|---|
-| Exp1 | `experiments/experiment1/start.ps1`; `experiments/experiment1/start.sh`; `experiments/experiment1/run_mnist_experiment.py` | Early MNIST prototype. | Runnable entry points found; not executed in P1. | Historical only for the route-memory manuscript. |
-| Exp2 | `experiments/experiment2/start.ps1`; `experiments/experiment2/start.sh`; `experiments/experiment2/run_mnist_experiment.py` | Persistent plastic-graph MNIST exploration. | Entry points and artifacts found; not executed in P1. | No standardized validation profile. |
-| Exp3 | `experiments/experiment3/start.ps1`; `experiments/experiment3/start.sh`; `experiments/experiment3/run_experiment_suite.py`; `experiments/experiment3/run_mnist_experiment.py` | Recurrent MNIST variants. | Entry points and suite artifacts found; not executed in P1. | Historical context, not central evidence. |
-| Exp4 | `experiments/experiment4_successor/start.ps1`; `experiments/experiment4_successor/start.sh`; `experiments/experiment4_successor/run_exp4_suite.py`; `experiments/experiment4_successor/run_exp4_successor_experiment.py` | Successor traversal foundation. | Entry points and artifacts found; not executed in P1. | Multiple legacy launchers; canonical command still needs confirmation. |
-| Exp5 | `experiments/experiment5_contextual_successor/start.ps1`; `experiments/experiment5_contextual_successor/start.sh`; `experiments/experiment5_contextual_successor/run_exp5_suite.py`; `experiments/experiment5_contextual_successor/run_exp5_contextual_successor.py` | Contextual successor predecessor. | Entry points and smoke artifacts found; not executed in P1. | Caveated precursor, not final evidence. |
-| Exp6 | `experiments/experiment6_route_audit_successor/start.ps1`; `experiments/experiment6_route_audit_successor/start.sh`; `experiments/experiment6_route_audit_successor/run_exp6_suite.py`; `experiments/experiment6_route_audit_successor/run_exp6_route_audit_successor.py` | Route-audit correction. | Entry points and artifacts found; not executed in P1. | README/result cleanup may still be useful before citing exact numbers. |
-| Exp7 | `experiments/experiment7_route_field_diagnostics/start.ps1`; `experiments/experiment7_route_field_diagnostics/start.sh`; `experiments/experiment7_route_field_diagnostics/run_exp7_suite.py`; `experiments/experiment7_route_field_diagnostics/run_exp7_route_field_diagnostics.py` | Route-field diagnostic. | Entry points and artifacts found; not executed in P1. | Validation is nonstandard. |
-| Exp8 | `experiments/experiment8_self_organizing_route_acquisition/start_exp8.ps1`; `experiments/experiment8_self_organizing_route_acquisition/start.ps1`; `experiments/experiment8_self_organizing_route_acquisition/run_exp8_suite.py` | Self-organizing route acquisition. | Entry points and validation-named outputs found; not executed in P1. | No single canonical `validation_report.md`. |
-| Exp9 | `experiments/experiment9_robust_adaptive_route_plasticity/start_exp9.ps1`; `experiments/experiment9_robust_adaptive_route_plasticity/start.ps1`; `experiments/experiment9_robust_adaptive_route_plasticity/run_exp9_suite.py` | Robust adaptive route plasticity. | Entry points and validation-named outputs found; not executed in P1. | Stress-test evidence only. |
-| Exp10 | `experiments/experiment10_adaptive_reversal/start_exp10.ps1`; `experiments/experiment10_adaptive_reversal/start.ps1`; `experiments/experiment10_adaptive_reversal/run_exp10_suite.py` | Adaptive reversal and consolidation tradeoff. | Entry points and validation-named outputs found; not executed in P1. | Not non-destructive memory evidence. |
+Exp1-Exp6 remain historical/exploratory. Exp7-Exp10 are supporting mechanism-building experiments. Their entry points and artifacts are indexed in `docs/repo_audit/ARTIFACT_INDEX.csv`, but this cleanup did not execute their commands or promote them to central evidence.
 
-## Canonical run interface target
+## Artifact Regeneration
 
-Future manuscript-critical experiments should aim for a consistent interface:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\experiments\<experiment>\start_exp<N>.ps1 -Profile smoke -Clean
-powershell -ExecutionPolicy Bypass -File .\experiments\<experiment>\start_exp<N>.ps1 -Profile standard -Clean
-powershell -ExecutionPolicy Bypass -File .\experiments\<experiment>\start_exp<N>.ps1 -Profile full -Clean
-```
-
-This is a target interface. It should not be read as a claim that every historical experiment already supports it.
-
-## Artifact regeneration
-
-Generated artifacts are committed or preserved in the owning experiment directories as historical records. They should not be overwritten to make documentation tidier.
+Generated artifacts are preserved in the owning experiment directories as historical records. They should not be overwritten to make documentation tidier.
 
 Final paper figures should eventually be regenerated from scripts with fixed input paths and documented source-data tables. Review-friendly source-data mirrors may exist under `docs/source_data/`, but the original `experiments/...` artifacts remain authoritative unless a future document explicitly says otherwise.
 
-## Path verification
+## Utility Checks
 
-Run:
+Path verification:
 
 ```bash
 python scripts/verify_doc_source_paths.py
 ```
 
-This verifier checks active local source paths in documentation and skips paths explicitly marked planned, future, missing, or local verification pending.
+Generic seed-summary helper:
 
-## Required before manuscript submission
+```bash
+python scripts/compute_seed_metric_summary.py --help
+```
 
-- Verify Exp11, Exp12, and Exp13 smoke or validation commands on a fresh checkout.
+The seed-summary helper requires explicit input/output paths and grouping columns. Its output is marked `human_review_required_before_citation`.
+
+## Required Before Manuscript Submission
+
+- Verify Exp11, Exp12, Exp13, and Exp13.1 commands on a fresh checkout.
 - Document runtime, expected outputs, seed counts, and hardware expectations for manuscript-critical runs.
 - Add final figure regeneration commands and source-data manifests.
 - Add seed-level confidence intervals and effect sizes for core claims.
-- Standardize Exp13.1 from the beginning using the target run interface.
+- Complete separate Exp13.2 import/alignment for baselines.
 - Keep completed generated outputs immutable and create new run files for reruns.

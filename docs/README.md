@@ -23,7 +23,7 @@ Recommended reading order:
 | `docs/manuscript/MANUSCRIPT_TODO.md` | Conservative work queue for manuscript readiness. | Active work queue | Edit when work status changes or a blocker is completed with local evidence. |
 | `docs/manuscript/FIGURE_PLAN.md` | Candidate main and supplementary figure map. | Active planning doc | Edit whenever a figure, panel, source artifact, or caveat changes. |
 | `docs/manuscript/LIMITATIONS_AND_THREATS.md` | Reviewer-risk and non-claim tracker. | Active caveat doc | Edit when a limitation is resolved or a new risk appears. |
-| `docs/manuscript/BASELINE_REQUIREMENTS.md` | Planned baseline suite contracts and acceptance criteria. | Planned, no baseline results yet | Edit when baseline designs or completed baseline artifacts change. |
+| `docs/manuscript/BASELINE_REQUIREMENTS.md` | Baseline suite contracts and acceptance criteria. | Planned/deferred; Exp13.2 intentionally excluded from current cleanup | Edit during the separate Exp13.2 import/alignment pass or when prior-art/baseline requirements change. |
 | `docs/manuscript/SOURCE_OF_TRUTH.md` | Rules for resolving conflicts between docs, artifacts, and thread exports. | Active handoff note | Edit only when canonical-document ownership changes. |
 
 ## Experiment docs
@@ -49,6 +49,7 @@ Recommended reading order:
 | `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` | Run-interface and reproducibility map. | Active audit; commands inspected, not fully rerun in P1/P2 |
 | `docs/repo_audit/PATH_VERIFICATION_REPORT.md` | Records path-verifier expectations and prior results. | Active audit support |
 | `docs/repo_audit/MISSING_ARTIFACTS.md` | Tracks missing or local-verification-pending artifacts. | Active caveat tracker |
+| `docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md` | Current non-Exp13.2 publication-cleanup handoff report. | Active handoff record |
 
 ## Theory docs
 
@@ -70,4 +71,5 @@ Active claims live in `docs/manuscript/CLAIMS_AND_EVIDENCE.md`. Use thread expor
 - Update `docs/manuscript/CLAIMS_AND_EVIDENCE.md` when a claim changes.
 - Update `docs/manuscript/FIGURE_PLAN.md` when a figure changes.
 - Update `docs/manuscript/MANUSCRIPT_TODO.md` when work status changes.
+- Keep Exp13.2 claim/figure/source-data integration in a separate dedicated pass.
 - Run `python scripts/verify_doc_source_paths.py` after source-path-heavy edits.

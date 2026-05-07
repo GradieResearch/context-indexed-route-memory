@@ -1,0 +1,14 @@
+mirror_file,authoritative_source_path,mirror_type,claim_ids,source_path_exists,final_figure_script_exists,notes
+exp12_capacity_final_summary.csv,experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv,direct copy,"C2,C3,C4,C5",yes,no,aggregate source-data mirror; seed-level CI/effect-size tables still needed
+exp12_heldout_generalization_summary.csv,experiments/experiment12_capacity_generalization/analysis/exp12/heldout_generalization_summary.csv,direct copy,C9,yes,no,aggregate mirror; holdout claim needs seen/unseen cleanup if kept central
+exp13_capacity_pressure_summary.csv,experiments/experiment13_breaking_point/analysis/capacity_pressure_summary.csv,direct copy,"C1,C3,C4,C6,C8",yes,no,aggregate mirror; no manuscript-grade CI/effect-size table yet
+exp13_context_corruption_summary.csv,experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv,direct copy,C10,yes,no,"wrong-world/adversarial sensitivity, not generic stochastic robustness"
+exp13_true_holdout_generalization_summary.csv,experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv,direct copy,C9,yes,no,requires seen/unseen metric cleanup
+exp13_continuous_frontend_bridge_summary.csv,experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv,direct copy,C11,yes,no,"preliminary bridge, not end-to-end perception"
+exp13_local_capacity_pressure_summary.csv,experiments/experiment13_breaking_point/analysis/local_capacity_pressure_summary.csv,direct copy,C7,yes,no,aggregate local budget summary; paired seed-level comparison pending
+exp13_local_vs_global_budget_comparison.csv,docs/experiments/exp13_local_vs_global_budget_comparison.md,derived docs table,C7,yes,no,docs-derived aggregate comparison; not seed-level paired analysis
+exp13_1_variant_metrics.csv,experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv,direct copy,"C1,C2,C3,C4",yes,no,aggregate mirror from Exp13.1 full run
+exp13_1_context_corruption.csv,experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_context_corruption.csv,direct copy,C10,yes,no,wrong-world injection supports identity sensitivity only
+exp13_1_lesion_metrics.csv,experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv,direct copy,none positive,yes,no,diagnostic failed expected pattern; do not cite as positive mechanism evidence
+exp13_1_budget_consolidation.csv,experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv,direct copy,"C7,C8",yes,no,aggregate mirror; CI/effect-size table pending
+exp13_1_freeze_plasticity.csv,experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_freeze_plasticity.csv,direct copy,C8 caveat,yes,no,internal diagnostic only

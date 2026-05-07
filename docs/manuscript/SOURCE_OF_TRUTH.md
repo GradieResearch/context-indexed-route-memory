@@ -26,3 +26,7 @@ If there is a conflict:
 2. `docs/manuscript/CLAIMS_AND_EVIDENCE.md` wins for current claim wording.
 3. `docs/manuscript/LIMITATIONS_AND_THREATS.md` wins for caveats.
 4. Thread exports are used only as historical context unless imported.
+
+## Current Scope Note
+
+For the current P0/P1 publication-cleanup handoff, Exp13.2 is intentionally excluded. Existing Exp13.2 artifacts or historical import notes do not update active claim wording until a separate Exp13.2 analysis/import/alignment pass updates the canonical docs together.

@@ -10,7 +10,7 @@ Manuscript, evidence, synthesis, and repo-audit documents live under `docs/`. Th
 
 ## Current status
 
-The internal evidence is promising, but the repository is not submission-ready. Current blockers include Exp13.1 publication hardening, an external baseline suite, seed-level uncertainty reporting, and final reproducible paper figures.
+The internal evidence is promising, but the repository is not submission-ready. Current blockers include the separate Exp13.2 baseline import/alignment pass, seed-level uncertainty reporting, final reproducible paper figures, prior-art import, command verification, and license/citation metadata.
 
 The strongest internal result so far is benchmark-specific: context-indexed structural route memory can retain incompatible local transition systems, while recurrence is needed to turn one-step route memories into multi-step execution. This needs external comparison before submission-level claims are appropriate.
 
@@ -61,7 +61,8 @@ README.md     external-facing repository entry point
 | Exp10 | `experiments/experiment10_adaptive_reversal/` | Adaptive reversal and consolidation tradeoff. | Supporting evidence for stability/plasticity caveats. |
 | Exp11 | `experiments/experiment11_context_memory/` | Context-separated incompatible-world memory. | Manuscript-critical internal evidence. |
 | Exp12 | `experiments/experiment12_capacity_generalization/` | Capacity, retention, and held-out composition scaling. | Manuscript-critical internal evidence; ceiling-limited. |
-| Exp13 | `experiments/experiment13_breaking_point/` | Breaking point, context corruption, holdout boundary, continuous bridge. | Manuscript-critical boundary evidence; requires Exp13.1 hardening. |
+| Exp13 | `experiments/experiment13_breaking_point/` | Breaking point, context corruption, holdout boundary, continuous bridge. | Manuscript-critical boundary evidence; holdout and context-corruption caveats remain. |
+| Exp13.1 | `experiments/experiment13_1_publication_hardening/` | Publication-hardening ablations and mechanism audit. | Manuscript-critical internal evidence; lesion diagnostic failed expected pattern and must not be used as positive evidence without audit/rerun. |
 
 ## Current claim map
 
@@ -70,12 +71,12 @@ The canonical claim table is [CLAIMS_AND_EVIDENCE.md](docs/manuscript/CLAIMS_AND
 | Claim IDs | Current interpretation | Status |
 |---|---|---|
 | C1-C4 | Structural plasticity, world/context indexing, recurrence, and route-table/execution separation are supported inside the route-memory benchmark. | Strong internal ablation evidence; needs external baselines. |
-| C5-C7 | Exp12 shows clean-context scaling; Exp13 begins mapping finite-capacity failure. | Promising but needs uncertainty and Exp13.1 cleanup. |
+| C5-C7 | Exp12 shows clean-context scaling; Exp13 and Exp13.1 map finite-capacity/local-budget failure. | Promising but needs uncertainty, final scripts, and capacity-law cleanup. |
 | C8 | Consolidation is best framed as a stability/plasticity bias. | Preliminary; needs dose-response. |
 | C9 | The model composes stored primitives but does not infer unseen primitive transitions. | Needs metric cleanup. |
 | C10 | Adversarial context corruption can break execution when world selection flips. | Promising; stochastic corruption remains pending. |
 | C11 | Continuous/noisy inputs can feed route memory through a simple decoded bridge. | Preliminary or supplementary. |
-| C12 | Baselines and prior-art positioning are required before submission readiness. | Needs baseline and novelty-source import. |
+| C12 | Baselines and prior-art positioning are required before submission readiness. | Needs separate Exp13.2 import/alignment and novelty-source import. |
 
 Every manuscript-facing use should retain the discipline: Claim -> Evidence -> Caveat -> Source path.
 
@@ -102,7 +103,7 @@ python scripts/verify_doc_source_paths.py
 
 ## Planned next work
 
-The next planned scientific step is Exp13.1 publication hardening under a new experiment directory inside `experiments/`, followed by the external baseline suite. A richer applied visual-state bridge should wait until Exp13.1, baselines, uncertainty reporting, and final figure workflows are hardened.
+The next planned manuscript-readiness step is a separate Exp13.2 baseline analysis/import/alignment pass, followed by seed-level uncertainty reporting and final figure workflows. A richer applied visual-state bridge should wait until baseline integration, uncertainty reporting, prior-art positioning, and final figure workflows are hardened.
 
 ## License / citation
 
