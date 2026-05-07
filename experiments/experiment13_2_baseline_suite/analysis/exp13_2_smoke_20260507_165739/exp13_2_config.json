@@ -1,0 +1,26 @@
+{
+  "capacity_ratios": [
+    1.0,
+    0.5
+  ],
+  "hash_slot_divisors": [
+    1,
+    2
+  ],
+  "modes": 4,
+  "profile": "smoke",
+  "progress_every": 1,
+  "route_lengths": [
+    4,
+    8
+  ],
+  "routes_per_world": 8,
+  "seeds": [
+    0,
+    1
+  ],
+  "suffix_min_length": 2,
+  "world_counts": [
+    4
+  ]
+}

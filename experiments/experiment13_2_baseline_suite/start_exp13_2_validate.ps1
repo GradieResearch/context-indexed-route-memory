@@ -6,7 +6,7 @@ $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $ScriptDir
 
-$VenvPython = Join-Path $ScriptDir "..\.venv\Scripts\python.exe"
+$VenvPython = Join-Path $ScriptDir "..\..\.venv\Scripts\python.exe"
 if (Test-Path $VenvPython) {
     $Python = $VenvPython
 } else {

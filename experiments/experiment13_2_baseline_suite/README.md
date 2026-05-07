@@ -116,6 +116,19 @@ Use these guardrails when analyzing the results:
 
 This experiment should contribute to C12: external baselines required. It may also strengthen/refine C2, C3, C4, C6, and C7 if the expected sanity relationships hold.
 
+## Completed runs and results
+
+### `exp13_2_smoke_20260507_165655`
+
+Claim -> Root `.venv` start-script resolution was verified with a smoke run.
+Evidence -> `start_exp13_2_run.ps1 -Profile smoke -SkipValidation -NoSqlite` completed 16/16 planned units and reported Python from `..\..\.venv\Scripts\python.exe`.
+Caveat -> Validation and SQLite writing were intentionally skipped for this launch-script check.
+Source path -> `experiments/experiment13_2_baseline_suite/analysis/exp13_2_smoke_20260507_165655/`
+
+- Database path: not written (`-NoSqlite`).
+- Key configuration: smoke profile, seeds `[0, 1]`, world counts `[4]`, route lengths `[4, 8]`, routes per world `8`.
+- Summary: hardest tested CIRM suffix-composition accuracy was `1.0000`; context-gated lookup was also `1.0000`; whole-route endpoint memorizer suffix-route accuracy was `0.0000`.
+
 ## Known limitations
 
 - These are symbolic/algorithmic baselines, not full neural baselines.

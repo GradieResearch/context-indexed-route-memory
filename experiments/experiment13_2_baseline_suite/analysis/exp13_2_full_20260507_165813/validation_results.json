@@ -1,0 +1,151 @@
+{
+  "analysis_dir": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813",
+  "analysis_id": "exp13_2",
+  "checks": [
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\exp13_2_metrics.csv",
+      "name": "file exists: exp13_2_metrics.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\metrics.csv",
+      "name": "file exists: metrics.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\exp13_2_summary.csv",
+      "name": "file exists: exp13_2_summary.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\exp13_2_effect_sizes.csv",
+      "name": "file exists: exp13_2_effect_sizes.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\exp13_2_baseline_metrics.csv",
+      "name": "file exists: exp13_2_baseline_metrics.csv",
+      "status": "PASS"
+    },
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\run_manifest.json",
+      "name": "file exists: run_manifest.json",
+      "status": "PASS"
+    },
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\progress.jsonl",
+      "name": "file exists: progress.jsonl",
+      "status": "PASS"
+    },
+    {
+      "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_2_baseline_suite\\analysis\\exp13_2_full_20260507_165813\\experiment_report.md",
+      "name": "file exists: experiment_report.md",
+      "status": "PASS"
+    },
+    {
+      "detail": "15040 rows",
+      "name": "metrics row count",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing=[]",
+      "name": "required metric columns",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing=[]",
+      "name": "required phases present",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing=[]",
+      "name": "required variants present",
+      "status": "PASS"
+    },
+    {
+      "detail": "seed_count=20",
+      "name": "seed count nonzero",
+      "status": "PASS"
+    },
+    {
+      "detail": "748 rows",
+      "name": "summary row count",
+      "status": "PASS"
+    },
+    {
+      "detail": "exp13_2_baseline_suite",
+      "name": "manifest experiment name",
+      "status": "PASS"
+    },
+    {
+      "detail": "{\"cpu_count\": 12, \"gpu_note\": \"This experiment is symbolic/table-based and runs on CPU; no GPU is required.\", \"gpu_used\": false, \"machine\": \"AMD64\", \"matplotlib_version\": \"3.10.9\", \"numpy_version\": \"2.4.4\", \"pandas_version\": \"3.0.2\", \"platform\": \"Windows-10-10.0.19045-SP0\", \"processor\": \"Intel64 Family 6 Model 63 Stepping 2, GenuineIntel\", \"python_version\": \"3.12.10 (tags/v3.12.10:0cc8128, Apr  8 ",
+      "name": "device metadata present",
+      "status": "PASS"
+    },
+    {
+      "detail": "runs\\exp13_2_full_20260507_165813.sqlite3",
+      "name": "sqlite db exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "[\"metrics\", \"summary\", \"effect_sizes\", \"manifest\"]",
+      "name": "sqlite tables",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=1.0000",
+      "name": "CIRM full solves seen routes",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=1.0000",
+      "name": "CIRM full solves suffix routes",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=1.0000",
+      "name": "context-gated table solves suffix routes",
+      "status": "PASS"
+    },
+    {
+      "detail": "seen=0.1172; first_step=0.1172",
+      "name": "shared no-context table underperforms on context-conflict probes",
+      "status": "PASS"
+    },
+    {
+      "detail": "seen=1.0000; suffix=0.0000",
+      "name": "endpoint memorizer seen-vs-suffix split",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=1.0000",
+      "name": "no-recurrence route-table preserved",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=0.0000",
+      "name": "no-recurrence composition impaired",
+      "status": "PASS"
+    },
+    {
+      "detail": "mean=0.0000",
+      "name": "no-structural-plasticity route table low",
+      "status": "PASS"
+    },
+    {
+      "detail": "6 png files",
+      "name": "plots generated",
+      "status": "PASS"
+    },
+    {
+      "detail": "events=1685",
+      "name": "progress has run_complete",
+      "status": "PASS"
+    }
+  ],
+  "experiment_name": "exp13_2_baseline_suite",
+  "fail_count": 0,
+  "pass_count": 28,
+  "status": "PASS",
+  "warn_count": 0
+}
