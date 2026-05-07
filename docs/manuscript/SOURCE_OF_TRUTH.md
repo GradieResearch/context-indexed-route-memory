@@ -4,6 +4,7 @@ Purpose: Explain which documents are authoritative when repository docs disagree
 
 ## Canonical docs
 
+- Claim freeze for the first manuscript: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`
 - Claims: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
 - Figures: `docs/manuscript/FIGURE_PLAN.md`
 - Submission readiness: `docs/synthesis/PUBLICATION_READINESS.md`
@@ -23,10 +24,15 @@ Purpose: Explain which documents are authoritative when repository docs disagree
 If there is a conflict:
 
 1. Generated artifact/source data wins for numeric claims.
-2. `docs/manuscript/CLAIMS_AND_EVIDENCE.md` wins for current claim wording.
-3. `docs/manuscript/LIMITATIONS_AND_THREATS.md` wins for caveats.
-4. Thread exports are used only as historical context unless imported.
+2. `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` wins for first-manuscript inclusion/exclusion decisions once present.
+3. `docs/manuscript/CLAIMS_AND_EVIDENCE.md` wins for current claim wording outside the frozen first-manuscript subset.
+4. `docs/manuscript/LIMITATIONS_AND_THREATS.md` wins for caveats.
+5. Thread exports are used only as historical context unless imported.
 
 ## Current Scope Note
 
-For the current P0/P1 publication-cleanup handoff, Exp13.2 is intentionally excluded. Existing Exp13.2 artifacts or historical import notes do not update active claim wording until a separate Exp13.2 analysis/import/alignment pass updates the canonical docs together.
+The repository is now in a post-Exp14 manuscript-readiness state. Exp13.2 has been imported as a completed symbolic/algorithmic baseline suite, and Exp14 has been imported as completed symbolic transition-cue context-selection evidence.
+
+This does **not** make the repository submission-ready. Exp13.2 partially satisfies symbolic/algorithmic baseline coverage, but neural baselines, prior-art/novelty import, manuscript-grade uncertainty tables, final figure scripts, command verification, and license/citation metadata remain open readiness items.
+
+Use the first-manuscript claim-freeze document for the next phase: it decides which claims are main-text candidates, which are supplement-only, and which must remain future work or non-claims.
