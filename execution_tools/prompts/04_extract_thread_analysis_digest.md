@@ -3,7 +3,25 @@
 ```text
 I am consolidating this experiment analysis thread into the GitHub repository for manuscript preparation.
 
-Please create a structured, forensic digest of this conversation.
+Please create a structured, forensic digest of this conversation and package it for repository import.
+
+Repository import contract:
+- Produce a downloadable zip archive.
+- The zip archive must contain exactly one required markdown digest file:
+  `<THREAD_DIGEST_FILENAME>.md`
+- Replace `<THREAD_DIGEST_FILENAME>` with the actual digest filename, without angle brackets.
+- Use a stable, repo-safe, lower_snake_case filename that identifies the thread scope.
+- Prefer filenames like:
+  - `experiment13_1_analysis_digest.md`
+  - `experiment14_baseline_design_digest.md`
+  - `experiment13_publication_hardening_analysis_digest.md`
+- Do not name the file literally `<THREAD_DIGEST_FILENAME>.md`.
+- Do not put the digest inside a nested directory in the zip.
+- Do not include generated repo updates in the zip. This package is only the thread digest for later import.
+- The expected local staging path after download is:
+  `docs/imports/<THREAD_DIGEST_FILENAME>.zip`
+- The expected final repository path after import is:
+  `docs/threads/<THREAD_DIGEST_FILENAME>.md`
 
 Do not add new speculation unless clearly labeled.
 Extract only what was actually discussed, designed, concluded, corrected, or analyzed in this thread.
@@ -12,9 +30,13 @@ Use exact experiment numbers and artifact filenames when available.
 Use current repo-relative paths with the `experiments/...` prefix when local paths are known.
 If local paths are unknown, stale, or only represented by uploaded files, mark them `local verification pending`.
 
-Output markdown with the following structure:
+The markdown digest inside the zip must use the following structure:
 
 # Thread Digest: Experiment <ID> <short title>
+
+Digest filename: `<THREAD_DIGEST_FILENAME>.md`
+Intended repository path: `docs/threads/<THREAD_DIGEST_FILENAME>.md`
+Import package expected at: `docs/imports/<THREAD_DIGEST_FILENAME>.zip`
 
 ## 1. Thread scope
 
@@ -148,7 +170,19 @@ List exact files to update:
 
 State what should happen next.
 
+## 14. Import package checklist
+
+Confirm:
+
+- Zip filename:
+- Digest filename inside zip:
+- Digest is at zip root, not nested:
+- Digest final path after repo import:
+- Digest contains only thread-derived analysis, not direct repo edits:
+- Any local artifact paths needing verification:
+
 Important:
-This digest will be saved directly into the repository under `docs/threads/`.
+This digest will be imported into the repository under `docs/threads/`.
+The zip should be downloaded to `docs/imports/` before running the repository import prompt.
 It must be conservative, source-oriented, and useful to a future agent.
 ```

@@ -5,7 +5,15 @@ You are working inside the local repository:
 
 GradieResearch/context-indexed-route-memory
 
-We have completed analysis of Experiment <ID> in a ChatGPT thread and saved the thread digest under:
+We have completed analysis of Experiment <ID> in a ChatGPT thread and saved the thread digest package under:
+
+docs/imports/<THREAD_DIGEST_FILENAME>.zip
+
+The import package should contain:
+
+`<THREAD_DIGEST_FILENAME>.md`
+
+After validating and extracting the package, the digest must be placed at:
 
 docs/threads/<THREAD_DIGEST_FILENAME>.md
 
@@ -14,6 +22,7 @@ Your task is to import that analysis into the repository’s canonical documenta
 Do not modify experiment code.
 Do not rerun experiments.
 Do not delete generated artifacts.
+Do not delete the original zip from `docs/imports/` unless explicitly asked.
 Do not invent conclusions.
 Do not strengthen claims beyond the thread digest and local artifacts.
 Do not treat design proposals as completed results.
@@ -43,7 +52,8 @@ Naming convention:
 - If no summary exists, create one from `docs/experiments/EXPERIMENT_SUMMARY_TEMPLATE.md`.
 
 Inputs:
-- Thread digest: `docs/threads/<THREAD_DIGEST_FILENAME>.md`
+- Import zip: `docs/imports/<THREAD_DIGEST_FILENAME>.zip`
+- Thread digest after extraction: `docs/threads/<THREAD_DIGEST_FILENAME>.md`
 - Experiment directory: `experiments/<EXPERIMENT_DIR>/`
 - Current canonical docs:
   - `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
@@ -57,6 +67,23 @@ Inputs:
   - `docs/threads/THREAD_INDEX.md`
 
 Tasks:
+
+################################################################################
+# Phase 0 - Stage thread digest from import zip
+################################################################################
+
+Validate the import package before changing canonical docs.
+
+Steps:
+- Confirm `docs/imports/<THREAD_DIGEST_FILENAME>.zip` exists.
+- Inspect the zip contents.
+- Confirm it contains exactly one required markdown digest named `<THREAD_DIGEST_FILENAME>.md`.
+- Confirm the markdown digest is at the zip root, not nested inside a directory.
+- If the zip contains extra files, ignore them unless they are explicitly documented as supporting context; do not import generated repo edits from the zip.
+- Extract only `<THREAD_DIGEST_FILENAME>.md` to a temporary location or directly to `docs/threads/<THREAD_DIGEST_FILENAME>.md`.
+- If `docs/threads/<THREAD_DIGEST_FILENAME>.md` already exists, do not overwrite it silently. Compare contents and either preserve the existing file or create a clearly named conflict note in `docs/repo_audit/THREAD_IMPORT_CONFLICTS.md`.
+- Confirm the extracted digest begins with `# Thread Digest:` and includes the import package checklist.
+- Use `docs/threads/<THREAD_DIGEST_FILENAME>.md` as the source thread path for all later updates.
 
 ################################################################################
 # Phase 1 — Inspect local artifacts
@@ -281,6 +308,8 @@ Include:
 # Experiment <ID> Analysis Import Report
 
 ## Summary
+
+## Import package reviewed
 
 ## Thread digest imported
 

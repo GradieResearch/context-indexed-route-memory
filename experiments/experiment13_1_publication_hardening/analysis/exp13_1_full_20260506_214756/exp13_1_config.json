@@ -1,0 +1,71 @@
+{
+  "budget_route_length": 12,
+  "budget_world_count": 48,
+  "composition_route_length": 12,
+  "context_levels": [
+    0.0,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.99
+  ],
+  "freeze_world_count": 12,
+  "global_budget_ratios": [
+    0.25,
+    0.375,
+    0.5,
+    0.75,
+    1.0,
+    1.25
+  ],
+  "lesion_fraction": 0.08,
+  "lesion_route_length": 12,
+  "lesion_world_count": 24,
+  "local_budget_ratios": [
+    0.25,
+    0.375,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "modes": 3,
+  "nodes": 32,
+  "profile": "full",
+  "route_lengths": [
+    1,
+    2,
+    4,
+    8,
+    12,
+    16
+  ],
+  "routes_per_world": 72,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "structure_audit_route_length": 12,
+  "structure_audit_world_count": 24,
+  "world_count": 32
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "status": "PASS",
+    "name": "analysis directory exists",
+    "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_1_publication_hardening\\analysis\\exp13_1_standard_20260506_213337"
+  },
+  {
+    "status": "PASS",
+    "name": "required output files exist",
+    "detail": "All required files are present."
+  },
+  {
+    "status": "PASS",
+    "name": "required plots exist under plots/",
+    "detail": "All required plots are present under plots/."
+  },
+  {
+    "status": "PASS",
+    "name": "run manifest has required metadata",
+    "detail": "run_id=exp13_1_standard_20260506_213337"
+  },
+  {
+    "status": "PASS",
+    "name": "SQLite run database exists",
+    "detail": "G:\\code\\OpenSource\\GradieResearch\\context-indexed-route-memory\\experiments\\experiment13_1_publication_hardening\\runs\\exp13_1_standard_20260506_213337.sqlite3"
+  },
+  {
+    "status": "PASS",
+    "name": "SQLite contains expected tables",
+    "detail": "tables=['metadata', 'metrics', 'variants']"
+  },
+  {
+    "status": "PASS",
+    "name": "raw metrics are non-empty",
+    "detail": "rows=570"
+  },
+  {
+    "status": "PASS",
+    "name": "expected metric and metadata columns present",
+    "detail": "All expected columns are present."
+  },
+  {
+    "status": "PASS",
+    "name": "all expected metric columns exist",
+    "detail": "All expected metric columns exist."
+  },
+  {
+    "status": "PASS",
+    "name": "no metric column is entirely null",
+    "detail": "No metric column is entirely null."
+  },
+  {
+    "status": "PASS",
+    "name": "metric columns are numeric and finite",
+    "detail": "All metric columns are finite."
+  },
+  {
+    "status": "PASS",
+    "name": "bounded metrics lie within [0, 1]",
+    "detail": "All bounded metrics are in range."
+  },
+  {
+    "status": "PASS",
+    "name": "required variants are present",
+    "detail": "Variants: ['exp13_1_aggressive_consolidation', 'exp13_1_full_model', 'exp13_1_no_consolidation', 'exp13_1_no_context_binding', 'exp13_1_no_recurrence_at_eval', 'exp13_1_no_recurrence_throughout', 'exp13_1_no_structural_plasticity', 'exp13_1_no_world_gated_plasticity', 'exp13_1_weak_consolidation']"
+  },
+  {
+    "status": "PASS",
+    "name": "required phases are present",
+    "detail": "Phases: ['budget_consolidation', 'context_corruption', 'freeze_plasticity', 'lesion_test', 'structure_audit', 'variant_comparison']"
+  },
+  {
+    "status": "PASS",
+    "name": "clean and corrupted context conditions are present",
+    "detail": "Context conditions: ['clean', 'context_bleed', 'context_dropout', 'wrong_world_injection']"
+  },
+  {
+    "status": "PASS",
+    "name": "corrupted context metrics are not identical to clean metrics across all rows",
+    "detail": "At least one corruption metric differs from clean."
+  },
+  {
+    "status": "PASS",
+    "name": "no-recurrence-at-eval rows exist",
+    "detail": "Rows found."
+  },
+  {
+    "status": "PASS",
+    "name": "no-recurrence-throughout rows exist",
+    "detail": "Rows found."
+  },
+  {
+    "status": "PASS",
+    "name": "no-recurrence-at-eval keeps training recurrence metadata separate",
+    "detail": "Expected recurrence_training=True and recurrence_evaluation=False."
+  },
+  {
+    "status": "PASS",
+    "name": "no-recurrence-throughout is represented separately",
+    "detail": "Expected recurrence_training=False and recurrence_evaluation=False."
+  },
+  {
+    "status": "PASS",
+    "name": "targeted route-field lesion is present",
+    "detail": "Lesion conditions: ['clean_unlesioned_baseline', 'random_count_matched_edges', 'random_weight_distribution_matched_edges', 'targeted_critical_edges']"
+  },
+  {
+    "status": "PASS",
+    "name": "matched/random lesion baseline is present",
+    "detail": "Lesion conditions: ['clean_unlesioned_baseline', 'random_count_matched_edges', 'random_weight_distribution_matched_edges', 'targeted_critical_edges']"
+  },
+  {
+    "status": "PASS",
+    "name": "lesion summary conditions match raw lesion rows",
+    "detail": "Raw lesion conditions: ['clean_unlesioned_baseline', 'random_count_matched_edges', 'random_weight_distribution_matched_edges', 'targeted_critical_edges']"
+  },
+  {
+    "status": "PASS",
+    "name": "progress log includes ETA/rate fields",
+    "detail": "ETA/rate fields present."
+  },
+  {
+    "status": "PASS",
+    "name": "progress log reached planned total units",
+    "detail": "completed=570; manifest_total=570"
+  },
+  {
+    "status": "PASS",
+    "name": "report includes caveats and expected-pattern framing",
+    "detail": "Report includes caveats and expected-pattern framing."
+  },
+  {
+    "status": "PASS",
+    "name": "report does not overclaim with forbidden phrases",
+    "detail": "No forbidden overclaim phrases found."
+  }
+]
