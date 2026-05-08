@@ -4,24 +4,54 @@
 
 P0/P1 repository-readiness work is sufficient for a conservative manuscript handoff, but not for submission. Exp13.2 has been imported as completed symbolic/algorithmic baseline evidence, and Exp14 has been imported as completed symbolic transition-cue context-selection evidence.
 
-Claim: The next operational step is not another experiment by default. The next step is first-manuscript claim hardening, then final figure/table generation.
+Claim: The next operational step is Experiment 15 local execution and result import, not design of a new experiment.
 
-Evidence: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` freezes a conservative first-manuscript claim boundary; C13 is `Promising`; C12 is partially satisfied by symbolic/algorithmic baselines but still needs prior-art import and a target-venue neural-baseline decision.
+Evidence: `experiments/experiment15_neural_baseline_comparator/` now contains an implementation-only neural comparator suite with validation/full launch scripts, analysis, validation, runtime metadata capture, and no checked-in result claims.
 
-Caveat: This does not make the repository submission-ready.
+Caveat: Exp15 does not yet provide neural-baseline evidence. Paul still needs to run validation/full locally, upload the generated `analysis/exp15_full_*` artifacts, and import the analyzed results before manuscript claims are updated.
 
-Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`.
+Source path: `docs/manuscript/finalization/NEXT_STEP_PROMPT.md`; `experiments/experiment15_neural_baseline_comparator/README.md`; `experiments/experiment15_neural_baseline_comparator/run_experiment15.py`; `experiments/experiment15_neural_baseline_comparator/validate_experiment15.py`.
 
 ## Immediate Order Of Operations
 
-1. Use `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` as the controlling input for first-manuscript scope.
-2. Decide whether Exp14 C13 is main-text or supplement.
-3. Decide whether the first submission target permits a controlled symbolic/mechanistic benchmark without neural baselines.
-4. Generate manuscript-grade seed-level CI/effect-size tables for C1-C7 and C13 where retained.
-5. Build final reproducible figure scripts and source-data manifests.
-6. Import prior-art/novelty sources and update C12 discussion/related-work posture.
-7. Verify Exp11, Exp12, Exp13, Exp13.1, Exp13.2, and retained Exp14 run commands on a fresh checkout.
-8. Decide whether Exp13.1 lesion rerun, Exp13 holdout cleanup, stochastic context corruption, or neural baselines are necessary based on final manuscript claims and target venue.
+1. Run `experiments/experiment15_neural_baseline_comparator/start_exp15_validation.ps1` locally.
+2. If validation passes, run `experiments/experiment15_neural_baseline_comparator/start_exp15_full.ps1` locally.
+3. Upload the latest `analysis/exp15_full_*` directory in a separate analysis thread.
+4. Produce an Exp15 analysis digest and decide whether neural results change the manuscript claim posture.
+5. Import Exp15 results into the registry, baseline requirements, limitations, claim-freeze, and publication-readiness docs.
+6. Generate manuscript-grade seed-level CI/effect-size tables for retained C1-C7, C13, and Exp15 neural-comparator claims if retained.
+7. Build final reproducible figure scripts and source-data manifests.
+8. Import prior-art/novelty sources and update C12 discussion/related-work posture.
+9. Verify retained experiment commands on a fresh checkout.
+10. Decide whether Exp13.1 lesion rerun, Exp13 holdout cleanup, stochastic context corruption, or other optional experiments are necessary based on final manuscript claims and target venue.
+
+## Exp15 Neural Comparator
+
+Purpose: Address the remaining neural-baseline vulnerability without turning the first manuscript into an open-ended architecture search.
+
+Implemented baseline families:
+
+- GRU endpoint with context;
+- GRU endpoint without context;
+- GRU rollout with context;
+- GRU rollout without context;
+- small attention/Transformer-style endpoint model with context;
+- one-step transition MLP with context;
+- one-step transition MLP without context;
+- sequential-world replay-trained transition MLP;
+- parameter-isolated transition MLP with world-specific heads.
+
+Required local output after the full run:
+
+- `exp15_seed_metrics.csv`;
+- `exp15_summary.csv`;
+- `exp15_effect_sizes.csv`;
+- `exp15_model_runtime.csv`;
+- `run_manifest.json`;
+- validation report;
+- five diagnostic plots.
+
+Interpretation guardrail: Exp15 should clarify whether ordinary neural comparators solve, fail, or partially solve the route-memory probe decomposition. It should not be described as exhaustive neural benchmarking or proof of neural-network superiority/inferiority.
 
 ## Exp13.1 Follow-Up
 
@@ -40,13 +70,13 @@ Source path: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_
 
 Exp13.2 is complete and imported as a symbolic/algorithmic baseline suite. It partially resolves the baseline blocker for a controlled symbolic/mechanistic manuscript, but it does not provide neural baselines and does not replace prior-art/novelty import.
 
-Claim: Baseline integration remains a manuscript-readiness issue, but it is now a target-venue and prior-art issue rather than an unreviewed Exp13.2-artifact issue.
+Claim: Baseline integration remains a manuscript-readiness issue until Exp15 results and prior-art/novelty positioning are imported.
 
-Evidence: Exp13.2 includes oracle context-gated lookup, shared no-context lookup, endpoint memorization, recurrent controls, replay/LRU-style controls, hash/superposition controls, and parameter-isolation controls. Oracle context-gated lookup matches CIRM on the clean supplied-context benchmark.
+Evidence: Exp13.2 includes oracle context-gated lookup, shared no-context lookup, endpoint memorization, recurrent controls, replay/LRU-style controls, hash/superposition controls, and parameter-isolation controls. Exp15 implementation now provides the planned neural comparator suite, but no Exp15 result artifacts have been imported yet.
 
-Caveat: Neural baselines are absent. If targeting a stronger ML venue, implement neural baselines before submission.
+Caveat: Neural-baseline evidence remains absent until Paul runs Exp15 locally and imports the generated analysis.
 
-Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/experiments/exp13_2_summary.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`.
+Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/experiments/exp13_2_summary.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `experiments/experiment15_neural_baseline_comparator/README.md`.
 
 ## Applied Bridge
 
