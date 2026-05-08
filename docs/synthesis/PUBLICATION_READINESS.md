@@ -10,6 +10,18 @@ Exp13.2 should now be treated as imported symbolic/algorithmic baseline evidence
 
 Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`.
 
+## Manuscript Asset Pipeline Status
+
+Status: reproducible candidate assets generated, but not final submission-ready figures.
+
+Claim -> The first-manuscript claim freeze now has a local reproducible asset pipeline for candidate figures, source data, and source tables.
+
+Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs under `docs/manuscript/source_data/`, manuscript tables under `docs/manuscript/tables/`, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
+
+Caveat -> Human review is still required for caption wording, journal formatting, Exp14 main-vs-supplement placement, prior-art positioning, and target-venue baseline posture. The generated assets do not remove the neural-baseline or novelty-import caveats.
+
+Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
+
 ## Strongest Evidence
 
 - Exp11 A/B context-separated retention and ablations. Source path: `experiments/experiment11_context_memory/analysis/exp11/exp11_memory_indices.csv`; `docs/threads/experiment11_export`.
@@ -39,7 +51,7 @@ Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscrip
 ## Required Before Submission
 
 - Add seed-level confidence intervals and effect sizes for retained core claims.
-- Create final paper figures from reproducible scripts with source-data manifests.
+- Human-review and finalize the generated candidate paper figures from the reproducible manuscript asset script.
 - Add source-data/final figures for Exp14 if retained.
 - Import prior-art/novelty evidence as local source artifacts.
 - Verify manuscript-critical smoke/validation/full commands and document runtimes/hardware.

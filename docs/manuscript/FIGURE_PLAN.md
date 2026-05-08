@@ -4,6 +4,36 @@ Purpose: Track candidate figures and panels while preserving a source path and c
 
 Scope note: Exp13.2 is intentionally excluded from this cleanup pass. Any baseline figure or table is deferred to a separate Exp13.2 import/alignment pass and is not included as a current manuscript-ready panel here.
 
+## Post-Freeze Generated Asset Status
+
+Step 4 manuscript asset generation has produced a reproducible candidate figure/table pipeline.
+
+Build command: `python scripts/manuscript_assets/build_manuscript_assets.py`
+
+Generated asset manifest: `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`
+
+Generation report: `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`
+
+Freeze-document numbering supersedes the older candidate numbering below:
+
+| Freeze figure | Generated file(s) | Source data | Claim(s) | Status | Caveat |
+|---|---|---|---|---|---|
+| Figure 1 - Conceptual route-memory schematic | `docs/manuscript/figures/figure_01_conceptual_route_memory.png`; `docs/manuscript/figures/figure_01_conceptual_route_memory.svg` | `docs/manuscript/source_data/figure_01_conceptual_route_memory.csv` | C1-C4 framing; C13 boundary wording | Generated candidate schematic | Conceptual only; not empirical evidence. |
+| Figure 2 - Structural plasticity and recurrence ablation | `docs/manuscript/figures/figure_02_structural_plasticity_recurrence_ablation.png`; `docs/manuscript/figures/figure_02_structural_plasticity_recurrence_ablation.svg` | `docs/manuscript/source_data/figure_02_structural_plasticity_recurrence_ablation.csv` | C1-C4 | Generated candidate main figure | Internal symbolic ablation; uncertainty uses aggregate normal approximation. |
+| Figure 3 - Clean capacity scaling | `docs/manuscript/figures/figure_03_capacity_scaling.png`; `docs/manuscript/figures/figure_03_capacity_scaling.svg` | `docs/manuscript/source_data/figure_03_capacity_scaling.csv` | C5 | Generated candidate main figure | Ceiling-limited clean supplied-context result; no fitted capacity law. |
+| Figure 4 - Finite structural budget/local-global pressure | `docs/manuscript/figures/figure_04_finite_structural_budget_local_global.png`; `docs/manuscript/figures/figure_04_finite_structural_budget_local_global.svg` | `docs/manuscript/source_data/figure_04_finite_structural_budget_local_global.csv` | C6-C7 | Generated candidate narrow-main/supplement figure | Observed degradation curve only; paired seed-level local/global inference remains deferred. |
+| Figure 5 - Symbolic context selection from transition cues | `docs/manuscript/figures/figure_05_symbolic_context_selection.png`; `docs/manuscript/figures/figure_05_symbolic_context_selection.svg` | `docs/manuscript/source_data/figure_05_symbolic_context_selection.csv` | C13 | Generated candidate main-or-supplement figure | Symbolic transition-cue selection only; oracle remains an upper bound. |
+
+Generated manuscript tables:
+
+| Table | File(s) | Role | Caveat |
+|---|---|---|---|
+| Table 1 - Claim evidence | `docs/manuscript/tables/table_01_claim_evidence.csv`; `docs/manuscript/tables/table_01_claim_evidence.md` | Frozen-claim evidence map for C1-C7, C13, and C12 discussion posture. | Headline values require human caption/prose review. |
+| Table 2 - Run integrity | `docs/manuscript/tables/table_02_run_integrity.csv`; `docs/manuscript/tables/table_02_run_integrity.md` | Run/source provenance for manuscript-relevant artifacts. | Older Exp11/Exp12 layouts lack validation JSON and SQLite manifests. |
+| Table 3 - Statistical summary | `docs/manuscript/tables/table_03_statistical_summary.csv`; `docs/manuscript/tables/table_03_statistical_summary.md` | Figure and baseline statistical source table. | Effect-size grouping still needs human review before exact manuscript citation. |
+
+Exp13.2 baseline evidence is generated as `docs/manuscript/source_data/table_exp13_2_symbolic_baseline_suite.csv` and the manuscript tables above, rather than as a main Figure 4, because `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` assigns Figure 4 to finite structural budget/local-vs-global pressure.
+
 ## Figure 1 - Conceptual Architecture and Task
 
 Purpose: Define the continual compositional route-memory benchmark and the model decomposition.

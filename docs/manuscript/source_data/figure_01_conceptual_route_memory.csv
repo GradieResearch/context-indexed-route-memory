@@ -1,0 +1,5 @@
+panel,element,source_artifact,manuscript_claim_id,caveat
+worlds_contexts,World/context cues select among incompatible transition systems.,docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md,C2,Conceptual schematic only; not empirical evidence.
+structural_table,Context-indexed structural route table stores one-step transitions.,docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md,"C1,C4",Does not claim biological proof or novelty of context gating alone.
+recurrence,Recurrent execution composes stored one-step transitions into multi-step routes.,docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md,"C3,C4","Composition is over stored transitions, not unseen primitive inference."
+cue_selection,Symbolic transition cues can select the active context before execution.,docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md,C13,"Symbolic transition-cue selection, not raw sensory latent-world discovery."

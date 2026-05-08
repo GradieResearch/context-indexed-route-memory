@@ -14,12 +14,22 @@ Caveat: The manuscript still needs final claim freeze, manuscript-grade uncertai
 
 Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`.
 
+## Step 4 Manuscript Asset Pipeline Status
+
+Claim -> A reproducible candidate manuscript asset pipeline now exists for the frozen first-manuscript claim set.
+
+Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs, claim/run-integrity/statistical tables, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
+
+Caveat -> These are generated candidate manuscript assets, not human-approved final journal figures or final captions. Exp14 placement remains main-vs-supplement unresolved, Exp13.2 remains symbolic/algorithmic baseline evidence only, and prior-art/neural-baseline decisions remain open.
+
+Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
+
 ## P0 - Required Before Manuscript Draft
 
 | TODO | Reason | Related experiment | Source path | Target output |
 |---|---|---|---|---|
 | Freeze first-manuscript claims. | The repository needs a stable claim boundary before final figures and prose drafting. | Manuscript-level | `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md` | Human-reviewed claim set with main, narrow-main, supplement, drop, and future-work statuses. |
-| Decide Exp14 manuscript placement. | Exp14 is validated symbolic cue-selection evidence, but main-vs-supplement placement changes figure scope. | Exp14 | `docs/threads/experiment14_analysis_digest.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `docs/manuscript/FIGURE_PLAN.md` | Main/supplement decision, final figure script, and source-data mirror for retained panels. |
+| Decide Exp14 manuscript placement. | Exp14 is validated symbolic cue-selection evidence and a candidate Figure 5 now exists, but main-vs-supplement placement changes caption and manuscript scope. | Exp14 | `docs/threads/experiment14_analysis_digest.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `docs/manuscript/figures/figure_05_symbolic_context_selection.png`; `docs/manuscript/source_data/figure_05_symbolic_context_selection.csv`; `docs/manuscript/FIGURE_PLAN.md` | Human decision: main or supplement; then final caption and journal formatting. |
 | Resolve venue baseline posture. | Exp13.2 supplies symbolic/algorithmic baselines, but not neural baselines. | Exp13.2 and manuscript-level | `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/experiments/exp13_2_summary.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md` | Explicit decision: controlled symbolic/mechanistic benchmark paper now, or neural-baseline expansion before stronger ML submission. |
 
 ## P0 - Required Before Manuscript Submission
@@ -27,7 +37,7 @@ Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/repo_audi
 | TODO | Reason | Related experiment | Source path | Target output |
 |---|---|---|---|---|
 | Add seed-level confidence intervals and effect sizes. | Many claims cite aggregate means without manuscript-grade uncertainty. | Exp11-Exp14 | `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `scripts/compute_seed_metric_summary.py` | Human-reviewed CI/effect-size tables tied to explicit claim groupings. |
-| Create final reproducible paper figures. | Current figure plan cites generated analysis plots, not final panel scripts. | Exp11-Exp14, Exp13.2 if retained | `docs/manuscript/FIGURE_PLAN.md`; `docs/source_data/SOURCE_DATA_MANIFEST.csv` | Figure scripts plus source-data manifests for every retained panel. |
+| Human-review generated candidate figures and captions. | Step 4 generated reproducible candidate figures/source data, but final manuscript readiness still requires caption review, panel review, and journal formatting. | Exp11-Exp14, Exp13.2 tables | `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/manuscript/FIGURE_PLAN.md` | Final captions, approved main-vs-supplement placement, and any journal-specific formatting changes. |
 | Verify manuscript-critical run commands on a fresh checkout. | Commands were inspected or documented, not freshly rerun in this cleanup pass. | Exp11-Exp14, Exp13.2 if cited | `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` | Command log with pass/fail, runtime, hardware, and expected outputs. |
 | Import novelty/prior-art assessment as a local artifact. | C12 and related-work framing depend on prior-art positioning and a missing thread-referenced artifact. | Manuscript-level | local verification pending for `Pasted text.txt`; `docs/manuscript/BASELINE_REQUIREMENTS.md` | Future `docs/manuscript/NOVELTY_ASSESSMENT_IMPORTED.md` or equivalent cited artifact. |
 | Fix holdout metrics if retaining Exp13 holdout claims centrally. | Exp13 route-table/generalization claims need seen/unseen/all metric cleanup. | Exp13 or successor analysis | `experiments/experiment13_breaking_point/analysis/true_holdout_generalization_summary.csv` | Split metrics such as `route_table_accuracy_seen`, `route_table_accuracy_unseen`, and matching composition splits. |
