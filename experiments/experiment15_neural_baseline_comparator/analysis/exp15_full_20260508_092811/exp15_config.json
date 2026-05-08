@@ -1,0 +1,166 @@
+{
+  "batch_size": 64,
+  "embedding_dim": 48,
+  "epochs": 20,
+  "hidden_dim": 64,
+  "learning_rate": 0.0015,
+  "modes": 4,
+  "optional_neural_key_value_baseline_included": false,
+  "optional_neural_key_value_baseline_reason": "Omitted to keep Exp15 bounded; add only if reviewers require a memory-augmented neural comparator.",
+  "profile": "full",
+  "progress_every": 25,
+  "replay_buffer_worlds": 3,
+  "required_variants": [
+    "neural_gru_endpoint_context",
+    "neural_gru_endpoint_no_context",
+    "neural_gru_rollout_context",
+    "neural_gru_rollout_no_context",
+    "neural_transformer_sequence_context",
+    "neural_transition_mlp_context",
+    "neural_transition_mlp_no_context",
+    "neural_transition_mlp_replay_context",
+    "neural_transition_mlp_world_heads_context"
+  ],
+  "route_lengths": [
+    4,
+    8,
+    12
+  ],
+  "routes_per_world": 12,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "suffix_min_length": 2,
+  "train_eval_split_protocol": {
+    "first_step_context_conflict": "first transition of each shared-start route; requires context disambiguation",
+    "seen_full_routes": "used for endpoint training and seen-route evaluation",
+    "suffix_routes": "withheld as full-route endpoint examples; composed from trained primitives only",
+    "transition_examples": "used for transition/rollout training"
+  },
+  "transformer_layers": 2,
+  "variant_specs": [
+    {
+      "context_available": true,
+      "endpoint_model": true,
+      "family": "gru_endpoint",
+      "model_kind": "gru_endpoint",
+      "parameter_isolated": false,
+      "replay_enabled": false,
+      "sequence_model": true,
+      "training_regime": "joint_endpoint",
+      "transition_model": false,
+      "variant": "neural_gru_endpoint_context"
+    },
+    {
+      "context_available": false,
+      "endpoint_model": true,
+      "family": "gru_endpoint",
+      "model_kind": "gru_endpoint",
+      "parameter_isolated": false,
+      "replay_enabled": false,
+      "sequence_model": true,
+      "training_regime": "joint_endpoint",
+      "transition_model": false,
+      "variant": "neural_gru_endpoint_no_context"
+    },
+    {
+      "context_available": true,
+      "endpoint_model": false,
+      "family": "gru_rollout",
+      "model_kind": "gru_rollout",
+      "parameter_isolated": false,
+      "replay_enabled": false,
+      "sequence_model": true,
+      "training_regime": "joint_transition_rollout",
+      "transition_model": true,
+      "variant": "neural_gru_rollout_context"
+    },
+    {
+      "context_available": false,
+      "endpoint_model": false,
+      "family": "gru_rollout",
+      "model_kind": "gru_rollout",
+      "parameter_isolated": false,
+      "replay_enabled": false,
+      "sequence_model": true,
+      "training_regime": "joint_transition_rollout",
+      "transition_model": true,
+      "variant": "neural_gru_rollout_no_context"
+    },
+    {
+      "context_available": true,
+      "endpoint_model": true,
+      "family": "transformer_sequence",
+      "model_kind": "transformer_endpoint",
+      "parameter_isolated": false,
+      "replay_enabled": false,
+      "sequence_model": true,
+      "training_regime": "joint_endpoint",
+      "transition_model": false,
+      "variant": "neural_transformer_sequence_context"
+    },
+    {
+      "context_available": true,
+      "endpoint_model": false,
+      "family": "transition_mlp",
+      "model_kind": "transition_mlp",
+      "parameter_isolated": false,
+      "replay_enabled": false,
+      "sequence_model": false,
+      "training_regime": "joint_transition",
+      "transition_model": true,
+      "variant": "neural_transition_mlp_context"
+    },
+    {
+      "context_available": false,
+      "endpoint_model": false,
+      "family": "transition_mlp",
+      "model_kind": "transition_mlp",
+      "parameter_isolated": false,
+      "replay_enabled": false,
+      "sequence_model": false,
+      "training_regime": "joint_transition",
+      "transition_model": true,
+      "variant": "neural_transition_mlp_no_context"
+    },
+    {
+      "context_available": true,
+      "endpoint_model": false,
+      "family": "replay_transition_mlp",
+      "model_kind": "transition_mlp",
+      "parameter_isolated": false,
+      "replay_enabled": true,
+      "sequence_model": false,
+      "training_regime": "sequential_worlds_with_replay",
+      "transition_model": true,
+      "variant": "neural_transition_mlp_replay_context"
+    },
+    {
+      "context_available": true,
+      "endpoint_model": false,
+      "family": "parameter_isolated_transition_mlp",
+      "model_kind": "world_head_transition_mlp",
+      "parameter_isolated": true,
+      "replay_enabled": false,
+      "sequence_model": false,
+      "training_regime": "world_specific_heads",
+      "transition_model": true,
+      "variant": "neural_transition_mlp_world_heads_context"
+    }
+  ],
+  "world_counts": [
+    2,
+    8,
+    16,
+    32
+  ]
+}
