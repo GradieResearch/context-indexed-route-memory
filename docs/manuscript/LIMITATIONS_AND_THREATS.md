@@ -4,11 +4,19 @@ Purpose: Track limitations, reviewer attack surfaces, and non-claims so the manu
 
 ## Baseline Coverage Still Incomplete
 
-Claim: Baseline and prior-art coverage remain incomplete in this cleanup pass.
-Evidence: Current central evidence is internal to Exp11, Exp12, Exp13, and Exp13.1. `docs/manuscript/BASELINE_REQUIREMENTS.md` defines required baseline families but does not import Exp13.2 results in this pass.
-Caveat: Exp13.2 is intentionally deferred to a separate analysis/import/alignment pass; do not mark C12 complete here.
-Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
-Proposed fix: Complete the separate Exp13.2 pass, import missing novelty/prior-art sources, and decide whether additional neural baselines are required.
+Claim: Baseline and prior-art coverage remain incomplete after Exp15 import.
+Evidence: Exp13.2 now supplies symbolic/algorithmic baseline evidence, and Exp15 now supplies a completed minimal neural comparator with validation PASS.
+Caveat: Exp15 is fixed-profile and non-exhaustive. It does not replace prior-art/novelty import or a target-venue decision about whether memory-augmented neural baselines are required.
+Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`
+Proposed fix: Import missing novelty/prior-art sources, decide whether an optional memory-augmented neural baseline is required, and keep Exp15 claims limited to the tested fixed-profile comparator.
+
+## Neural Comparator Scope
+
+Claim: The neural baseline comparator is completed but minimal.
+Evidence: Exp15 tested 9 variants over 10 seeds, world counts 2, 8, 16, and 32, route lengths 4, 8, and 12, with 5,400 seed metric rows and 1,080 runtime rows.
+Caveat: There was no neural architecture search; model sizes and hyperparameters were small and fixed; no memory-augmented/key-value neural baseline was included; route length 16 was omitted from the default full profile; the replay variant requires implementation/training-regime audit before scientific interpretation; and `run_manifest.json` was reconstructed after a final SQLite manifest-write failure, with the SQLite `run_manifest` table locally verified as empty.
+Source path: `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/README.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/run_manifest.json`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_config.json`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; `experiments/experiment15_neural_baseline_comparator/runs/exp15_full_20260508_092811.sqlite3`
+Proposed fix: Treat Exp15 as a conservative comparator table/supplement unless the target venue requires a broader neural-baseline suite.
 
 ## Symbolic Benchmark Limitation
 
@@ -99,6 +107,7 @@ Proposed fix: Add a human-selected license and citation metadata before public r
 - Do not claim broad abstract rule induction.
 - Do not claim end-to-end perception.
 - Do not claim raw sensory latent-world discovery from Exp14.
+- Do not claim broad CIRM superiority over neural models from Exp15.
 - Do not claim consolidation is universally necessary.
 - Do not use Exp13.1 lesion diagnostics as positive mechanism evidence unless audited and rerun.
-- Do not use Exp13.2 to complete baseline claims until the separate Exp13.2 pass is done.
+- Do not use Exp15 replay collapse as scientific evidence against replay until audited.

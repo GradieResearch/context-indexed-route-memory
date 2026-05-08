@@ -123,3 +123,21 @@ Local artifact status: `experiments/experiment13_2_baseline_suite/analysis/exp13
 Risk: A manuscript could overclaim raw accuracy superiority over a supplied-context oracle lookup table.
 Recommended resolution: Treat this as claim refinement: clean supplied-context symbolic route memory can be solved by oracle context-gated lookup; frame CIRM through mechanism and failure modes instead.
 Resolution status: active caveat in claims, limitations, figure plan, and synthesis docs.
+
+## Conflict / uncertainty 15
+
+Issue: Pre-import active docs described Exp15 as pending or neural baselines as absent, while the imported Exp15 digest and local artifacts support completed minimal neural-comparator status.
+Thread source: `docs/threads/experiment15_analysis_digest.md`.
+Local artifact status: Local artifacts exist under `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/`, and `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md` reports PASS 42, WARN 0, FAIL 0.
+Risk: Manuscript/readiness docs could simultaneously claim neural baselines are absent and cite Exp15 results.
+Recommended resolution: Update active registry, experiment summary, claims, limitations, figure planning, TODO, and synthesis docs to describe Exp15 as completed minimal fixed-profile neural evidence, while preserving non-exhaustive caveats.
+Resolution status: resolved in active docs during Exp15 import; historical drafts and planning prompts may still preserve pre-import wording.
+
+## Conflict / uncertainty 16
+
+Issue: `run_manifest.json` was reconstructed after a final SQLite manifest-write failure, and local SQLite inspection found the `run_manifest` table empty.
+Thread source: `docs/threads/experiment15_analysis_digest.md`.
+Local artifact status: `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/run_manifest.json` records `recovered_after_failed_sqlite_tail: true`; `experiments/experiment15_neural_baseline_comparator/runs/exp15_full_20260508_092811.sqlite3` is present with `exp15_seed_metrics` and `exp15_model_runtime` tables, but the SQLite `run_manifest` table has 0 rows.
+Risk: Provenance could be overstated if docs imply the SQLite manifest is complete.
+Recommended resolution: Treat CSV artifacts as authoritative unless a later audit says otherwise; explicitly cite the reconstructed-manifest/empty-SQLite-manifest caveat wherever Exp15 is used for manuscript claims.
+Resolution status: active provenance caveat in registry, Exp15 README, claims, limitations, figure planning, synthesis docs, and this import report.

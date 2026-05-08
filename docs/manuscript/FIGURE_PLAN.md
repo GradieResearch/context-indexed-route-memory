@@ -2,7 +2,7 @@
 
 Purpose: Track candidate figures and panels while preserving a source path and caveat for every claim.
 
-Scope note: Exp13.2 is intentionally excluded from this cleanup pass. Any baseline figure or table is deferred to a separate Exp13.2 import/alignment pass and is not included as a current manuscript-ready panel here.
+Scope note: Exp13.2 and Exp15 are imported baseline evidence, but baseline visuals remain planning items. Treat Exp15 plots as analysis plots, not final manuscript figures, until a source-data-backed table/figure is generated and reviewed.
 
 ## Post-Freeze Generated Asset Status
 
@@ -32,7 +32,16 @@ Generated manuscript tables:
 | Table 2 - Run integrity | `docs/manuscript/tables/table_02_run_integrity.csv`; `docs/manuscript/tables/table_02_run_integrity.md` | Run/source provenance for manuscript-relevant artifacts. | Older Exp11/Exp12 layouts lack validation JSON and SQLite manifests. |
 | Table 3 - Statistical summary | `docs/manuscript/tables/table_03_statistical_summary.csv`; `docs/manuscript/tables/table_03_statistical_summary.md` | Figure and baseline statistical source table. | Effect-size grouping still needs human review before exact manuscript citation. |
 
-Exp13.2 baseline evidence is generated as `docs/manuscript/source_data/table_exp13_2_symbolic_baseline_suite.csv` and the manuscript tables above, rather than as a main Figure 4, because `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` assigns Figure 4 to finite structural budget/local-vs-global pressure.
+Exp13.2 baseline evidence is generated as `docs/manuscript/source_data/table_exp13_2_symbolic_baseline_suite.csv` and the manuscript tables above, rather than as a main Figure 4, because `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` assigns Figure 4 to finite structural budget/local-vs-global pressure. Exp15 baseline evidence should be handled either as a compact main-text baseline table or as a supplementary neural comparator figure/table.
+
+## Exp15 Neural Comparator Baseline Planning
+
+Claim -> Exp15 adds completed minimal neural comparator evidence that can inform baseline table/figure planning.
+Evidence -> The imported run `exp15_full_20260508_092811` passed validation and produced analysis plots for seen-vs-suffix composition, context-conflict accuracy, retention, route-length scaling, and world-count scaling.
+Caveat -> These are analysis plots, not final manuscript figures. Exp15 is fixed-profile and non-exhaustive; a final manuscript asset should use source-data-backed tables/plots and should include the manifest/SQLite provenance caveat.
+Source path -> `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_seen_vs_suffix_composition.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_context_conflict_accuracy.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_retention_after_sequential_worlds.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_route_length_scaling.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_world_count_scaling.png`
+
+Recommended output: either a compact main-text baseline table summarizing the hard slice, or a supplementary neural comparator figure/table that keeps broad neural-superiority claims out of the manuscript.
 
 ## Figure 1 - Conceptual Architecture and Task
 
@@ -115,12 +124,12 @@ Source materials: `experiments/experiment14_latent_context_inference/analysis/ex
 Status: Candidate manuscript panel or supplement; final rendering pending.
 Caveat: Generated analysis plots are not final figures. This supports symbolic transition-cue selection, not raw sensory latent-world discovery, and the oracle context-gated table remains an upper bound.
 
-## Deferred Baseline Figure
+## Baseline Figure/Table
 
-Claim: Baseline figure/table planning is required, but intentionally deferred.
-Evidence: C12 remains `Needs baseline` in this pass.
-Caveat: Do not create a baseline-results figure or table from Exp13.2 until the separate Exp13.2 import/alignment pass is complete.
-Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`
+Claim: Baseline figure/table planning is required before manuscript submission.
+Evidence: Exp13.2 supplies symbolic/algorithmic baseline evidence, and Exp15 supplies completed minimal neural comparator evidence.
+Caveat: Exp15 plots are analysis outputs, not final figures; Exp15 is not an exhaustive architecture search and omits memory-augmented/key-value neural baselines.
+Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`
 
 ## Final-Figure Readiness
 
@@ -135,4 +144,4 @@ Source path: `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/BASELINE
 | Figure 7 - Context Corruption Failure Boundary | C10 | `experiments/experiment13_breaking_point/analysis/context_corruption_summary.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_context_corruption.csv` | yes | no | exploratory/generated analysis output | Wrong-world sensitivity only; not stochastic robustness. | Add stochastic corruption if claiming robustness. |
 | Figure 8 - Continuous / Perceptual Bridge | C11 | `experiments/experiment13_breaking_point/analysis/continuous_frontend_bridge_summary.csv` | yes | no | exploratory/generated analysis output | Preliminary bridge, not perception. | Keep supplementary unless a stronger applied bridge is built. |
 | Figure 9 - Latent Symbolic Context Inference | C13 | `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_effect_sizes.csv`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/plots/exp14_world_selection_vs_corruption.png`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/plots/exp14_seen_composition_vs_corruption.png`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/plots/exp14_cue_count_selection_sensitivity.png`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/plots/exp14_cue_count_composition_sensitivity.png` | no | no | generated analysis output; candidate panel/supplement | Symbolic cues only; oracle upper bound remains; final rendering pending. | Decide main vs supplement, create final plotting script, and add source-data mirror if retained. |
-| Deferred baseline table/figure | C12 | deferred to separate Exp13.2 pass | not reviewed in this pass | no | deferred | Baseline blocker remains active here. | Complete Exp13.2 import/alignment separately. |
+| Exp15 neural comparator table/figure | C12, C2, C4 caveats | `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_effect_sizes.csv`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_model_runtime.csv`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_seen_vs_suffix_composition.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_context_conflict_accuracy.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_retention_after_sequential_worlds.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_route_length_scaling.png`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/plots/exp15_world_count_scaling.png` | no | no | generated analysis output only | Minimal fixed-profile comparator; manifest reconstructed after SQLite tail failure; replay variant requires audit before interpretation. | Decide compact main-text table vs supplementary comparator figure/table; generate source-data-backed final asset if retained. |

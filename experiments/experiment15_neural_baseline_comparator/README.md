@@ -193,6 +193,33 @@ Do not describe Exp15 as exhaustive neural benchmarking. It is a minimal compara
 - The optional neural key-value / memory-augmented baseline is omitted for scope control.
 - Validation confirms artifact and metric integrity, not scientific significance.
 
-## After Paul runs it
+## Completed Runs And Results
 
-Upload the latest `analysis/exp15_full_<timestamp>/` directory in a separate analysis thread. That thread should analyze the generated summaries/plots, produce a digest, and only then update manuscript claims, limitation language, baseline requirements, and finalization checklist items.
+### `exp15_full_20260508_092811`
+
+Claim -> Exp15 completed the minimal fixed-profile neural comparator, but it is not an exhaustive neural architecture search.
+Evidence -> `validation_report.md` reports PASS with 42 PASS, 0 WARN, and 0 FAIL checks for 10 seeds, 9 variants, world counts 2, 8, 16, and 32, route lengths 4, 8, and 12, 5,400 seed metric rows, and 1,080 runtime rows.
+Caveat -> `run_manifest.json` was reconstructed after training/evaluation completed but the final SQLite manifest write failed. The SQLite database is present, but local verification found its `run_manifest` table empty; use the CSV artifacts as authoritative unless a later provenance audit says otherwise.
+Source path -> `docs/threads/experiment15_analysis_digest.md`; `analysis/exp15_full_20260508_092811/validation_report.md`; `analysis/exp15_full_20260508_092811/run_manifest.json`; `analysis/exp15_full_20260508_092811/exp15_summary.csv`; `analysis/exp15_full_20260508_092811/exp15_seed_metrics.csv`; `analysis/exp15_full_20260508_092811/exp15_model_runtime.csv`; `runs/exp15_full_20260508_092811.sqlite3`.
+
+Hardest-slice summary for `world_count=32`, `route_length=12`, `n_seeds=10`:
+
+| Variant | Conservative hard-slice summary |
+|---|---|
+| `neural_gru_endpoint_context` | Seen-route composition about 0.9990; suffix-route composition about 0.4040; transition accuracy about 0.0232; retention about 0.7015. |
+| `neural_gru_rollout_context` | First-step context conflict about 0.8794; transition accuracy about 0.5122; suffix-route composition about 0.0777; retention about 0.0612. |
+| `neural_transformer_sequence_context` | Seen-route composition about 0.5435; suffix-route composition about 0.1184; retention about 0.3309. |
+| `neural_transition_mlp_context` | 1.0000 on all hard-slice metrics. |
+| `neural_transition_mlp_world_heads_context` | 1.0000 on all hard-slice metrics. |
+| `neural_transition_mlp_no_context` | First-step context conflict about 0.0312; seen-route composition about 0.0312; suffix-route composition 1.0000; transition accuracy about 0.9193; retention about 0.5156. |
+| `neural_transition_mlp_replay_context` | Near-zero hard-slice performance; this requires implementation/training-regime audit before scientific interpretation. |
+
+Claim -> The completed comparator strengthens the distinction between endpoint memorization, local transition learning, and recurrent route composition.
+Evidence -> At the hardest slice, endpoint-style GRU and Transformer models show partial or strong seen-route endpoint behavior without matching suffix composition or transition accuracy, while context-conditioned transition MLP variants solve the clean symbolic benchmark.
+Caveat -> The context-conditioned transition MLP result means the manuscript should not claim broad CIRM superiority over neural models or that structural plasticity is required for all route-memory systems.
+Source path -> `docs/threads/experiment15_analysis_digest.md`; `analysis/exp15_full_20260508_092811/exp15_summary.csv`; `analysis/exp15_full_20260508_092811/exp15_report.md`.
+
+Claim -> Context/world information is necessary for deliberately conflicting first-step and full-route disambiguation, not universal for every suffix transition.
+Evidence -> `neural_transition_mlp_no_context` is near chance on first-step context conflict and seen-route composition at the hard slice, but reaches suffix-route composition 1.0000 and transition accuracy about 0.9193.
+Caveat -> Phrase context necessity as conflict-specific. Do not imply that every suffix transition in this generator requires context.
+Source path -> `docs/threads/experiment15_analysis_digest.md`; `analysis/exp15_full_20260508_092811/exp15_summary.csv`.

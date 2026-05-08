@@ -4,11 +4,11 @@
 
 Status: ready for claim hardening and final figure/table planning, but not submission-ready.
 
-The current internal spine is defensible but narrow: in a controlled symbolic route-memory benchmark, context-indexed structural plasticity stores incompatible local transition systems, recurrent execution composes stored one-step transitions into multi-step routes, Exp13.2 supplies symbolic/algorithmic baseline coverage, and Exp14 shows that the active symbolic world can be selected from partial transition cues. Exp11, Exp12, Exp13, Exp13.1, Exp13.2, and Exp14 support this story with important caveats.
+The current internal spine is defensible but narrow: in a controlled symbolic route-memory benchmark, context-indexed structural plasticity stores incompatible local transition systems, recurrent execution composes stored one-step transitions into multi-step routes, Exp13.2 supplies symbolic/algorithmic baseline coverage, Exp14 shows that the active symbolic world can be selected from partial transition cues, and Exp15 supplies a minimal neural comparator. Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 support this story with important caveats.
 
-Exp13.2 should now be treated as imported symbolic/algorithmic baseline evidence. It partially satisfies C12 for a controlled symbolic/mechanistic manuscript, but it does not provide neural baselines and does not replace prior-art/novelty import.
+Exp13.2 should now be treated as imported symbolic/algorithmic baseline evidence, and Exp15 should now be treated as imported minimal neural comparator evidence. Together they partially satisfy C12 for a controlled symbolic/mechanistic manuscript, but Exp15 remains fixed-profile and non-exhaustive and neither import replaces prior-art/novelty import.
 
-Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`.
+Source path: `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/CLAIMS_AND_EVIDENCE.md`; `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`.
 
 ## Manuscript Asset Pipeline Status
 
@@ -18,7 +18,7 @@ Claim -> The first-manuscript claim freeze now has a local reproducible asset pi
 
 Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs under `docs/manuscript/source_data/`, manuscript tables under `docs/manuscript/tables/`, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
 
-Caveat -> Human review is still required for caption wording, journal formatting, Exp14 main-vs-supplement placement, prior-art positioning, and target-venue baseline posture. The generated assets do not remove the neural-baseline or novelty-import caveats.
+Caveat -> Human review is still required for caption wording, journal formatting, Exp14 main-vs-supplement placement, Exp15 baseline-table/figure placement, prior-art positioning, and target-venue baseline posture. The generated assets do not remove the non-exhaustive neural-baseline or novelty-import caveats.
 
 Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`.
 
@@ -30,10 +30,11 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 - Exp13.1 publication-hardening ablations: no-recurrence-at-eval preserves route-table accuracy while composition collapses, no-structural-plasticity fails, no-context-binding fails, and local budget pressure is much more damaging than global budget pressure. Source path: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_variant_metrics.csv`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv`.
 - Exp13.2 symbolic/algorithmic baseline suite: oracle context-gated lookup matches CIRM on the clean supplied-context benchmark, no-context lookup fails conflict-sensitive probes, no-recurrence separates route-table storage from composition, endpoint memorization fails suffix composition, and hash/superposition-style controls expose context compression/collision behavior. Source path: `docs/experiments/exp13_2_summary.md`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `experiments/experiment13_2_baseline_suite/analysis/exp13_2_full_20260507_165813/exp13_2_summary.csv`.
 - Exp14 latent symbolic context selection: full run validation passed, clean hard-slice CIRM selection/composition reaches 1.0000, and cue corruption/cue-count sweeps quantify the symbolic selection boundary. Source path: `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/validation_report.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`; `docs/threads/experiment14_analysis_digest.md`.
+- Exp15 minimal neural comparator: full run validation passed; context-conditioned transition MLP and world-head transition MLP variants solve all hard-slice metrics at 1.0000, endpoint GRU/Transformer variants expose endpoint-vs-composition dissociations, and no-context transition MLP fails first-step/full-route disambiguation while solving suffix composition. Source path: `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`.
 
 ## Weakest Evidence
 
-- Neural baselines are absent. Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`.
+- Neural baseline coverage is minimal and non-exhaustive. Exp15 used fixed small models/hyperparameters, omitted memory-augmented/key-value neural baselines, omitted route length 16 from the default full profile, and includes manifest/SQLite provenance caveats. Source path: `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/README.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/run_manifest.json`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_config.json`.
 - Prior-art/novelty evidence remains incomplete. Source path: `docs/manuscript/BASELINE_REQUIREMENTS.md`; local verification pending for `Pasted text.txt`.
 - Consolidation as a stability-plasticity bias is preliminary because Exp13 validation shows only a small finite-pressure delta and Exp13.1 did not show constrained-budget accuracy rescue. Source path: `experiments/experiment13_breaking_point/analysis/validation_report.md`; `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_budget_consolidation.csv`.
 - Exp13.1 targeted lesion evidence failed the expected pattern and should not be used as positive mechanism evidence. Source path: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_lesion_metrics.csv`.
@@ -45,7 +46,7 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 
 - Use `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` as the handoff for final figure/table generation and manuscript drafting.
 - Decide whether Exp14/C13 is a main-text result or supplementary result.
-- Decide whether the first submission target permits a controlled symbolic/mechanistic benchmark without neural baselines.
+- Decide whether Exp15 is a compact main-text baseline table or supplementary comparator, and whether the first submission target requires an optional memory-augmented neural baseline.
 - Refresh `docs/manuscript/MANUSCRIPT_SPINE.md` from the claim-freeze document.
 
 ## Required Before Submission
@@ -53,6 +54,7 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 - Add seed-level confidence intervals and effect sizes for retained core claims.
 - Human-review and finalize the generated candidate paper figures from the reproducible manuscript asset script.
 - Add source-data/final figures for Exp14 if retained.
+- Add a source-data-backed Exp15 baseline table/figure if retained.
 - Import prior-art/novelty evidence as local source artifacts.
 - Verify manuscript-critical smoke/validation/full commands and document runtimes/hardware.
 - Add human-chosen `LICENSE` and `CITATION.cff`.
@@ -75,7 +77,8 @@ Source path: `README.md`; `docs/README.md`; `docs/manuscript/SOURCE_OF_TRUTH.md`
 
 | Reviewer criticism | Why they might say it | Current answer | Required fix |
 |---|---|---|---|
-| Internal ablations are not enough. | Most core claims compare model variants and symbolic controls. | Exp13.2 adds symbolic/algorithmic baselines, but not neural baselines. | Decide target venue and add neural baselines if needed. |
+| Internal ablations are not enough. | Most core claims compare model variants and symbolic controls. | Exp13.2 adds symbolic/algorithmic baselines, and Exp15 adds a minimal neural comparator. | Decide target venue and add memory-augmented or broader neural baselines if needed. |
+| Neural comparator is too small. | Exp15 is fixed-profile, with small models and no architecture search. | Agreed; Exp15 is a minimal comparator, not a neural benchmark suite. | Keep claims narrow, or create a successor neural-baseline experiment if the venue requires it. |
 | Oracle context-gated lookup solves clean supplied-context benchmark. | Exp13.2 shows oracle context-gated lookup matches CIRM in the clean supplied-context setting. | Agreed; raw clean supplied-context accuracy is not the novelty claim. | Frame contribution around mechanism decomposition, capacity/boundary mapping, and Exp14 symbolic cue-selected context. |
 | Generalization is overstated. | Exp13 unseen primitive transitions fail. | The manuscript should claim composition over stored primitives, not unseen transition inference. | Fix seen/unseen/all holdout metrics and wording if C9 is retained centrally. |
 | Consolidation claim is weak. | Easy regimes do not need consolidation; Exp13 delta is small. | Current claim is bias/tradeoff, not necessity. | Keep supplementary or add dose-response/robustness evidence. |

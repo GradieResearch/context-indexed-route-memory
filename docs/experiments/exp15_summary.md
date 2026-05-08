@@ -1,8 +1,8 @@
 # Experiment 15 Summary: Minimal Neural Baseline Comparator
 
-Status: **planned / implemented, awaiting local execution and result import**.
+Status: **completed minimal neural comparator import**.
 
-This document exists so repository documentation references resolve before Experiment 15 has been run locally. It must not be cited as result evidence until the generated Exp15 artifacts have been imported and reviewed.
+This document summarizes the imported Experiment 15 full run. Treat it as minimal fixed-profile neural comparator evidence, not exhaustive neural benchmarking.
 
 ## Purpose
 
@@ -10,7 +10,7 @@ Experiment 15 implements a minimal neural baseline comparator for the Context-In
 
 The experiment asks whether ordinary neural sequence models trained under matched symbolic route-memory conditions reproduce, fail, or partially reproduce the same storage, context separation, retention, and compositional execution behavior observed in CIRM.
 
-## Current implementation status
+## Implementation and imported run
 
 Implementation directory:
 
@@ -18,7 +18,7 @@ Implementation directory:
 experiments/experiment15_neural_baseline_comparator/
 ```
 
-Implemented files:
+Implementation files:
 
 - `experiments/experiment15_neural_baseline_comparator/README.md`
 - `experiments/experiment15_neural_baseline_comparator/run_experiment15.py`
@@ -43,9 +43,20 @@ The implementation includes:
 
 The optional neural key-value / memory-augmented lookup baseline is intentionally omitted for scope control.
 
-## Planned metrics
+Imported run:
 
-Expected generated metrics after local execution:
+```text
+run_id: exp15_full_20260508_092811
+profile: full
+analysis: experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/
+sqlite: experiments/experiment15_neural_baseline_comparator/runs/exp15_full_20260508_092811.sqlite3
+```
+
+Validation status: PASS, with 42 PASS, 0 WARN, and 0 FAIL checks.
+
+## Metrics
+
+Generated metrics:
 
 - one-step transition accuracy;
 - seen-route composition accuracy;
@@ -57,12 +68,12 @@ Expected generated metrics after local execution:
 - runtime/training cost;
 - seed-level summaries suitable for confidence intervals and effect sizes.
 
-## Expected local artifacts after execution
+## Local artifacts
 
-After Paul runs the validation or full profile, the latest run directory should contain:
+The imported full run contains:
 
 ```text
-analysis/exp15_<profile>_<timestamp>/
+experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/
   validation_report.md
   validation_results.json
   run_manifest.json
@@ -81,6 +92,7 @@ analysis/exp15_<profile>_<timestamp>/
     exp15_retention_after_sequential_worlds.png
     exp15_route_length_scaling.png
     exp15_world_count_scaling.png
+experiments/experiment15_neural_baseline_comparator/runs/exp15_full_20260508_092811.sqlite3
 ```
 
 ## How to run locally
@@ -99,18 +111,12 @@ powershell -ExecutionPolicy Bypass -File .\start_exp15_full.ps1
 
 ## Result summary
 
-Pending. No Experiment 15 local validation or full-run results have been imported into the repository yet.
+Claim -> Exp15 completed a minimal neural comparator over 10 seeds, 9 variants, world counts 2, 8, 16, and 32, and route lengths 4, 8, and 12.
+Evidence -> The validation report passes and the imported CSVs contain 5,400 seed metric rows, 540 summary rows, and 1,080 runtime rows.
+Caveat -> The run manifest was reconstructed after a final SQLite manifest-write failure. The SQLite database is present, but local verification found its `run_manifest` table empty; use CSV artifacts as authoritative unless a later audit says otherwise.
+Source path -> `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/run_manifest.json`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_seed_metrics.csv`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_model_runtime.csv`.
 
-Do not use this document as evidence for neural-baseline performance until it is replaced or updated after the generated `analysis/exp15_full_*` artifacts have been reviewed.
-
-## Post-run import checklist
-
-After the full run is analyzed, update this document with:
-
-- run ID and profile;
-- validation PASS/WARN/FAIL counts;
-- row counts for `exp15_seed_metrics.csv`, `exp15_summary.csv`, `exp15_effect_sizes.csv`, and `exp15_model_runtime.csv`;
-- key hard-slice results;
-- Claim -> Evidence -> Caveat entries;
-- source artifact paths;
-- manuscript consequence for baseline and limitation language.
+Claim -> Exp15 narrows manuscript wording rather than supporting broad neural-superiority claims.
+Evidence -> At the hard slice `world_count=32`, `route_length=12`, context-conditioned transition MLP and world-head transition MLP variants reach 1.0000 on all hard-slice metrics, while endpoint GRU/Transformer variants show seen-route/endpoint behavior that does not fully transfer to suffix composition or transition accuracy.
+Caveat -> Exp15 is not an architecture search, uses fixed small hyperparameters, omits memory-augmented/key-value neural baselines, and treats the replay variant as requiring audit before interpretation.
+Source path -> `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_report.md`.
