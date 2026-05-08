@@ -30,7 +30,7 @@ Important controlling docs to inspect first:
 
 Primary deliverable:
 
-Create a self-contained experiment directory:
+Create the planned self-contained experiment directory:
 
 `experiments/experiment15_neural_baseline_comparator/`
 

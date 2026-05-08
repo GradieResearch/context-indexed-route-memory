@@ -27,7 +27,7 @@ Legend:
 
 ### Design and implementation
 
-- [ ] Create `experiments/experiment15_neural_baseline_comparator/`.
+- [ ] Create planned directory `experiments/experiment15_neural_baseline_comparator/`.
 - [ ] Add experiment README with purpose, hypotheses, variants, metrics, and expected outputs.
 - [ ] Implement shared dataset/probe generation aligned to Exp13.2/Exp14 route-memory metrics.
 - [ ] Implement GRU/LSTM endpoint baseline.
@@ -76,8 +76,8 @@ Legend:
 
 ### Import
 
-- [ ] Add `docs/experiments/exp15_summary.md`.
-- [ ] Add `docs/threads/experiment15_analysis_digest.md`.
+- [ ] Add planned post-run summary `docs/experiments/exp15_summary.md` after results exist.
+- [ ] Add planned post-run digest `docs/threads/experiment15_analysis_digest.md` after results exist.
 - [ ] Update `docs/experiments/EXPERIMENT_REGISTRY.md`.
 - [ ] Update `docs/manuscript/BASELINE_REQUIREMENTS.md`.
 - [ ] Update `docs/manuscript/CLAIMS_AND_EVIDENCE.md`.
@@ -186,4 +186,4 @@ Do not start these until Exp15 has been analyzed and the manuscript claim postur
 
 ## Current recommended next checkbox
 
-- [ ] Create and implement `experiments/experiment15_neural_baseline_comparator/` using `docs/manuscript/finalization/NEXT_STEP_PROMPT.md`.
+- [ ] Create and implement planned directory `experiments/experiment15_neural_baseline_comparator/` using `docs/manuscript/finalization/NEXT_STEP_PROMPT.md`.
