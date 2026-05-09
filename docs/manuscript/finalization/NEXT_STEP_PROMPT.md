@@ -1,27 +1,28 @@
-# Next Step Prompt: Post-15A Citation, Prior-Art, And Figure/Table Review
+# Next Step Prompt: Final Citation Insertion And Human Figure/Table Decisions
 
-Use this prompt in a new session after Analysis Pass 15A has been completed.
+Use this prompt in a new session after the post-15A citation/prior-art audit and figure/table human-review checklist have been merged.
 
 ```text
 You are working in the repository:
 
 GradieResearch/context-indexed-route-memory
 
-Task: Advance the manuscript from retained-claim/statistical hardening into citation/prior-art hardening and human-review preparation for the generated candidate figure/table package. Do not change the experimental record.
+Task: Convert the post-15A citation/prior-art audit into final manuscript citation work and perform human-directed review of the generated candidate figure/table package. Do not change the experimental record.
 
 Starting context:
 
-The repository is now post-Exp15, post-Manuscript-V2-capture, and post-Analysis-Pass-15A.
+The repository is now post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, and post-citation/figure-review-audit.
 
 - Experiment 15 is complete and imported as minimal fixed-profile neural comparator evidence.
 - The imported Exp15 run is `exp15_full_20260508_092811`.
 - `docs/manuscript/draft/MANUSCRIPT_V2.md` exists.
 - `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` exists.
 - `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` exists.
-- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` has been updated for retained, boundary, supplement, blocked, and non-claim evidence.
+- `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md` exists.
+- `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` exists.
+- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` separates retained, boundary, supplement, blocked, and non-claim evidence.
 - `docs/manuscript/tables/table_04_exp15_neural_comparator.md` exists.
 - `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv` exists.
-- The next checklist item is no longer retained-claim selection. The next checklist item is citation/prior-art hardening plus human review of generated Figures 1-5 and Tables 1-4.
 
 Current scientific posture to preserve:
 
@@ -43,6 +44,8 @@ Inputs to inspect first:
 - `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
 - `docs/manuscript/finalization/MANUSCRIPT_FINALIZATION_PLAN.md`
 - `docs/manuscript/MANUSCRIPT_TODO.md`
+- `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`
+- `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
 - `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
 - `docs/manuscript/draft/MANUSCRIPT_V2.md`
 - `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`
@@ -50,6 +53,7 @@ Inputs to inspect first:
 - `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
 - `docs/manuscript/FIGURE_PLAN.md`
 - `docs/manuscript/BASELINE_REQUIREMENTS.md`
+- `docs/manuscript/NOVELTY_POSITIONING.md`
 - `docs/synthesis/PUBLICATION_READINESS.md`
 - `docs/source_data/SOURCE_DATA_MANIFEST.csv`
 - `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`
@@ -61,26 +65,31 @@ Inputs to inspect first:
 
 Primary objective:
 
-Prepare the manuscript package for citation/prior-art hardening and human figure/table review. This should identify all citation placeholders and related-work claims that need real metadata, document the disposition of the missing novelty/prior-art source artifact, and produce a clear human-review checklist for Figures 1-5 and Tables 1-4.
+Move from audit artifacts to manuscript-facing deliverables: verified bibliography/citation insertion, closest-prior-art risk table prose, and resolved figure/table placement/caption decisions where a human decision is available.
 
 Concrete work:
 
-1. Citation and related-work audit.
-   - Scan `MANUSCRIPT_V2.md` and manuscript-support docs for citation placeholders, TODO citation markers, unsupported related-work claims, or fake-looking references.
-   - Produce a clear list of citation placeholders with exact surrounding context and the metadata/source needed.
+1. Final citation insertion.
+   - Use `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md` as the source-backed starting point.
+   - Verify metadata against primary sources before creating final bibliography entries.
+   - Add or update the repository bibliography file only if the repository convention supports one.
+   - Replace manuscript placeholder keys with final citation keys or a consistent citation format.
    - Do not add fake citations, fake BibTeX, or unsupported prior-art claims.
-   - If browsing/literature search is available in the environment, use current source metadata and prefer primary sources for technical claims.
 
-2. Missing novelty/prior-art artifact disposition.
-   - Locate/import or recreate the missing novelty/prior-art source artifact, if it is still relevant and available.
-   - If it cannot be found, document that explicitly and remove dependency on it as a blocker where appropriate.
-   - Do not invent its contents.
+2. Closest-prior-art table.
+   - If retained in Section 2.7, add a compact table comparing CIRM to closest prior-art families.
+   - Include task-gated lookup, mixture-of-experts/modular routing, fast weights/linear attention, differentiable/external memory, neural algorithmic reasoning, symbolic graph/path algorithms, hippocampal/CLS inspiration, and memory-augmented neural baselines where appropriate.
+   - The table must state what is inherited, what is not claimed as novel, and what the paper contributes narrowly.
 
-3. Human-review figure/table package.
-   - Review generated Figures 1-5 and Tables 1-4 against `RETAINED_CLAIMS_STATISTICAL_HARDENING.md`.
-   - For each figure/table, record: retained placement, claim role, caption caveat, source-data status, and unresolved human decision.
-   - Keep Exp14 as main-narrow Figure 5 for V2 hardening unless a human/venue decision moves it to supplement.
-   - Keep Exp15 as compact Table 4 unless a human/venue decision moves it to supplement.
+3. Human figure/table decisions.
+   - Use `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` as the decision tracker.
+   - Resolve any decisions the human has explicitly made.
+   - If the human has not chosen, preserve the current conservative defaults:
+     - Figures 1-3 stay main.
+     - Figure 4 stays main-narrow for C6, with C7 boundary caveat.
+     - Figure 5 stays main-narrow for V2 hardening, movable to supplement by venue decision.
+     - Table 4 stays compact main-text neural comparator, movable to supplement by venue decision.
+     - Table 3 remains candidate until grouping/effect-size review is completed.
    - Do not promote Exp15 analysis plots into final figures unless explicitly requested.
 
 4. Update operational docs after concrete changes.
@@ -88,6 +97,7 @@ Concrete work:
    - Update `docs/manuscript/MANUSCRIPT_TODO.md`.
    - Update `docs/synthesis/PUBLICATION_READINESS.md` if readiness status changes.
    - Update `docs/manuscript/FIGURE_PLAN.md` only if figure/table placement or caption-readiness decisions change.
+   - Update `docs/manuscript/NOVELTY_POSITIONING.md` if prior-art positioning changes.
 
 Do not do these unless explicitly requested:
 
@@ -102,11 +112,12 @@ Do not do these unless explicitly requested:
 
 Definition of done:
 
-- Citation placeholders and unsupported related-work risks are listed with exact locations/context.
-- The missing novelty/prior-art source artifact is imported/recreated, or its absence is explicitly documented.
-- Figures 1-5 and Tables 1-4 have a human-review checklist with placement, caveats, source-data status, and unresolved decisions.
+- Citation placeholders in `MANUSCRIPT_V2.md` are replaced or explicitly left as tracked TODOs with a reason.
+- Bibliography metadata is verified and stored using the repository's chosen convention, if one exists.
+- The closest-prior-art table is added or explicitly deferred.
+- Figure/table decisions from `FIGURE_TABLE_HUMAN_REVIEW.md` are resolved where human direction exists, or conservative defaults are preserved.
 - Finalization checklist and manuscript TODO reflect actual progress.
-- `docs/synthesis/PUBLICATION_READINESS.md` reflects the post-15A readiness posture.
+- `docs/synthesis/PUBLICATION_READINESS.md` reflects the new readiness posture if it changed.
 - `python scripts/verify_doc_source_paths.py` passes, or failures/inability to run are listed with exact paths and fixes.
 - Final response summarizes changed files, remaining blockers, unresolved human decisions, and verification result.
 ```
