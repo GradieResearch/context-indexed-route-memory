@@ -2,15 +2,15 @@
 
 Purpose: Define the baseline and prior-art evidence required before the manuscript can claim submission readiness.
 
-## Current status after Exp13.2, Exp14, and Exp15
+## Current status after Exp13.2, Exp14, Exp15, and Analysis Pass 15A
 
 Claim: Exp13.2 partially satisfies the symbolic/algorithmic baseline requirement, and Exp15 partially satisfies the neural-comparator requirement, but baseline and prior-art coverage are still not complete enough to claim submission readiness.
 
-Evidence: The completed Exp13.2 baseline-suite import reports a locally verified full run with `PASS: 28`, `WARN: 0`, `FAIL: 0`, 20 seeds, 15,040 metrics rows, 748 summary rows, 624 effect-size rows, and a local SQLite database. The imported suite includes shared no-context lookup, oracle context-gated lookup, endpoint memorization, recurrent non-plastic rules, superposition/hash-slot baselines, bounded LRU variants, replay variants, and parameter-isolation controls. The completed Exp15 import reports validation PASS for 10 seeds, 9 neural variants, 5,400 seed metric rows, 540 summary rows, and 1,080 runtime rows.
+Evidence: The completed Exp13.2 baseline-suite import reports a locally verified full run with `PASS: 28`, `WARN: 0`, `FAIL: 0`, 20 seeds, 15,040 metrics rows, 748 summary rows, 624 effect-size rows, and a local SQLite database. The imported suite includes shared no-context lookup, oracle context-gated lookup, endpoint memorization, recurrent non-plastic rules, superposition/hash-slot baselines, bounded LRU variants, replay variants, and parameter-isolation controls. The completed Exp15 import reports validation PASS for 10 seeds, 9 neural variants, 5,400 seed metric rows, 540 summary rows, and 1,080 runtime rows. Analysis Pass 15A retains C12 as a discussion/table baseline claim rather than a broad submission-readiness claim.
 
-Caveat: Exp15 is a minimal fixed-profile comparator, not exhaustive neural benchmarking. It uses fixed small model sizes/hyperparameters, omits memory-augmented/key-value neural baselines, and includes a reconstructed-manifest/empty-SQLite-`run_manifest` provenance caveat. The novelty/prior-art source artifact named `Pasted text.txt` is still not present locally, and the manuscript still needs venue-appropriate prior-art positioning and a decision about whether broader neural baselines are required.
+Caveat: Exp15 is a minimal fixed-profile comparator, not exhaustive neural benchmarking. It uses fixed small model sizes/hyperparameters, omits memory-augmented/key-value neural baselines, and includes a reconstructed-manifest/empty-SQLite-`run_manifest` provenance caveat. The missing novelty/prior-art source artifact is still not present locally, and the manuscript still needs venue-appropriate prior-art positioning and a decision about whether broader neural baselines are required.
 
-Source path: `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/experiments/exp13_2_summary.md`; `docs/threads/experiment13_2_analysis_digest.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; local verification pending for `Pasted text.txt`.
+Source path: `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/experiments/exp13_2_summary.md`; `docs/threads/experiment13_2_analysis_digest.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `docs/threads/experiment15_analysis_digest.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`.
 
 ## Required Baseline Families
 
@@ -40,8 +40,8 @@ Source path: `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/experime
 
 Claim: Baseline work is partially complete but remains a submission-readiness blocker.
 
-Evidence: Exp13.2 supplies a completed symbolic/algorithmic baseline suite, Exp14 clarifies the oracle-context limitation by testing symbolic transition-cue context selection, and Exp15 supplies a completed minimal neural comparator.
+Evidence: Exp13.2 supplies a completed symbolic/algorithmic baseline suite, Exp14 clarifies the oracle-context limitation by testing symbolic transition-cue context selection, Exp15 supplies a completed minimal neural comparator, and Analysis Pass 15A records C12 as a discussion/table claim rather than a broad readiness claim.
 
 Caveat: Prior-art/novelty import and broader neural-baseline decisions remain open. The first manuscript may proceed as a controlled symbolic/mechanistic benchmark if it explicitly states these limits; a stronger ML-venue submission may require memory-augmented or broader neural baselines.
 
-Source path: `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`.
+Source path: `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`.
