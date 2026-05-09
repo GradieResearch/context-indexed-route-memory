@@ -1,32 +1,33 @@
-# Next Experiments
+# Next Experiments / Next Work
 
 ## Repository-Readiness Context
 
-P0/P1 repository-readiness work is sufficient for a conservative manuscript handoff, but not for submission. Exp13.2 has been imported as completed symbolic/algorithmic baseline evidence, Exp14 has been imported as completed symbolic transition-cue context-selection evidence, and Exp15 has been imported as completed minimal neural comparator evidence.
+P0/P1 repository-readiness work is sufficient for a conservative manuscript handoff, but not for submission. Exp13.2 has been imported as completed symbolic/algorithmic baseline evidence, Exp14 has been imported as completed symbolic transition-cue context-selection evidence, Exp15 has been imported as completed minimal neural comparator evidence, and `docs/manuscript/draft/MANUSCRIPT_V2.md` has been captured.
 
-Claim: The immediate Exp15 execution/import item is closed; the next operational step is manuscript integration and figure/table planning.
+Claim: The immediate Exp15 execution/import and V2-capture items are closed; the next operational step is retained-claim selection, manuscript-grade statistical hardening, and final source-data-backed figure/table planning.
 
-Evidence: `docs/threads/experiment15_analysis_digest.md` is imported, and local artifacts for `exp15_full_20260508_092811` exist with validation PASS.
+Evidence: `docs/threads/experiment15_analysis_digest.md` is imported, local artifacts for `exp15_full_20260508_092811` exist with validation PASS, `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` exists, and `docs/manuscript/tables/table_04_exp15_neural_comparator.md` / `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv` exist.
 
 Caveat: Exp15 provides minimal fixed-profile neural evidence, not exhaustive architecture search. The replay variant requires audit before scientific interpretation, and optional memory-augmented neural baselines remain a venue/reviewer decision.
 
-Source path: `docs/threads/experiment15_analysis_digest.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `experiments/experiment15_neural_baseline_comparator/README.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`.
+Source path: `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/threads/experiment15_analysis_digest.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`; `experiments/experiment15_neural_baseline_comparator/README.md`; `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/validation_report.md`; `docs/manuscript/tables/table_04_exp15_neural_comparator.md`.
 
 ## Immediate Order Of Operations
 
-1. Integrate Exp15 into manuscript claim wording, limitations, baseline planning, and publication-readiness docs.
-2. Generate manuscript-grade seed-level CI/effect-size tables for retained C1-C7, C13, and Exp15 neural-comparator claims if retained.
-3. Decide whether Exp15 should be a compact main-text baseline table or a supplementary neural comparator figure/table.
-4. Audit the Exp15 replay variant only if it will be cited.
-5. Decide whether a memory-augmented neural baseline is required based on venue/reviewer posture.
-6. Build final reproducible figure scripts and source-data manifests after figure/table decisions.
-7. Import prior-art/novelty sources and update C12 discussion/related-work posture.
-8. Verify retained experiment commands on a fresh checkout.
-9. Decide whether Exp13.1 lesion rerun, Exp13 holdout cleanup, stochastic context corruption, or other optional experiments are necessary based on final manuscript claims and target venue.
+1. Use `docs/manuscript/finalization/NEXT_STEP_PROMPT.md` for Analysis Pass 15A.
+2. Decide the retained main-claim set after V2 and post-Exp15 narrowing.
+3. For each retained main claim, identify exact source CSVs and whether seed-level raw metrics are available.
+4. Generate or update manuscript-grade CI/effect-size/statistical summaries where supported by local artifacts.
+5. Update `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` as evidence permits.
+6. Decide final figure/table set, including Exp14 main-vs-supplement placement and whether Exp15 Table 4 stays main-text or moves to supplement.
+7. Keep C9 out of the main claim set unless seen/unseen primitive metrics are cleaned.
+8. Keep Exp15 replay collapse out of the scientific claim set unless audited.
+9. Import prior-art/novelty sources and update related-work posture.
+10. Verify retained experiment commands on a fresh checkout and document runtime/hardware expectations.
 
 ## Exp15 Neural Comparator
 
-Purpose: Address the remaining neural-baseline vulnerability without turning the first manuscript into an open-ended architecture search.
+Purpose: Address the neural-baseline vulnerability without turning the first manuscript into an open-ended architecture search.
 
 Implemented baseline families:
 
@@ -48,7 +49,8 @@ Verified local output from `exp15_full_20260508_092811`:
 - `exp15_model_runtime.csv`;
 - `run_manifest.json`;
 - validation report;
-- five diagnostic plots.
+- five diagnostic plots;
+- compact V2 Table 4 source data under `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`.
 
 Interpretation guardrail: Exp15 clarifies that ordinary fixed-profile neural comparators solve, fail, or partially solve different parts of the route-memory probe decomposition. It should not be described as exhaustive neural benchmarking or proof of neural-network superiority/inferiority.
 
@@ -69,7 +71,7 @@ Source path: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_
 
 Exp13.2 is complete and imported as a symbolic/algorithmic baseline suite. Exp15 is complete and imported as a minimal neural comparator. Together they partially resolve the baseline blocker for a controlled symbolic/mechanistic manuscript, but they do not replace prior-art/novelty import.
 
-Claim: Baseline integration remains a manuscript-readiness issue until Exp15 is integrated into final tables/figures and prior-art/novelty positioning is imported.
+Claim: Baseline integration remains a manuscript-readiness issue until retained-claim statistics, final figure/table decisions, and prior-art/novelty positioning are complete.
 
 Evidence: Exp13.2 includes oracle context-gated lookup, shared no-context lookup, endpoint memorization, recurrent controls, replay/LRU-style controls, hash/superposition controls, and parameter-isolation controls. Exp15 now adds completed minimal neural comparator results for GRU, Transformer-style endpoint, transition MLP, replay, and world-head variants.
 
@@ -94,8 +96,21 @@ Exp14 is complete and validated as symbolic transition-cue context selection. Th
 
 Potential follow-up goals:
 
-- Add final figure scripts and source-data mirrors if C13 becomes main or supplement evidence.
+- Decide whether Exp14 is main-narrow Figure 5 or a supplementary result.
+- Add final figure scripts and source-data mirrors if C13 remains main or supplement evidence.
 - Add a short implementation/theory note for cue-count and synthetic corruption behavior if exact curves are interpreted.
 - Build a successor only if the manuscript needs raw sensory, learned perceptual, or non-symbolic latent context discovery.
 
 Source path: `docs/threads/experiment14_analysis_digest.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/validation_report.md`; `experiments/experiment14_latent_context_inference/analysis/exp14_full_20260507_210712/exp14_summary.csv`.
+
+## Do Not Start By Default
+
+Do not start a new experiment by default. Revisit these only if retained claims, target venue, or reviewer strategy requires them:
+
+- optional memory-augmented/key-value neural comparator;
+- Exp15 replay implementation/training-regime audit;
+- Exp13.1 lesion diagnostic audit/rerun;
+- C9 seen/unseen primitive metric cleanup;
+- stochastic context corruption / selection margin experiment;
+- consolidation dose-response experiment;
+- non-symbolic applied/perceptual bridge.
