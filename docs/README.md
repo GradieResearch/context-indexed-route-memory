@@ -10,16 +10,17 @@ Recommended reading order:
 2. `docs/manuscript/SOURCE_OF_TRUTH.md`
 3. `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`
 4. `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`
-5. `docs/manuscript/draft/MANUSCRIPT_V2.md`
-6. `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
-7. `docs/manuscript/finalization/README.md`
-8. `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
-9. `docs/manuscript/finalization/NEXT_STEP_PROMPT.md`
-10. `docs/synthesis/PUBLICATION_READINESS.md`
-11. `docs/manuscript/LIMITATIONS_AND_THREATS.md`
-12. `docs/experiments/EXPERIMENT_REGISTRY.md`
-13. `docs/manuscript/FIGURE_PLAN.md`
-14. `docs/synthesis/NEXT_EXPERIMENTS.md`
+5. `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
+6. `docs/manuscript/draft/MANUSCRIPT_V2.md`
+7. `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
+8. `docs/manuscript/finalization/README.md`
+9. `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
+10. `docs/manuscript/finalization/NEXT_STEP_PROMPT.md`
+11. `docs/synthesis/PUBLICATION_READINESS.md`
+12. `docs/manuscript/LIMITATIONS_AND_THREATS.md`
+13. `docs/experiments/EXPERIMENT_REGISTRY.md`
+14. `docs/manuscript/FIGURE_PLAN.md`
+15. `docs/synthesis/NEXT_EXPERIMENTS.md`
 
 ## Manuscript docs
 
@@ -27,6 +28,7 @@ Recommended reading order:
 |---|---|---|---|
 | `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` | Frozen first-manuscript claim boundary and handoff into figure/table generation. | Active phase-control doc | Edit only when the first-manuscript inclusion/exclusion decision changes with local evidence. |
 | `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` | Post-Exp15 narrowing of the first-manuscript claim posture. | Active; stricter than earlier claim-freeze language where conflicts exist | Edit when Exp15 interpretation, neural-baseline posture, or post-Exp15 claim wording changes. |
+| `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` | Post-Analysis-Pass-15A retained-claim list, source-CSV map, figure/table readiness decision, and non-claim boundary. | Active post-15A control doc | Edit when retained claim role, source mapping, figure/table placement, or non-claim status changes. |
 | `docs/manuscript/draft/MANUSCRIPT_V2.md` | Captured post-Exp15 manuscript draft. | Active V2 draft; not submission-ready | Edit when manuscript prose changes after retained-claim/statistical hardening, citation verification, or figure/table decisions. |
 | `docs/manuscript/finalization/README.md` | Index for manuscript finalization planning, checklist, and handoff prompt. | Active finalization entrypoint | Edit when the current finalization phase or handoff prompt changes. |
 | `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md` | Operational checklist for the finalization phase. | Active tracker | Edit when checklist items are completed, deferred, or re-scoped. |
@@ -37,6 +39,7 @@ Recommended reading order:
 | `docs/manuscript/FIGURE_PLAN.md` | Candidate main and supplementary figure map. | Active planning doc | Edit whenever a figure, panel, source artifact, or caveat changes. |
 | `docs/manuscript/LIMITATIONS_AND_THREATS.md` | Reviewer-risk and non-claim tracker. | Active caveat doc | Edit when a limitation is resolved or a new risk appears. |
 | `docs/manuscript/BASELINE_REQUIREMENTS.md` | Baseline suite contracts and acceptance criteria. | Active; Exp13.2 symbolic/algorithmic baselines and Exp15 minimal neural comparator imported | Edit when baseline interpretation, neural-baseline posture, or prior-art requirements change. |
+| `docs/manuscript/NOVELTY_POSITIONING.md` | Provisional novelty framing and prior-art support gap. | Active but incomplete; source-backed prior-art import pending | Edit when prior-art/citation hardening imports or retires the missing novelty/prior-art source artifact. |
 | `docs/manuscript/SOURCE_OF_TRUTH.md` | Rules for resolving conflicts between docs, artifacts, and thread exports. | Active handoff note | Edit only when canonical-document ownership changes. |
 
 ## Experiment docs
@@ -80,11 +83,12 @@ Recommended reading order:
 
 Thread exports under `docs/threads/` are source material. They may preserve historical wording, old paths, or exploratory interpretations from earlier conversations.
 
-Active first-manuscript claim inclusion decisions live in `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`. Post-Exp15 claim narrowing lives in `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`. Active claim wording lives in `docs/manuscript/CLAIMS_AND_EVIDENCE.md`. Use thread exports as historical context unless their interpretation has been imported into current evidence docs with a local source path and caveat.
+Active first-manuscript claim inclusion decisions live in `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`. Post-Exp15 claim narrowing lives in `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`. Post-15A retained-claim role and source-CSV mapping lives in `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`. Active claim wording lives in `docs/manuscript/CLAIMS_AND_EVIDENCE.md`. Use thread exports as historical context unless their interpretation has been imported into current evidence docs with a local source path and caveat.
 
 ## Rule for future edits
 
 - Update `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` when Exp15 materially narrows a claim.
+- Update `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` when post-15A retained-claim role, source mapping, or non-claim status changes.
 - Update `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md` when first-manuscript inclusion status changes.
 - Update `docs/manuscript/CLAIMS_AND_EVIDENCE.md` when a claim changes.
 - Update `docs/manuscript/FIGURE_PLAN.md` when a figure changes.
