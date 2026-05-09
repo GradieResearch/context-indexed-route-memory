@@ -18,75 +18,27 @@ Legend:
 - [x] Create `docs/manuscript/finalization/`.
 - [x] Add finalization plan.
 - [x] Add finalization checklist.
-- [x] Replace the old Exp15 implementation prompt with a post-Exp15 hardening prompt.
-- [x] Update next-step prompt for V2 manuscript capture and post-Exp15 finalization hardening.
-- [x] Update next-step prompt for Analysis Pass 15A: retained-claim selection and statistical/source-data hardening.
+- [x] Replace the old Exp15 implementation prompt with post-Exp15 finalization prompts.
+- [x] Update next-step prompt through Analysis Pass 15A.
 - [x] Link finalization folder from `docs/README.md`.
 - [x] Update `docs/manuscript/SOURCE_OF_TRUTH.md` for post-Exp15/post-V2 document authority.
 - [x] Update `docs/manuscript/finalization/README.md` for current finalization posture.
+- [x] Add `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` for Analysis Pass 15A.
+- [~] Update next-step prompt for the next post-15A pass: citation/prior-art hardening and human figure/table review.
 
 ---
 
 ## Phase 1 - Experiment 15 Neural Comparator
 
-### Design and implementation
-
-- [x] Create planned directory `experiments/experiment15_neural_baseline_comparator/`.
-- [x] Add experiment README with purpose, hypotheses, variants, metrics, and expected outputs.
-- [x] Implement shared dataset/probe generation aligned to Exp13.2/Exp14 route-memory metrics.
-- [x] Implement GRU endpoint baseline.
-- [x] Implement GRU rollout baseline.
-- [x] Implement small Transformer sequence baseline.
-- [x] Implement neural one-step transition model rolled out recurrently.
-- [x] Implement replay-trained neural baseline.
-- [x] Implement parameter-isolated neural baseline.
-- [x] Decide optional neural key-value / memory-augmented lookup baseline: omitted from Exp15 for scope control.
-- [x] Add runtime/hardware manifest capture.
-- [x] Add progress logging with seed, variant, slice, elapsed time, and estimated remaining work.
-- [x] Add deterministic seed handling.
-- [x] Add smoke, validation, and full profiles.
-- [x] Add `start_exp15_validation.ps1`.
-- [x] Add `start_exp15_full.ps1`.
-- [x] Add analysis script.
-- [x] Add validation script.
-
-### Validation, full run, and analysis
-
+- [x] Create and implement `experiments/experiment15_neural_baseline_comparator/`.
+- [x] Implement required fixed-profile neural variants: GRU endpoint, GRU rollout, small Transformer, transition MLP, replay-trained transition MLP, and parameter/world-head-isolated variant.
+- [x] Add deterministic seed handling, runtime/hardware metadata, validation/full profiles, start scripts, analysis script, and validation script.
 - [~] Run smoke profile locally. Full/validation artifacts are present; no separate smoke artifact was verified in the Exp15 import pass.
 - [x] Run validation/full profile locally for `exp15_full_20260508_092811`.
-- [x] Confirm all required variants execute.
-- [x] Confirm suffix-route probes are separated from seen full-route probes.
-- [x] Confirm no-context/context variants are distinguishable in config columns.
-- [x] Confirm replay/parameter-isolation configs are explicitly recorded.
-- [x] Confirm all metrics are finite and in valid ranges.
-- [x] Confirm validation report reports PASS/WARN/FAIL counts.
-- [x] Preserve full run artifacts under `analysis/exp15_full_20260508_092811/`.
-- [x] Generate `exp15_summary.csv`.
-- [x] Generate `exp15_seed_metrics.csv`.
-- [x] Generate `exp15_effect_sizes.csv`.
-- [x] Generate `exp15_model_runtime.csv`.
-- [x] Generate route-length scaling plot.
-- [x] Generate world-count scaling plot.
-- [x] Generate seen-vs-suffix composition plot.
-- [x] Generate context-conflict accuracy plot.
-- [x] Generate retention-after-sequential-worlds plot.
-- [x] Generate validation report.
-- [x] Review whether Exp15 changes the manuscript claim posture.
-
-### Import
-
-- [x] Import digest to `docs/threads/experiment15_analysis_digest.md`.
-- [x] Update `docs/experiments/exp15_summary.md`.
-- [x] Update `docs/experiments/EXPERIMENT_REGISTRY.md`.
-- [x] Update `docs/manuscript/BASELINE_REQUIREMENTS.md`.
-- [x] Update `docs/manuscript/CLAIMS_AND_EVIDENCE.md`.
-- [x] Update `docs/manuscript/LIMITATIONS_AND_THREATS.md`.
-- [x] Update `docs/manuscript/FIGURE_PLAN.md`.
-- [x] Update `docs/manuscript/MANUSCRIPT_TODO.md`.
-- [x] Update `docs/synthesis/PUBLICATION_READINESS.md`.
-- [x] Update `docs/synthesis/NEXT_EXPERIMENTS.md`.
-- [x] Create `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`.
-- [x] Record Exp15 conflicts/caveats in `docs/repo_audit/THREAD_IMPORT_CONFLICTS.md`.
+- [x] Confirm required variants, context/no-context configs, suffix-vs-seen probes, finite metrics, and validation report are present.
+- [x] Preserve full run artifacts under `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/`.
+- [x] Generate Exp15 summary, seed-metric, effect-size, runtime, validation, and analysis-plot artifacts.
+- [x] Import Exp15 docs and caveats into experiment, manuscript, synthesis, and repo-audit docs.
 - [x] Create post-Exp15 claim freeze addendum at `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`.
 
 ---
@@ -95,18 +47,17 @@ Legend:
 
 - [x] Capture the discussion-drafted/post-Exp15 manuscript as `docs/manuscript/draft/MANUSCRIPT_V2.md`.
 - [x] Preserve the V2 posture: controlled symbolic/mechanistic benchmark and evidence map, not broad neural superiority.
-- [x] Create `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` if no equivalent post-Exp15 claim-freeze artifact exists.
 - [x] Record Exp15 as narrowing C1, C2, C4, and C12.
 - [x] Record Exp14 as symbolic transition-cue context selection, not raw latent-world discovery.
 - [x] Record Exp15 replay collapse as non-claim pending audit.
-- [!] Decide Exp14 placement: main-narrow Figure 5 vs supplement.
 - [x] Decide Exp15 placement for V2: compact main-text Table 4, movable to supplement by later human/venue decision.
+- [~] Decide Exp14 placement: retained as main-narrow Figure 5 for V2 hardening, with supplement relocation left as a later venue/human decision.
 
 ---
 
 ## Phase 3 - Prior-Art And Novelty Positioning
 
-- [!] Locate/import the missing novelty/prior-art source artifact referenced as `Pasted text.txt`, if still relevant.
+- [!] Locate/import or recreate the missing novelty/prior-art source artifact if still relevant.
 - [ ] Verify all V1/V2 citation placeholders against real BibTeX metadata.
 - [ ] Add or update bibliography file if repository conventions include one.
 - [ ] Separate prior-art families clearly: continual learning, memory-augmented neural networks, fast weights/differentiable plasticity, mixture-of-experts/modular routing, latent-cause/context inference, neural algorithmic reasoning, and compositional generalization.
@@ -117,37 +68,37 @@ Legend:
 
 ## Phase 4 - Statistical Hardening
 
-- [!] Decide retained main claims after Exp15 and V2 capture.
-- [ ] For each retained main claim, identify exact source CSV(s).
-- [ ] Generate manuscript-grade seed-level summaries.
-- [ ] Generate 95% confidence intervals.
-- [ ] Generate effect sizes for direct comparisons.
-- [ ] Review effect-size grouping for Exp13.2.
-- [ ] Review effect-size grouping for Exp14.
-- [ ] Review effect-size grouping for Exp15.
-- [ ] Update `docs/manuscript/tables/table_03_statistical_summary.md`.
-- [ ] Update `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`.
-- [ ] Ensure C9 remains out of the main claim set unless seen/unseen metrics are cleaned.
-- [ ] Avoid fitted capacity-law language unless capacity-law fitting is added.
+- [x] Decide retained main claims after Exp15 and V2 capture.
+- [x] For each retained main claim, identify exact source CSV(s).
+- [x] Update `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` for retained, boundary, supplement, blocked, and non-claim evidence.
+- [x] Ensure C9 remains out of the main claim set unless seen/unseen metrics are cleaned.
+- [x] Avoid fitted capacity-law language unless capacity-law fitting is added.
+- [~] Generate manuscript-grade seed-level summaries. Retained-claim source paths are mapped, but exact seed-level grouping still needs human review before final citation.
+- [~] Generate 95% confidence intervals. Candidate Table 3 exists, but final CI grouping remains pending.
+- [~] Generate effect sizes for direct comparisons. Exp13.2, Exp14, and Exp15 effect-size artifacts exist, but retained comparison grouping still needs review.
+- [~] Review effect-size grouping for Exp13.2.
+- [~] Review effect-size grouping for Exp14.
+- [~] Review effect-size grouping for Exp15.
+- [~] Update `docs/manuscript/tables/table_03_statistical_summary.md`. Current Table 3 is a generated candidate table and should not be treated as final until grouping is reviewed.
 
 ---
 
 ## Phase 5 - Final Figure, Table, And Source-Data Pipeline
 
-- [!] Decide final main figure/table set.
-- [ ] Create final Figure 1 schematic or provide source instructions for human-drawn schematic.
-- [ ] Generate final Figure 2 core ablation script/source data.
-- [ ] Generate final Figure 3 clean capacity/retention script/source data.
-- [ ] Generate final Figure 4 finite-budget/local-vs-global script/source data, if retained.
-- [ ] Generate final Figure 5 Exp14 symbolic context-selection script/source data, if retained.
+- [~] Decide final main figure/table set. Pass 15A retains Figures 1-3, Figure 4 as C6 main-narrow with C7 boundary handling, Figure 5 as main-narrow movable to supplement, and Table 4 as compact V2 neural comparator table.
+- [~] Create final Figure 1 schematic or provide source instructions for human-drawn schematic. Candidate Figure 1 exists; final label/caption review remains.
+- [~] Generate final Figure 2 core ablation script/source data. Candidate asset/source data exist; final row/caption review remains.
+- [~] Generate final Figure 3 clean capacity/retention script/source data. Candidate asset/source data exist; final ceiling-limited caption review remains.
+- [~] Generate final Figure 4 finite-budget/local-vs-global script/source data, if retained. Candidate asset/source data exist; C7 local/global remains boundary-only pending paired seed-level analysis.
+- [~] Generate final Figure 5 Exp14 symbolic context-selection script/source data, if retained. Candidate asset/source data exist; final main-vs-supplement and oracle-upper-bound caption review remain.
 - [x] Decide Exp15 placement for V2: compact main-text Table 4, with supplement relocation left as a later venue/human decision.
 - [x] Generate source-data-backed Exp15 neural comparator table, if retained.
 - [x] Add `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`, if Exp15 Table 4 is retained.
 - [x] Add `docs/manuscript/tables/table_04_exp15_neural_comparator.md`, if Exp15 Table 4 is retained.
-- [ ] Add source-data files for every final panel/table.
+- [~] Add source-data files for every final panel/table. Candidate source data exists for generated Figures 1-5 and Table 4; final human-approved panel/table set still needs confirmation.
 - [x] Update `docs/source_data/SOURCE_DATA_MANIFEST.csv` for Exp15 Table 4.
-- [ ] Ensure candidate analysis plots are not cited as final manuscript figures unless regenerated by final figure scripts.
-- [ ] Add figure/table captions with explicit caveats.
+- [x] Ensure candidate analysis plots are not cited as final manuscript figures unless regenerated by final figure scripts. Pass 15A explicitly keeps Exp15 plots as analysis artifacts only.
+- [~] Add figure/table captions with explicit caveats. Caveats are identified; final caption prose remains a human-review task.
 
 ---
 
@@ -202,4 +153,5 @@ Do not start these by default. Revisit them only after post-Exp15 claim and figu
 
 ## Current Recommended Next Checkbox
 
-- [!] Decide retained main claims after V2 capture and post-Exp15 narrowing, then begin statistical hardening for the retained main claim set.
+- [ ] Verify all V1/V2 citation placeholders against real BibTeX metadata and locate/import or recreate the missing novelty/prior-art source artifact if still relevant.
+- [ ] Human-review generated Figures 1-5 and Tables 1-4 for final caption wording, caveats, and main-vs-supplement placement.
