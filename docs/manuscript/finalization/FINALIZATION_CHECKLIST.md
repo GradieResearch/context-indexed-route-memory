@@ -68,7 +68,7 @@ Legend:
 - [x] Separate prior-art families clearly: continual learning, memory-augmented neural systems, fast weights/differentiable plasticity, mixture-of-experts/modular routing, latent-cause/context inference, neural algorithmic reasoning, compositional generalization, symbolic graph/path lookup, hippocampal/CLS inspiration, and minimal neural comparator posture.
 - [x] Ensure novelty is framed at the control-doc level as the controlled route-memory decomposition and evidence map.
 - [x] Decide closest-prior-art placement: convert `docs/manuscript/closest_prior_art_table.md` into prose in Section 2.7 and retain the table as a companion artifact.
-- [~] Apply closest-prior-art prose directly to `docs/manuscript/draft/MANUSCRIPT_V2.md`. A safe patch artifact now exists at `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md`; direct large-file edit remains pending.
+- [x] Apply closest-prior-art prose directly to `docs/manuscript/draft/MANUSCRIPT_V2.md`. The safe patch artifact at `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` has been applied to Section 2.7.
 
 ---
 
@@ -113,7 +113,7 @@ Legend:
 - [x] Update abstract after Exp15 and statistical hardening status.
 - [x] Update introduction to reflect final claim posture.
 - [~] Update related work with verified citations. `docs/manuscript/REFERENCES.md` verifies metadata, but final manuscript citation style/conversion remains pending until target venue selection.
-- [~] Apply closest-prior-art Section 2.7 prose. Patch artifact exists; direct edit to the large manuscript file remains pending.
+- [x] Apply closest-prior-art Section 2.7 prose directly to the manuscript draft.
 - [x] Update methods/problem setup with Exp15 neural baseline details if Exp15 is retained.
 - [x] Update results with current candidate figures/tables.
 - [x] Update discussion to reflect final limitations.
@@ -159,6 +159,6 @@ Do not start these by default. Revisit them only after human venue and reviewer-
 
 ## Current Recommended Next Checkbox
 
-- [ ] Apply `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` directly to `docs/manuscript/draft/MANUSCRIPT_V2.md` without overwriting unrelated manuscript content.
+- [x] Apply `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` directly to `docs/manuscript/draft/MANUSCRIPT_V2.md` without overwriting unrelated manuscript content.
 - [ ] Regenerate or revise Table 3 with explicit grouping/slice columns, or create a compact final-safe main-text Table 3 and move the full statistical map to supplement.
 - [ ] Run `python scripts/verify_doc_source_paths.py` in a clean checkout or CI after the direct manuscript patch.

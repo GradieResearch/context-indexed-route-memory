@@ -4,7 +4,7 @@ Purpose: Maintain a conservative work queue for turning this repository into a m
 
 ## Current Next Operational Priority
 
-Move from **human-decision capture** into **direct manuscript patching and Table 3 statistical grouping cleanup**.
+Move from **human-decision capture and direct Section 2.7 manuscript patching** into **Table 3 statistical grouping cleanup**.
 
 The repository is no longer waiting for the initial post-15A citation/prior-art audit, checked citation ledger, or human placement decisions. Those steps now exist as durable artifacts:
 
@@ -26,9 +26,8 @@ Human decisions now recorded:
 
 The current active work is therefore:
 
-1. Apply `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` directly to `docs/manuscript/draft/MANUSCRIPT_V2.md`.
-2. Regenerate or revise Table 3 with explicit grouping/slice columns, or create a compact final-safe main-text Table 3 and move the full statistical map to supplement.
-3. Run `python scripts/verify_doc_source_paths.py` after the direct manuscript patch and table/statistical-doc updates.
+1. Regenerate or revise Table 3 with explicit grouping/slice columns, or create a compact final-safe main-text Table 3 and move the full statistical map to supplement.
+2. Run `python scripts/verify_doc_source_paths.py` after table/statistical-doc updates and before readiness handoff.
 
 Current retained V2 posture:
 
@@ -37,11 +36,11 @@ Current retained V2 posture:
 - Boundary or supplement only: C7, C8, C10, and C11.
 - Out of the main claim set or non-claims: C9, Exp13.1 positive lesion evidence, Exp15 replay collapse, broad CIRM-over-neural claims, raw sensory latent-world discovery, and biological validation.
 
-Claim: The repository has a conservative V2 manuscript draft, a post-Exp15 claim-narrowing layer, a retained-claim decision, candidate manuscript figures/tables, an updated statistical-readiness map, a checked citation ledger, a closest-prior-art companion table, recorded human integration decisions, and a started Table 3 grouping review, but it is not submission-ready.
+Claim: The repository has a conservative V2 manuscript draft with Section 2.7 closest-prior-art prose applied directly, a post-Exp15 claim-narrowing layer, a retained-claim decision, candidate manuscript figures/tables, an updated statistical-readiness map, a checked citation ledger, a closest-prior-art companion table, recorded human integration decisions, and a started Table 3 grouping review, but it is not submission-ready.
 
-Evidence: Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 have local artifacts and imported summaries. Exp13.2 partially satisfies symbolic/algorithmic baseline coverage, Exp14 supports symbolic transition-cue context selection, Exp15 adds minimal fixed-profile neural comparator evidence, V2 Table 4 captures the Exp15 hard-slice comparator, `docs/manuscript/REFERENCES.md` verifies major placeholder-key metadata, `docs/manuscript/closest_prior_art_table.md` supplies the closest-prior-art structure, and `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` records the initial Table 3 review.
+Evidence: Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 have local artifacts and imported summaries. Exp13.2 partially satisfies symbolic/algorithmic baseline coverage, Exp14 supports symbolic transition-cue context selection, Exp15 adds minimal fixed-profile neural comparator evidence, V2 Table 4 captures the Exp15 hard-slice comparator, `docs/manuscript/REFERENCES.md` verifies major placeholder-key metadata, `docs/manuscript/closest_prior_art_table.md` supplies the closest-prior-art structure, Section 2.7 of `docs/manuscript/draft/MANUSCRIPT_V2.md` now contains the closest-prior-art positioning prose, and `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` records the initial Table 3 review.
 
-Caveat: The manuscript still needs the Section 2.7 prose patch applied directly, final related-work citation formatting after target venue selection, human-reviewed captions, final seed-level statistical grouping, fresh command verification, and license/citation metadata. Exp15 neural coverage is fixed-profile and non-exhaustive; optional memory-augmented neural baselines remain a venue/reviewer decision.
+Caveat: The manuscript still needs final related-work citation formatting after target venue selection, human-reviewed captions, final seed-level statistical grouping, fresh command verification, and license/citation metadata. Table 3 remains candidate-only until grouping/effect-size review is completed. Exp15 neural coverage is fixed-profile and non-exhaustive; optional memory-augmented neural baselines remain a venue/reviewer decision.
 
 Source path: `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/REFERENCES.md`; `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md`; `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md`; `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`.
 
@@ -70,6 +69,7 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 | Post-15A citation/prior-art audit. | Citation placeholders were mapped to prior-art families; the missing novelty/prior-art artifact was not invented and was retired as the only path forward. | `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/NOVELTY_POSITIONING.md` |
 | Checked citation ledger. | Major placeholder-key metadata is checked in a venue-neutral reference ledger; no fake `.bib`/CSL export has been invented. | `docs/manuscript/REFERENCES.md`; `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md` |
 | Closest-prior-art companion table. | Prior-art families are separated into inherited ideas, non-novel claims, and the manuscript's narrow contribution. | `docs/manuscript/closest_prior_art_table.md` |
+| Section 2.7 closest-prior-art prose applied. | The manuscript draft now contains prose-level closest-prior-art positioning and no longer contains the old closest-prior-art TODO. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md`; `docs/manuscript/closest_prior_art_table.md` |
 | Human decision integration status. | Citation/export convention, closest-prior-art placement, and figure/table placement are recorded. | `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md` |
 | Table 3 grouping review started. | Table 3 is confirmed candidate-only until grouping/slice columns and final effect-size comparisons are reviewed. | `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md`; `docs/manuscript/tables/table_03_statistical_summary.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` |
 
@@ -77,9 +77,8 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 
 | TODO | Reason | Source path | Target output |
 |---|---|---|---|
-| Apply Section 2.7 prose patch directly to `MANUSCRIPT_V2.md`. | Human decided prose placement, and the safe patch source is ready. | `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/closest_prior_art_table.md` | Section 2.7 contains prose-level closest-prior-art positioning and no longer contains the old closest-prior-art TODO. |
 | Regenerate or revise Table 3 with explicit grouping/slice columns. | Candidate Table 3 mixes descriptive rows, ceiling rows, aggregate intervals, and repeated-looking slices without enough final grouping metadata. | `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md`; `docs/manuscript/tables/table_03_statistical_summary.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` | Final-safe Table 3 or a compact main-text table plus supplementary statistical map. |
-| Run documentation source-path verifier after the direct manuscript patch. | New finalization docs and any manuscript updates should not introduce broken active paths. | `scripts/verify_doc_source_paths.py` | Passing verifier output or exact failure report. |
+| Run documentation source-path verifier before readiness handoff. | New finalization docs and any manuscript updates should not introduce broken active paths. | `scripts/verify_doc_source_paths.py` | Passing verifier output or exact failure report. |
 | Decide whether target venue strategy requires a memory-augmented/key-value neural comparator. | Exp15 is intentionally minimal and fixed-profile; broader neural coverage is venue-dependent. | `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `experiments/experiment15_neural_baseline_comparator/README.md` | Explicit venue/reviewer decision; do not start a new experiment by default. |
 
 ## P0 - Required Before Manuscript Submission
