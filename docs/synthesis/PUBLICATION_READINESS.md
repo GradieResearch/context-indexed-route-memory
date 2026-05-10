@@ -2,11 +2,11 @@
 
 ## Summary Judgment
 
-Status: post-Analysis-Pass-15A, post-citation-ledger/status pass, post-human-decision capture, post-direct Section 2.7 manuscript patch, and post-compact Table 3 split. The manuscript is not submission-ready; the next blocker is documentation/path verification plus caption/manuscript alignment for the compact Table 3 path.
+Status: post-Analysis-Pass-15A, post-citation-ledger/status pass, post-human-decision capture, post-direct Section 2.7 manuscript patch, post-compact Table 3 split, and post-status capture for the remaining Table 3 verification/alignment blocker. The manuscript is not submission-ready; the next blocker is now specifically to patch the stale manuscript Table 3 placeholder and run documentation source-path verification from a clean local/CI environment.
 
 The current internal spine remains defensible but narrow: in a controlled symbolic route-memory benchmark, context-indexed structural plasticity stores incompatible local transition systems, recurrent execution composes stored one-step transitions into multi-step routes, Exp13.2 supplies symbolic/algorithmic baseline coverage, Exp14 shows that the active symbolic world can be selected from partial symbolic transition cues, Exp15 supplies a minimal neural comparator, and Analysis Pass 15A records the retained claim set and source-CSV mapping.
 
-The repository has moved beyond the raw citation/prior-art audit, human-decision, direct Section 2.7 patch, and current-pass Table 3 cleanup stages. `docs/manuscript/REFERENCES.md` remains the checked venue-neutral citation ledger. `docs/manuscript/closest_prior_art_table.md` remains the closest-prior-art companion artifact. `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md` records the human decisions for citation/export convention, closest-prior-art placement, and figure/table placement. `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` now records the Table 3 outcome: use a compact final-safe descriptive main-text Table 3 and retain the full generated statistical map as candidate/supplementary support.
+The repository has moved beyond the raw citation/prior-art audit, human-decision, direct Section 2.7 patch, and current-pass Table 3 cleanup stages. `docs/manuscript/REFERENCES.md` remains the checked venue-neutral citation ledger. `docs/manuscript/closest_prior_art_table.md` remains the closest-prior-art companion artifact. `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md` records the human decisions for citation/export convention, closest-prior-art placement, and figure/table placement. `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` records the Table 3 outcome: use a compact final-safe descriptive main-text Table 3 and retain the full generated statistical map as candidate/supplementary support. `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` records that the Table 3 verification/alignment pass remains open until the manuscript placeholder is patched and the source-path verifier is run.
 
 Current retained V2 posture:
 
@@ -32,13 +32,13 @@ Claim -> The first-manuscript claim freeze has a local reproducible asset pipeli
 
 Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs, manuscript tables, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`. Exp15 Table 4 is present as a compact source-data-backed V2 comparator table. Compact Table 3 is now present as a descriptive source-data-backed main-text table.
 
-Caveat -> Human review is still required for caption wording and journal formatting. Compact Table 3 is descriptive and final-safe for the current manuscript pass; it does not claim final inferential effect sizes or approved comparison-family statistics.
+Caveat -> Human review is still required for caption wording and journal formatting. Compact Table 3 is descriptive and final-safe for the current manuscript pass; it does not claim final inferential effect sizes or approved comparison-family statistics. The manuscript draft still needs its stale Table 3 placeholder patched before this alignment pass is complete.
 
 ## Strongest Evidence
 
 - Exp12 clean scaling reaches ceiling across the mirrored supplied-context grid used for Figure 3. Source path: `docs/manuscript/source_data/figure_03_capacity_scaling.csv`.
 - Exp13 finite structural budget shows observed degradation and recovery across explicit budget ratios. Source path: `docs/manuscript/source_data/figure_04_finite_structural_budget_local_global.csv`.
-- Exp13.1 publication-hardening ablations separate full-model, no-context-binding, no-recurrence-at-eval, and no-structural-plasticity behavior. Source path: `docs/manuscript/tables/table_03_statistical_summary.csv`.
+- Exp13.1 publication-hardening ablations separate full-model, no-context-binding, no-recurrence-at-eval, and no-structural-plasticity behavior. The compact main-text Table 3 path is `docs/manuscript/tables/table_03_compact_final_safe.md`; the detailed generated statistical map remains candidate/supplementary at `docs/manuscript/tables/table_03_statistical_summary.csv`.
 - Exp14 symbolic transition-cue selection reaches ceiling or near-ceiling in the selected hard cue slices and degrades under high cue corruption while the oracle context-gated table remains an upper bound. Source path: `docs/manuscript/source_data/figure_05_symbolic_context_selection.csv`; `docs/threads/experiment14_analysis_digest.md`.
 - Exp15 minimal neural comparator narrows broad claims and supports Table 4 caveats. Source path: `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`.
 - Checked citation ledger, closest-prior-art table, and Section 2.7 prose patch preserve prior-art hygiene without inventing final venue formatting. Source path: `docs/manuscript/REFERENCES.md`; `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md`.
@@ -55,8 +55,9 @@ Caveat -> Human review is still required for caption wording and journal formatt
 
 ## Required Before Manuscript Draft Finalization
 
-- Run `python scripts/verify_doc_source_paths.py` after the compact Table 3 split.
-- Polish manuscript and caption references so compact Table 3 is cited as descriptive and the generated detailed map remains candidate/supplementary.
+- Patch `docs/manuscript/draft/MANUSCRIPT_V2.md` so the main-text Table 3 placeholder cites `docs/manuscript/tables/table_03_compact_final_safe.md` and `docs/manuscript/source_data/table_03_compact_final_safe.csv`.
+- Run `python scripts/verify_doc_source_paths.py` after the manuscript placeholder patch from a clean local checkout or CI-capable environment.
+- Record the verifier pass/failure/inability exactly in `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` and synced operational docs.
 - Human-review generated Figures 1-5 and Tables 1-4 for caption wording, caveats, and venue-specific formatting.
 - Keep Figure 4 supplement-default unless the finite-budget story is intentionally emphasized.
 - Keep Figure 5 main-narrow unless a later venue decision requires supplement relocation.
@@ -74,10 +75,10 @@ Caveat -> Human review is still required for caption wording and journal formatt
 
 ## Operational Readiness
 
-Claim: The repository is more navigable after the post-citation-ledger, human-decision, Section 2.7, and compact Table 3 cleanup passes, but remains scientifically not submission-ready.
+Claim: The repository is more navigable after the post-citation-ledger, human-decision, Section 2.7, compact Table 3 cleanup, and Table 3 verification/alignment status capture passes, but remains scientifically not submission-ready.
 
-Evidence: The manuscript TODO, finalization checklist, statistical-readiness table, checked references ledger, closest-prior-art table, human decision status, Section 2.7 prose patch, Table 3 grouping review, compact Table 3, and compact Table 3 source data describe the current state.
+Evidence: The manuscript TODO, finalization checklist, statistical-readiness table, checked references ledger, closest-prior-art table, human decision status, Section 2.7 prose patch, Table 3 grouping review, Table 3 verification/alignment status, compact Table 3, and compact Table 3 source data describe the current state.
 
-Caveat: This is documentation readiness, not new scientific evidence.
+Caveat: This is documentation readiness, not new scientific evidence. The documentation source-path verifier still needs to be run from a clean local/CI environment after the manuscript placeholder patch.
 
-Source path: `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/manuscript/REFERENCES.md`; `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md`; `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md`; `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md`; `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/source_data/table_03_compact_final_safe.csv`.
+Source path: `docs/manuscript/MANUSCRIPT_TODO.md`; `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/manuscript/REFERENCES.md`; `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md`; `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md`; `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md`; `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`; `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/source_data/table_03_compact_final_safe.csv`.
