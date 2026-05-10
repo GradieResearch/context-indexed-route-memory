@@ -1,6 +1,6 @@
 # Manuscript Finalization Checklist
 
-Purpose: working checklist for moving the Context-Indexed Route Memory manuscript from V2 draft capture to a submission-ready package after Exp15 import and human placement decisions.
+Purpose: working checklist for moving the Context-Indexed Route Memory manuscript from V2 draft capture to a submission-ready package after Exp15 import, human placement decisions, Section 2.7 closest-prior-art integration, and the current-pass Table 3 compact-safe split.
 
 Use this as the operational tracker. Check items only when the repository contains the corresponding artifact or the manuscript has been explicitly updated.
 
@@ -24,11 +24,8 @@ Legend:
 - [x] Add `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` for generated Figure 1-5 / Table 1-4 human review.
 - [x] Add `docs/manuscript/REFERENCES.md` as checked venue-neutral citation ledger.
 - [x] Add `docs/manuscript/closest_prior_art_table.md` as closest-prior-art companion artifact.
-- [x] Add `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`.
-- [x] Add `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`.
-- [x] Add `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md`.
-- [x] Add `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` as the safe direct-edit patch source for Section 2.7.
-- [x] Add `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` to start Table 3 grouping/effect-size review.
+- [x] Add citation-ledger, human-decision, and Section 2.7 finalization status artifacts.
+- [x] Add `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` and update it with the compact Table 3 split outcome.
 
 ---
 
@@ -68,7 +65,7 @@ Legend:
 - [x] Separate prior-art families clearly: continual learning, memory-augmented neural systems, fast weights/differentiable plasticity, mixture-of-experts/modular routing, latent-cause/context inference, neural algorithmic reasoning, compositional generalization, symbolic graph/path lookup, hippocampal/CLS inspiration, and minimal neural comparator posture.
 - [x] Ensure novelty is framed at the control-doc level as the controlled route-memory decomposition and evidence map.
 - [x] Decide closest-prior-art placement: convert `docs/manuscript/closest_prior_art_table.md` into prose in Section 2.7 and retain the table as a companion artifact.
-- [x] Apply closest-prior-art prose directly to `docs/manuscript/draft/MANUSCRIPT_V2.md`. The safe patch artifact at `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` has been applied to Section 2.7.
+- [x] Apply closest-prior-art prose directly to `docs/manuscript/draft/MANUSCRIPT_V2.md`.
 
 ---
 
@@ -79,12 +76,12 @@ Legend:
 - [x] Update `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` for retained, boundary, supplement, blocked, and non-claim evidence.
 - [x] Ensure C9 remains out of the main claim set unless seen/unseen metrics are cleaned.
 - [x] Avoid fitted capacity-law language unless capacity-law fitting is added.
-- [~] Generate manuscript-grade seed-level summaries. Retained-claim source paths are mapped, but exact seed-level grouping still needs review before final citation.
-- [~] Generate 95% confidence intervals. Candidate Table 3 exists, but final CI grouping remains pending.
-- [~] Generate effect sizes for direct comparisons. Exp13.2, Exp14, and Exp15 effect-size artifacts exist, but retained comparison grouping still needs review.
-- [x] Start Table 3 grouping/effect-size review in `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md`.
-- [~] Review effect-size grouping for Exp13.2, Exp14, and Exp15. Started; not final.
-- [~] Update `docs/manuscript/tables/table_03_statistical_summary.md`. Current Table 3 is a generated candidate table and should not be treated as final until grouping is reviewed or regenerated.
+- [x] Complete the current-pass Table 3 cleanup using Option B: compact final-safe descriptive main-text Table 3 plus retained detailed candidate/supplementary statistical map.
+- [x] Add `docs/manuscript/tables/table_03_compact_final_safe.md`.
+- [x] Add `docs/manuscript/source_data/table_03_compact_final_safe.csv`.
+- [x] Preserve `docs/manuscript/tables/table_03_statistical_summary.md` and `.csv` as detailed candidate/supplementary statistical-map artifacts, not final main-text statistics.
+- [~] Manuscript-grade seed-level summaries, 95% confidence intervals, and effect sizes remain available/partially mapped, but final inferential comparison families are still not claimed by compact Table 3.
+- [~] Review effect-size grouping for Exp13.2, Exp14, and Exp15 only if the manuscript later needs inferential effect-size wording.
 
 ---
 
@@ -94,7 +91,7 @@ Legend:
   - Figures 1-3: main.
   - Figure 4: supplement by default unless the finite-budget story is intentionally emphasized.
   - Figure 5: main-narrow.
-  - Table 3: candidate until grouping/effect-size review is complete.
+  - Table 3: compact final-safe descriptive main-text table; detailed generated statistical map retained as candidate/supplementary support.
   - Table 4: compact main-text table.
 - [~] Create final Figure 1 schematic or provide source instructions for human-drawn schematic. Candidate Figure 1 exists; final label/caption review remains.
 - [~] Generate final Figure 2 core ablation script/source data. Candidate asset/source data exist; final row/caption review remains.
@@ -122,6 +119,7 @@ Legend:
 - [x] Ensure Exp15 is not overinterpreted as exhaustive neural benchmarking.
 - [x] Ensure Exp15 replay collapse is not interpreted scientifically unless audited.
 - [x] Ensure broad CIRM-over-neural-model claims are absent.
+- [~] Update manuscript/caption prose to reference compact Table 3 and keep the detailed statistical map candidate/supplementary.
 - [ ] Remove or clearly mark all TODOs before submission.
 
 ---
@@ -132,12 +130,12 @@ Legend:
 - [x] Run documentation source-path verifier after Exp15 import.
 - [x] Confirm all requested Exp15 artifacts exist locally.
 - [ ] Confirm all manuscript-cited artifacts exist locally after final figure/table decisions.
-- [ ] Run `python scripts/verify_doc_source_paths.py` after this pass.
+- [ ] Run `python scripts/verify_doc_source_paths.py` after the compact Table 3 split.
 - [ ] Add runtime/hardware metadata standard to future experiment template or docs.
 - [x] Document Exp15 runtime/hardware metadata and reconstructed-manifest caveat.
 - [ ] Add `LICENSE` after human license choice.
 - [ ] Add `CITATION.cff`.
-- [~] Update README/current-status indexes after Exp13.2/Exp14/Exp15/V2 state is final.
+- [~] Update README/current-status indexes after Exp13.2/Exp14/Exp15/V2/Table 3 compact split state is final.
 - [ ] Add final reproducibility instructions.
 - [ ] Decide whether to tag a release.
 - [ ] Decide whether to archive on Zenodo after preprint/manuscript stabilization.
@@ -160,5 +158,6 @@ Do not start these by default. Revisit them only after human venue and reviewer-
 ## Current Recommended Next Checkbox
 
 - [x] Apply `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` directly to `docs/manuscript/draft/MANUSCRIPT_V2.md` without overwriting unrelated manuscript content.
-- [ ] Regenerate or revise Table 3 with explicit grouping/slice columns, or create a compact final-safe main-text Table 3 and move the full statistical map to supplement.
-- [ ] Run `python scripts/verify_doc_source_paths.py` in a clean checkout or CI after the direct manuscript patch.
+- [x] Create a compact final-safe main-text Table 3 and move the full generated statistical map to candidate/supplementary status.
+- [ ] Run `python scripts/verify_doc_source_paths.py` in a clean checkout or CI-capable environment after the compact Table 3 split.
+- [ ] Polish figure/table captions and manuscript prose so they refer to compact Table 3 rather than treating the generated detailed map as final.
