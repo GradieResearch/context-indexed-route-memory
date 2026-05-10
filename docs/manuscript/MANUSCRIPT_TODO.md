@@ -107,7 +107,7 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 ## P2 - Future Work
 
 | TODO | Reason | Source path | Target output |
-|---|---|---|
-| Richer latent-world inference. | Exp14 covers symbolic transition-cue selection but not raw sensory or learned perceptual context discovery. | New experiment directory only if the manuscript needs a stronger non-symbolic bridge. |
-| Richer non-symbolic tasks. | Move beyond synthetic symbolic route memory. | Applied bridge experiment, not claimed by current C11. |
-| Biological mapping expansion. | Keep biological claims disciplined while exploring inspiration. | Theory note or discussion section with citations. |
+|---|---|---|---|
+| Richer latent-world inference. | Exp14 covers symbolic transition-cue selection but not raw sensory or learned perceptual context discovery. | `docs/manuscript/LIMITATIONS_AND_THREATS.md`; `docs/threads/experiment14_analysis_digest.md` | New experiment directory only if the manuscript needs a stronger non-symbolic bridge. |
+| Richer non-symbolic tasks. | Move beyond synthetic symbolic route memory. | `docs/threads/experiment12to13_export.md` | Applied bridge experiment, not claimed by current C11. |
+| Biological mapping expansion. | Keep biological claims disciplined while exploring inspiration. | `docs/theory/BIOLOGICAL_FRAMING.md` | Theory note or discussion section with citations. |
