@@ -1,6 +1,6 @@
 # Manuscript Finalization Checklist
 
-Purpose: working checklist for moving the Context-Indexed Route Memory manuscript from V2 draft capture to a submission-ready package after Exp15 import, human placement decisions, Section 2.7 closest-prior-art integration, the compact-safe Table 3 split, and the first verification/alignment status capture.
+Purpose: working checklist for moving the Context-Indexed Route Memory manuscript from V2 draft capture to a submission-ready package after Exp15 import, human placement decisions, Section 2.7 closest-prior-art integration, the compact-safe Table 3 split, and the Table 3 manuscript-placeholder/source-path verification pass.
 
 Use this as the operational tracker. Check items only when the repository contains the corresponding artifact or the manuscript has been explicitly updated.
 
@@ -120,7 +120,7 @@ Legend:
 - [x] Ensure Exp15 is not overinterpreted as exhaustive neural benchmarking.
 - [x] Ensure Exp15 replay collapse is not interpreted scientifically unless audited.
 - [x] Ensure broad CIRM-over-neural-model claims are absent.
-- [!] Patch stale `MANUSCRIPT_V2.md` Table 3 placeholder so main-text Table 3 cites `docs/manuscript/tables/table_03_compact_final_safe.md`, not `docs/manuscript/tables/table_03_statistical_summary.md`.
+- [x] Patch stale `MANUSCRIPT_V2.md` Table 3 placeholder so main-text Table 3 cites `docs/manuscript/tables/table_03_compact_final_safe.md`, not `docs/manuscript/tables/table_03_statistical_summary.md`.
 - [~] Keep caption/prose wording aligned so compact Table 3 is descriptive and the detailed statistical map remains candidate/supplementary.
 - [ ] Remove or clearly mark all TODOs before submission.
 
@@ -132,7 +132,7 @@ Legend:
 - [x] Run documentation source-path verifier after Exp15 import.
 - [x] Confirm all requested Exp15 artifacts exist locally.
 - [ ] Confirm all manuscript-cited artifacts exist locally after final figure/table decisions.
-- [!] Run `python scripts/verify_doc_source_paths.py` after the compact Table 3 split. Prior attempt could not run because the execution environment could not resolve `github.com` for a clean checkout; see `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`.
+- [x] Run `python scripts/verify_doc_source_paths.py` after the compact Table 3 split and manuscript placeholder patch. Result recorded in `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`.
 - [ ] Add runtime/hardware metadata standard to future experiment template or docs.
 - [x] Document Exp15 runtime/hardware metadata and reconstructed-manifest caveat.
 - [ ] Add `LICENSE` after human license choice.
@@ -162,6 +162,7 @@ Do not start these by default. Revisit them only after human venue and reviewer-
 - [x] Apply `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` directly to `docs/manuscript/draft/MANUSCRIPT_V2.md` without overwriting unrelated manuscript content.
 - [x] Create a compact final-safe main-text Table 3 and move the full generated statistical map to candidate/supplementary status.
 - [x] Record the current verification/alignment status in `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`.
-- [ ] Patch the stale `docs/manuscript/draft/MANUSCRIPT_V2.md` Table 3 placeholder to cite compact Table 3 as the main-text path.
-- [ ] Run `python scripts/verify_doc_source_paths.py` in a clean checkout or CI-capable environment after the manuscript placeholder patch.
-- [ ] If the verifier passes, update this checklist, `docs/manuscript/MANUSCRIPT_TODO.md`, `docs/synthesis/PUBLICATION_READINESS.md`, and `docs/manuscript/finalization/NEXT_STEP_PROMPT.md` to the next blocker after Table 3 alignment.
+- [x] Patch the stale `docs/manuscript/draft/MANUSCRIPT_V2.md` Table 3 placeholder to cite compact Table 3 as the main-text path.
+- [x] Run `python scripts/verify_doc_source_paths.py` after the manuscript placeholder patch.
+- [ ] Polish and human-review final captions/prose for Figures 1-3, Figure 5, compact Table 3, and Table 4 while preserving caveats.
+- [ ] Remove or clearly mark all remaining manuscript TODOs before submission.

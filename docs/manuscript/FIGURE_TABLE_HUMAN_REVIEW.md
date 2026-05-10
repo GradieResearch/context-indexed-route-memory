@@ -1,6 +1,6 @@
 # Figure and Table Human-Review Checklist
 
-Status: post-human-decision placement tracker, post-compact Table 3 split, and post-status capture for the remaining Table 3 verification/alignment blocker; still not a final journal art/caption approval.
+Status: post-human-decision placement tracker, post-compact Table 3 split, and post-Table-3 manuscript-placeholder/source-path verification pass; still not a final journal art/caption approval.
 
 Purpose: record the required human review for generated Figures 1-5 and Tables 1-4 before treating them as final submission assets.
 
@@ -28,7 +28,7 @@ Claim: Figures 1-5 and Tables 1-4 form a coherent candidate V2 manuscript packag
 
 Evidence: The manuscript asset pipeline generated candidate Figures 1-5, source-data mirrors, and Tables 1-3; Exp15 Table 4 has also been generated as a source-data-backed compact neural comparator table. The current Table 3 path is now the compact final-safe descriptive table, while the generated detailed statistical map is retained as candidate/supplementary support.
 
-Caveat: Candidate assets are not automatically final submission figures. Compact Table 3 is descriptive and final-safe for the current manuscript pass, but it does not claim final inferential effect sizes or approved comparison-family statistics. `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` records that the manuscript draft still needs its stale Table 3 placeholder patched before this alignment pass is complete.
+Caveat: Candidate assets are not automatically final submission figures. Compact Table 3 is descriptive and final-safe for the current manuscript pass, but it does not claim final inferential effect sizes or approved comparison-family statistics. `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` records the Table 3 manuscript-placeholder patch and source-path verifier result.
 
 ## Human placement decision
 
@@ -55,7 +55,7 @@ Caveat: Candidate assets are not automatically final submission figures. Compact
 |---|---|---|---|---|---|
 | Table 1 - Claim evidence | Main/supporting | Evidence map for retained main claims C1-C6, C13, and C12 discussion/table baseline posture. | Must distinguish retained main, boundary/supplement, blocked, and non-claim evidence. Must not re-promote C9, Exp13.1 lesion evidence, Exp15 replay collapse, broad neural superiority, raw latent-world discovery, or biological validation. | Generated table exists: `docs/manuscript/tables/table_01_claim_evidence.csv`; `docs/manuscript/tables/table_01_claim_evidence.md`. | Approve headline wording and decide whether table length is suitable for main text or should become supplementary with a condensed main version. |
 | Table 2 - Run integrity | Main/supporting or supplement | Provenance summary for manuscript-relevant experiments and source artifacts. | Must preserve older-run caveats: Exp11/Exp12 have older/nonstandard validation/provenance layouts; Exp15 has reconstructed-manifest/SQLite-tail caveat. | Generated table exists: `docs/manuscript/tables/table_02_run_integrity.csv`; `docs/manuscript/tables/table_02_run_integrity.md`. | Decide whether this belongs in main text, supplement, or repository-only reproducibility appendix. |
-| Table 3 - Compact final-safe descriptive statistical summary | Main-text descriptive table | Descriptive support for retained claim families C1-C4, C5, C6, and C13 without final inferential effect-size claims. | Must state that the compact table is descriptive. Must not imply final comparison-family effect sizes, fitted capacity laws, C7 promotion, or raw sensory latent-world discovery. | Compact table and source data exist: `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/source_data/table_03_compact_final_safe.csv`. | Patch manuscript placeholder so main-text Table 3 points here; then polish caption/prose to route readers to the detailed map only as candidate/supplementary support. |
+| Table 3 - Compact final-safe descriptive statistical summary | Main-text descriptive table | Descriptive support for retained claim families C1-C4, C5, C6, and C13 without final inferential effect-size claims. | Must state that the compact table is descriptive. Must not imply final comparison-family effect sizes, fitted capacity laws, C7 promotion, or raw sensory latent-world discovery. | Compact table and source data exist: `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/source_data/table_03_compact_final_safe.csv`. | Polish caption/prose to keep compact Table 3 descriptive and route readers to the detailed map only as candidate/supplementary support. |
 | Table 3 detailed statistical map | Candidate/supplementary support only | Audit trail for generated statistical rows and future inferential cleanup. | Must not be cited as final main-text inferential statistics until grouping/slice columns and comparison families are approved. | Generated table exists: `docs/manuscript/tables/table_03_statistical_summary.csv`; `docs/manuscript/tables/table_03_statistical_summary.md`. | Keep for audit/supplement planning; do not use exact effects as final manuscript statistics yet. |
 | Table 4 - Exp15 neural comparator | Compact main-text table | C12 discussion/table baseline posture; strengthens C2/C4 caveats and narrows C1/C2 overclaiming. | Must say Exp15 is minimal fixed-profile and non-exhaustive. Must state context-conditioned transition MLP and world-head MLP solve the clean hard slice. Must keep replay collapse non-claim pending audit. Must not imply broad CIRM-over-neural superiority. | Source-data-backed table exists: `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`. | Decide later whether optional memory-augmented/key-value neural baseline is needed for the eventual target venue. |
 
@@ -74,8 +74,7 @@ For each final figure/table caption, verify:
 
 ## Recommended next review order
 
-1. Patch `docs/manuscript/draft/MANUSCRIPT_V2.md` so Table 3 refers to `docs/manuscript/tables/table_03_compact_final_safe.md` and the detailed generated statistical map remains candidate/supplementary.
-2. Run `python scripts/verify_doc_source_paths.py` after the manuscript placeholder patch from a clean local checkout or CI-capable environment.
-3. Record the verifier result exactly in `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` and sync `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`, `docs/manuscript/MANUSCRIPT_TODO.md`, and `docs/synthesis/PUBLICATION_READINESS.md`.
-4. Polish captions for Figures 1-3, Figure 5, compact Table 3, and Table 4.
-5. Decide later, based on venue/reviewer strategy, whether Table 1/Table 2 remain main/supporting or move to supplement/repository appendix.
+1. Polish captions for Figures 1-3, Figure 5, compact Table 3, and Table 4.
+2. Remove or clearly mark remaining manuscript TODOs before submission.
+3. Decide later, based on venue/reviewer strategy, whether Table 1/Table 2 remain main/supporting or move to supplement/repository appendix.
+4. Decide later, based on venue/reviewer strategy, whether optional memory-augmented/key-value neural baselines are needed.

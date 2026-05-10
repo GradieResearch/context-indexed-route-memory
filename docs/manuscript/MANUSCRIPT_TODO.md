@@ -4,29 +4,23 @@ Purpose: Maintain a conservative work queue for turning this repository into a m
 
 ## Current Next Operational Priority
 
-Complete the remaining **compact Table 3 manuscript-placeholder and source-path verification blocker**.
+Complete final **figure/table caption polish and manuscript TODO cleanup** after compact Table 3 alignment.
 
-The current-pass Table 3 decision has been made: use **Option B**, a compact final-safe descriptive main-text Table 3, while retaining the full generated statistical map as a candidate/supplementary artifact.
+The compact Table 3 decision has been made and the manuscript placeholder has been patched:
 
-New Table 3 artifacts:
+- Main-text Table 3: `docs/manuscript/tables/table_03_compact_final_safe.md`
+- Main-text Table 3 source data: `docs/manuscript/source_data/table_03_compact_final_safe.csv`
+- Detailed candidate/supplementary statistical map: `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv`
 
-- `docs/manuscript/tables/table_03_compact_final_safe.md`
-- `docs/manuscript/source_data/table_03_compact_final_safe.csv`
-
-Retained candidate/supplementary statistical map:
-
-- `docs/manuscript/tables/table_03_statistical_summary.md`
-- `docs/manuscript/tables/table_03_statistical_summary.csv`
-
-Status note: `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` records that the verification/alignment pass is **not complete yet**. The manuscript draft still needs its stale main-text Table 3 placeholder patched, and `python scripts/verify_doc_source_paths.py` still needs to be run from a clean local checkout or CI-capable environment.
+Status note: `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` records the Table 3 manuscript-placeholder patch and source-path verifier result. The verifier passed in the recorded GitHub Actions environment.
 
 The current active work is therefore:
 
-1. Patch `docs/manuscript/draft/MANUSCRIPT_V2.md` so the main-text Table 3 placeholder cites `docs/manuscript/tables/table_03_compact_final_safe.md` and `docs/manuscript/source_data/table_03_compact_final_safe.csv`.
-2. Keep `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv` candidate/supplementary only.
-3. Run `python scripts/verify_doc_source_paths.py` after the manuscript placeholder patch.
-4. Record the verifier pass/failure/inability exactly; do not mark the verifier complete unless it actually passes.
-5. Keep final effect-size wording out of the manuscript unless explicit comparison families are approved.
+1. Polish captions/prose for Figures 1-3, Figure 5, compact Table 3, and Table 4.
+2. Keep compact Table 3 descriptive; do not turn it into final inferential effect-size evidence.
+3. Keep the detailed generated statistical map candidate/supplementary unless comparison families are explicitly approved.
+4. Remove or clearly mark remaining manuscript TODOs before submission.
+5. Defer venue-specific citation/export, optional memory-augmented neural baselines, license, and `CITATION.cff` until explicit human decisions are made.
 
 ## Current retained V2 posture
 
@@ -44,16 +38,15 @@ The current active work is therefore:
 | Closest-prior-art prose. | Section 2.7 contains closest-prior-art positioning prose and the companion table is retained. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` |
 | Human decision integration. | Citation/export convention, closest-prior-art placement, and figure/table placement are recorded. | `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md` |
 | Table 3 compact-safe split. | Compact final-safe descriptive Table 3 now exists; the detailed generated statistical map remains candidate/supplementary and not final inferential statistics. | `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/source_data/table_03_compact_final_safe.csv`; `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` |
-| Table 3 verification/alignment status capture. | Current blocker is documented: patch stale manuscript placeholder and run verifier from clean local/CI environment. | `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`; `docs/manuscript/finalization/NEXT_STEP_PROMPT.md` |
+| Table 3 manuscript alignment and source-path verification. | Stale manuscript Table 3 placeholder patched; verifier result recorded. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`; `docs/manuscript/finalization/NEXT_STEP_PROMPT.md` |
 | Exp15 Table 4 capture. | Compact source-data-backed V2 neural comparator table exists. | `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv` |
 
 ## P0 - Current Next Pass
 
 | TODO | Reason | Source path | Target output |
 |---|---|---|---|
-| Patch stale manuscript Table 3 placeholder. | The manuscript must not cite the generated detailed statistical map as the main Table 3 path. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/source_data/table_03_compact_final_safe.csv`; `docs/manuscript/tables/table_03_statistical_summary.md` | Main-text placeholder names compact Table 3 as descriptive and keeps the detailed map candidate/supplementary. |
-| Run documentation source-path verifier. | New compact Table 3 files and synchronized docs should not introduce broken active paths. | `scripts/verify_doc_source_paths.py` | Passing verifier output or exact failure/inability report. |
-| Sync status docs after verifier result. | The next prompt should advance only after the Table 3 placeholder and verifier result are real. | `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`; `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`; `docs/synthesis/PUBLICATION_READINESS.md`; `docs/manuscript/finalization/NEXT_STEP_PROMPT.md` | Updated docs that either close this blocker or preserve the exact failure reason. |
+| Polish figure/table captions and manuscript prose. | Candidate assets exist, but final journal-style caption wording still needs human review and caveat preservation. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/tables/table_04_exp15_neural_comparator.md` | Final-safe captions/prose for Figures 1-3, Figure 5, compact Table 3, and Table 4. |
+| Remove or clearly mark remaining manuscript TODOs. | The draft still contains TODO placeholders that cannot remain in a submission draft. | `docs/manuscript/draft/MANUSCRIPT_V2.md` | No unreviewed submission-blocking TODOs in the manuscript draft. |
 | Decide whether target venue strategy requires a memory-augmented/key-value neural comparator. | Exp15 is intentionally minimal and fixed-profile; broader neural coverage is venue-dependent. | `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `experiments/experiment15_neural_baseline_comparator/README.md` | Explicit venue/reviewer decision; do not start a new experiment by default. |
 
 ## P0 - Required Before Manuscript Submission

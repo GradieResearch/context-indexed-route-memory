@@ -119,7 +119,7 @@ This manuscript makes the following publication-safe contributions:
 
 [Table 2 here: run integrity summary. Source: `docs/manuscript/tables/table_02_run_integrity.md`. Supports provenance for Exp11, Exp12, Exp13, Exp13.1, Exp13.2, and Exp14. Exp15 provenance is currently tracked through `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`, `docs/threads/experiment15_analysis_digest.md`, and Table 4.]
 
-[Table 3 here: statistical summary. Source: `docs/manuscript/tables/table_03_statistical_summary.md`. Caveat: effect-size grouping still needs human review.]
+[Table 3 here: compact final-safe descriptive statistical summary. Source: `docs/manuscript/tables/table_03_compact_final_safe.md`; source data: `docs/manuscript/source_data/table_03_compact_final_safe.csv`. Detailed generated statistical map retained as candidate/supplementary audit support at `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv`. Caveat: descriptive only; do not treat as final inferential effect-size evidence or approved comparison-family statistics.]
 
 [Table 4 here: minimal neural comparator hard-slice summary from Exp15. Source table: `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; source data: `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`; authoritative source artifact: `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`. Caveat: Exp15 is a fixed-profile comparator, not exhaustive neural benchmarking.]
 
