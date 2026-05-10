@@ -1,50 +1,43 @@
-# Next Step Prompt: Finalize Table 3 Grouping And Statistical Reporting
+# Next Step Prompt: Verify Compact Table 3 Split And Align Captions
 
-Use this prompt after the Section 2.7 closest-prior-art prose patch has been applied to `docs/manuscript/draft/MANUSCRIPT_V2.md` and the initial Table 3 grouping review has been started.
+Use this prompt after the compact Table 3 split has been completed.
 
 ```text
 You are working in the repository:
 
 GradieResearch/context-indexed-route-memory
 
-Task: Complete the next manuscript-finalization blocker: Table 3 grouping/effect-size cleanup and statistical-reporting readiness. Do not start new experiments.
+Task: Complete the next manuscript-finalization blocker: verify documentation/source paths and align manuscript/caption prose with the compact Table 3 path. Do not start new experiments.
 
 Starting context:
 
-The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, post-human-decision capture, and post-Section-2.7 closest-prior-art prose integration.
+The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, post-human-decision capture, post-Section-2.7 closest-prior-art prose integration, and post-current-pass Table 3 compact split.
 
 Already completed:
 
-- `docs/manuscript/draft/MANUSCRIPT_V2.md` Section 2.7 now contains closest-prior-art prose derived from `docs/manuscript/closest_prior_art_table.md`.
+- `docs/manuscript/draft/MANUSCRIPT_V2.md` Section 2.7 contains closest-prior-art prose derived from `docs/manuscript/closest_prior_art_table.md`.
 - `docs/manuscript/closest_prior_art_table.md` remains the companion source artifact.
 - `docs/manuscript/REFERENCES.md` remains the venue-neutral citation ledger until target venue/convention selection.
-- Figure/table placement decisions are recorded:
-  - Figures 1-3: main.
-  - Figure 4: supplement by default unless the finite-budget story is emphasized.
-  - Figure 5: main-narrow.
-  - Table 3: candidate until grouping/effect-size review is complete.
-  - Table 4: compact main-text table.
-- `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` has started the Table 3 review and identifies why the current Table 3 remains candidate-only.
-
-Inputs to inspect first:
-
-- `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md`
-- `docs/manuscript/tables/table_03_statistical_summary.md`
-- `docs/manuscript/tables/table_03_statistical_summary.csv`
-- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`
-- `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
-- `scripts/manuscript_assets/build_manuscript_assets.py`
-- `scripts/compute_seed_metric_summary.py` if relevant
-- authoritative source CSVs referenced in `STATISTICAL_REPORTING_READINESS.csv`
+- `docs/manuscript/tables/table_03_compact_final_safe.md` is the compact final-safe descriptive main-text Table 3.
+- `docs/manuscript/source_data/table_03_compact_final_safe.csv` is the compact Table 3 source-data mirror.
+- `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv` remain detailed candidate/supplementary statistical-map artifacts, not final inferential statistics.
+- `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` records the Option B compact Table 3 decision and remaining caveats.
+- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`, `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`, `docs/manuscript/MANUSCRIPT_TODO.md`, `docs/synthesis/PUBLICATION_READINESS.md`, and `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` have been updated for the compact Table 3 split.
 
 Immediate work:
 
-1. Decide the safest final Table 3 path:
-   - Option A: regenerate/revise Table 3 with explicit grouping/slice columns and final-status flags; or
-   - Option B: create a compact final-safe main-text Table 3 and move the full statistical map to supplement/candidate status.
+1. Run `python scripts/verify_doc_source_paths.py` in a clean checkout or CI-capable environment.
+   - If it passes, record the pass in the relevant finalization/readiness docs.
+   - If it cannot run, document the exact reason and do not guess.
+   - If it fails, fix broken active paths only; do not change scientific claims.
 
-2. Preserve the current claim posture:
-   - Do not invent effect sizes, confidence intervals, seed counts, or comparisons.
+2. Align manuscript/caption/table references:
+   - Ensure `docs/manuscript/draft/MANUSCRIPT_V2.md` refers to compact descriptive Table 3 if it cites Table 3 as main text.
+   - Ensure captions do not treat `table_03_statistical_summary.md` as final inferential statistics.
+   - Keep the detailed generated Table 3 map as candidate/supplement/audit support.
+
+3. Preserve the current claim posture:
+   - Do not add final effect-size language unless explicit comparison families are approved.
    - Keep C1 benchmark/model-family-specific.
    - Keep C2 conflict-specific, not a blanket context-is-required-for-every-suffix claim.
    - Keep C5 ceiling-limited and supplied-context only.
@@ -53,24 +46,14 @@ Immediate work:
    - Keep C13 symbolic transition-cue context selection only.
    - Keep Exp15 replay collapse as non-claim pending audit.
 
-3. If regenerating/revising Table 3:
-   - Add enough grouping/slice metadata to make rows unambiguous, especially for Exp12 clean scaling, Exp13 budget ratios, Exp14 cue-count/corruption-rate rows, and Exp15/Exp13.2 comparison families if included.
-   - Include final-status or manuscript-use flags such as `final_safe_descriptive`, `candidate_pending_grouping`, `supplement_only`, or `non_claim`.
-   - Keep Table 4 separate unless there is an explicit reason to merge Exp15 neural comparator statistics into Table 3.
-
-4. If creating a compact main-text Table 3:
-   - Include only final-safe descriptive rows/claim-level summaries.
-   - Move detailed statistical-map material to a supplement/candidate artifact.
-   - Make the caveats explicit in captions and operational docs.
-
-5. Sync operational docs after Table 3 work:
+4. Sync operational docs after verification/caption alignment:
    - `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
    - `docs/manuscript/MANUSCRIPT_TODO.md`
    - `docs/synthesis/PUBLICATION_READINESS.md`
-   - `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` if Table 3 status changes.
-   - `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` if final statuses change.
+   - `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
+   - `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` only if statuses change.
 
-6. Update this `NEXT_STEP_PROMPT.md` at the end so the next prompt points to the next real blocker after Table 3, not back to completed work.
+5. Update this `NEXT_STEP_PROMPT.md` at the end so the next prompt points to the next real blocker after verification/caption alignment, not back to completed Table 3 grouping work.
 
 Do not do these unless explicitly requested:
 
@@ -84,9 +67,8 @@ Do not do these unless explicitly requested:
 
 Definition of done:
 
-- Table 3 is either final-safe for manuscript use or explicitly split into compact-main plus supplementary/candidate statistical map.
-- Table 3 rows have enough grouping/slice metadata to avoid ambiguity, or the detailed ambiguous rows are removed from main-text use.
-- Operational docs no longer describe Table 3 grouping/effect-size review as merely unstarted.
-- `python scripts/verify_doc_source_paths.py` passes, or inability to run is documented with exact reason.
+- `python scripts/verify_doc_source_paths.py` passes, or inability/failure is documented with exact reason.
+- Manuscript/caption references distinguish compact descriptive Table 3 from the detailed candidate/supplement statistical map.
+- Operational docs no longer loop back to Table 3 grouping as unfinished.
 - Final response summarizes changed files, verification status, final Table 3 status, and remaining blockers.
 ```
