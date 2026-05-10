@@ -1,6 +1,6 @@
 # Manuscript Finalization Plan
 
-Purpose: convert the current limitation/threat register into a practical post-Exp15/post-15A manuscript-finalization plan.
+Purpose: convert the current limitation/threat register into a practical post-Exp15/post-15A/post-citation-ledger manuscript-finalization plan.
 
 Controlling inputs:
 
@@ -9,6 +9,12 @@ Controlling inputs:
 - `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`
 - `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`
 - `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
+- `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`
+- `docs/manuscript/REFERENCES.md`
+- `docs/manuscript/closest_prior_art_table.md`
+- `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
+- `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`
+- `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`
 - `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
 - `docs/manuscript/BASELINE_REQUIREMENTS.md`
 - `docs/experiments/exp13_2_summary.md`
@@ -24,10 +30,10 @@ Do not try to solve every limitation before submission. Split the remaining work
 |---|---|---|
 | A. Claim and manuscript hygiene | Prevent overclaiming and keep the manuscript scoped as a controlled symbolic/mechanistic benchmark. | Yes |
 | B. Metric/statistical cleanup | Ensure every central claim has clean seed-level uncertainty, effect-size, source-data, and figure provenance. | Yes |
-| C. Baseline/prior-art positioning | Keep Exp15 minimal neural comparator evidence in scope while completing citation/prior-art hygiene. | Yes |
+| C. Citation/prior-art and venue positioning | Use the checked citation ledger and closest-prior-art table without inventing metadata or broadening claims. | Yes |
 | D. Optional boundary experiments | Address lesion, stochastic robustness, consolidation, applied bridge, or memory-augmented neural baselines only if those claims are elevated. | No |
 
-Recommended immediate next action: **post-15A citation/prior-art hardening and human review of generated Figures 1-5 and Tables 1-4**.
+Recommended immediate next action: **human decision checkpoint for citation/export convention, closest-prior-art placement, figure/table placement, and venue baseline strategy**.
 
 The manuscript should continue to avoid claims of solved continual learning, broad neural-network superiority, raw sensory latent-world discovery, end-to-end perception, broad biological proof, broad abstract rule induction, or unseen primitive inference.
 
@@ -60,7 +66,21 @@ Required next decisions:
 - Decide whether a memory-augmented/key-value neural baseline is required for the target venue.
 - Keep broad CIRM-over-neural-model claims out of the manuscript.
 
-## 3. Symbolic Benchmark Limitation
+## 3. Citation And Prior-Art Positioning
+
+Claim -> Citation/prior-art hardening has progressed from audit to checked metadata and a closest-prior-art companion table.
+Evidence -> `docs/manuscript/REFERENCES.md` records checked venue-neutral metadata for the major manuscript placeholder keys. `docs/manuscript/closest_prior_art_table.md` separates inherited prior art, non-novel claims, and the manuscript's narrow contribution. `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md` and `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md` record the completed passes and remaining decisions.
+Caveat -> The manuscript still lacks a final chosen citation/export convention and has not yet inlined or prose-integrated the closest-prior-art table into Section 2.7.
+Source path -> `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/REFERENCES.md`; `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`; `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`.
+
+Required next decisions:
+
+- Choose citation/export convention: Pandoc-style keys, BibTeX, CSL JSON, numbered references, target-journal author-year style, or venue-neutral ledger for now.
+- Decide whether closest-prior-art material is inserted as a compact Section 2.7 table, converted to prose, or retained as a companion artifact until venue formatting.
+- Do not invent fake BibTeX, fake CSL JSON, fake DOIs, or target-journal metadata.
+- Do not propagate the corrected `Eichenbaum2017` mismatch. The checked entry is in `docs/manuscript/REFERENCES.md`.
+
+## 4. Symbolic Benchmark Limitation
 
 Claim -> The benchmark remains synthetic and symbolic.
 Evidence -> Exp11-Exp15 use symbolic nodes, modes, worlds, routes, contexts, or transition cues.
@@ -73,7 +93,7 @@ Safe language:
 
 No new experiment is required unless the manuscript attempts to make applied or perceptual claims.
 
-## 4. Oracle Context And Symbolic Context Selection
+## 5. Oracle Context And Symbolic Context Selection
 
 Claim -> Exp14 partially reduces the oracle-world-label limitation by selecting symbolic context from transition cues.
 Evidence -> Exp14 validation and summary artifacts support symbolic transition-cue context selection; Exp13.2 oracle context-gated lookup remains a clean supplied-context upper bound.
@@ -86,7 +106,7 @@ Required asset work:
 - Caption it as symbolic transition-cue context selection.
 - Preserve the oracle-context-gated table as an upper-bound caveat.
 
-## 5. Metric And Statistical Hardening
+## 6. Metric And Statistical Hardening
 
 Claim -> Central claims still need final manuscript-grade statistics and source-data-backed figures/tables.
 Evidence -> Current docs have candidate assets and many generated analysis summaries, but not all retained claims have final reviewed effect-size groupings or approved source-data manifests/captions.
@@ -113,7 +133,7 @@ Acceptance criteria for every retained central claim:
 
 C9 must stay out of the main claim set unless seen/unseen/all route-table and composition split metrics are cleaned.
 
-## 6. Known Retained Scope Boundaries
+## 7. Known Retained Scope Boundaries
 
 Keep these as explicit limitations unless new evidence is added:
 
@@ -126,8 +146,10 @@ Keep these as explicit limitations unless new evidence is added:
 | Biological framing | Computational inspiration only, not a validated hippocampal theory. |
 | Exp15 replay variant | Audit before citing as scientific evidence about replay. |
 | Exp15 neural scope | Minimal fixed-profile comparator, not architecture search. |
+| Citation convention | Human/venue decision pending; keep `REFERENCES.md` as venue-neutral ledger until chosen. |
+| Closest-prior-art placement | Human/venue decision pending; keep `closest_prior_art_table.md` as companion artifact until chosen. |
 
-## 7. Reproducibility And Provenance
+## 8. Reproducibility And Provenance
 
 Claim -> Exp15 includes runtime/hardware metadata, but has a manifest/SQLite provenance caveat.
 Evidence -> `run_manifest.json` records runtime/hardware fields and `recovered_after_failed_sqlite_tail: true`; local SQLite inspection found an empty `run_manifest` table.
@@ -158,7 +180,7 @@ Future manifests should preserve explicit runtime/hardware metadata:
 }
 ```
 
-## 8. License, Citation, And Release Metadata
+## 9. License, Citation, And Release Metadata
 
 Before public release or manuscript submission:
 
@@ -172,14 +194,15 @@ License selection must remain a human decision.
 
 ## Recommended Work Order
 
-1. Verify V1/V2 citation placeholders against real BibTeX metadata.
-2. Import, recreate, or explicitly retire the missing novelty/prior-art source artifact.
+1. Human decision checkpoint: choose citation/export convention.
+2. Human decision checkpoint: decide closest-prior-art Section 2.7 placement.
 3. Human-review generated Figures 1-5 and Tables 1-4 for caption wording, caveats, and main-vs-supplement placement.
 4. Finalize retained-claim CI/effect-size grouping for Table 3.
 5. Decide whether Exp15 remains a compact main-text baseline table or moves to supplement for the target venue.
 6. Decide whether optional memory-augmented/key-value neural baselines are required for the target venue.
-7. Add runtime metadata standards, license, and citation metadata.
-8. Revisit whether optional Exp16-Exp20 work is still necessary.
+7. Apply the chosen citation convention and closest-prior-art placement to `MANUSCRIPT_V2.md`.
+8. Add runtime metadata standards, license, and citation metadata.
+9. Revisit whether optional Exp16-Exp20 work is still necessary.
 
 ## Numbering Posture
 
@@ -187,8 +210,11 @@ License selection must remain a human decision.
 |---|---|---|---|
 | Experiment 15 | Minimal Neural Baseline Comparator | Completed minimal evidence | Integrated with non-exhaustive, replay, and provenance caveats. |
 | Analysis Pass 15A | Manuscript Statistical Hardening | Completed as control pass | Retained claims and source CSVs are mapped; final human-reviewed CI/effect-size grouping remains pending. |
-| Post-15A pass | Citation, prior-art, and figure/table review | Yes | Current next documentation/manuscript-readiness item; not a new experiment. |
-| Repository Pass 15B | Submission Metadata and Reproducibility Hardening | Yes, after citation/figure review | Not a new experiment. |
+| Post-15A citation audit | Citation/prior-art and figure/table review artifact creation | Completed as control pass | `CITATION_PRIOR_ART_AUDIT.md` and `FIGURE_TABLE_HUMAN_REVIEW.md` exist. |
+| Citation ledger pass | Checked references and closest-prior-art companion table | Completed as control pass | `REFERENCES.md`, `closest_prior_art_table.md`, and insertion report exist. |
+| Citation-ledger integration status | Current citation/placement decision status | Completed as control pass | `CITATION_LEDGER_INTEGRATION_STATUS.md` exists. |
+| Human decision checkpoint | Citation convention, closest-prior-art placement, figure/table decisions | Yes | Current next documentation/manuscript-readiness item; not a new experiment. |
+| Repository Pass 15B | Submission Metadata and Reproducibility Hardening | Yes, after human decisions / guarded manuscript integration | Not a new experiment. |
 | Optional neural baseline successor | Memory-augmented/key-value neural comparator | Venue-dependent | Only if target venue/reviewer posture requires broader neural coverage. |
 | Experiment 16 | Lesion Diagnostic Audit | No | Only if positive lesion evidence is desired. |
 | Experiment 17 | Perceptual / Continuous Applied Bridge | No | Future applied bridge. |
@@ -198,4 +224,4 @@ License selection must remain a human decision.
 
 ## Bottom Line
 
-Exp15 and Analysis Pass 15A are complete as finalization control steps. Do not start additional new experiments by default. Most remaining limitations should be handled as citation/prior-art hardening, human figure/table review, final statistical grouping, source-data/caption discipline, and future-work framing rather than new experimental obligations.
+Exp15, Analysis Pass 15A, the citation/prior-art audit, the checked citation ledger, and the citation-ledger integration-status pass are complete as finalization control steps. Do not start additional new experiments by default. Most remaining limitations should be handled as human citation/placement decisions, guarded manuscript integration, final statistical grouping, source-data/caption discipline, and future-work framing rather than new experimental obligations.

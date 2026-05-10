@@ -1,28 +1,32 @@
-# Next Step Prompt: Final Citation Insertion And Human Figure/Table Decisions
+# Next Step Prompt: Human Decision Checkpoint And Guarded Manuscript Integration
 
-Use this prompt in a new session after the post-15A citation/prior-art audit and figure/table human-review checklist have been merged.
+Use this prompt after the citation-ledger integration status has merged.
 
 ```text
 You are working in the repository:
 
 GradieResearch/context-indexed-route-memory
 
-Task: Convert the post-15A citation/prior-art audit into final manuscript citation work and perform human-directed review of the generated candidate figure/table package. Do not change the experimental record.
+Task: Determine whether the required human decisions for final citation style, closest-prior-art placement, and figure/table placement have been made. If decisions are available, apply only those decisions to the manuscript and operational docs. If decisions are not available, call out the missing decisions and pause without inventing them.
 
 Starting context:
 
-The repository is now post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, and post-citation/figure-review-audit.
+The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, and post-citation-ledger integration-status pass.
 
-- Experiment 15 is complete and imported as minimal fixed-profile neural comparator evidence.
-- The imported Exp15 run is `exp15_full_20260508_092811`.
-- `docs/manuscript/draft/MANUSCRIPT_V2.md` exists.
-- `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md` exists.
-- `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` exists.
-- `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md` exists.
-- `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` exists.
-- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` separates retained, boundary, supplement, blocked, and non-claim evidence.
-- `docs/manuscript/tables/table_04_exp15_neural_comparator.md` exists.
-- `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv` exists.
+Current completed artifacts:
+
+- `docs/manuscript/draft/MANUSCRIPT_V2.md`
+- `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`
+- `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
+- `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`
+- `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
+- `docs/manuscript/REFERENCES.md`
+- `docs/manuscript/closest_prior_art_table.md`
+- `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`
+- `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`
+- `docs/manuscript/tables/table_04_exp15_neural_comparator.md`
+- `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`
+- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`
 
 Current scientific posture to preserve:
 
@@ -43,48 +47,73 @@ Inputs to inspect first:
 
 - `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
 - `docs/manuscript/finalization/MANUSCRIPT_FINALIZATION_PLAN.md`
+- `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`
+- `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`
 - `docs/manuscript/MANUSCRIPT_TODO.md`
+- `docs/manuscript/REFERENCES.md`
+- `docs/manuscript/closest_prior_art_table.md`
 - `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`
 - `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
-- `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
 - `docs/manuscript/draft/MANUSCRIPT_V2.md`
-- `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`
-- `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`
-- `docs/manuscript/CLAIMS_AND_EVIDENCE.md`
 - `docs/manuscript/FIGURE_PLAN.md`
-- `docs/manuscript/BASELINE_REQUIREMENTS.md`
 - `docs/manuscript/NOVELTY_POSITIONING.md`
 - `docs/synthesis/PUBLICATION_READINESS.md`
-- `docs/source_data/SOURCE_DATA_MANIFEST.csv`
-- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`
-- `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`
-- `docs/manuscript/tables/table_01_claim_evidence.md`
-- `docs/manuscript/tables/table_02_run_integrity.md`
-- `docs/manuscript/tables/table_03_statistical_summary.md`
-- `docs/manuscript/tables/table_04_exp15_neural_comparator.md`
 
 Primary objective:
 
-Move from audit artifacts to manuscript-facing deliverables: verified bibliography/citation insertion, closest-prior-art risk table prose, and resolved figure/table placement/caption decisions where a human decision is available.
+Move the repo from out-of-sync finalization docs to a clear next actionable state. The next actionable state is either:
 
-Concrete work:
+1. apply explicit human decisions and update the manuscript/docs; or
+2. pause with a concise list of missing human decisions.
 
-1. Final citation insertion.
-   - Use `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md` as the source-backed starting point.
-   - Verify metadata against primary sources before creating final bibliography entries.
-   - Add or update the repository bibliography file only if the repository convention supports one.
-   - Replace manuscript placeholder keys with final citation keys or a consistent citation format.
-   - Do not add fake citations, fake BibTeX, or unsupported prior-art claims.
+Decision checkpoint:
 
-2. Closest-prior-art table.
-   - If retained in Section 2.7, add a compact table comparing CIRM to closest prior-art families.
-   - Include task-gated lookup, mixture-of-experts/modular routing, fast weights/linear attention, differentiable/external memory, neural algorithmic reasoning, symbolic graph/path algorithms, hippocampal/CLS inspiration, and memory-augmented neural baselines where appropriate.
-   - The table must state what is inherited, what is not claimed as novel, and what the paper contributes narrowly.
+Before editing the manuscript, determine whether the human has explicitly decided each item below.
 
-3. Human figure/table decisions.
-   - Use `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` as the decision tracker.
-   - Resolve any decisions the human has explicitly made.
-   - If the human has not chosen, preserve the current conservative defaults:
+1. Citation/export convention:
+   - Pandoc-style citation keys;
+   - BibTeX;
+   - CSL JSON;
+   - numbered references;
+   - target-journal author-year style;
+   - or explicitly keep `docs/manuscript/REFERENCES.md` as a venue-neutral ledger for now.
+
+2. Closest-prior-art placement:
+   - inline `docs/manuscript/closest_prior_art_table.md` into Section 2.7 as a compact table;
+   - convert it into prose in Section 2.7;
+   - or keep it as a companion artifact until target-venue formatting.
+
+3. Figure/table placement and review:
+   - Figures 1-3 main or changed;
+   - Figure 4 main-narrow versus supplement;
+   - Figure 5 main-narrow versus supplement;
+   - Table 3 grouping/effect-size review status;
+   - Table 4 main text versus supplement.
+
+If these decisions have not been made, do not choose for the human. Preserve conservative defaults and pause.
+
+Concrete work if decisions are available:
+
+1. Citation convention integration.
+   - Use `docs/manuscript/REFERENCES.md` as the checked metadata source.
+   - Convert only to the chosen convention.
+   - Do not add fake BibTeX, fake CSL JSON, fake DOIs, or unsupported source claims.
+   - Do not propagate the earlier `Eichenbaum2017` DOI/title mismatch. The checked entry is: Eichenbaum, H. (2017). On the Integration of Space, Time, and Memory. Neuron, 95(5), 1007-1018. DOI: `10.1016/j.neuron.2017.06.036`.
+
+2. Closest-prior-art integration.
+   - Use `docs/manuscript/closest_prior_art_table.md`.
+   - Preserve the `what is inherited / what is not claimed / narrow contribution` structure.
+   - Do not claim novelty for context gating, recurrence, replay, task isolation, modular routing, or memory augmentation in isolation.
+
+3. Citation-risk wording cleanup.
+   - Narrow `modern transformer memory systems` unless exact transformer-memory references are added.
+   - Narrow `task masks, adapters, parameter isolation` unless exact references for those families are added.
+   - Keep neuroscience citations motivational only.
+   - Keep Exp15 neural comparator wording fixed-profile and non-exhaustive.
+
+4. Figure/table decisions.
+   - Use `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` as the tracker.
+   - If the human has not chosen, preserve conservative defaults:
      - Figures 1-3 stay main.
      - Figure 4 stays main-narrow for C6, with C7 boundary caveat.
      - Figure 5 stays main-narrow for V2 hardening, movable to supplement by venue decision.
@@ -92,12 +121,12 @@ Concrete work:
      - Table 3 remains candidate until grouping/effect-size review is completed.
    - Do not promote Exp15 analysis plots into final figures unless explicitly requested.
 
-4. Update operational docs after concrete changes.
+5. Operational docs.
    - Update `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`.
    - Update `docs/manuscript/MANUSCRIPT_TODO.md`.
-   - Update `docs/synthesis/PUBLICATION_READINESS.md` if readiness status changes.
-   - Update `docs/manuscript/FIGURE_PLAN.md` only if figure/table placement or caption-readiness decisions change.
-   - Update `docs/manuscript/NOVELTY_POSITIONING.md` if prior-art positioning changes.
+   - Update `docs/synthesis/PUBLICATION_READINESS.md` if readiness posture changes.
+   - Update `docs/manuscript/FIGURE_PLAN.md` only if placement/caption decisions change.
+   - Update `docs/manuscript/NOVELTY_POSITIONING.md` only if prior-art positioning changes.
 
 Do not do these unless explicitly requested:
 
@@ -107,17 +136,15 @@ Do not do these unless explicitly requested:
 - Do not add a memory-augmented/key-value neural baseline unless the user chooses a venue/reviewer strategy requiring it.
 - Do not audit the Exp15 replay implementation unless specifically requested.
 - Do not rewrite the manuscript wholesale.
-- Do not add fake citations, fake BibTeX, or unsupported related-work claims.
+- Do not add fake citations, fake BibTeX, fake CSL JSON, or unsupported related-work claims.
 - Do not broaden claims beyond the retained post-15A posture.
 
 Definition of done:
 
-- Citation placeholders in `MANUSCRIPT_V2.md` are replaced or explicitly left as tracked TODOs with a reason.
-- Bibliography metadata is verified and stored using the repository's chosen convention, if one exists.
-- The closest-prior-art table is added or explicitly deferred.
-- Figure/table decisions from `FIGURE_TABLE_HUMAN_REVIEW.md` are resolved where human direction exists, or conservative defaults are preserved.
-- Finalization checklist and manuscript TODO reflect actual progress.
-- `docs/synthesis/PUBLICATION_READINESS.md` reflects the new readiness posture if it changed.
+- The current repository state is checked against the completed citation-ledger artifacts.
+- Missing human decisions are listed explicitly, or available decisions are applied.
+- `MANUSCRIPT_V2.md` is modified only where a decision exists or a low-risk wording cleanup is clearly supported by existing docs.
+- `FINALIZATION_CHECKLIST.md`, `MANUSCRIPT_TODO.md`, and readiness docs reflect the actual current state.
 - `python scripts/verify_doc_source_paths.py` passes, or failures/inability to run are listed with exact paths and fixes.
 - Final response summarizes changed files, remaining blockers, unresolved human decisions, and verification result.
 ```

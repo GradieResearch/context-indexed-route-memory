@@ -4,12 +4,22 @@ Purpose: Maintain a conservative work queue for turning this repository into a m
 
 ## Current Next Operational Priority
 
-Move from **post-15A audit capture** into **final citation insertion, closest-prior-art table writing, and human approval of generated candidate figures/tables**.
+Move from **completed citation-ledger/status capture** into a **human decision checkpoint** for final manuscript integration.
 
-Analysis Pass 15A is captured in `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` and reflected in `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`. The next hardening pass has now produced:
+The repository is no longer waiting for the initial post-15A citation/prior-art audit or the checked citation ledger. Those steps now exist as durable artifacts:
 
 - `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`
 - `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
+- `docs/manuscript/REFERENCES.md`
+- `docs/manuscript/closest_prior_art_table.md`
+- `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`
+- `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`
+
+The current blocker is not more audit work. It is choosing how to integrate the already-checked material into the manuscript:
+
+1. Citation/export convention: Pandoc keys, BibTeX, CSL JSON, numbered references, target-journal author-year style, or keep `docs/manuscript/REFERENCES.md` as a venue-neutral ledger for now.
+2. Closest-prior-art placement: inline `docs/manuscript/closest_prior_art_table.md` into Section 2.7, convert it to prose, or keep it as a companion artifact until target-venue formatting.
+3. Figure/table decisions: especially Figure 4 main-vs-supplement, Figure 5 main-vs-supplement, Table 3 grouping/effect-size review, and Table 4 main-vs-supplement placement.
 
 Current retained V2 posture:
 
@@ -18,21 +28,21 @@ Current retained V2 posture:
 - Boundary or supplement only: C7, C8, C10, and C11.
 - Out of the main claim set or non-claims: C9, Exp13.1 positive lesion evidence, Exp15 replay collapse, broad CIRM-over-neural claims, raw sensory latent-world discovery, and biological validation.
 
-Claim: The repository has a conservative V2 manuscript draft, a post-Exp15 claim-narrowing layer, a retained-claim decision, candidate manuscript figures/tables, an updated statistical-readiness map, a citation/prior-art audit, and a human-review checklist for Figures 1-5 and Tables 1-4, but it is not submission-ready.
+Claim: The repository has a conservative V2 manuscript draft, a post-Exp15 claim-narrowing layer, a retained-claim decision, candidate manuscript figures/tables, an updated statistical-readiness map, a checked citation ledger, a closest-prior-art companion table, and a human-review checklist for Figures 1-5 and Tables 1-4, but it is not submission-ready.
 
-Evidence: Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 have local artifacts and imported summaries. Exp13.2 partially satisfies symbolic/algorithmic baseline coverage, Exp14 supports symbolic transition-cue context selection, Exp15 adds minimal fixed-profile neural comparator evidence, V2 Table 4 captures the Exp15 hard-slice comparator, and the post-15A audit documents citation placeholders plus candidate prior-art metadata.
+Evidence: Exp11, Exp12, Exp13, Exp13.1, Exp13.2, Exp14, and Exp15 have local artifacts and imported summaries. Exp13.2 partially satisfies symbolic/algorithmic baseline coverage, Exp14 supports symbolic transition-cue context selection, Exp15 adds minimal fixed-profile neural comparator evidence, V2 Table 4 captures the Exp15 hard-slice comparator, `docs/manuscript/REFERENCES.md` verifies major placeholder-key metadata, and `docs/manuscript/closest_prior_art_table.md` supplies the closest-prior-art structure.
 
-Caveat: The manuscript still needs final bibliography insertion, final related-work prose, closest-prior-art table writing, human-reviewed captions/figure placement, final seed-level statistical grouping, fresh command verification, and license/citation metadata. Exp15 neural coverage is fixed-profile and non-exhaustive; optional memory-augmented neural baselines remain a venue/reviewer decision.
+Caveat: The manuscript still needs a chosen citation/export convention, final related-work prose/citation formatting, closest-prior-art table/prose placement decision, human-reviewed captions/figure placement, final seed-level statistical grouping, fresh command verification, and license/citation metadata. Exp15 neural coverage is fixed-profile and non-exhaustive; optional memory-augmented neural baselines remain a venue/reviewer decision.
 
-Source path: `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`.
+Source path: `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/REFERENCES.md`; `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md`; `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`.
 
 ## Step 4 Manuscript Asset Pipeline Status
 
 Claim -> A reproducible candidate manuscript asset pipeline now exists for the frozen first-manuscript claim set.
 
-Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs, claim/run-integrity/statistical tables, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`. Exp15 Table 4 has also been generated as a source-data-backed V2 comparator table. `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` now records the required human decisions for these assets.
+Evidence -> `python scripts/manuscript_assets/build_manuscript_assets.py` generates candidate Figures 1-5, source-data CSVs, claim/run-integrity/statistical tables, `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`, and `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`. Exp15 Table 4 has also been generated as a source-data-backed V2 comparator table. `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` records the required human decisions for these assets.
 
-Caveat -> These are generated candidate manuscript assets, not human-approved final journal figures or final captions. Exp14 placement remains main-vs-supplement unresolved, Exp13.2 remains symbolic/algorithmic baseline evidence only, Exp15 is a minimal fixed-profile neural comparator, and prior-art/optional neural-baseline decisions remain open.
+Caveat -> These are generated candidate manuscript assets, not human-approved final journal figures or final captions. Exp14 placement remains main-vs-supplement unresolved, Exp13.2 remains symbolic/algorithmic baseline evidence only, Exp15 is a minimal fixed-profile neural comparator, and optional neural-baseline decisions remain open.
 
 Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md`; `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`.
 
@@ -48,15 +58,18 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 | Manuscript V2 capture. | V2 manuscript draft exists with conservative post-Exp15 posture. | `docs/manuscript/draft/MANUSCRIPT_V2.md` |
 | Exp15 Table 4 capture. | Compact source-data-backed V2 neural comparator table exists. | `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv` |
 | Analysis Pass 15A retained-claim hardening. | Retained main claims and source CSVs are explicitly mapped; statistical-readiness tracker separates retained, boundary, supplement, blocked, and non-claim evidence. | `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`; `docs/source_data/STATISTICAL_REPORTING_READINESS.csv` |
-| Post-15A citation/prior-art audit. | Citation placeholders are mapped to prior-art families and candidate real metadata; the missing novelty/prior-art artifact is explicitly not invented and is retired as the only path forward. | `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/NOVELTY_POSITIONING.md` |
+| Post-15A citation/prior-art audit. | Citation placeholders were mapped to prior-art families; the missing novelty/prior-art artifact was not invented and was retired as the only path forward. | `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/NOVELTY_POSITIONING.md` |
+| Checked citation ledger. | Major placeholder-key metadata is checked in a venue-neutral reference ledger; no fake `.bib`/CSL export has been invented. | `docs/manuscript/REFERENCES.md`; `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md` |
+| Closest-prior-art companion table. | Prior-art families are separated into inherited ideas, non-novel claims, and the manuscript's narrow contribution. | `docs/manuscript/closest_prior_art_table.md` |
+| Citation-ledger integration status. | The repo records that final citation style and closest-prior-art insertion remain human decisions. | `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md` |
 | Post-15A figure/table human-review checklist. | Figures 1-5 and Tables 1-4 have placement, claim role, caption caveat, source-data status, and unresolved decision rows. | `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; `docs/manuscript/FIGURE_PLAN.md`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md` |
 
 ## P0 - Current Next Pass
 
 | TODO | Reason | Source path | Target output |
 |---|---|---|---|
-| Convert citation audit into final bibliography and manuscript citations. | Related-work/citation hygiene is now the most important manuscript blocker after retained-claim hardening. | `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Verified bibliography entries, replaced placeholders, and final related-work citations. |
-| Write the closest-prior-art risk table if retained in Section 2.7. | The manuscript currently calls for this table but does not yet contain final source-backed content. | `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Compact table separating CIRM from task-gated lookup, MoE routing, fast weights, external memory, graph algorithms, and memory-augmented neural baselines. |
+| Human decision checkpoint for citation/export convention. | Final citation conversion cannot be done safely without choosing a convention. | `docs/manuscript/REFERENCES.md`; `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Explicit decision: Pandoc keys, BibTeX, CSL JSON, numbered references, target-journal author-year style, or venue-neutral ledger for now. |
+| Human decision checkpoint for closest-prior-art placement. | The closest-prior-art table exists, but Section 2.7 insertion is a formatting/venue decision. | `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Inline table, prose summary, or companion artifact decision. |
 | Human-review generated candidate Figures 1-5 and Tables 1-4. | Candidate assets exist, but final captions, source-data statements, and main-vs-supplement placement require review. | `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; `docs/manuscript/FIGURE_PLAN.md`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` | Approved figure/table placement and caption caveats. |
 | Decide whether target venue strategy requires a memory-augmented/key-value neural comparator. | Exp15 is intentionally minimal and fixed-profile; broader neural coverage is venue-dependent. | `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `experiments/experiment15_neural_baseline_comparator/README.md` | Explicit venue/reviewer decision; do not start a new experiment by default. |
 
@@ -64,6 +77,8 @@ Source path: `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manus
 
 | TODO | Reason | Source path | Target output |
 |---|---|---|---|
+| Apply chosen citation/export convention to the manuscript. | Placeholder keys should be converted only after a convention is chosen. | `docs/manuscript/REFERENCES.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Chosen bibliography/citation format without invented metadata. |
+| Integrate or explicitly defer closest-prior-art Section 2.7 material. | The table exists but manuscript placement is unresolved. | `docs/manuscript/closest_prior_art_table.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Inline table/prose or explicit deferral note. |
 | Finalize seed-level confidence intervals and effect sizes for retained claims. | Pass 15A mapped sources but did not certify every statistical comparison as final. | `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`; `docs/manuscript/tables/table_03_statistical_summary.md`; `scripts/compute_seed_metric_summary.py` | Human-reviewed CI/effect-size tables tied to explicit claim groupings. |
 | Human-review generated candidate figures and captions. | Generated assets are reproducible candidates, not final journal figures. | `scripts/manuscript_assets/build_manuscript_assets.py`; `docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md`; `docs/manuscript/FIGURE_PLAN.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` | Final captions, approved placement, and journal-specific formatting changes. |
 | Verify manuscript-critical run commands on a fresh checkout. | Commands were inspected/documented, not freshly rerun in this pass. | `docs/repo_audit/REPRODUCIBILITY_AUDIT.md` | Command log with pass/fail, runtime, hardware, and expected outputs. |
