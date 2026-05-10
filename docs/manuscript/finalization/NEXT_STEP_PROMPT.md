@@ -1,150 +1,81 @@
-# Next Step Prompt: Human Decision Checkpoint And Guarded Manuscript Integration
+# Next Step Prompt: Apply Manuscript Prose Patch And Begin Table 3 Review
 
-Use this prompt after the citation-ledger integration status has merged.
+Use this prompt after the human-decision integration status has merged.
 
 ```text
 You are working in the repository:
 
 GradieResearch/context-indexed-route-memory
 
-Task: Determine whether the required human decisions for final citation style, closest-prior-art placement, and figure/table placement have been made. If decisions are available, apply only those decisions to the manuscript and operational docs. If decisions are not available, call out the missing decisions and pause without inventing them.
+Task: Complete the remaining guarded manuscript integration work after the human decisions captured in `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md`, then begin the next manuscript-finalization blocker: Table 3 grouping/effect-size review.
 
 Starting context:
 
-The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, and post-citation-ledger integration-status pass.
+The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, post-citation-ledger integration-status pass, and post-human-decision capture.
 
-Current completed artifacts:
+Human decisions now made:
 
-- `docs/manuscript/draft/MANUSCRIPT_V2.md`
-- `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`
-- `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md`
-- `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`
-- `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
-- `docs/manuscript/REFERENCES.md`
-- `docs/manuscript/closest_prior_art_table.md`
-- `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`
-- `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`
-- `docs/manuscript/tables/table_04_exp15_neural_comparator.md`
-- `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`
-- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`
+1. Citation/export convention:
+   - Keep `docs/manuscript/REFERENCES.md` as the venue-neutral ledger for now.
+   - Do not create BibTeX, CSL JSON, numbered references, or target-journal formatting until a target venue/convention is selected.
 
-Current scientific posture to preserve:
+2. Closest-prior-art placement:
+   - Convert `docs/manuscript/closest_prior_art_table.md` into prose in Section 2.7.
+   - Retain `docs/manuscript/closest_prior_art_table.md` as the companion source artifact.
 
-- The paper is a controlled symbolic/mechanistic benchmark and evidence-map manuscript.
-- Retained main scientific spine: C1, C2, C3, C4, C5, C6, and C13.
-- Retained discussion/table baseline claim: C12.
-- Boundary or supplement only: C7, C8, C10, and C11.
-- Out of main claim set: C9 unless seen/unseen/all metric cleanup is completed.
-- Exp15 is minimal neural comparator evidence, not exhaustive neural benchmarking.
-- Broad CIRM-over-neural-model claims are not supported.
-- Context-conditioned neural transition MLP and world-head transition MLP solve the clean hard slice at ceiling.
-- No-context neural results support conflict-specific context-indexing claims, not a blanket context-is-required-for-every-suffix claim.
-- Exp14 supports symbolic transition-cue context selection, not raw sensory latent-world discovery.
-- Exp15 replay collapse is a non-claim pending audit.
-- Do not cite Exp13.1 lesion evidence as positive mechanism evidence unless audited/rerun.
+3. Figure/table placement:
+   - Figures 1-3: main.
+   - Figure 4: supplement by default unless the finite-budget story is intentionally emphasized.
+   - Figure 5: main-narrow, because Exp14 helps reduce the oracle-context criticism.
+   - Table 3: candidate until grouping/effect-size review is complete.
+   - Table 4: compact main-text table, because Exp15 materially shapes the paper's claims.
 
 Inputs to inspect first:
 
-- `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
-- `docs/manuscript/finalization/MANUSCRIPT_FINALIZATION_PLAN.md`
-- `docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md`
-- `docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md`
-- `docs/manuscript/MANUSCRIPT_TODO.md`
-- `docs/manuscript/REFERENCES.md`
+- `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md`
 - `docs/manuscript/closest_prior_art_table.md`
-- `docs/manuscript/CITATION_PRIOR_ART_AUDIT.md`
 - `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
 - `docs/manuscript/draft/MANUSCRIPT_V2.md`
 - `docs/manuscript/FIGURE_PLAN.md`
-- `docs/manuscript/NOVELTY_POSITIONING.md`
+- `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
+- `docs/manuscript/MANUSCRIPT_TODO.md`
 - `docs/synthesis/PUBLICATION_READINESS.md`
+- `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`
+- `docs/manuscript/tables/table_03_statistical_summary.md`
 
-Primary objective:
+Immediate work:
 
-Move the repo from out-of-sync finalization docs to a clear next actionable state. The next actionable state is either:
+1. Apply the Section 2.7 prose replacement directly to `docs/manuscript/draft/MANUSCRIPT_V2.md`.
+   - Replace the old Section 2.7 closest-prior-art TODO with prose derived from `docs/manuscript/closest_prior_art_table.md`.
+   - Preserve the narrow novelty posture: controlled route-memory decomposition and evidence map, not novelty of context gating, recurrence, memory, modular routing, graph reasoning, or biological indexing in isolation.
+   - Preserve Exp13.2 and Exp15 caveats: oracle context-gated lookup and context-conditioned neural transition learning solve the clean supplied-context slice.
 
-1. apply explicit human decisions and update the manuscript/docs; or
-2. pause with a concise list of missing human decisions.
+2. Sync operational docs after the manuscript patch.
+   - Update `docs/manuscript/FIGURE_PLAN.md` if it still describes Figure 4/Figure 5/Table 4 as unresolved.
+   - Update `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md` so the human decision checkpoint is marked complete and the next active blocker is Table 3 grouping/effect-size review plus direct manuscript polish.
+   - Update `docs/manuscript/MANUSCRIPT_TODO.md` and `docs/synthesis/PUBLICATION_READINESS.md` if they still describe citation convention / closest-prior-art placement / figure placement as unresolved.
 
-Decision checkpoint:
-
-Before editing the manuscript, determine whether the human has explicitly decided each item below.
-
-1. Citation/export convention:
-   - Pandoc-style citation keys;
-   - BibTeX;
-   - CSL JSON;
-   - numbered references;
-   - target-journal author-year style;
-   - or explicitly keep `docs/manuscript/REFERENCES.md` as a venue-neutral ledger for now.
-
-2. Closest-prior-art placement:
-   - inline `docs/manuscript/closest_prior_art_table.md` into Section 2.7 as a compact table;
-   - convert it into prose in Section 2.7;
-   - or keep it as a companion artifact until target-venue formatting.
-
-3. Figure/table placement and review:
-   - Figures 1-3 main or changed;
-   - Figure 4 main-narrow versus supplement;
-   - Figure 5 main-narrow versus supplement;
-   - Table 3 grouping/effect-size review status;
-   - Table 4 main text versus supplement.
-
-If these decisions have not been made, do not choose for the human. Preserve conservative defaults and pause.
-
-Concrete work if decisions are available:
-
-1. Citation convention integration.
-   - Use `docs/manuscript/REFERENCES.md` as the checked metadata source.
-   - Convert only to the chosen convention.
-   - Do not add fake BibTeX, fake CSL JSON, fake DOIs, or unsupported source claims.
-   - Do not propagate the earlier `Eichenbaum2017` DOI/title mismatch. The checked entry is: Eichenbaum, H. (2017). On the Integration of Space, Time, and Memory. Neuron, 95(5), 1007-1018. DOI: `10.1016/j.neuron.2017.06.036`.
-
-2. Closest-prior-art integration.
-   - Use `docs/manuscript/closest_prior_art_table.md`.
-   - Preserve the `what is inherited / what is not claimed / narrow contribution` structure.
-   - Do not claim novelty for context gating, recurrence, replay, task isolation, modular routing, or memory augmentation in isolation.
-
-3. Citation-risk wording cleanup.
-   - Narrow `modern transformer memory systems` unless exact transformer-memory references are added.
-   - Narrow `task masks, adapters, parameter isolation` unless exact references for those families are added.
-   - Keep neuroscience citations motivational only.
-   - Keep Exp15 neural comparator wording fixed-profile and non-exhaustive.
-
-4. Figure/table decisions.
-   - Use `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` as the tracker.
-   - If the human has not chosen, preserve conservative defaults:
-     - Figures 1-3 stay main.
-     - Figure 4 stays main-narrow for C6, with C7 boundary caveat.
-     - Figure 5 stays main-narrow for V2 hardening, movable to supplement by venue decision.
-     - Table 4 stays compact main-text neural comparator, movable to supplement by venue decision.
-     - Table 3 remains candidate until grouping/effect-size review is completed.
-   - Do not promote Exp15 analysis plots into final figures unless explicitly requested.
-
-5. Operational docs.
-   - Update `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`.
-   - Update `docs/manuscript/MANUSCRIPT_TODO.md`.
-   - Update `docs/synthesis/PUBLICATION_READINESS.md` if readiness posture changes.
-   - Update `docs/manuscript/FIGURE_PLAN.md` only if placement/caption decisions change.
-   - Update `docs/manuscript/NOVELTY_POSITIONING.md` only if prior-art positioning changes.
+3. Begin Table 3 review only after the above docs are synchronized.
+   - Inspect `docs/manuscript/tables/table_03_statistical_summary.md`.
+   - Inspect `docs/source_data/STATISTICAL_REPORTING_READINESS.csv`.
+   - Identify which rows are safe final manuscript statistics and which require regrouping or caveats.
+   - Do not invent effect sizes or confidence intervals.
 
 Do not do these unless explicitly requested:
 
 - Do not rerun experiments.
 - Do not modify experiment code.
-- Do not start Exp16 or any optional successor experiment.
-- Do not add a memory-augmented/key-value neural baseline unless the user chooses a venue/reviewer strategy requiring it.
-- Do not audit the Exp15 replay implementation unless specifically requested.
-- Do not rewrite the manuscript wholesale.
-- Do not add fake citations, fake BibTeX, fake CSL JSON, or unsupported related-work claims.
+- Do not start Exp16 or optional successor experiments.
+- Do not add memory-augmented/key-value neural baselines unless a venue/reviewer strategy requires them.
+- Do not audit Exp15 replay unless specifically requested.
 - Do not broaden claims beyond the retained post-15A posture.
+- Do not create final bibliography files until a venue/citation convention is chosen.
 
 Definition of done:
 
-- The current repository state is checked against the completed citation-ledger artifacts.
-- Missing human decisions are listed explicitly, or available decisions are applied.
-- `MANUSCRIPT_V2.md` is modified only where a decision exists or a low-risk wording cleanup is clearly supported by existing docs.
-- `FINALIZATION_CHECKLIST.md`, `MANUSCRIPT_TODO.md`, and readiness docs reflect the actual current state.
-- `python scripts/verify_doc_source_paths.py` passes, or failures/inability to run are listed with exact paths and fixes.
-- Final response summarizes changed files, remaining blockers, unresolved human decisions, and verification result.
+- `MANUSCRIPT_V2.md` Section 2.7 contains prose derived from `docs/manuscript/closest_prior_art_table.md`.
+- `FIGURE_PLAN.md`, `FINALIZATION_CHECKLIST.md`, `MANUSCRIPT_TODO.md`, and `PUBLICATION_READINESS.md` no longer describe the now-made human decisions as unresolved.
+- Table 3 grouping/effect-size review is either started with explicit findings or deferred with a clear reason.
+- `python scripts/verify_doc_source_paths.py` passes, or inability to run is documented with exact reason.
+- Final response summarizes changed files, verification status, and remaining blockers.
 ```

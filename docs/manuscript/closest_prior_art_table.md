@@ -1,10 +1,10 @@
 # Closest Prior-Art Positioning Table
 
-Status: manuscript-facing positioning draft for Section 2.7; venue formatting still pending.
+Status: manuscript-facing positioning source for Section 2.7; human decision made to convert this material into prose while retaining this table as a companion artifact until venue formatting.
 
 Purpose: make the narrow novelty posture explicit. This table is not claiming that CIRM invents context gating, recurrence, memory augmentation, graph reasoning, or biological indexing. It states which ideas are inherited from prior art and what this manuscript contributes narrowly.
 
-Recommended placement: Section 2.7 of `docs/manuscript/draft/MANUSCRIPT_V2.md`, either as a compact table or as prose derived from the table.
+Human placement decision: Section 2.7 should use prose derived from this table rather than inlining the table. This table remains the companion source artifact for checking the prose and for possible later conversion into a venue-specific table or supplement.
 
 | Prior-art family | Representative citation keys | What this manuscript inherits / acknowledges | What is not claimed as novel | Narrow contribution of this manuscript |
 |---|---|---|---|---|
@@ -19,6 +19,8 @@ Recommended placement: Section 2.7 of `docs/manuscript/draft/MANUSCRIPT_V2.md`, 
 | Hippocampal indexing, cognitive maps, and complementary learning systems | `OkeefeNadel1978`; `TeylerDiScenna1986`; `McClelland1995`; `NormanOReilly2003`; `Eichenbaum2017`; `Kumaran2016` | Indexing, cognitive maps, pattern separation/completion, and complementary learning systems motivate the stability-plasticity framing. | The manuscript does not prove a hippocampal mechanism, biological implementation, neural sufficiency, or biological validity. | Uses the biological literature only as computational inspiration for a symbolic benchmark that separates indexing, storage, context, and recurrent execution. |
 | Minimal neural baseline comparator | Exp15 source artifacts plus the neural families above. | Conventional neural transition learners can solve the clean hard slice when context is supplied; endpoint sequence models and transition learners satisfy different computational contracts. | Exp15 is not exhaustive neural benchmarking and cannot support broad CIRM-over-neural superiority. | Adds fixed-profile neural comparator evidence showing that the benchmark distinguishes endpoint memorization, reusable transition learning, no-context conflict failure, suffix composition, and parameter/world-head isolation. |
 
-## Recommended Section 2.7 prose replacement
+## Section 2.7 prose source
 
 The contribution is best described as a controlled route-memory decomposition, not as novelty of any single mechanism. Context gating, recurrence, modular routing, differentiable or external memory, fast weights, graph reasoning, and hippocampal indexing all have substantial prior art. The present benchmark deliberately puts these ideas into a narrow symbolic transition setting where each can be probed separately: one-step transition storage, recurrent route execution, supplied versus selected context, endpoint memorization, suffix-route composition, finite structural budget pressure, and minimal neural comparator behavior. This framing also absorbs the Exp13.2 and Exp15 caveats: an oracle context-gated lookup table and context-conditioned neural transition learner can solve the clean supplied-context slice, so clean ceiling accuracy is not the novelty claim. The manuscript contribution is the evidence map showing where these computational contracts diverge under controlled interference.
+
+The prose integration decision is now made: Section 2.7 should contain this prose-level positioning, while this table remains available as a companion artifact for reviewer-facing traceability or later venue-specific table conversion.
