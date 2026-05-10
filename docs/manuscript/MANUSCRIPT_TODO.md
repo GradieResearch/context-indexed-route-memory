@@ -4,23 +4,22 @@ Purpose: Maintain a conservative work queue for turning this repository into a m
 
 ## Current Next Operational Priority
 
-Complete final **figure/table caption polish and manuscript TODO cleanup** after compact Table 3 alignment.
+Complete final **human manuscript review, target-venue formatting, and release metadata decisions** after caption/TODO cleanup.
 
-The compact Table 3 decision has been made and the manuscript placeholder has been patched:
+The caption/TODO cleanup pass has been completed for the current draft surface:
 
-- Main-text Table 3: `docs/manuscript/tables/table_03_compact_final_safe.md`
-- Main-text Table 3 source data: `docs/manuscript/source_data/table_03_compact_final_safe.csv`
-- Detailed candidate/supplementary statistical map: `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv`
-
-Status note: `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` records the Table 3 manuscript-placeholder patch and source-path verifier result. The verifier passed in the recorded GitHub Actions environment.
+- `docs/manuscript/draft/MANUSCRIPT_V2.md` now uses final-safe figure/table placeholder captions with explicit caveats.
+- Compact Table 3 remains descriptive and source-data-backed.
+- Table 4 remains minimal fixed-profile neural-comparator evidence with caveats.
+- Submission-blocking TODO markers in the manuscript draft have been removed or converted into explicit non-blocking draft notes.
 
 The current active work is therefore:
 
-1. Polish captions/prose for Figures 1-3, Figure 5, compact Table 3, and Table 4.
-2. Keep compact Table 3 descriptive; do not turn it into final inferential effect-size evidence.
-3. Keep the detailed generated statistical map candidate/supplementary unless comparison families are explicitly approved.
-4. Remove or clearly mark remaining manuscript TODOs before submission.
-5. Defer venue-specific citation/export, optional memory-augmented neural baselines, license, and `CITATION.cff` until explicit human decisions are made.
+1. Human-review manuscript flow and polished caption/placeholders.
+2. Choose the target venue and citation/export convention.
+3. Apply venue-specific bibliography, word count, figure/table formatting, and supplement decisions.
+4. Decide whether a memory-augmented/key-value neural comparator is needed for the target venue.
+5. Add human-chosen `LICENSE` and `CITATION.cff` before public submission/release.
 
 ## Current retained V2 posture
 
@@ -45,8 +44,8 @@ The current active work is therefore:
 
 | TODO | Reason | Source path | Target output |
 |---|---|---|---|
-| Polish figure/table captions and manuscript prose. | Candidate assets exist, but final journal-style caption wording still needs human review and caveat preservation. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/tables/table_04_exp15_neural_comparator.md` | Final-safe captions/prose for Figures 1-3, Figure 5, compact Table 3, and Table 4. |
-| Remove or clearly mark remaining manuscript TODOs. | The draft still contains TODO placeholders that cannot remain in a submission draft. | `docs/manuscript/draft/MANUSCRIPT_V2.md` | No unreviewed submission-blocking TODOs in the manuscript draft. |
+| Human-review manuscript flow and polished figure/table placeholders. | The manuscript now has final-safe caption placeholders, but final submission wording still needs human/venue review. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` | Human-approved manuscript draft for target-venue formatting. |
+| Choose target venue and citation/export convention. | `docs/manuscript/REFERENCES.md` remains venue-neutral until a convention is chosen. | `docs/manuscript/REFERENCES.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Final bibliography/citation format without invented metadata. |
 | Decide whether target venue strategy requires a memory-augmented/key-value neural comparator. | Exp15 is intentionally minimal and fixed-profile; broader neural coverage is venue-dependent. | `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `experiments/experiment15_neural_baseline_comparator/README.md` | Explicit venue/reviewer decision; do not start a new experiment by default. |
 
 ## P0 - Required Before Manuscript Submission

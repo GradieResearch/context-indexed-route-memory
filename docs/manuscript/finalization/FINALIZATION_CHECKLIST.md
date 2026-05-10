@@ -102,7 +102,7 @@ Legend:
 - [x] Generate source-data-backed Exp15 neural comparator Table 4.
 - [x] Add `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`.
 - [x] Add `docs/manuscript/tables/table_04_exp15_neural_comparator.md`.
-- [~] Add figure/table captions with explicit caveats. Caveats are identified in `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`; final caption prose remains a review task.
+- [x] Add final-safe figure/table placeholder captions with explicit caveats to `docs/manuscript/draft/MANUSCRIPT_V2.md`; final journal formatting remains a venue task.
 
 ---
 
@@ -122,7 +122,7 @@ Legend:
 - [x] Ensure broad CIRM-over-neural-model claims are absent.
 - [x] Patch stale `MANUSCRIPT_V2.md` Table 3 placeholder so main-text Table 3 cites `docs/manuscript/tables/table_03_compact_final_safe.md`, not `docs/manuscript/tables/table_03_statistical_summary.md`.
 - [~] Keep caption/prose wording aligned so compact Table 3 is descriptive and the detailed statistical map remains candidate/supplementary.
-- [ ] Remove or clearly mark all TODOs before submission.
+- [x] Remove or clearly mark submission-blocking TODO markers in `docs/manuscript/draft/MANUSCRIPT_V2.md` for the current draft pass.
 
 ---
 
@@ -159,10 +159,10 @@ Do not start these by default. Revisit them only after human venue and reviewer-
 
 ## Current Recommended Next Checkbox
 
-- [x] Apply `docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md` directly to `docs/manuscript/draft/MANUSCRIPT_V2.md` without overwriting unrelated manuscript content.
-- [x] Create a compact final-safe main-text Table 3 and move the full generated statistical map to candidate/supplementary status.
-- [x] Record the current verification/alignment status in `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`.
 - [x] Patch the stale `docs/manuscript/draft/MANUSCRIPT_V2.md` Table 3 placeholder to cite compact Table 3 as the main-text path.
 - [x] Run `python scripts/verify_doc_source_paths.py` after the manuscript placeholder patch.
-- [ ] Polish and human-review final captions/prose for Figures 1-3, Figure 5, compact Table 3, and Table 4 while preserving caveats.
-- [ ] Remove or clearly mark all remaining manuscript TODOs before submission.
+- [x] Polish and human-review-ready caption/prose placeholders for Figures 1-3, Figure 5, compact Table 3, and Table 4 while preserving caveats.
+- [x] Remove or clearly mark submission-blocking TODO markers in the manuscript draft for this pass.
+- [ ] Choose target venue/citation convention before final bibliography formatting.
+- [ ] Perform final human review of manuscript flow, figure/table placement, and venue formatting.
+- [ ] Add human-chosen `LICENSE` and `CITATION.cff` before public submission/release.

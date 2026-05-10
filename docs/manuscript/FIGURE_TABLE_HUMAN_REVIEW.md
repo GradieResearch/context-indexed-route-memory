@@ -1,6 +1,6 @@
 # Figure and Table Human-Review Checklist
 
-Status: post-human-decision placement tracker, post-compact Table 3 split, and post-Table-3 manuscript-placeholder/source-path verification pass; still not a final journal art/caption approval.
+Status: post-caption-placeholder polish tracker; final journal art/caption approval and venue formatting still remain.
 
 Purpose: record the required human review for generated Figures 1-5 and Tables 1-4 before treating them as final submission assets.
 
@@ -74,7 +74,7 @@ For each final figure/table caption, verify:
 
 ## Recommended next review order
 
-1. Polish captions for Figures 1-3, Figure 5, compact Table 3, and Table 4.
-2. Remove or clearly mark remaining manuscript TODOs before submission.
-3. Decide later, based on venue/reviewer strategy, whether Table 1/Table 2 remain main/supporting or move to supplement/repository appendix.
-4. Decide later, based on venue/reviewer strategy, whether optional memory-augmented/key-value neural baselines are needed.
+1. Human-review the polished manuscript placeholders/caption caveats in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
+2. Decide later, based on venue/reviewer strategy, whether Table 1/Table 2 remain main/supporting or move to supplement/repository appendix.
+3. Decide later, based on venue/reviewer strategy, whether optional memory-augmented/key-value neural baselines are needed.
+4. Apply target-venue formatting only after venue selection.

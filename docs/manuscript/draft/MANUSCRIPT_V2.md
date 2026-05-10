@@ -77,7 +77,7 @@ Experiment 15 adds a minimal neural comparator. It shows that small endpoint seq
 
 The work is therefore a narrow benchmark and evidence map for studying compositional route memory under symbolic interference. It does not establish broad continual learning, raw perceptual latent-world discovery, biological validity, or exhaustive neural benchmarking.
 
-[TODO before submission: replace this abstract with journal-specific word count; insert final confidence intervals/effect sizes only after Table 3 and Exp15 source-data-backed table are reviewed.]
+**Draft note.** Final target-venue word count and any inferential confidence-interval/effect-size reporting remain venue- and comparison-family-dependent. The current abstract is claim-safe for the repository manuscript draft and should not be expanded into final inferential statistics until Table 3 comparison families are explicitly approved.
 
 ---
 
@@ -115,13 +115,13 @@ This manuscript makes the following publication-safe contributions:
 * It adds symbolic/algorithmic and minimal neural baselines that sharpen the claim boundary rather than broadening it.
 * It identifies remaining submission blockers: prior-art import, final source-data-backed figures/tables, confidence intervals/effect-size review, optional memory-augmented neural baselines depending on venue, replay audit if cited, and final reproducibility checks.
 
-[Table 1 here: claim evidence summary. Source: `docs/manuscript/tables/table_01_claim_evidence.md`. Supports C1-C7, C13, and C12 discussion posture.]
+**Table 1 placeholder.** Claim-evidence summary. Source: `docs/manuscript/tables/table_01_claim_evidence.md`. Use as a main/supporting evidence map for retained claims C1-C6, C13, and C12, while preserving boundary/supplement and non-claim labels for C7-C11, C9, Exp13.1 positive lesion evidence, Exp15 replay collapse, broad neural-superiority claims, raw sensory latent-world discovery, and biological validation.
 
-[Table 2 here: run integrity summary. Source: `docs/manuscript/tables/table_02_run_integrity.md`. Supports provenance for Exp11, Exp12, Exp13, Exp13.1, Exp13.2, and Exp14. Exp15 provenance is currently tracked through `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`, `docs/threads/experiment15_analysis_digest.md`, and Table 4.]
+**Table 2 placeholder.** Run-integrity summary. Source: `docs/manuscript/tables/table_02_run_integrity.md`. Use as provenance support for the manuscript-relevant experiment package, while preserving older-run caveats and the Exp15 reconstructed-manifest/SQLite-tail caveat recorded in `docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md`, `docs/threads/experiment15_analysis_digest.md`, and Table 4.
 
-[Table 3 here: compact final-safe descriptive statistical summary. Source: `docs/manuscript/tables/table_03_compact_final_safe.md`; source data: `docs/manuscript/source_data/table_03_compact_final_safe.csv`. Detailed generated statistical map retained as candidate/supplementary audit support at `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv`. Caveat: descriptive only; do not treat as final inferential effect-size evidence or approved comparison-family statistics.]
+**Table 3 placeholder.** Compact final-safe descriptive statistical summary. Source: `docs/manuscript/tables/table_03_compact_final_safe.md`; source data: `docs/manuscript/source_data/table_03_compact_final_safe.csv`. This is the main-text descriptive Table 3 for the current manuscript pass. The detailed generated statistical map remains candidate/supplementary audit support at `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv`; do not treat it as final inferential effect-size evidence or approved comparison-family statistics.
 
-[Table 4 here: minimal neural comparator hard-slice summary from Exp15. Source table: `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; source data: `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`; authoritative source artifact: `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`. Caveat: Exp15 is a fixed-profile comparator, not exhaustive neural benchmarking.]
+**Table 4 placeholder.** Minimal neural comparator hard-slice summary from Exp15. Source table: `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; source data: `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`; authoritative source artifact: `experiments/experiment15_neural_baseline_comparator/analysis/exp15_full_20260508_092811/exp15_summary.csv`. Caption caveat: Exp15 is a fixed-profile comparator, not exhaustive neural benchmarking; context-conditioned and world-head transition MLPs solve the clean hard slice, and replay collapse remains a non-claim pending audit.
 
 ---
 
@@ -232,7 +232,7 @@ The benchmark separates several evaluation targets:
 
 In supplied-context experiments, the active world label is provided. This isolates whether context-indexed storage can avoid interference, but it does not establish context inference. In Exp14-style cue-selection experiments, the model receives partial symbolic transition evidence and selects a world before route execution. This reduces the oracle-label assumption but remains symbolic and controlled.
 
-[Figure 1 here: conceptual route-memory schematic. Source: `docs/manuscript/figures/figure_01_conceptual_route_memory.png` and `.svg`; source data: `docs/manuscript/source_data/figure_01_conceptual_route_memory.csv`. Caveat: conceptual only.]
+**Figure 1 placeholder.** Conceptual route-memory schematic. Source assets: `docs/manuscript/figures/figure_01_conceptual_route_memory.png` and `docs/manuscript/figures/figure_01_conceptual_route_memory.svg`; source data: `docs/manuscript/source_data/figure_01_conceptual_route_memory.csv`. Caption caveat: conceptual only; do not imply biological validation, raw latent-world discovery, or novelty of context gating/recurrence alone.
 
 ---
 
@@ -295,11 +295,11 @@ Exp1-Exp6 are exploratory or methodological precursors. Exp7-Exp10 provide usefu
 
 The C1 claim is benchmark-specific: within this symbolic route-memory benchmark, removing structural route storage collapses route-table formation and route execution. The strongest manuscript-facing evidence comes from the publication-hardening ablations and baseline suite. Exp13.1 reports near-chance performance for no-structural-plasticity variants at the hard route setting, while the full model reaches ceiling in the corresponding core ablation summaries. Exp13.2 reinforces this pattern in the symbolic baseline suite.
 
-[Figure 2 here: structural plasticity and recurrence ablation. Source: `docs/manuscript/figures/figure_02_structural_plasticity_recurrence_ablation.png` and `.svg`; source data: `docs/manuscript/source_data/figure_02_structural_plasticity_recurrence_ablation.csv`; source artifacts include `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_ablation_metrics.csv`.]
+**Figure 2 placeholder.** Structural storage and recurrence ablation. Source assets: `docs/manuscript/figures/figure_02_structural_plasticity_recurrence_ablation.png` and `docs/manuscript/figures/figure_02_structural_plasticity_recurrence_ablation.svg`; source data: `docs/manuscript/source_data/figure_02_structural_plasticity_recurrence_ablation.csv`; source artifact: `experiments/experiment13_1_publication_hardening/analysis/exp13_1_full_20260506_214756/exp13_1_ablation_metrics.csv`. Caption caveat: benchmark/model-family-specific; do not imply universal structural-plasticity necessity or broad neural-model inferiority.
 
 This result should not be overgeneralized. It does not show that all neural systems require explicit structural plasticity. Experiment 15 specifically shows that a context-conditioned neural transition MLP can solve the clean symbolic transition task when context is supplied. The safe interpretation is that structural route storage is required for the tested CIRM mechanism and its ablations, not for all possible route-memory systems.
 
-[TODO: Update C1 language in the final claim-freeze addendum: “benchmark-specific structural storage requirement for this model family,” not “universal structural plasticity requirement.”]
+**Claim-language note.** C1 should remain benchmark/model-family-specific: structural route storage is required for the tested CIRM mechanism and ablations, not universally required for all possible route-memory systems or neural implementations.
 
 ### 6.2 Recurrent execution is required for multi-step composition
 
@@ -343,13 +343,13 @@ Context/world indexing is necessary for incompatible local transitions and full-
 
 C5 is ceiling-limited. Under clean supplied context, the full model maintains ceiling route-table and composition accuracy through the tested world counts. Exp12 reports ceiling performance at world counts 2, 4, 8, 16, and 32 under the clean supplied-context full profile.
 
-[Figure 3 here: clean capacity scaling. Source: `docs/manuscript/figures/figure_03_capacity_scaling.png` and `.svg`; source data: `docs/manuscript/source_data/figure_03_capacity_scaling.csv`; source artifact: `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`.]
+**Figure 3 placeholder.** Clean supplied-context capacity scaling. Source assets: `docs/manuscript/figures/figure_03_capacity_scaling.png` and `docs/manuscript/figures/figure_03_capacity_scaling.svg`; source data: `docs/manuscript/source_data/figure_03_capacity_scaling.csv`; source artifact: `experiments/experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv`. Caption caveat: ceiling-limited supplied-context result over the tested range only; no fitted capacity law or broad generalization claim.
 
 C6 is narrower. Finite structural budget produces an observed route-execution degradation curve. Exp13 shows degradation under severe global budget pressure and recovery at exact or surplus budget. This supports an observed degradation curve, not a fitted capacity law.
 
 C7, local-versus-global budget pressure, is promising but should remain narrow main or supplement unless paired seed-level local/global statistics are added. The existing evidence suggests local budget pressure is more damaging than global pressure, but manuscript-grade statistical comparison remains pending.
 
-[Figure 4 here: finite structural budget/local-global pressure. Source: `docs/manuscript/figures/figure_04_finite_structural_budget_local_global.png` and `.svg`; source data: `docs/manuscript/source_data/figure_04_finite_structural_budget_local_global.csv`.]
+**Figure 4 placeholder.** Finite structural budget and local/global pressure. Source assets: `docs/manuscript/figures/figure_04_finite_structural_budget_local_global.png` and `docs/manuscript/figures/figure_04_finite_structural_budget_local_global.svg`; source data: `docs/manuscript/source_data/figure_04_finite_structural_budget_local_global.csv`. Placement/caption caveat: supplement-default unless the manuscript deliberately emphasizes the finite-budget story; use as observed degradation evidence only, with no fitted law and no C7 promotion without paired seed-level local/global analysis.
 
 Caption caveat:
 
@@ -519,7 +519,7 @@ Key manipulated variables across experiments include:
 * context-present versus no-context neural inputs;
 * joint versus sequential-world training regimes.
 
-[TODO: Fill exact task-generation parameters and pseudocode from implementation files.]
+[Draft note: Fill exact task-generation parameters and pseudocode from implementation files.]
 
 ### 10.2 Model variants and controls
 

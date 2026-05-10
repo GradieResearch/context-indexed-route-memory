@@ -4,9 +4,6 @@ on:
   pull_request:
   push:
 
-permissions:
-  contents: write
-
 jobs:
   verify-doc-paths:
     runs-on: ubuntu-latest

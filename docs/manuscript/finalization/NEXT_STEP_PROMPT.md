@@ -1,55 +1,35 @@
-# Next Step Prompt: Polish Figure/Table Captions And Clear Manuscript TODOs
+# Next Step Prompt: Human Review, Venue Formatting, And Release Metadata
 
-Use this prompt after compact Table 3 manuscript-placeholder alignment and source-path verification have been recorded.
+Use this prompt after the caption/TODO cleanup pass has been completed.
 
 ```text
 You are working in the repository:
 
 GradieResearch/context-indexed-route-memory
 
-Task: complete the next manuscript-finalization pass: final-safe figure/table caption polish and manuscript TODO cleanup. Do not start new experiments.
+Task: complete the next manuscript-finalization decision pass. Do not start new experiments by default.
 
 Starting context:
 
-The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, post-human-decision capture, post-Section-2.7 closest-prior-art prose integration, post-compact Table 3 split, and post-Table-3 manuscript-placeholder/source-path verification status capture.
+The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, post-human-decision capture, post-Section-2.7 closest-prior-art prose integration, post-compact Table 3 split, post-Table-3 manuscript-placeholder/source-path verification, and post-caption/TODO cleanup.
 
 Already completed:
 
 - `docs/manuscript/draft/MANUSCRIPT_V2.md` exists and carries the conservative post-Exp15 manuscript posture.
 - Section 2.7 contains closest-prior-art positioning prose, with `docs/manuscript/closest_prior_art_table.md` retained as a companion artifact.
-- `docs/manuscript/tables/table_03_compact_final_safe.md` is the compact descriptive main-text Table 3.
-- `docs/manuscript/source_data/table_03_compact_final_safe.csv` is the compact Table 3 source-data mirror.
-- `docs/manuscript/tables/table_03_statistical_summary.md` and `docs/manuscript/tables/table_03_statistical_summary.csv` remain detailed candidate/supplementary statistical-map artifacts, not final inferential statistics.
-- `docs/manuscript/draft/MANUSCRIPT_V2.md` points main-text Table 3 at the compact final-safe descriptive table and keeps the detailed statistical map candidate/supplementary.
-- `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` records the Table 3 manuscript-placeholder patch and source-path verifier result.
-- `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`, `docs/manuscript/MANUSCRIPT_TODO.md`, `docs/synthesis/PUBLICATION_READINESS.md`, and `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md` identify caption/prose polish and TODO cleanup as the next active blocker.
+- Compact Table 3 is descriptive and source-data-backed.
+- Table 4 is a compact minimal fixed-profile neural-comparator table with caveats.
+- The manuscript has final-safe figure/table placeholder captions and no unreviewed submission-blocking TODO markers for the current draft pass.
+- `python scripts/verify_doc_source_paths.py` has passed after the caption/TODO cleanup pass.
 
 Immediate work:
 
-1. Review:
-   - `docs/manuscript/draft/MANUSCRIPT_V2.md`
-   - `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
-   - `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
-   - `docs/manuscript/MANUSCRIPT_TODO.md`
-   - `docs/synthesis/PUBLICATION_READINESS.md`
-
-2. Polish manuscript figure/table placeholder and caption prose for:
-   - Figures 1-3 as main figures.
-   - Figure 5 as main-narrow symbolic transition-cue context-selection evidence.
-   - Figure 4 as supplement-default unless a human explicitly emphasizes the finite-budget story.
-   - Compact Table 3 as descriptive main-text statistics only.
-   - Table 4 as compact main-text Exp15 neural comparator evidence.
-
-3. Remove or clearly mark remaining submission-blocking TODOs in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
-
-4. Sync operational docs after the caption/TODO pass:
-   - `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`
-   - `docs/manuscript/MANUSCRIPT_TODO.md`
-   - `docs/synthesis/PUBLICATION_READINESS.md`
-   - `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md`
-   - this `NEXT_STEP_PROMPT.md`
-
-5. Run `python scripts/verify_doc_source_paths.py` if any active source paths are added or edited. Record the result exactly if run.
+1. Human-review `docs/manuscript/draft/MANUSCRIPT_V2.md` for flow, wording, and final claim posture.
+2. Choose a target venue or explicitly keep the package venue-neutral.
+3. If a venue is chosen, apply venue-specific citation/export convention, word count, figure/table placement, and supplement formatting.
+4. Decide whether reviewer strategy requires a memory-augmented/key-value neural comparator beyond Exp15.
+5. Add human-chosen `LICENSE` and `CITATION.cff` before public submission/release.
+6. Sync `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`, `docs/manuscript/MANUSCRIPT_TODO.md`, `docs/synthesis/PUBLICATION_READINESS.md`, and this prompt after decisions are made.
 
 Preserve the current claim posture:
 
@@ -71,13 +51,11 @@ Do not do these unless explicitly requested:
 - Do not start Exp16 or optional successor experiments.
 - Do not add memory-augmented/key-value neural baselines unless a venue/reviewer strategy requires them.
 - Do not audit Exp15 replay unless specifically requested.
-- Do not create final bibliography files until a venue/citation convention is chosen.
 
 Definition of done:
 
-- `docs/manuscript/draft/MANUSCRIPT_V2.md` has final-safe caption/placeholder prose for the current figure/table package and no unreviewed submission-blocking TODOs.
-- Compact Table 3 remains descriptive and source-data-backed.
-- Table 4 remains minimal fixed-profile neural-comparator evidence with caveats.
-- Operational docs point to the next real blocker after caption/TODO cleanup.
-- Final response summarizes changed files, verifier status if run, final caption/TODO status, and remaining blockers.
+- Target-venue/citation/release decisions are recorded, or explicitly deferred.
+- Manuscript flow review findings are recorded and actioned or queued.
+- Operational docs point to the next real blocker after venue/release decisioning.
+- Final response summarizes changed files, verifier status if run, and remaining blockers.
 ```

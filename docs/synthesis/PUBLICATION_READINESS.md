@@ -2,7 +2,7 @@
 
 ## Summary Judgment
 
-Status: post-Analysis-Pass-15A, post-citation-ledger/status pass, post-human-decision capture, post-direct Section 2.7 manuscript patch, post-compact Table 3 split, and post-Table-3 manuscript-placeholder/source-path verification pass. The manuscript is not submission-ready; the next blocker is final figure/table caption polish and manuscript TODO cleanup. The source-path verifier passed in the recorded verification environment.
+Status: post-Analysis-Pass-15A, post-citation-ledger/status pass, post-human-decision capture, post-direct Section 2.7 manuscript patch, post-compact Table 3 split, post-Table-3 manuscript-placeholder/source-path verification pass, and post-caption/TODO cleanup pass. The manuscript is still not submission-ready; the next blockers are human manuscript review, target-venue citation/formatting decisions, optional reviewer-strategy baseline decisions, and release metadata.
 
 The current internal spine remains defensible but narrow: in a controlled symbolic route-memory benchmark, context-indexed structural plasticity stores incompatible local transition systems, recurrent execution composes stored one-step transitions into multi-step routes, Exp13.2 supplies symbolic/algorithmic baseline coverage, Exp14 shows that the active symbolic world can be selected from partial symbolic transition cues, Exp15 supplies a minimal neural comparator, and Analysis Pass 15A records the retained claim set and source-CSV mapping.
 
@@ -55,9 +55,10 @@ Caveat -> Human review is still required for caption wording and journal formatt
 
 ## Required Before Manuscript Draft Finalization
 
-- Human-review generated Figures 1-5 and Tables 1-4 for caption wording, caveats, and venue-specific formatting.
-- Polish manuscript prose around compact Table 3 and Table 4 without adding final inferential effect-size claims.
-- Remove or clearly mark all remaining manuscript TODOs before submission.
+- Human-review manuscript flow and polished figure/table placeholders in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
+- Choose target venue before final word count, bibliography style, figure/table placement, and supplement formatting.
+- Decide whether target venue/reviewer strategy requires a memory-augmented/key-value neural comparator.
+- Keep compact Table 3 descriptive unless explicit comparison families are approved.
 - Keep Figure 4 supplement-default unless the finite-budget story is intentionally emphasized.
 - Keep Figure 5 main-narrow unless a later venue decision requires supplement relocation.
 - Keep Table 4 as compact main-text unless a later venue decision requires supplement relocation.
