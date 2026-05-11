@@ -1,38 +1,57 @@
-# Next Step Prompt: Venue-Neutral Manuscript Flow Review Or Venue Decision
+# Next Step Prompt: Implement Manuscript Reproducibility Driver
 
-Use this prompt after the pre-venue documentation state has been tied off.
+Use this prompt after the manuscript reproducibility foundation docs have been added.
 
 ```text
 You are working in the repository:
 
 GradieResearch/context-indexed-route-memory
 
-Task: perform the next manuscript-finalization decision/action pass. Do not start new experiments by default.
+Task: implement the manuscript reproducibility driver and first validation report. Do not rerun expensive full experiments by default.
 
 Starting context:
 
-The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, post-human-decision capture, post-Section-2.7 closest-prior-art prose integration, post-compact Table 3 split, post-Table-3 manuscript-placeholder/source-path verification, post-caption/TODO cleanup, and post-pre-venue decision-status tie-off.
+The repository is post-Exp15, post-Manuscript-V2-capture, post-Analysis-Pass-15A, post-citation/prior-art audit, post-citation-ledger pass, post-human-decision capture, post-Section-2.7 closest-prior-art prose integration, post-compact Table 3 split, post-Table-3 manuscript-placeholder/source-path verification, post-caption/TODO cleanup, post-pre-venue decision-status tie-off, and post-pre-V3 cleanup.
 
-Already completed:
+Reproducibility foundation now exists:
 
-- `docs/manuscript/draft/MANUSCRIPT_V2.md` exists and carries the conservative post-Exp15 manuscript posture.
-- Section 2.7 contains closest-prior-art positioning prose, with `docs/manuscript/closest_prior_art_table.md` retained as a companion artifact.
-- Compact Table 3 is descriptive and source-data-backed.
-- Table 4 is a compact minimal fixed-profile neural-comparator table with caveats.
-- The manuscript has final-safe figure/table placeholder captions and no unreviewed submission-blocking TODO markers for the current draft pass.
-- `python scripts/verify_doc_source_paths.py` has passed after the caption/TODO cleanup pass.
-- `docs/manuscript/finalization/HUMAN_REVIEW_VENUE_STATUS.md` records that target venue, citation/export convention, release metadata, and optional neural-comparator expansion remain human decisions.
+- `docs/manuscript/MANUSCRIPT_REPRODUCIBILITY_MAP.md`
+- `docs/manuscript/source_data/manuscript_claim_artifact_map.csv`
+- `docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_PROTOCOL.md`
+- Existing audit: `docs/repo_audit/REPRODUCIBILITY_AUDIT.md`
 
 Immediate work:
 
-1. If no venue has been chosen, keep the package venue-neutral and perform a prose-only manuscript flow review.
-2. Normalize the remaining duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
-3. Review the manuscript for repeated caveats, awkward placeholder wording, and claim-posture drift without changing the scientific claims.
-4. Record flow-review findings in a finalization status document.
-5. If a target venue is chosen by a human, apply the selected citation/export convention, word count, figure/table placement, and supplement formatting.
-6. If no target venue is chosen, do not create BibTeX, CSL JSON, numbered references, final journal formatting, `LICENSE`, or `CITATION.cff`.
-7. Sync `docs/manuscript/finalization/FINALIZATION_CHECKLIST.md`, `docs/manuscript/MANUSCRIPT_TODO.md`, `docs/synthesis/PUBLICATION_READINESS.md`, and this prompt after the pass.
-8. Run `python scripts/verify_doc_source_paths.py` after edits.
+1. Implement the planned future manuscript reproducibility driver at `scripts/reproduce_manuscript.py`.
+2. Support at least these profiles:
+   - `validate-artifacts`
+   - `rebuild-manuscript-assets`
+   - `smoke`
+   - `rerun-critical`
+   - `full-critical`
+3. In the first implementation, fully implement `validate-artifacts` and `rebuild-manuscript-assets`.
+4. For `smoke`, `rerun-critical`, and `full-critical`, implement command planning and safe skip/reporting if the exact launchers cannot be run in the current environment.
+5. Produce planned future report outputs:
+   - a manuscript reproducibility Markdown report under `docs/repo_audit/`
+   - a manuscript reproducibility JSON report under `docs/repo_audit/`
+6. Validate source paths with `python scripts/verify_doc_source_paths.py`.
+7. Do not overwrite historical experiment outputs.
+8. Do not run expensive full experiments unless explicitly requested by a human.
+
+Implementation guidance:
+
+- Read `docs/manuscript/source_data/manuscript_claim_artifact_map.csv`.
+- Parse semicolon-separated source paths and validation artifact paths.
+- Check all retained-claim source and validation paths exist.
+- Parse required CSVs and check that they are non-empty.
+- Add profile-specific checks for key source-data artifacts:
+  - `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv`
+  - `docs/manuscript/source_data/figure_05_symbolic_context_selection.csv`
+  - `docs/manuscript/source_data/figure_03_capacity_scaling.csv`
+  - `docs/manuscript/source_data/table_03_compact_final_safe.csv`
+- Run `python scripts/manuscript_assets/build_manuscript_assets.py` for `rebuild-manuscript-assets` if available in the current environment.
+- Record pass/warn/fail per claim and per profile.
+- Include commit SHA, branch/ref, OS, Python version, command, runtime, and caveats in the report.
 
 Preserve the current claim posture:
 
@@ -47,20 +66,11 @@ Preserve the current claim posture:
 - Keep Exp15 replay collapse as non-claim pending audit.
 - Do not claim broad neural superiority, solved continual learning, raw sensory latent-world discovery, or biological validation.
 
-Do not do these unless explicitly requested:
-
-- Do not rerun experiments.
-- Do not modify experiment code.
-- Do not start Exp16 or optional successor experiments.
-- Do not add memory-augmented/key-value neural baselines unless a venue/reviewer strategy requires them.
-- Do not audit Exp15 replay unless specifically requested.
-- Do not choose a license, citation style, or target venue without a human decision.
-
 Definition of done:
 
-- The remaining duplicate Table 4 placeholder is normalized, or explicitly left as a known blocker if tooling prevents the edit.
-- Manuscript flow-review findings are recorded and actioned or queued.
-- Target-venue/citation/release decisions are recorded, or explicitly deferred.
-- Operational docs point to the next real blocker after the flow/decision pass.
-- Final response summarizes changed files, verifier status, and remaining blockers.
+- The planned future validate-artifacts profile runs successfully from a clean checkout or reports actionable failures.
+- The planned future rebuild-manuscript-assets profile runs successfully or records exact environment/actionable failures.
+- Manuscript reproducibility Markdown and JSON reports are generated under `docs/repo_audit/`.
+- `python scripts/verify_doc_source_paths.py` passes.
+- Final response summarizes changed files, profile results, verifier status, and remaining reproducibility blockers.
 ```
