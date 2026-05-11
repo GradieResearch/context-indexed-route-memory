@@ -28,7 +28,7 @@ Manuscript asset pipeline:
 
 ## Required command surface
 
-Implement a master driver:
+Implement the planned future master driver with these profiles:
 
 ```bash
 python scripts/reproduce_manuscript.py --profile validate-artifacts
@@ -46,10 +46,10 @@ The script should be conservative by default:
 - Do not require GPU unless the selected profile explicitly needs it.
 - Produce machine-readable JSON plus Markdown reports.
 
-Recommended outputs:
+Planned future outputs:
 
-- `docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_REPORT.md`
-- `docs/repo_audit/manuscript_reproducibility_report.json`
+- manuscript reproducibility Markdown report;
+- manuscript reproducibility JSON report.
 
 ## Profile definitions
 
@@ -176,21 +176,21 @@ Must:
 
 ## Statistical output requirements
 
-Add these in a follow-up implementation pass:
+Add these planned future outputs in a follow-up implementation pass:
 
-- `docs/manuscript/source_data/reproducibility_claim_summary.csv`
-- `docs/manuscript/source_data/seed_level_core_claim_metrics.csv`
-- `docs/manuscript/tables/table_reproducibility_claim_summary.md`
+- reproducibility claim summary CSV;
+- seed-level core-claim metrics CSV;
+- reproducibility claim summary Markdown table.
 
 These should be claim-scoped, not a giant all-experiment matrix.
 
-Minimum columns for `reproducibility_claim_summary.csv`:
+Minimum columns for reproducibility claim summary:
 
 ```text
 claim_id,role,experiment_ids,metric_family,source_artifacts,n_units,summary_value,interval_or_spread,effect_size,status,caveat,fresh_rerun_status
 ```
 
-Minimum columns for `seed_level_core_claim_metrics.csv`:
+Minimum columns for seed-level core-claim metrics:
 
 ```text
 claim_id,experiment_id,run_id,seed,variant,world_count,route_length,metric_name,metric_value,source_artifact
@@ -198,7 +198,7 @@ claim_id,experiment_id,run_id,seed,variant,world_count,route_length,metric_name,
 
 ## Report requirements
 
-`docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_REPORT.md` should include:
+The planned future manuscript reproducibility report should include:
 
 - repository commit SHA;
 - branch/ref;
@@ -221,10 +221,10 @@ claim_id,experiment_id,run_id,seed,variant,world_count,route_length,metric_name,
 ## Acceptance criteria before V3 submission
 
 - `python scripts/verify_doc_source_paths.py` passes.
-- `python scripts/reproduce_manuscript.py --profile validate-artifacts` passes.
-- `python scripts/reproduce_manuscript.py --profile rebuild-manuscript-assets` passes or records exact generated-file differences for review.
-- `python scripts/reproduce_manuscript.py --profile smoke` passes or records justified skips.
-- A fresh `MANUSCRIPT_REPRODUCIBILITY_REPORT.md` is committed.
+- The planned future validate-artifacts profile passes.
+- The planned future rebuild-manuscript-assets profile passes or records exact generated-file differences for review.
+- The planned future smoke profile passes or records justified skips.
+- A fresh manuscript reproducibility report is committed.
 - Claim-scoped statistical summaries exist for retained claims.
 - V3 wording matches only claims marked reproducibility-backed or explicitly caveated.
 
