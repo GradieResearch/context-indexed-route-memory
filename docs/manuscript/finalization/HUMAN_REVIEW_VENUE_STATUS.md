@@ -1,14 +1,16 @@
 # Human Review, Venue, And Release Decision Status
 
-Date: 2026-05-10
+Date: 2026-05-11
 
-Purpose: record the next finalization decision pass after caption/TODO cleanup.
+Purpose: record the manuscript decision state after caption/TODO cleanup and before any target-venue or release-metadata decisions are made.
 
 ## Status
 
-Result: **decision pass recorded; human decisions still required**.
+Result: **pre-venue documentation state tied off; human decisions still required**.
 
-This pass confirms that the repository has moved past the Table 3 alignment and caption/TODO cleanup blockers. The remaining work is no longer primarily experiment import or source-path repair. It is now submission-package decision work: human manuscript review, venue/citation formatting, release metadata, and optional reviewer-strategy baseline decisions.
+The repository has moved past the Table 3 alignment, path-verification, caption-placeholder, and manuscript-TODO cleanup blockers. The remaining work is no longer primarily experiment import or source-path repair. It is now submission-package decision work: human manuscript review, venue/citation formatting, release metadata, and optional reviewer-strategy baseline decisions.
+
+This status intentionally does **not** invent a target venue, bibliography convention, license, `CITATION.cff`, or new neural-baseline requirement.
 
 ## Current manuscript-readiness assessment
 
@@ -35,7 +37,7 @@ However, the manuscript is not yet final because these human choices remain open
 
 ## Known minor cleanup item
 
-A later duplicate in-section Table 4 placeholder still uses older bracketed manuscript-placeholder wording. This is not a path-verification blocker and does not change the claim posture, but it should be normalized during the next manuscript flow/edit pass.
+A later duplicate in-section Table 4 placeholder still uses older bracketed manuscript-placeholder wording. This is not a path-verification blocker and does not change the claim posture, but it should be normalized during the next manuscript flow/edit pass. It is deliberately called out here so it does not get lost.
 
 ## Recommendation
 

@@ -1,53 +1,67 @@
 # Manuscript Finalization
 
-Purpose: collect the final manuscript-readiness plan, working checklist, status reports, and handoff prompts for the Context-Indexed Route Memory manuscript.
+Purpose: provide a clean operating surface for moving from the V2 manuscript/finalization package into a real V3 manuscript draft.
 
-This folder is the operating area for the finalization phase after `MANUSCRIPT_V2.md`, Exp13.2 import, Exp14 import, Exp15 import, Analysis Pass 15A retained-claim hardening, citation/prior-art audit, checked citation-ledger pass, human decision capture, Section 2.7 closest-prior-art prose integration, and the compact Table 3 split.
+This folder previously accumulated several one-off prompts and status captures while Exp15, citation hygiene, Table 3, caption cleanup, and pre-venue status were being integrated. Those artifacts are retained for traceability, but only a small subset should be treated as active.
 
-## Files
+## Active V3-facing files
 
-- [`MANUSCRIPT_FINALIZATION_PLAN.md`](MANUSCRIPT_FINALIZATION_PLAN.md) - limitation-by-limitation plan for closing or explicitly retaining reviewer-risk items.
-- [`FINALIZATION_CHECKLIST.md`](FINALIZATION_CHECKLIST.md) - practical checklist for tracking manuscript finalization work.
-- [`NEXT_STEP_PROMPT.md`](NEXT_STEP_PROMPT.md) - current agent-ready prompt for documentation/source-path verification plus manuscript/caption alignment for the compact Table 3 path.
-- [`HUMAN_DECISION_INTEGRATION_STATUS.md`](HUMAN_DECISION_INTEGRATION_STATUS.md) - record of human decisions for citation/export convention, closest-prior-art placement, and figure/table placement.
-- [`TABLE_3_GROUPING_REVIEW.md`](TABLE_3_GROUPING_REVIEW.md) - record of the Option B compact Table 3 split and remaining caveats.
-- [`CITATION_PRIOR_ART_INSERTION_REPORT.md`](CITATION_PRIOR_ART_INSERTION_REPORT.md) - report from the checked citation-ledger and closest-prior-art table creation pass.
-- [`CITATION_LEDGER_INTEGRATION_STATUS.md`](CITATION_LEDGER_INTEGRATION_STATUS.md) - status of citation-ledger integration after the follow-up pass.
-- [`NEXT_STEP_PROMPT_AFTER_CITATION_LEDGER.md`](NEXT_STEP_PROMPT_AFTER_CITATION_LEDGER.md) - historical handoff prompt used after the citation-ledger pass; retained as an audit trail and superseded by `NEXT_STEP_PROMPT.md`.
+Use these first:
 
-## Current Finalization Posture
+- [`NEXT_STEP_PROMPT.md`](NEXT_STEP_PROMPT.md) - current agent-ready handoff for the next manuscript pass.
+- [`FINALIZATION_CHECKLIST.md`](FINALIZATION_CHECKLIST.md) - active operational checklist.
+- [`HUMAN_REVIEW_VENUE_STATUS.md`](HUMAN_REVIEW_VENUE_STATUS.md) - current pre-venue decision gate and remaining-work estimate.
+- [`MANUSCRIPT_FINALIZATION_PLAN.md`](MANUSCRIPT_FINALIZATION_PLAN.md) - higher-level finalization plan.
 
-The first manuscript remains a controlled symbolic/mechanistic benchmark paper. `MANUSCRIPT_V2.md` has been captured, Exp15 is imported as completed minimal fixed-profile neural-comparator evidence, Table 4 is present as a compact source-data-backed comparator table, and `docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md` records the post-15A retained claim posture.
+Primary non-finalization companions:
 
-The human-decision and Table 3 cleanup stages are no longer open blockers:
+- [`../draft/MANUSCRIPT_V2.md`](../draft/MANUSCRIPT_V2.md) - current draft to flow-review before V3.
+- [`../MANUSCRIPT_TODO.md`](../MANUSCRIPT_TODO.md) - manuscript work queue.
+- [`../SOURCE_OF_TRUTH.md`](../SOURCE_OF_TRUTH.md) - canonical document priority rules.
+- [`../../synthesis/PUBLICATION_READINESS.md`](../../synthesis/PUBLICATION_READINESS.md) - current publication-readiness judgment.
 
-- `docs/manuscript/REFERENCES.md` remains the checked venue-neutral citation ledger until a target venue/convention is chosen.
-- `docs/manuscript/closest_prior_art_table.md` remains the closest-prior-art companion artifact.
-- Section 2.7 of `docs/manuscript/draft/MANUSCRIPT_V2.md` contains closest-prior-art prose derived from that companion artifact.
-- `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md` records the citation/export, closest-prior-art, and figure/table placement decisions.
-- `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` records the compact Table 3 outcome.
-- `docs/manuscript/tables/table_03_compact_final_safe.md` and `docs/manuscript/source_data/table_03_compact_final_safe.csv` are the compact descriptive main-text Table 3 path.
-- `docs/manuscript/tables/table_03_statistical_summary.md` and `.csv` remain detailed candidate/supplementary statistical-map artifacts, not final main-text inferential statistics.
+## Current state
 
-Current retained V2 posture:
+The repository is post:
 
-- Main scientific spine: C1, C2, C3, C4, C5, C6, and C13.
-- Discussion/table baseline claim: C12.
-- Boundary or supplement only: C7, C8, C10, and C11.
-- Out of the main claim set or non-claims: C9, Exp13.1 positive lesion evidence, Exp15 replay collapse, broad CIRM-over-neural claims, raw sensory latent-world discovery, and biological validation.
+- Exp15 import and post-Exp15 claim narrowing;
+- Analysis Pass 15A retained-claim/statistical hardening;
+- checked citation-ledger and closest-prior-art companion artifact creation;
+- Section 2.7 closest-prior-art prose integration;
+- compact descriptive Table 3 split and verification;
+- caption/TODO cleanup;
+- pre-venue human-review/venue/release decision-status capture.
 
-## Current Next Action
+The manuscript is **not submission-ready**, but it is close enough for a serious V3 drafting pass.
 
-Use `NEXT_STEP_PROMPT.md` for the next phase.
+## Current next action
 
-The next step is not another citation-audit pass, human-decision checkpoint, Analysis Pass 15A, Table 3 grouping decision, or new experiment. Those stages have already been recorded.
+Do one of the following, in order of preference:
 
-The current blocker is:
+1. If no venue has been chosen, perform a venue-neutral V3 manuscript flow review.
+2. Normalize the remaining duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
+3. Preserve the conservative claim posture while improving prose and manuscript flow.
+4. Record any unresolved venue, citation, figure/table, license, and optional-baseline decisions.
 
-1. Run `python scripts/verify_doc_source_paths.py` in a clean checkout or CI-capable environment.
-2. If it passes, record the pass in the relevant finalization/readiness docs.
-3. If it cannot run, document the exact reason and do not guess.
-4. If it fails, fix broken active paths only; do not change scientific claims.
-5. Polish manuscript/caption prose so compact descriptive Table 3 is the main-text Table 3 path and the detailed generated statistical map remains candidate/supplementary support.
+Do **not** start a new experiment, choose a venue, choose a license, create final citation exports, or add a memory-augmented/key-value neural comparator unless a human explicitly asks for that.
 
-Do not start new experiments by default.
+## Historical audit trail
+
+These files are retained as provenance for how the current state was reached. They should not be used as current instructions unless `NEXT_STEP_PROMPT.md` explicitly points to them.
+
+- `CITATION_PRIOR_ART_INSERTION_REPORT.md` - checked citation-ledger and closest-prior-art creation pass.
+- `CITATION_LEDGER_INTEGRATION_STATUS.md` - citation-ledger integration follow-up status.
+- `HUMAN_DECISION_INTEGRATION_STATUS.md` - earlier human decisions on citation/export posture, closest-prior-art placement, and figure/table placement.
+- `TABLE_3_GROUPING_REVIEW.md` - compact Table 3 decision record.
+- `TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` - Table 3 manuscript placeholder/source-path verification record.
+- `CAPTION_TODO_CLEANUP_STATUS.md` - caption/TODO cleanup verification record.
+- `SECTION_2_7_PROSE_PATCH.md` - prose patch source for closest-prior-art Section 2.7 integration.
+- `NEXT_STEP_PROMPT_AFTER_CITATION_LEDGER.md` - superseded handoff prompt from the citation-ledger stage.
+- `MANUSCRIPT_TODO_CITATION_LEDGER_UPDATE.md` - superseded TODO update note from the citation-ledger stage.
+
+## Known cleanup before V3
+
+- Normalize the duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
+- Remove or replace `docs/manuscript/draft/bkup.orig` if local Git access is available; it is a stale backup draft and is not canonical.
+- Keep `docs/manuscript/REFERENCES.md` venue-neutral until a target venue/citation convention is chosen.
+- Keep `LICENSE` and `CITATION.cff` unset until human choices are made.

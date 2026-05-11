@@ -1,6 +1,6 @@
 # Manuscript Finalization Checklist
 
-Purpose: working checklist for moving the Context-Indexed Route Memory manuscript from V2 draft capture to a submission-ready package after Exp15 import, human placement decisions, Section 2.7 closest-prior-art integration, the compact-safe Table 3 split, and the Table 3 manuscript-placeholder/source-path verification pass.
+Purpose: working checklist for moving the Context-Indexed Route Memory manuscript from V2 draft capture to a submission-ready package after Exp15 import, human placement decisions, Section 2.7 closest-prior-art integration, the compact-safe Table 3 split, Table 3 manuscript-placeholder/source-path verification, caption/TODO cleanup, and pre-venue decision-status tie-off.
 
 Use this as the operational tracker. Check items only when the repository contains the corresponding artifact or the manuscript has been explicitly updated.
 
@@ -26,7 +26,9 @@ Legend:
 - [x] Add `docs/manuscript/closest_prior_art_table.md` as closest-prior-art companion artifact.
 - [x] Add citation-ledger, human-decision, and Section 2.7 finalization status artifacts.
 - [x] Add `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` and update it with the compact Table 3 split outcome.
-- [x] Add `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` to capture the remaining compact Table 3 verification/alignment blocker.
+- [x] Add `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md` for compact Table 3 verification/alignment.
+- [x] Add `docs/manuscript/finalization/CAPTION_TODO_CLEANUP_STATUS.md` for caption/TODO cleanup verification.
+- [x] Add `docs/manuscript/finalization/HUMAN_REVIEW_VENUE_STATUS.md` for pre-venue decision-state tracking.
 
 ---
 
@@ -123,6 +125,7 @@ Legend:
 - [x] Patch stale `MANUSCRIPT_V2.md` Table 3 placeholder so main-text Table 3 cites `docs/manuscript/tables/table_03_compact_final_safe.md`, not `docs/manuscript/tables/table_03_statistical_summary.md`.
 - [~] Keep caption/prose wording aligned so compact Table 3 is descriptive and the detailed statistical map remains candidate/supplementary.
 - [x] Remove or clearly mark submission-blocking TODO markers in `docs/manuscript/draft/MANUSCRIPT_V2.md` for the current draft pass.
+- [!] Normalize duplicate in-section Table 4 placeholder before final flow review.
 
 ---
 
@@ -163,6 +166,8 @@ Do not start these by default. Revisit them only after human venue and reviewer-
 - [x] Run `python scripts/verify_doc_source_paths.py` after the manuscript placeholder patch.
 - [x] Polish and human-review-ready caption/prose placeholders for Figures 1-3, Figure 5, compact Table 3, and Table 4 while preserving caveats.
 - [x] Remove or clearly mark submission-blocking TODO markers in the manuscript draft for this pass.
-- [ ] Choose target venue/citation convention before final bibliography formatting.
+- [x] Record pre-venue human-review/venue/release decision status.
+- [!] Normalize the duplicate in-section Table 4 placeholder before final flow review.
+- [ ] Choose target venue/citation convention before final bibliography formatting, or explicitly keep the package venue-neutral for the next pass.
 - [ ] Perform final human review of manuscript flow, figure/table placement, and venue formatting.
 - [ ] Add human-chosen `LICENSE` and `CITATION.cff` before public submission/release.

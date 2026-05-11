@@ -4,20 +4,21 @@ Purpose: Maintain a conservative work queue for turning this repository into a m
 
 ## Current Next Operational Priority
 
-Complete final **human manuscript review, target-venue formatting, and release metadata decisions** after caption/TODO cleanup.
+Complete a **venue-neutral manuscript flow review** unless a human first chooses a target venue/citation convention.
 
-The caption/TODO cleanup pass has been completed for the current draft surface:
+The caption/TODO cleanup and pre-venue decision-status passes have been completed for the current draft surface:
 
-- `docs/manuscript/draft/MANUSCRIPT_V2.md` now uses final-safe figure/table placeholder captions with explicit caveats.
+- `docs/manuscript/draft/MANUSCRIPT_V2.md` uses final-safe figure/table placeholder captions with explicit caveats.
 - Compact Table 3 remains descriptive and source-data-backed.
 - Table 4 remains minimal fixed-profile neural-comparator evidence with caveats.
 - Submission-blocking TODO markers in the manuscript draft have been removed or converted into explicit non-blocking draft notes.
+- `docs/manuscript/finalization/HUMAN_REVIEW_VENUE_STATUS.md` records the remaining target-venue, citation/export, release-metadata, and optional neural-comparator decisions.
 
 The current active work is therefore:
 
-1. Human-review manuscript flow and polished caption/placeholders.
-2. Choose the target venue and citation/export convention.
-3. Apply venue-specific bibliography, word count, figure/table formatting, and supplement decisions.
+1. Normalize the remaining duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
+2. Perform a prose-only manuscript flow review while preserving the current claim posture.
+3. Choose the target venue and citation/export convention, or explicitly keep the package venue-neutral for one more pass.
 4. Decide whether a memory-augmented/key-value neural comparator is needed for the target venue.
 5. Add human-chosen `LICENSE` and `CITATION.cff` before public submission/release.
 
@@ -38,12 +39,15 @@ The current active work is therefore:
 | Human decision integration. | Citation/export convention, closest-prior-art placement, and figure/table placement are recorded. | `docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md` |
 | Table 3 compact-safe split. | Compact final-safe descriptive Table 3 now exists; the detailed generated statistical map remains candidate/supplementary and not final inferential statistics. | `docs/manuscript/tables/table_03_compact_final_safe.md`; `docs/manuscript/source_data/table_03_compact_final_safe.csv`; `docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md` |
 | Table 3 manuscript alignment and source-path verification. | Stale manuscript Table 3 placeholder patched; verifier result recorded. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md`; `docs/manuscript/finalization/NEXT_STEP_PROMPT.md` |
+| Caption/TODO cleanup. | Manuscript placeholders and TODO markers were converted into final-safe draft notes for the current pass. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/finalization/CAPTION_TODO_CLEANUP_STATUS.md` |
+| Pre-venue decision status. | Remaining venue, citation, release, and optional baseline decisions are explicitly deferred to human choice. | `docs/manuscript/finalization/HUMAN_REVIEW_VENUE_STATUS.md` |
 | Exp15 Table 4 capture. | Compact source-data-backed V2 neural comparator table exists. | `docs/manuscript/tables/table_04_exp15_neural_comparator.md`; `docs/manuscript/source_data/table_04_exp15_neural_comparator.csv` |
 
 ## P0 - Current Next Pass
 
 | TODO | Reason | Source path | Target output |
 |---|---|---|---|
+| Normalize the duplicate in-section Table 4 placeholder. | One later Table 4 placeholder still uses older bracketed manuscript-placeholder wording; it is not path-breaking but should be cleaned before final flow review. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/finalization/HUMAN_REVIEW_VENUE_STATUS.md` | Consistent Table 4 placeholder/caption language throughout V2. |
 | Human-review manuscript flow and polished figure/table placeholders. | The manuscript now has final-safe caption placeholders, but final submission wording still needs human/venue review. | `docs/manuscript/draft/MANUSCRIPT_V2.md`; `docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md` | Human-approved manuscript draft for target-venue formatting. |
 | Choose target venue and citation/export convention. | `docs/manuscript/REFERENCES.md` remains venue-neutral until a convention is chosen. | `docs/manuscript/REFERENCES.md`; `docs/manuscript/draft/MANUSCRIPT_V2.md` | Final bibliography/citation format without invented metadata. |
 | Decide whether target venue strategy requires a memory-augmented/key-value neural comparator. | Exp15 is intentionally minimal and fixed-profile; broader neural coverage is venue-dependent. | `docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md`; `docs/manuscript/BASELINE_REQUIREMENTS.md`; `experiments/experiment15_neural_baseline_comparator/README.md` | Explicit venue/reviewer decision; do not start a new experiment by default. |
