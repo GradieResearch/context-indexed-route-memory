@@ -43,7 +43,7 @@ These are useful provenance, but they are not active instructions unless an acti
 - Generated reports are local artifacts, not manuscript prose.
 - Historical experiment notes may contain outdated framing.
 - Roadmaps and issue templates are handoff aids, not evidence.
-- `docs/manuscript/draft/bkup.orig` is a stale backup draft and is not canonical.
+- The old backup draft file named `bkup.orig` has been removed and was never canonical.
 
 ## Rule
 
