@@ -30,7 +30,8 @@ The repository is post:
 - Section 2.7 closest-prior-art prose integration;
 - compact descriptive Table 3 split and verification;
 - caption/TODO cleanup;
-- pre-venue human-review/venue/release decision-status capture.
+- pre-venue human-review/venue/release decision-status capture;
+- stale backup draft removal and duplicate Table 4 placeholder normalization.
 
 The manuscript is **not submission-ready**, but it is close enough for a serious V3 drafting pass.
 
@@ -39,9 +40,8 @@ The manuscript is **not submission-ready**, but it is close enough for a serious
 Do one of the following, in order of preference:
 
 1. If no venue has been chosen, perform a venue-neutral V3 manuscript flow review.
-2. Normalize the remaining duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
-3. Preserve the conservative claim posture while improving prose and manuscript flow.
-4. Record any unresolved venue, citation, figure/table, license, and optional-baseline decisions.
+2. Preserve the conservative claim posture while improving prose and manuscript flow.
+3. Record any unresolved venue, citation, figure/table, license, and optional-baseline decisions.
 
 Do **not** start a new experiment, choose a venue, choose a license, create final citation exports, or add a memory-augmented/key-value neural comparator unless a human explicitly asks for that.
 
@@ -59,9 +59,7 @@ These files are retained as provenance for how the current state was reached. Th
 - `NEXT_STEP_PROMPT_AFTER_CITATION_LEDGER.md` - superseded handoff prompt from the citation-ledger stage.
 - `MANUSCRIPT_TODO_CITATION_LEDGER_UPDATE.md` - superseded TODO update note from the citation-ledger stage.
 
-## Known cleanup before V3
+## Before V3
 
-- Normalize the duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md`.
-- Remove or replace `docs/manuscript/draft/bkup.orig` if local Git access is available; it is a stale backup draft and is not canonical.
 - Keep `docs/manuscript/REFERENCES.md` venue-neutral until a target venue/citation convention is chosen.
 - Keep `LICENSE` and `CITATION.cff` unset until human choices are made.
