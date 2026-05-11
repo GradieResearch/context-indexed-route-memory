@@ -43,9 +43,9 @@ These are retained because they document important decisions and source-path ver
 - `docs/manuscript/finalization/NEXT_STEP_PROMPT_AFTER_CITATION_LEDGER.md`
 - `docs/manuscript/finalization/MANUSCRIPT_TODO_CITATION_LEDGER_UPDATE.md`
 
-## Non-canonical debris / cleanup targets
+## Cleanup targets resolved
 
-- The stale backup draft `docs/manuscript/draft/bkup.orig` has been removed.
+- The stale backup draft file named `bkup.orig` has been removed.
 - The duplicate in-section Table 4 placeholder in `docs/manuscript/draft/MANUSCRIPT_V2.md` has been normalized.
 
 ## Next recommended action
