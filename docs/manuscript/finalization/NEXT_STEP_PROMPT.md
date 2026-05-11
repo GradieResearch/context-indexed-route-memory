@@ -22,7 +22,7 @@ Reproducibility foundation now exists:
 
 Immediate work:
 
-1. Implement `scripts/reproduce_manuscript.py`.
+1. Implement the planned future manuscript reproducibility driver at `scripts/reproduce_manuscript.py`.
 2. Support at least these profiles:
    - `validate-artifacts`
    - `rebuild-manuscript-assets`
@@ -31,9 +31,9 @@ Immediate work:
    - `full-critical`
 3. In the first implementation, fully implement `validate-artifacts` and `rebuild-manuscript-assets`.
 4. For `smoke`, `rerun-critical`, and `full-critical`, implement command planning and safe skip/reporting if the exact launchers cannot be run in the current environment.
-5. Produce:
-   - `docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_REPORT.md`
-   - `docs/repo_audit/manuscript_reproducibility_report.json`
+5. Produce planned future report outputs:
+   - a manuscript reproducibility Markdown report under `docs/repo_audit/`
+   - a manuscript reproducibility JSON report under `docs/repo_audit/`
 6. Validate source paths with `python scripts/verify_doc_source_paths.py`.
 7. Do not overwrite historical experiment outputs.
 8. Do not run expensive full experiments unless explicitly requested by a human.
@@ -68,9 +68,9 @@ Preserve the current claim posture:
 
 Definition of done:
 
-- `scripts/reproduce_manuscript.py --profile validate-artifacts` runs successfully from a clean checkout or reports actionable failures.
-- `scripts/reproduce_manuscript.py --profile rebuild-manuscript-assets` runs successfully or records exact environment/actionable failures.
-- `docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_REPORT.md` and `.json` are generated.
+- The planned future validate-artifacts profile runs successfully from a clean checkout or reports actionable failures.
+- The planned future rebuild-manuscript-assets profile runs successfully or records exact environment/actionable failures.
+- Manuscript reproducibility Markdown and JSON reports are generated under `docs/repo_audit/`.
 - `python scripts/verify_doc_source_paths.py` passes.
 - Final response summarizes changed files, profile results, verifier status, and remaining reproducibility blockers.
 ```
