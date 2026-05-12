@@ -1,0 +1,11 @@
+{
+  "branch": "fresh-foundation-repro-report-v2",
+  "commit_sha": "a21ea4b6bcd0732952d7964a81f073de72cf5299",
+  "generated_at_utc": "2026-05-12T14:53:48Z",
+  "github_runner": "GitHub Actions 1000000338",
+  "machine": "x86_64",
+  "platform": "Linux-6.17.0-1010-azure-x86_64-with-glibc2.39",
+  "processor": "x86_64",
+  "python_version": "Python 3.11.15",
+  "run_id": "2026-05-12_ci_foundation_a21ea4b"
+}
