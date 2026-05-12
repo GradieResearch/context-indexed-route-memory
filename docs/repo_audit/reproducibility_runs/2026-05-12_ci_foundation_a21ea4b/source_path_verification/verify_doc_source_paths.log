@@ -1,0 +1,225 @@
+# Documentation Source Path Verification
+Files scanned: 141
+OK paths: 6104
+Missing active paths: 0
+Skipped planned/future paths: 13
+Skipped local-verification-pending paths: 56
+
+## Missing Active Paths
+None
+
+## Skipped Planned/Future Paths
+AGENTS.md:22: experiments/exp13_1_publication_hardening/ (explicitly marked planned/future/pending)
+AGENTS.md:22: experiments/experimentNN_descriptive_name/ (explicitly marked planned/future/pending)
+docs/manuscript/draft/MANUSCRIPT_V1.md:533: docs/manuscript/PRIOR_ART_LIVE_SEARCH_20260508.md (explicitly marked planned/future/pending)
+docs/manuscript/draft/MANUSCRIPT_V1.md:533: docs/manuscript/NOVELTY_ASSESSMENT_IMPORTED.md (explicitly marked planned/future/pending)
+docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md:7: docs/manuscript/BASELINE_RESULTS.md (explicitly marked planned/future/pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:21: experiments/expNN_descriptive_name/ (explicitly marked planned/future/pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:38: experiments/exp13_1_publication_hardening/ (explicitly marked planned/future/pending)
+docs/repo_audit/PATH_VERIFICATION_REPORT.md:19: experiments/expNN_descriptive_name/ (explicitly marked planned/future/pending)
+docs/repo_audit/PATH_VERIFICATION_REPORT.md:19: experiments/experimentNN_descriptive_name/ (explicitly marked planned/future/pending)
+docs/repo_audit/PATH_VERIFICATION_REPORT.md:20: docs/manuscript/BASELINE_RESULTS.md (explicitly marked planned/future/pending)
+docs/repo_audit/PATH_VERIFICATION_REPORT.md:22: docs/manuscript/BASELINE_RESULTS.md (explicitly marked planned/future/pending)
+docs/threads/experiment13_2_analysis_digest.md:537: docs/manuscript/BASELINE_RESULTS.md (explicitly marked planned/future/pending)
+docs/threads/experiment13_2_analysis_digest.md:656: docs/manuscript/BASELINE_RESULTS.md (explicitly marked planned/future/pending)
+
+## Skipped Local-Verification-Pending Paths
+AGENTS.md:61: experiment12_capacity_generalization/analysis/ (explicitly marked missing/local verification pending)
+docs/experiments/EXPERIMENT_CLAIMS_MATRIX.csv:40: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/manuscript/CITATION_PRIOR_ART_AUDIT.md:30: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/manuscript/CLAIMS_AND_EVIDENCE.md:44: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/EXP13_1_ANALYSIS_IMPORT_REPORT.md:5: docs/imports/experiment13_1_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/repo_audit/EXP13_1_ANALYSIS_IMPORT_REPORT.md:9: docs/imports/experiment13_1_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md:5: docs/imports/experiment13_2_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md:9: docs/imports/experiment13_2_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md:16: docs/imports/experiment14_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md:115: experiments/experiment14_latent_context_inference/e14_analysis.zip (explicitly marked missing/local verification pending)
+docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md:6: docs/imports/experiment15_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md:8: docs/imports/experiment15_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md:41: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md:115: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/MISSING_ARTIFACTS.md:43: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md:37: experiments/experiment14_latent_context_inference/e14_analysis.zip (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md:72: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:15: CLAIMS_AND_EVIDENCE.md (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:15: FIGURE_PLAN.md (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:15: PUBLICATION_READINESS.md (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:15: REPRODUCIBILITY_AUDIT.md (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:18: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_QA.md:32: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_REPORT.md:17: experiment12_capacity_generalization/analysis/exp12/capacity_final_summary.csv (explicitly marked missing/local verification pending)
+docs/repo_audit/P0_REMEDIATION_REPORT.md:77: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/P1_REMEDIATION_QA.md:23: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/P2_REMEDIATION_REPORT.md:186: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/PATH_VERIFICATION_REPORT.md:26: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/PATH_VERIFICATION_REPORT.md:27: docs/manuscript/NOVELTY_ASSESSMENT_IMPORTED.md (explicitly marked missing/local verification pending)
+docs/repo_audit/PATH_VERIFICATION_REPORT.md:37: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_CONFLICTS.md:59: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW.md:13: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW.md:13: BASELINE_REQUIREMENTS.md (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW.md:15: BASELINE_REQUIREMENTS.md (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW_RESOLUTION.md:25: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW_RESOLUTION.md:27: BASELINE_REQUIREMENTS.md (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW_RESOLUTION.md:139: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW_RESOLUTION.md:146: Pasted text.txt (explicitly marked missing/local verification pending)
+docs/repo_audit/THREAD_IMPORT_REVIEW_RESOLUTION.md:153: CLAIMS_AND_EVIDENCE.md (explicitly marked missing/local verification pending)
+docs/threads/experiment13_1_analysis_digest.md:5: docs/imports/experiment13_1_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment13_1_analysis_digest.md:617: validation_report.md (explicitly marked missing/local verification pending)
+docs/threads/experiment13_1_analysis_digest.md:617: validation_results.json (explicitly marked missing/local verification pending)
+docs/threads/experiment13_1_analysis_digest.md:617: run_manifest.json (explicitly marked missing/local verification pending)
+docs/threads/experiment13_2_analysis_digest.md:5: docs/imports/experiment13_2_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment13_2_analysis_digest.md:574: validation_report.md (explicitly marked missing/local verification pending)
+docs/threads/experiment13_2_analysis_digest.md:574: run_manifest.json (explicitly marked missing/local verification pending)
+docs/threads/experiment13_2_analysis_digest.md:574: exp13_2_metrics.csv (explicitly marked missing/local verification pending)
+docs/threads/experiment13_2_analysis_digest.md:574: exp13_2_summary.csv (explicitly marked missing/local verification pending)
+docs/threads/experiment13_2_analysis_digest.md:574: exp13_2_effect_sizes.csv (explicitly marked missing/local verification pending)
+docs/threads/experiment13_2_analysis_digest.md:601: docs/imports/experiment13_2_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment14_analysis_digest.md:5: docs/imports/experiment14_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment14_analysis_digest.md:341: docs/imports/experiment14_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment15_analysis_digest.md:5: docs/imports/experiment15_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment15_analysis_digest.md:401: docs/imports/experiment15_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment15_analysis_digest.md:459: docs/imports/experiment15_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+docs/threads/experiment15_analysis_digest.md:471: docs/imports/experiment15_analysis_digest.zip (staged import bundle reference; not retained as active repo artifact)
+
+## Files Scanned
+AGENTS.md
+EXPERIMENT_TRACKER.md
+Experiment.md
+README.md
+docs/README.md
+docs/experiments/EXPERIMENT_ARTIFACTS_INDEX.csv
+docs/experiments/EXPERIMENT_CLAIMS_MATRIX.csv
+docs/experiments/EXPERIMENT_REGISTRY.md
+docs/experiments/EXPERIMENT_SUMMARY_TEMPLATE.md
+docs/experiments/HISTORICAL_EXPERIMENTS.md
+docs/experiments/exp10_summary.md
+docs/experiments/exp11_summary.md
+docs/experiments/exp12_summary.md
+docs/experiments/exp13_1_summary.md
+docs/experiments/exp13_2_summary.md
+docs/experiments/exp13_local_vs_global_budget_comparison.md
+docs/experiments/exp13_summary.md
+docs/experiments/exp14_summary.md
+docs/experiments/exp15_summary.md
+docs/experiments/exp1_summary.md
+docs/experiments/exp2_summary.md
+docs/experiments/exp3_summary.md
+docs/experiments/exp4_summary.md
+docs/experiments/exp5_summary.md
+docs/experiments/exp6_summary.md
+docs/experiments/exp7_summary.md
+docs/experiments/exp8_summary.md
+docs/experiments/exp9_summary.md
+docs/glossary/README.md
+docs/imports/README.md
+docs/manuscript/BASELINE_REQUIREMENTS.md
+docs/manuscript/CITATION_PRIOR_ART_AUDIT.md
+docs/manuscript/CLAIMS_AND_EVIDENCE.md
+docs/manuscript/FIGURE_PLAN.md
+docs/manuscript/FIGURE_TABLE_HUMAN_REVIEW.md
+docs/manuscript/FIRST_MANUSCRIPT_CLAIM_FREEZE.md
+docs/manuscript/LIMITATIONS_AND_THREATS.md
+docs/manuscript/MANUSCRIPT_ASSET_MANIFEST.md
+docs/manuscript/MANUSCRIPT_REPRODUCIBILITY_MAP.md
+docs/manuscript/MANUSCRIPT_SPINE.md
+docs/manuscript/MANUSCRIPT_TODO.md
+docs/manuscript/NOVELTY_POSITIONING.md
+docs/manuscript/POST_EXP15_CLAIM_FREEZE_ADDENDUM.md
+docs/manuscript/REFERENCES.md
+docs/manuscript/RESULTS_STORYBOARD.md
+docs/manuscript/RETAINED_CLAIMS_STATISTICAL_HARDENING.md
+docs/manuscript/SOURCE_OF_TRUTH.md
+docs/manuscript/closest_prior_art_table.md
+docs/manuscript/draft/MANUSCRIPT_V0.md
+docs/manuscript/draft/MANUSCRIPT_V1.md
+docs/manuscript/draft/MANUSCRIPT_V2.md
+docs/manuscript/finalization/CAPTION_TODO_CLEANUP_STATUS.md
+docs/manuscript/finalization/CITATION_LEDGER_INTEGRATION_STATUS.md
+docs/manuscript/finalization/CITATION_PRIOR_ART_INSERTION_REPORT.md
+docs/manuscript/finalization/FINALIZATION_CHECKLIST.md
+docs/manuscript/finalization/HUMAN_DECISION_INTEGRATION_STATUS.md
+docs/manuscript/finalization/HUMAN_REVIEW_VENUE_STATUS.md
+docs/manuscript/finalization/MANUSCRIPT_FINALIZATION_PLAN.md
+docs/manuscript/finalization/MANUSCRIPT_TODO_CITATION_LEDGER_UPDATE.md
+docs/manuscript/finalization/NEXT_STEP_PROMPT.md
+docs/manuscript/finalization/NEXT_STEP_PROMPT_AFTER_CITATION_LEDGER.md
+docs/manuscript/finalization/PRE_V3_CLEANUP_STATUS.md
+docs/manuscript/finalization/README.md
+docs/manuscript/finalization/SECTION_2_7_PROSE_PATCH.md
+docs/manuscript/finalization/TABLE_3_GROUPING_REVIEW.md
+docs/manuscript/finalization/TABLE_3_VERIFICATION_ALIGNMENT_STATUS.md
+docs/manuscript/source_data/figure_01_conceptual_route_memory.csv
+docs/manuscript/source_data/figure_02_structural_plasticity_recurrence_ablation.csv
+docs/manuscript/source_data/figure_03_capacity_scaling.csv
+docs/manuscript/source_data/figure_04_finite_structural_budget_local_global.csv
+docs/manuscript/source_data/figure_05_symbolic_context_selection.csv
+docs/manuscript/source_data/manuscript_claim_artifact_map.csv
+docs/manuscript/source_data/table_03_compact_final_safe.csv
+docs/manuscript/source_data/table_04_exp15_neural_comparator.csv
+docs/manuscript/source_data/table_exp13_2_symbolic_baseline_suite.csv
+docs/manuscript/tables/table_01_claim_evidence.csv
+docs/manuscript/tables/table_01_claim_evidence.md
+docs/manuscript/tables/table_02_run_integrity.csv
+docs/manuscript/tables/table_02_run_integrity.md
+docs/manuscript/tables/table_03_compact_final_safe.md
+docs/manuscript/tables/table_03_statistical_summary.csv
+docs/manuscript/tables/table_03_statistical_summary.md
+docs/manuscript/tables/table_04_exp15_neural_comparator.md
+docs/repo_audit/ARTIFACT_INDEX.csv
+docs/repo_audit/EXP13_1_ANALYSIS_IMPORT_QA.md
+docs/repo_audit/EXP13_1_ANALYSIS_IMPORT_REPORT.md
+docs/repo_audit/EXP13_2_ANALYSIS_IMPORT_REPORT.md
+docs/repo_audit/EXP14_ANALYSIS_IMPORT_REPORT.md
+docs/repo_audit/EXP15_ANALYSIS_IMPORT_REPORT.md
+docs/repo_audit/MANUSCRIPT_ASSET_GENERATION_REPORT.md
+docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_PROTOCOL.md
+docs/repo_audit/MANUSCRIPT_REPRODUCIBILITY_REPORT.md
+docs/repo_audit/MISSING_ARTIFACTS.md
+docs/repo_audit/NAMING_AND_STRUCTURE_AUDIT.md
+docs/repo_audit/P0_P1_PUBLICATION_CLEANUP_REPORT.md
+docs/repo_audit/P0_REMEDIATION_QA.md
+docs/repo_audit/P0_REMEDIATION_REPORT.md
+docs/repo_audit/P1_REMEDIATION_QA.md
+docs/repo_audit/P1_REMEDIATION_REPORT.md
+docs/repo_audit/P2_REMEDIATION_QA.md
+docs/repo_audit/P2_REMEDIATION_REPORT.md
+docs/repo_audit/PATH_VERIFICATION_REPORT.md
+docs/repo_audit/REPRODUCIBILITY_AUDIT.md
+docs/repo_audit/REVIEWER_ATTACK_SURFACES.md
+docs/repo_audit/THREAD_IMPORT_CONFLICTS.md
+docs/repo_audit/THREAD_IMPORT_REVIEW.md
+docs/repo_audit/THREAD_IMPORT_REVIEW_RESOLUTION.md
+docs/repo_audit/manuscript_reproducibility_report.json
+docs/source_data/README.md
+docs/source_data/SOURCE_DATA_MANIFEST.csv
+docs/source_data/STATISTICAL_REPORTING_READINESS.csv
+docs/source_data/exp12_capacity_final_summary.csv
+docs/source_data/exp12_heldout_generalization_summary.csv
+docs/source_data/exp13_1_budget_consolidation.csv
+docs/source_data/exp13_1_context_corruption.csv
+docs/source_data/exp13_1_freeze_plasticity.csv
+docs/source_data/exp13_1_lesion_metrics.csv
+docs/source_data/exp13_1_variant_metrics.csv
+docs/source_data/exp13_2_baseline_metrics.csv
+docs/source_data/exp13_2_effect_sizes.csv
+docs/source_data/exp13_2_summary.csv
+docs/source_data/exp13_capacity_pressure_summary.csv
+docs/source_data/exp13_context_corruption_summary.csv
+docs/source_data/exp13_continuous_frontend_bridge_summary.csv
+docs/source_data/exp13_local_capacity_pressure_summary.csv
+docs/source_data/exp13_local_vs_global_budget_comparison.csv
+docs/source_data/exp13_true_holdout_generalization_summary.csv
+docs/synthesis/NEXT_EXPERIMENTS.md
+docs/synthesis/PROJECT_STATUS.md
+docs/synthesis/PUBLICATION_READINESS.md
+docs/synthesis/ROADMAP.md
+docs/theory/BIOLOGICAL_FRAMING.md
+docs/theory/CORE_THEORY.md
+docs/theory/GLOSSARY.md
+docs/theory/PRIOR_ART_MAP.md
+docs/threads/THREAD_DIGEST_TEMPLATE.md
+docs/threads/THREAD_INDEX.md
+docs/threads/experiment13_1_analysis_digest.md
+docs/threads/experiment13_2_analysis_digest.md
+docs/threads/experiment14_analysis_digest.md
+docs/threads/experiment15_analysis_digest.md
