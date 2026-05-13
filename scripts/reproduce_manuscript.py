@@ -63,6 +63,32 @@ KEY_SOURCE_DATA_CHECKS: dict[str, set[str]] = {
         "mean",
         "manuscript_claim_id",
     },
+    "docs/manuscript/source_data/reproducibility_claim_summary.csv": {
+        "claim_id",
+        "role",
+        "experiment_ids",
+        "metric_family",
+        "source_artifacts",
+        "n_units",
+        "summary_value",
+        "interval_or_spread",
+        "effect_size",
+        "status",
+        "caveat",
+        "fresh_rerun_status",
+    },
+    "docs/manuscript/source_data/seed_level_core_claim_metrics.csv": {
+        "claim_id",
+        "experiment_id",
+        "run_id",
+        "seed",
+        "variant",
+        "world_count",
+        "route_length",
+        "metric_name",
+        "metric_value",
+        "source_artifact",
+    },
 }
 
 SMOKE_COMMANDS: list[dict[str, str]] = [
